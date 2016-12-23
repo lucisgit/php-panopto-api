@@ -1,0 +1,9 @@
+{
+    "require": {
+        "php": "^5.0.1 || ^7.0",
+        "ext-soap": "*"
+    },
+    "require-dev": {
+        "wsdl2phpgenerator/wsdl2phpgenerator": "^3.4"
+    }
+}
