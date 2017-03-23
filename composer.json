@@ -3,7 +3,7 @@
     "type": "library",
     "description": "PHP Panopto API client and libraries.",
     "homepage": "http://github.com/lucisgit/php-panopto-api",
-    "keywords": ["panopto", "api", "php"],
+    "keywords": ["panopto", "api", "php", "soap"],
     "license": "GPL-3.0+",
     "authors": [
         {
