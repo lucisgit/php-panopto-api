@@ -4,12 +4,14 @@ This is PHP5 implementation of Panopto v4.6 API. It contains client
 class for accessing Panopto API public webservices and corresponding libarary
 classes for performing the API calls. The client is composer/autoload friendly.
 
+All public Panopto v4.6 API webservices are supported, i.e.
+`AccessManagement`, `Auth`, `RemoteRecorderManagement`,
+`SessionManagement`, `UsageReporting` and `UserManagement`.
+
 ## Features
 
-* All public Panopto v4.6 API webservices supported, i.e.
-`AccessManagement`, `Auth`, `RemoteRecorderManagement`,
-`SessionManagement`, `UsageReporting`, `UserManagement`.
 * Includes *types* classes.
+* Identity Provider authentication support.
 * Follows PSR-4 conventions and autoload friendly.
 * Provides client class for simplifying individual webservices access
 * Provides script for generating library classes for custom host/version.
@@ -55,7 +57,7 @@ library directly:
 require_once(dirname(__FILE__) . "/lib/panopto/lib/Client.php");
 ```
 
-## Basic usage
+## Usage
 
 Using client class instance simplifies accessing Panopto webservices and
 authentication process. At minimum, you need to know your server hostname
@@ -75,7 +77,8 @@ $panoptoclient->setAuthenticationInfo('username', 'userpassword');
 // Get AuthenticationInfo instance for using in calls.
 $auth = $panoptoclient->getAuthenticationInfo();
 
-// Get RemoteRecorderManagement webservice instance.
+// For example, get RemoteRecorderManagement webservice instance for
+// accessing its methods.
 $rrmclient = $panoptoclient->RemoteRecorderManagement();
 
 // Let's list recorders for this simple example. According to API docs we need
@@ -90,7 +93,11 @@ $pagination->setMaxNumberResults($perpage);
 $param = new \Panopto\RemoteRecorderManagement\ListRecorders($auth, $pagination, 'Name');
 
 // Perform API call, this return value of ListRecordersResponse type.
-$recorderslist = $rrmclient->ListRecorders($param)->getListRecordersResult();
+try {
+    $recorderslist = $rrmclient->ListRecorders($param)->getListRecordersResult();
+} catch(Exception $e) {
+    throw new SoapFault('client', $e->getMessage());
+}
 
 echo "Total recorders count: " . $recorderslist->TotalResultCount;
 
@@ -111,10 +118,81 @@ foreach($recorders as $recorder) {
 
 ```
 
-## Building custom library classes.
+## Authentication using Application Key
 
-The repo includes script for generating library classes using
-Panopto WSDL interface endpoints. This can be used for making library up to date
-with upstream changes or generating classes for the host-specific API version.
+You can create AuthenticationInfo instance using Application Key value from
+Identity Provider setting in Panopto. You do not need a password in this
+case, however the username needs to be preceed with corresponding Instance
+Name, e.g. `MyInstanceName\username`. It makes sense to use this feature
+where the client is used in the application that supposed to be linked to Panopto.
 
+```php
+// Create client instance for my.panopto.host.
+$panoptoclient = new \Panopto\Client('my.panopto.host');
+
+// Create AuthenticationInfo instance with user crdentials.
+$panoptoclient->setAuthenticationInfo('MyInstanceName\username', '', '00000000-0000-0000-0000-000000000000');
+
+// Get AuthenticationInfo instance for using in calls.
+$auth = $panoptoclient->getAuthenticationInfo();
+```
+
+## Building custom library classes
+
+The repo includes script for generating library classes using [wsdl2phpgenerator](https://github.com/wsdl2phpgenerator/wsdl2phpgenerator)
+converter and Panopto WSDL interface endpoints. This can be used for making
+library up to date with upstream changes or generating classes for the
+host-specific API version.
+
+**How to setup**
+
+You need a clone of this repo and install dependencies using Composer first.
+
+```bash
+$ pwd
+/home/user/git
+$ git clone https://github.com/lucisgit/php-panopto-api.git
+Cloning into 'php-panopto-api'...
+remote: Counting objects: 368, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 368 (delta 0), reused 0 (delta 0), pack-reused 363
+Receiving objects: 100% (368/368), 104.24 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (238/238), done.
+Checking connectivity... done.
+$ cd php-panopto-api
+$ curl -s http://getcomposer.org/installer | php
+All settings correct for using Composer
+Downloading...
+
+Composer (version 1.4.1) successfully installed to: /home/ruslan/git/php-panopto-api/composer.phar
+Use it: php composer.phar
+
+$ php composer.phar install
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Package operations: 3 installs, 0 updates, 0 removals
+  - Installing symfony/polyfill-iconv (v1.3.0): Loading from cache
+  - Installing symfony/options-resolver (v3.2.6): Loading from cache
+  - Installing wsdl2phpgenerator/wsdl2phpgenerator (3.4.0): Loading from cache
+Generating autoload files
+```
+
+**How to use**
+
+By default, the script is using demo.hosted.panopto.com and version 4.6, but
+you can specify alternative host/version for your own needs (run command
+with -h parameter for usage details).
+
+```bash
+$ php generate_phpclasses.php
+Using https://demo.hosted.panopto.com/Panopto/PublicAPI/4.6/ for webservices interface.
+Generating \Panopto\AccessManagement classes...
+Generating \Panopto\Auth classes...
+Generating \Panopto\RemoteRecorderManagement classes...
+Generating \Panopto\SessionManagement classes...
+Generating \Panopto\UsageReporting classes...
+Generating \Panopto\UserManagement classes...
+
+PHP classess have been generated from Panopto API WSDL. Use /home/user/git/php-panopto-api/lib/Panopto/PublicAPI/4.6/<webservice>/autoload.php in your project.
+```
 
