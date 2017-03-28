@@ -118,6 +118,9 @@ foreach($recorders as $recorder) {
 
 ```
 
+You can find some other examples how client can be used in the
+`examples` directory.
+
 ## Authentication using Application Key
 
 You can create AuthenticationInfo instance using Application Key value from

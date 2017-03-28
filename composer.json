@@ -24,6 +24,7 @@
         "wsdl2phpgenerator/wsdl2phpgenerator": "^3.4"
     },
     "autoload": {
-        "psr-4": { "Panopto\\": "lib/" }
+        "psr-4": { "Panopto\\": "lib/" },
+        "exclude-from-classmap": ["/examples/"]
     }
 }
