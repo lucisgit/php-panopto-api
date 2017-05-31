@@ -90,6 +90,15 @@ foreach ($webservices as $webservice) {
     $generator->generate(new \Wsdl2PhpGenerator\Config($generatorconfig));
 }
 
-echo "\nPHP classess have been generated from Panopto API WSDL. Use " . $destination . "/<webservice>/autoload.php in your project.\n";
+// Display version of the server.
+require_once($destination . '/Auth/autoload.php');
+$wsdl = 'https://' . $server . '/Panopto/PublicAPI/' . $version . '/Auth.svc?wsdl';
+$authclient = new \Panopto\Auth\Auth(array(), $wsdl);
+$param = new \Panopto\Auth\GetServerVersion();
+$version = $authclient->GetServerVersion($param)->getGetServerVersionResult();
+
+echo "\nServer $server is running Panopto version ${version}\n";
+
+echo "\nPHP classess have been sucessfully generated using Panopto API WSDL. Use " . $destination . "/<webservice>/autoload.php in your project. Check Readme file for more information on usage.\n";
 exit(0);
 
