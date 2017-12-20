@@ -16,6 +16,11 @@ class FolderAccessDetails
     protected $GroupsWithCreatorAccess = null;
 
     /**
+     * @var ArrayOfguid $GroupsWithPublisherAccess
+     */
+    protected $GroupsWithPublisherAccess = null;
+
+    /**
      * @var ArrayOfguid $GroupsWithViewerAccess
      */
     protected $GroupsWithViewerAccess = null;
@@ -29,6 +34,11 @@ class FolderAccessDetails
      * @var ArrayOfguid $UsersWithCreatorAccess
      */
     protected $UsersWithCreatorAccess = null;
+
+    /**
+     * @var ArrayOfguid $UsersWithPublisherAccess
+     */
+    protected $UsersWithPublisherAccess = null;
 
     /**
      * @var ArrayOfguid $UsersWithViewerAccess
@@ -74,6 +84,24 @@ class FolderAccessDetails
     public function setGroupsWithCreatorAccess($GroupsWithCreatorAccess)
     {
       $this->GroupsWithCreatorAccess = $GroupsWithCreatorAccess;
+      return $this;
+    }
+
+    /**
+     * @return ArrayOfguid
+     */
+    public function getGroupsWithPublisherAccess()
+    {
+      return $this->GroupsWithPublisherAccess;
+    }
+
+    /**
+     * @param ArrayOfguid $GroupsWithPublisherAccess
+     * @return \Panopto\AccessManagement\FolderAccessDetails
+     */
+    public function setGroupsWithPublisherAccess($GroupsWithPublisherAccess)
+    {
+      $this->GroupsWithPublisherAccess = $GroupsWithPublisherAccess;
       return $this;
     }
 
@@ -128,6 +156,24 @@ class FolderAccessDetails
     public function setUsersWithCreatorAccess($UsersWithCreatorAccess)
     {
       $this->UsersWithCreatorAccess = $UsersWithCreatorAccess;
+      return $this;
+    }
+
+    /**
+     * @return ArrayOfguid
+     */
+    public function getUsersWithPublisherAccess()
+    {
+      return $this->UsersWithPublisherAccess;
+    }
+
+    /**
+     * @param ArrayOfguid $UsersWithPublisherAccess
+     * @return \Panopto\AccessManagement\FolderAccessDetails
+     */
+    public function setUsersWithPublisherAccess($UsersWithPublisherAccess)
+    {
+      $this->UsersWithPublisherAccess = $UsersWithPublisherAccess;
       return $this;
     }
 

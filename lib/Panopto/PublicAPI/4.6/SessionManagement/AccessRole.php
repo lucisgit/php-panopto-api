@@ -1,6 +1,6 @@
 <?php
 
-namespace Panopto\AccessManagement;
+namespace Panopto\SessionManagement;
 
 class AccessRole
 {

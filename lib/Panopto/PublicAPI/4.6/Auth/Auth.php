@@ -18,6 +18,8 @@ class Auth extends \SoapClient
       'GetServerVersionResponse' => 'Panopto\\Auth\\GetServerVersionResponse',
       'GetAuthenticatedUrl' => 'Panopto\\Auth\\GetAuthenticatedUrl',
       'GetAuthenticatedUrlResponse' => 'Panopto\\Auth\\GetAuthenticatedUrlResponse',
+      'ReportIntegrationInfo' => 'Panopto\\Auth\\ReportIntegrationInfo',
+      'ReportIntegrationInfoResponse' => 'Panopto\\Auth\\ReportIntegrationInfoResponse',
     );
 
     /**
@@ -74,6 +76,15 @@ class Auth extends \SoapClient
     public function GetAuthenticatedUrl(GetAuthenticatedUrl $parameters)
     {
       return $this->__soapCall('GetAuthenticatedUrl', array($parameters));
+    }
+
+    /**
+     * @param ReportIntegrationInfo $parameters
+     * @return ReportIntegrationInfoResponse
+     */
+    public function ReportIntegrationInfo(ReportIntegrationInfo $parameters)
+    {
+      return $this->__soapCall('ReportIntegrationInfo', array($parameters));
     }
 
 }

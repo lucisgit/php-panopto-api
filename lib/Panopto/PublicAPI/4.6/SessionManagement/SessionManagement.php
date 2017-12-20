@@ -14,6 +14,7 @@ class SessionManagement extends \SoapClient
       'Pagination' => 'Panopto\\SessionManagement\\Pagination',
       'ArrayOfSessionState' => 'Panopto\\SessionManagement\\ArrayOfSessionState',
       'ListFoldersRequest' => 'Panopto\\SessionManagement\\ListFoldersRequest',
+      'ArrayOfAccessRole' => 'Panopto\\SessionManagement\\ArrayOfAccessRole',
       'RecorderDownloadUrlResponse' => 'Panopto\\SessionManagement\\RecorderDownloadUrlResponse',
       'Note' => 'Panopto\\SessionManagement\\Note',
       'ListNotesResponse' => 'Panopto\\SessionManagement\\ListNotesResponse',
@@ -73,6 +74,10 @@ class SessionManagement extends \SoapClient
       'UpdateSessionDescriptionResponse' => 'Panopto\\SessionManagement\\UpdateSessionDescriptionResponse',
       'UpdateSessionIsBroadcast' => 'Panopto\\SessionManagement\\UpdateSessionIsBroadcast',
       'UpdateSessionIsBroadcastResponse' => 'Panopto\\SessionManagement\\UpdateSessionIsBroadcastResponse',
+      'UpdateSessionSetPanoptoBroadcast' => 'Panopto\\SessionManagement\\UpdateSessionSetPanoptoBroadcast',
+      'UpdateSessionSetPanoptoBroadcastResponse' => 'Panopto\\SessionManagement\\UpdateSessionSetPanoptoBroadcastResponse',
+      'UpdateSessionSetRTMPBroadcast' => 'Panopto\\SessionManagement\\UpdateSessionSetRTMPBroadcast',
+      'UpdateSessionSetRTMPBroadcastResponse' => 'Panopto\\SessionManagement\\UpdateSessionSetRTMPBroadcastResponse',
       'UpdateSessionOwner' => 'Panopto\\SessionManagement\\UpdateSessionOwner',
       'UpdateSessionOwnerResponse' => 'Panopto\\SessionManagement\\UpdateSessionOwnerResponse',
       'MoveSessions' => 'Panopto\\SessionManagement\\MoveSessions',
@@ -101,10 +106,16 @@ class SessionManagement extends \SoapClient
       'DeleteFoldersResponse' => 'Panopto\\SessionManagement\\DeleteFoldersResponse',
       'ProvisionExternalCourse' => 'Panopto\\SessionManagement\\ProvisionExternalCourse',
       'ProvisionExternalCourseResponse' => 'Panopto\\SessionManagement\\ProvisionExternalCourseResponse',
+      'ProvisionExternalCourseWithRoles' => 'Panopto\\SessionManagement\\ProvisionExternalCourseWithRoles',
+      'ProvisionExternalCourseWithRolesResponse' => 'Panopto\\SessionManagement\\ProvisionExternalCourseWithRolesResponse',
       'SetExternalCourseAccess' => 'Panopto\\SessionManagement\\SetExternalCourseAccess',
       'SetExternalCourseAccessResponse' => 'Panopto\\SessionManagement\\SetExternalCourseAccessResponse',
+      'SetExternalCourseAccessForRoles' => 'Panopto\\SessionManagement\\SetExternalCourseAccessForRoles',
+      'SetExternalCourseAccessForRolesResponse' => 'Panopto\\SessionManagement\\SetExternalCourseAccessForRolesResponse',
       'SetCopiedExternalCourseAccess' => 'Panopto\\SessionManagement\\SetCopiedExternalCourseAccess',
       'SetCopiedExternalCourseAccessResponse' => 'Panopto\\SessionManagement\\SetCopiedExternalCourseAccessResponse',
+      'SetCopiedExternalCourseAccessForRoles' => 'Panopto\\SessionManagement\\SetCopiedExternalCourseAccessForRoles',
+      'SetCopiedExternalCourseAccessForRolesResponse' => 'Panopto\\SessionManagement\\SetCopiedExternalCourseAccessForRolesResponse',
       'GetRecorderDownloadUrls' => 'Panopto\\SessionManagement\\GetRecorderDownloadUrls',
       'GetRecorderDownloadUrlsResponse' => 'Panopto\\SessionManagement\\GetRecorderDownloadUrlsResponse',
       'CreateNoteByRelativeTime' => 'Panopto\\SessionManagement\\CreateNoteByRelativeTime',
@@ -329,6 +340,24 @@ class SessionManagement extends \SoapClient
     }
 
     /**
+     * @param UpdateSessionSetPanoptoBroadcast $parameters
+     * @return UpdateSessionSetPanoptoBroadcastResponse
+     */
+    public function UpdateSessionSetPanoptoBroadcast(UpdateSessionSetPanoptoBroadcast $parameters)
+    {
+      return $this->__soapCall('UpdateSessionSetPanoptoBroadcast', array($parameters));
+    }
+
+    /**
+     * @param UpdateSessionSetRTMPBroadcast $parameters
+     * @return UpdateSessionSetRTMPBroadcastResponse
+     */
+    public function UpdateSessionSetRTMPBroadcast(UpdateSessionSetRTMPBroadcast $parameters)
+    {
+      return $this->__soapCall('UpdateSessionSetRTMPBroadcast', array($parameters));
+    }
+
+    /**
      * @param UpdateSessionOwner $parameters
      * @return UpdateSessionOwnerResponse
      */
@@ -455,6 +484,15 @@ class SessionManagement extends \SoapClient
     }
 
     /**
+     * @param ProvisionExternalCourseWithRoles $parameters
+     * @return ProvisionExternalCourseWithRolesResponse
+     */
+    public function ProvisionExternalCourseWithRoles(ProvisionExternalCourseWithRoles $parameters)
+    {
+      return $this->__soapCall('ProvisionExternalCourseWithRoles', array($parameters));
+    }
+
+    /**
      * @param SetExternalCourseAccess $parameters
      * @return SetExternalCourseAccessResponse
      */
@@ -464,12 +502,30 @@ class SessionManagement extends \SoapClient
     }
 
     /**
+     * @param SetExternalCourseAccessForRoles $parameters
+     * @return SetExternalCourseAccessForRolesResponse
+     */
+    public function SetExternalCourseAccessForRoles(SetExternalCourseAccessForRoles $parameters)
+    {
+      return $this->__soapCall('SetExternalCourseAccessForRoles', array($parameters));
+    }
+
+    /**
      * @param SetCopiedExternalCourseAccess $parameters
      * @return SetCopiedExternalCourseAccessResponse
      */
     public function SetCopiedExternalCourseAccess(SetCopiedExternalCourseAccess $parameters)
     {
       return $this->__soapCall('SetCopiedExternalCourseAccess', array($parameters));
+    }
+
+    /**
+     * @param SetCopiedExternalCourseAccessForRoles $parameters
+     * @return SetCopiedExternalCourseAccessForRolesResponse
+     */
+    public function SetCopiedExternalCourseAccessForRoles(SetCopiedExternalCourseAccessForRoles $parameters)
+    {
+      return $this->__soapCall('SetCopiedExternalCourseAccessForRoles', array($parameters));
     }
 
     /**

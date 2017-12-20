@@ -11,6 +11,11 @@ class UserAccessDetails
     protected $FoldersWithCreatorAccess = null;
 
     /**
+     * @var ArrayOfguid $FoldersWithPublisherAccess
+     */
+    protected $FoldersWithPublisherAccess = null;
+
+    /**
      * @var ArrayOfguid $FoldersWithViewerAccess
      */
     protected $FoldersWithViewerAccess = null;
@@ -56,6 +61,24 @@ class UserAccessDetails
     public function setFoldersWithCreatorAccess($FoldersWithCreatorAccess)
     {
       $this->FoldersWithCreatorAccess = $FoldersWithCreatorAccess;
+      return $this;
+    }
+
+    /**
+     * @return ArrayOfguid
+     */
+    public function getFoldersWithPublisherAccess()
+    {
+      return $this->FoldersWithPublisherAccess;
+    }
+
+    /**
+     * @param ArrayOfguid $FoldersWithPublisherAccess
+     * @return \Panopto\AccessManagement\UserAccessDetails
+     */
+    public function setFoldersWithPublisherAccess($FoldersWithPublisherAccess)
+    {
+      $this->FoldersWithPublisherAccess = $FoldersWithPublisherAccess;
       return $this;
     }
 
