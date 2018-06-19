@@ -1,5 +1,8 @@
 # PHP Panopto API client and libraries.
 
+[![Latest Stable Version](https://poser.pugx.org/lucisgit/php-panopto-api/v/stable)](https://packagist.org/packages/lucisgit/php-panopto-api)
+[![License](https://poser.pugx.org/lucisgit/php-panopto-api/license)](https://packagist.org/packages/lucisgit/php-panopto-api)
+
 This is PHP5 implementation of Panopto v4.6 API. It contains client
 class for accessing Panopto API public webservices and corresponding libarary
 classes for performing the API calls. The client is composer/autoload friendly.
