@@ -68,7 +68,9 @@
         'Panopto\UserManagement\GetGroupsByName' => __DIR__ .'/GetGroupsByName.php',
         'Panopto\UserManagement\GetGroupsByNameResponse' => __DIR__ .'/GetGroupsByNameResponse.php',
         'Panopto\UserManagement\GetUsersInGroup' => __DIR__ .'/GetUsersInGroup.php',
-        'Panopto\UserManagement\GetUsersInGroupResponse' => __DIR__ .'/GetUsersInGroupResponse.php'
+        'Panopto\UserManagement\GetUsersInGroupResponse' => __DIR__ .'/GetUsersInGroupResponse.php',
+        'Panopto\UserManagement\SetUserHasLoggedIn' => __DIR__ .'/SetUserHasLoggedIn.php',
+        'Panopto\UserManagement\SetUserHasLoggedInResponse' => __DIR__ .'/SetUserHasLoggedInResponse.php'
     );
     if (!empty($classes[$class])) {
         include $classes[$class];

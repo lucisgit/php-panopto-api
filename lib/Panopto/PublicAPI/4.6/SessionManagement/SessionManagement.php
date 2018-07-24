@@ -78,6 +78,10 @@ class SessionManagement extends \SoapClient
       'UpdateSessionSetPanoptoBroadcastResponse' => 'Panopto\\SessionManagement\\UpdateSessionSetPanoptoBroadcastResponse',
       'UpdateSessionSetRTMPBroadcast' => 'Panopto\\SessionManagement\\UpdateSessionSetRTMPBroadcast',
       'UpdateSessionSetRTMPBroadcastResponse' => 'Panopto\\SessionManagement\\UpdateSessionSetRTMPBroadcastResponse',
+      'UpdateSessionCreateRTMPStreams' => 'Panopto\\SessionManagement\\UpdateSessionCreateRTMPStreams',
+      'UpdateSessionCreateRTMPStreamsResponse' => 'Panopto\\SessionManagement\\UpdateSessionCreateRTMPStreamsResponse',
+      'UpdateSessionUpdateRTMPStreamTypes' => 'Panopto\\SessionManagement\\UpdateSessionUpdateRTMPStreamTypes',
+      'UpdateSessionUpdateRTMPStreamTypesResponse' => 'Panopto\\SessionManagement\\UpdateSessionUpdateRTMPStreamTypesResponse',
       'UpdateSessionOwner' => 'Panopto\\SessionManagement\\UpdateSessionOwner',
       'UpdateSessionOwnerResponse' => 'Panopto\\SessionManagement\\UpdateSessionOwnerResponse',
       'MoveSessions' => 'Panopto\\SessionManagement\\MoveSessions',
@@ -355,6 +359,24 @@ class SessionManagement extends \SoapClient
     public function UpdateSessionSetRTMPBroadcast(UpdateSessionSetRTMPBroadcast $parameters)
     {
       return $this->__soapCall('UpdateSessionSetRTMPBroadcast', array($parameters));
+    }
+
+    /**
+     * @param UpdateSessionCreateRTMPStreams $parameters
+     * @return UpdateSessionCreateRTMPStreamsResponse
+     */
+    public function UpdateSessionCreateRTMPStreams(UpdateSessionCreateRTMPStreams $parameters)
+    {
+      return $this->__soapCall('UpdateSessionCreateRTMPStreams', array($parameters));
+    }
+
+    /**
+     * @param UpdateSessionUpdateRTMPStreamTypes $parameters
+     * @return UpdateSessionUpdateRTMPStreamTypesResponse
+     */
+    public function UpdateSessionUpdateRTMPStreamTypes(UpdateSessionUpdateRTMPStreamTypes $parameters)
+    {
+      return $this->__soapCall('UpdateSessionUpdateRTMPStreamTypes', array($parameters));
     }
 
     /**

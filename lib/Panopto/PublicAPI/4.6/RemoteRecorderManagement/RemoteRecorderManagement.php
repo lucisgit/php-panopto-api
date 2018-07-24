@@ -37,6 +37,12 @@ class RemoteRecorderManagement extends \SoapClient
       'ScheduleRecurringRecordingResponse' => 'Panopto\\RemoteRecorderManagement\\ScheduleRecurringRecordingResponse',
       'UpdateRecordingTime' => 'Panopto\\RemoteRecorderManagement\\UpdateRecordingTime',
       'UpdateRecordingTimeResponse' => 'Panopto\\RemoteRecorderManagement\\UpdateRecordingTimeResponse',
+      'UpdateRecordingSettings' => 'Panopto\\RemoteRecorderManagement\\UpdateRecordingSettings',
+      'UpdateRecordingSettingsResponse' => 'Panopto\\RemoteRecorderManagement\\UpdateRecordingSettingsResponse',
+      'GetDefaultFolderForRecorder' => 'Panopto\\RemoteRecorderManagement\\GetDefaultFolderForRecorder',
+      'GetDefaultFolderForRecorderResponse' => 'Panopto\\RemoteRecorderManagement\\GetDefaultFolderForRecorderResponse',
+      'GetMachineSidForRecorder' => 'Panopto\\RemoteRecorderManagement\\GetMachineSidForRecorder',
+      'GetMachineSidForRecorderResponse' => 'Panopto\\RemoteRecorderManagement\\GetMachineSidForRecorderResponse',
     );
 
     /**
@@ -120,6 +126,33 @@ class RemoteRecorderManagement extends \SoapClient
     public function UpdateRecordingTime(UpdateRecordingTime $parameters)
     {
       return $this->__soapCall('UpdateRecordingTime', array($parameters));
+    }
+
+    /**
+     * @param UpdateRecordingSettings $parameters
+     * @return UpdateRecordingSettingsResponse
+     */
+    public function UpdateRecordingSettings(UpdateRecordingSettings $parameters)
+    {
+      return $this->__soapCall('UpdateRecordingSettings', array($parameters));
+    }
+
+    /**
+     * @param GetDefaultFolderForRecorder $parameters
+     * @return GetDefaultFolderForRecorderResponse
+     */
+    public function GetDefaultFolderForRecorder(GetDefaultFolderForRecorder $parameters)
+    {
+      return $this->__soapCall('GetDefaultFolderForRecorder', array($parameters));
+    }
+
+    /**
+     * @param GetMachineSidForRecorder $parameters
+     * @return GetMachineSidForRecorderResponse
+     */
+    public function GetMachineSidForRecorder(GetMachineSidForRecorder $parameters)
+    {
+      return $this->__soapCall('GetMachineSidForRecorder', array($parameters));
     }
 
 }

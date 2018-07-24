@@ -16,6 +16,10 @@ class UsageReporting extends \SoapClient
       'DetailedUsageResponse' => 'Panopto\\UsageReporting\\DetailedUsageResponse',
       'ArrayOfDetailedUsageResponseItem' => 'Panopto\\UsageReporting\\ArrayOfDetailedUsageResponseItem',
       'DetailedUsageResponseItem' => 'Panopto\\UsageReporting\\DetailedUsageResponseItem',
+      'ArrayOfStatsReportType' => 'Panopto\\UsageReporting\\ArrayOfStatsReportType',
+      'ArrayOfStatsReportStatus' => 'Panopto\\UsageReporting\\ArrayOfStatsReportStatus',
+      'StatsReportStatus' => 'Panopto\\UsageReporting\\StatsReportStatus',
+      'ArrayOfstring' => 'Panopto\\UsageReporting\\ArrayOfstring',
       'GetSystemSummaryUsage' => 'Panopto\\UsageReporting\\GetSystemSummaryUsage',
       'GetSystemSummaryUsageResponse' => 'Panopto\\UsageReporting\\GetSystemSummaryUsageResponse',
       'GetFolderSummaryUsage' => 'Panopto\\UsageReporting\\GetFolderSummaryUsage',
@@ -28,6 +32,16 @@ class UsageReporting extends \SoapClient
       'GetUserDetailedUsageResponse' => 'Panopto\\UsageReporting\\GetUserDetailedUsageResponse',
       'GetSessionUserDetailedUsage' => 'Panopto\\UsageReporting\\GetSessionUserDetailedUsage',
       'GetSessionUserDetailedUsageResponse' => 'Panopto\\UsageReporting\\GetSessionUserDetailedUsageResponse',
+      'DescribeReportTypes' => 'Panopto\\UsageReporting\\DescribeReportTypes',
+      'DescribeReportTypesResponse' => 'Panopto\\UsageReporting\\DescribeReportTypesResponse',
+      'DescribeReportType' => 'Panopto\\UsageReporting\\DescribeReportType',
+      'DescribeReportTypeResponse' => 'Panopto\\UsageReporting\\DescribeReportTypeResponse',
+      'GetRecentReports' => 'Panopto\\UsageReporting\\GetRecentReports',
+      'GetRecentReportsResponse' => 'Panopto\\UsageReporting\\GetRecentReportsResponse',
+      'QueueReport' => 'Panopto\\UsageReporting\\QueueReport',
+      'QueueReportResponse' => 'Panopto\\UsageReporting\\QueueReportResponse',
+      'GetReport' => 'Panopto\\UsageReporting\\GetReport',
+      'GetReportResponse' => 'Panopto\\UsageReporting\\GetReportResponse',
     );
 
     /**
@@ -102,6 +116,51 @@ class UsageReporting extends \SoapClient
     public function GetSessionUserDetailedUsage(GetSessionUserDetailedUsage $parameters)
     {
       return $this->__soapCall('GetSessionUserDetailedUsage', array($parameters));
+    }
+
+    /**
+     * @param DescribeReportTypes $parameters
+     * @return DescribeReportTypesResponse
+     */
+    public function DescribeReportTypes(DescribeReportTypes $parameters)
+    {
+      return $this->__soapCall('DescribeReportTypes', array($parameters));
+    }
+
+    /**
+     * @param DescribeReportType $parameters
+     * @return DescribeReportTypeResponse
+     */
+    public function DescribeReportType(DescribeReportType $parameters)
+    {
+      return $this->__soapCall('DescribeReportType', array($parameters));
+    }
+
+    /**
+     * @param GetRecentReports $parameters
+     * @return GetRecentReportsResponse
+     */
+    public function GetRecentReports(GetRecentReports $parameters)
+    {
+      return $this->__soapCall('GetRecentReports', array($parameters));
+    }
+
+    /**
+     * @param QueueReport $parameters
+     * @return QueueReportResponse
+     */
+    public function QueueReport(QueueReport $parameters)
+    {
+      return $this->__soapCall('QueueReport', array($parameters));
+    }
+
+    /**
+     * @param GetReport $parameters
+     * @return GetReportResponse
+     */
+    public function GetReport(GetReport $parameters)
+    {
+      return $this->__soapCall('GetReport', array($parameters));
     }
 
 }

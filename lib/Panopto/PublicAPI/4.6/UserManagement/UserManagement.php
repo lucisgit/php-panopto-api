@@ -70,6 +70,8 @@ class UserManagement extends \SoapClient
       'GetGroupsByNameResponse' => 'Panopto\\UserManagement\\GetGroupsByNameResponse',
       'GetUsersInGroup' => 'Panopto\\UserManagement\\GetUsersInGroup',
       'GetUsersInGroupResponse' => 'Panopto\\UserManagement\\GetUsersInGroupResponse',
+      'SetUserHasLoggedIn' => 'Panopto\\UserManagement\\SetUserHasLoggedIn',
+      'SetUserHasLoggedInResponse' => 'Panopto\\UserManagement\\SetUserHasLoggedInResponse',
     );
 
     /**
@@ -324,6 +326,15 @@ class UserManagement extends \SoapClient
     public function GetUsersInGroup(GetUsersInGroup $parameters)
     {
       return $this->__soapCall('GetUsersInGroup', array($parameters));
+    }
+
+    /**
+     * @param SetUserHasLoggedIn $parameters
+     * @return SetUserHasLoggedInResponse
+     */
+    public function SetUserHasLoggedIn(SetUserHasLoggedIn $parameters)
+    {
+      return $this->__soapCall('SetUserHasLoggedIn', array($parameters));
     }
 
 }

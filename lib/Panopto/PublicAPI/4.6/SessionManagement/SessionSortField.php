@@ -10,6 +10,7 @@ class SessionSortField
     const Duration = 'Duration';
     const State = 'State';
     const Relevance = 'Relevance';
+    const Order = 'Order';
 
 
 }
