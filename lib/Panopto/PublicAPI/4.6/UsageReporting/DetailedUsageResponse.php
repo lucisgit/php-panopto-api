@@ -6,19 +6,19 @@ class DetailedUsageResponse
 {
 
     /**
-     * @var ArrayOfDetailedUsageResponseItem $PagedResponses
+     * @var ArrayOfDetailedUsageResponseItem|null $PagedResponses
      */
     protected $PagedResponses = null;
 
     /**
-     * @var int $TotalNumberResponses
+     * @var int|null $TotalNumberResponses
      */
     protected $TotalNumberResponses = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -26,17 +26,17 @@ class DetailedUsageResponse
      */
     public function getPagedResponses()
     {
-      return $this->PagedResponses;
+        return $this->PagedResponses;
     }
 
     /**
      * @param ArrayOfDetailedUsageResponseItem $PagedResponses
-     * @return \Panopto\UsageReporting\DetailedUsageResponse
+     * @return DetailedUsageResponse
      */
-    public function setPagedResponses($PagedResponses)
+    public function setPagedResponses($PagedResponses): DetailedUsageResponse
     {
-      $this->PagedResponses = $PagedResponses;
-      return $this;
+        $this->PagedResponses = $PagedResponses;
+        return $this;
     }
 
     /**
@@ -44,17 +44,17 @@ class DetailedUsageResponse
      */
     public function getTotalNumberResponses()
     {
-      return $this->TotalNumberResponses;
+        return $this->TotalNumberResponses;
     }
 
     /**
      * @param int $TotalNumberResponses
-     * @return \Panopto\UsageReporting\DetailedUsageResponse
+     * @return DetailedUsageResponse
      */
-    public function setTotalNumberResponses($TotalNumberResponses)
+    public function setTotalNumberResponses($TotalNumberResponses): DetailedUsageResponse
     {
-      $this->TotalNumberResponses = $TotalNumberResponses;
-      return $this;
+        $this->TotalNumberResponses = $TotalNumberResponses;
+        return $this;
     }
 
 }

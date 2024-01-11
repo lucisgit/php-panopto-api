@@ -6,34 +6,34 @@ class DetailedUsageResponseItem
 {
 
     /**
-     * @var float $SecondsViewed
+     * @var float|null $SecondsViewed
      */
     protected $SecondsViewed = null;
 
     /**
-     * @var guid $SessionId
+     * @var string|null $SessionId
      */
     protected $SessionId = null;
 
     /**
-     * @var float $StartPosition
+     * @var float|null $StartPosition
      */
     protected $StartPosition = null;
 
     /**
-     * @var \DateTime $Time
+     * @var \DateTime|string|null $Time
      */
-    protected $Time = null;
+    protected \DateTime|string|null $Time = null;
 
     /**
-     * @var guid $UserId
+     * @var string|null $UserId
      */
     protected $UserId = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -41,35 +41,35 @@ class DetailedUsageResponseItem
      */
     public function getSecondsViewed()
     {
-      return $this->SecondsViewed;
+        return $this->SecondsViewed;
     }
 
     /**
      * @param float $SecondsViewed
-     * @return \Panopto\UsageReporting\DetailedUsageResponseItem
+     * @return DetailedUsageResponseItem
      */
-    public function setSecondsViewed($SecondsViewed)
+    public function setSecondsViewed($SecondsViewed): DetailedUsageResponseItem
     {
-      $this->SecondsViewed = $SecondsViewed;
-      return $this;
+        $this->SecondsViewed = $SecondsViewed;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->SessionId;
+        return $this->SessionId;
     }
 
     /**
-     * @param guid $SessionId
-     * @return \Panopto\UsageReporting\DetailedUsageResponseItem
+     * @param string $SessionId
+     * @return DetailedUsageResponseItem
      */
-    public function setSessionId($SessionId)
+    public function setSessionId($SessionId): DetailedUsageResponseItem
     {
-      $this->SessionId = $SessionId;
-      return $this;
+        $this->SessionId = $SessionId;
+        return $this;
     }
 
     /**
@@ -77,65 +77,65 @@ class DetailedUsageResponseItem
      */
     public function getStartPosition()
     {
-      return $this->StartPosition;
+        return $this->StartPosition;
     }
 
     /**
      * @param float $StartPosition
-     * @return \Panopto\UsageReporting\DetailedUsageResponseItem
+     * @return DetailedUsageResponseItem
      */
-    public function setStartPosition($StartPosition)
+    public function setStartPosition($StartPosition): DetailedUsageResponseItem
     {
-      $this->StartPosition = $StartPosition;
-      return $this;
+        $this->StartPosition = $StartPosition;
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getTime()
+    public function getTime(): \DateTime|bool|null
     {
-      if ($this->Time == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->Time);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->Time == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->Time);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
-     * @param \DateTime $Time
-     * @return \Panopto\UsageReporting\DetailedUsageResponseItem
+     * @param \DateTime|null $Time
+     * @return DetailedUsageResponseItem
      */
-    public function setTime(\DateTime $Time = null)
+    public function setTime(?\DateTime $Time = null): DetailedUsageResponseItem
     {
-      if ($Time == null) {
-       $this->Time = null;
-      } else {
-        $this->Time = $Time->format(\DateTime::ATOM);
-      }
-      return $this;
+        if ($Time == null) {
+            $this->Time = null;
+        } else {
+            $this->Time = $Time->format(\DateTime::ATOM);
+        }
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getUserId()
     {
-      return $this->UserId;
+        return $this->UserId;
     }
 
     /**
-     * @param guid $UserId
-     * @return \Panopto\UsageReporting\DetailedUsageResponseItem
+     * @param string $UserId
+     * @return DetailedUsageResponseItem
      */
-    public function setUserId($UserId)
+    public function setUserId($UserId): DetailedUsageResponseItem
     {
-      $this->UserId = $UserId;
-      return $this;
+        $this->UserId = $UserId;
+        return $this;
     }
 
 }

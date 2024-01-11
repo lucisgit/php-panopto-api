@@ -8,41 +8,41 @@ class ArrayOfRemoteRecorderDevice implements \ArrayAccess, \Iterator, \Countable
     /**
      * @var RemoteRecorderDevice[] $RemoteRecorderDevice
      */
-    protected $RemoteRecorderDevice = null;
+    protected array $RemoteRecorderDevice = [];
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
-     * @return RemoteRecorderDevice[]
+     * @return RemoteRecorderDevice[]|null
      */
-    public function getRemoteRecorderDevice()
+    public function getRemoteRecorderDevice(): ?array
     {
-      return $this->RemoteRecorderDevice;
+        return $this->RemoteRecorderDevice;
     }
 
     /**
-     * @param RemoteRecorderDevice[] $RemoteRecorderDevice
-     * @return \Panopto\RemoteRecorderManagement\ArrayOfRemoteRecorderDevice
+     * @param RemoteRecorderDevice[]|null $RemoteRecorderDevice
+     * @return ArrayOfRemoteRecorderDevice
      */
-    public function setRemoteRecorderDevice(array $RemoteRecorderDevice = null)
+    public function setRemoteRecorderDevice(?array $RemoteRecorderDevice = null): ArrayOfRemoteRecorderDevice
     {
-      $this->RemoteRecorderDevice = $RemoteRecorderDevice;
-      return $this;
+        $this->RemoteRecorderDevice = $RemoteRecorderDevice;
+        return $this;
     }
 
     /**
      * ArrayAccess implementation
      *
      * @param mixed $offset An offset to check for
-     * @return boolean true on success or false on failure
+     * @return bool True on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
-      return isset($this->RemoteRecorderDevice[$offset]);
+        return isset($this->RemoteRecorderDevice[$offset]);
     }
 
     /**
@@ -51,9 +51,9 @@ class ArrayOfRemoteRecorderDevice implements \ArrayAccess, \Iterator, \Countable
      * @param mixed $offset The offset to retrieve
      * @return RemoteRecorderDevice
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): RemoteRecorderDevice
     {
-      return $this->RemoteRecorderDevice[$offset];
+        return $this->RemoteRecorderDevice[$offset];
     }
 
     /**
@@ -63,13 +63,13 @@ class ArrayOfRemoteRecorderDevice implements \ArrayAccess, \Iterator, \Countable
      * @param RemoteRecorderDevice $value The value to set
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
-      if (!isset($offset)) {
-        $this->RemoteRecorderDevice[] = $value;
-      } else {
-        $this->RemoteRecorderDevice[$offset] = $value;
-      }
+        if (!isset($offset)) {
+            $this->RemoteRecorderDevice[] = $value;
+        } else {
+            $this->RemoteRecorderDevice[$offset] = $value;
+        }
     }
 
     /**
@@ -78,9 +78,9 @@ class ArrayOfRemoteRecorderDevice implements \ArrayAccess, \Iterator, \Countable
      * @param mixed $offset The offset to unset
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
-      unset($this->RemoteRecorderDevice[$offset]);
+        unset($this->RemoteRecorderDevice[$offset]);
     }
 
     /**
@@ -88,9 +88,9 @@ class ArrayOfRemoteRecorderDevice implements \ArrayAccess, \Iterator, \Countable
      *
      * @return RemoteRecorderDevice Return the current element
      */
-    public function current()
+    public function current(): RemoteRecorderDevice
     {
-      return current($this->RemoteRecorderDevice);
+        return current($this->RemoteRecorderDevice);
     }
 
     /**
@@ -99,9 +99,9 @@ class ArrayOfRemoteRecorderDevice implements \ArrayAccess, \Iterator, \Countable
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
-      next($this->RemoteRecorderDevice);
+        next($this->RemoteRecorderDevice);
     }
 
     /**
@@ -109,19 +109,19 @@ class ArrayOfRemoteRecorderDevice implements \ArrayAccess, \Iterator, \Countable
      *
      * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): ?string
     {
-      return key($this->RemoteRecorderDevice);
+        return key($this->RemoteRecorderDevice);
     }
 
     /**
      * Iterator implementation
      *
-     * @return boolean Return the validity of the current position
+     * @return bool Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
-      return $this->key() !== null;
+        return $this->key() !== null;
     }
 
     /**
@@ -130,19 +130,19 @@ class ArrayOfRemoteRecorderDevice implements \ArrayAccess, \Iterator, \Countable
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
-      reset($this->RemoteRecorderDevice);
+        reset($this->RemoteRecorderDevice);
     }
 
     /**
      * Countable implementation
      *
-     * @return RemoteRecorderDevice Return count of elements
+     * @return int Return count of elements
      */
-    public function count()
+    public function count(): int
     {
-      return count($this->RemoteRecorderDevice);
+        return count($this->RemoteRecorderDevice);
     }
 
 }

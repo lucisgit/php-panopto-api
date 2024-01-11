@@ -6,18 +6,18 @@ class IsDropbox
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $folderId
+     * @var string|null $folderId
      */
     protected $folderId = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $folderId
+     * @param string $folderId
      */
     public function __construct($auth, $folderId)
     {
@@ -30,35 +30,35 @@ class IsDropbox
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\IsDropbox
+     * @return IsDropbox
      */
-    public function setAuth($auth)
+    public function setAuth($auth): IsDropbox
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->folderId;
+        return $this->folderId;
     }
 
     /**
-     * @param guid $folderId
-     * @return \Panopto\SessionManagement\IsDropbox
+     * @param string $folderId
+     * @return IsDropbox
      */
-    public function setFolderId($folderId)
+    public function setFolderId($folderId): IsDropbox
     {
-      $this->folderId = $folderId;
-      return $this;
+        $this->folderId = $folderId;
+        return $this;
     }
 
 }

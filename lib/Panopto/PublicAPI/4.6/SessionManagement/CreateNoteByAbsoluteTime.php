@@ -6,33 +6,33 @@ class CreateNoteByAbsoluteTime
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var string $text
+     * @var string|null $text
      */
     protected $text = null;
 
     /**
-     * @var string $channel
+     * @var string|null $channel
      */
     protected $channel = null;
 
     /**
-     * @var \DateTime $timestamp
+     * @var \DateTime|string|null $timestamp
      */
-    protected $timestamp = null;
+    protected \DateTime|string|null $timestamp = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
+     * @param string $sessionId
      * @param string $text
      * @param string $channel
      * @param \DateTime $timestamp
@@ -51,35 +51,35 @@ class CreateNoteByAbsoluteTime
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\CreateNoteByAbsoluteTime
+     * @return CreateNoteByAbsoluteTime
      */
-    public function setAuth($auth)
+    public function setAuth($auth): CreateNoteByAbsoluteTime
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\SessionManagement\CreateNoteByAbsoluteTime
+     * @param string $sessionId
+     * @return CreateNoteByAbsoluteTime
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): CreateNoteByAbsoluteTime
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
@@ -87,17 +87,17 @@ class CreateNoteByAbsoluteTime
      */
     public function getText()
     {
-      return $this->text;
+        return $this->text;
     }
 
     /**
      * @param string $text
-     * @return \Panopto\SessionManagement\CreateNoteByAbsoluteTime
+     * @return CreateNoteByAbsoluteTime
      */
-    public function setText($text)
+    public function setText($text): CreateNoteByAbsoluteTime
     {
-      $this->text = $text;
-      return $this;
+        $this->text = $text;
+        return $this;
     }
 
     /**
@@ -105,43 +105,43 @@ class CreateNoteByAbsoluteTime
      */
     public function getChannel()
     {
-      return $this->channel;
+        return $this->channel;
     }
 
     /**
      * @param string $channel
-     * @return \Panopto\SessionManagement\CreateNoteByAbsoluteTime
+     * @return CreateNoteByAbsoluteTime
      */
-    public function setChannel($channel)
+    public function setChannel($channel): CreateNoteByAbsoluteTime
     {
-      $this->channel = $channel;
-      return $this;
+        $this->channel = $channel;
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getTimestamp()
+    public function getTimestamp(): \DateTime|bool|null
     {
-      if ($this->timestamp == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->timestamp);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->timestamp == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->timestamp);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
      * @param \DateTime $timestamp
-     * @return \Panopto\SessionManagement\CreateNoteByAbsoluteTime
+     * @return CreateNoteByAbsoluteTime
      */
-    public function setTimestamp(\DateTime $timestamp)
+    public function setTimestamp(\DateTime $timestamp): CreateNoteByAbsoluteTime
     {
-      $this->timestamp = $timestamp->format(\DateTime::ATOM);
-      return $this;
+        $this->timestamp = $timestamp->format(\DateTime::ATOM);
+        return $this;
     }
 
 }

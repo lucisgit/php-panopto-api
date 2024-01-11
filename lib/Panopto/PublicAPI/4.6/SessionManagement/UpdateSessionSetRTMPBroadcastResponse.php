@@ -6,7 +6,7 @@ class UpdateSessionSetRTMPBroadcastResponse
 {
 
     /**
-     * @var ArrayOfstring $UpdateSessionSetRTMPBroadcastResult
+     * @var ArrayOfstring|null $UpdateSessionSetRTMPBroadcastResult
      */
     protected $UpdateSessionSetRTMPBroadcastResult = null;
 
@@ -23,17 +23,17 @@ class UpdateSessionSetRTMPBroadcastResponse
      */
     public function getUpdateSessionSetRTMPBroadcastResult()
     {
-      return $this->UpdateSessionSetRTMPBroadcastResult;
+        return $this->UpdateSessionSetRTMPBroadcastResult;
     }
 
     /**
      * @param ArrayOfstring $UpdateSessionSetRTMPBroadcastResult
-     * @return \Panopto\SessionManagement\UpdateSessionSetRTMPBroadcastResponse
+     * @return UpdateSessionSetRTMPBroadcastResponse
      */
-    public function setUpdateSessionSetRTMPBroadcastResult($UpdateSessionSetRTMPBroadcastResult)
+    public function setUpdateSessionSetRTMPBroadcastResult($UpdateSessionSetRTMPBroadcastResult): UpdateSessionSetRTMPBroadcastResponse
     {
-      $this->UpdateSessionSetRTMPBroadcastResult = $UpdateSessionSetRTMPBroadcastResult;
-      return $this;
+        $this->UpdateSessionSetRTMPBroadcastResult = $UpdateSessionSetRTMPBroadcastResult;
+        return $this;
     }
 
 }

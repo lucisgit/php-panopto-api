@@ -6,12 +6,12 @@ class DeleteFolders
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var ArrayOfguid $folderIds
+     * @var ArrayOfguid|null $folderIds
      */
     protected $folderIds = null;
 
@@ -30,17 +30,17 @@ class DeleteFolders
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\DeleteFolders
+     * @return DeleteFolders
      */
-    public function setAuth($auth)
+    public function setAuth($auth): DeleteFolders
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -48,17 +48,17 @@ class DeleteFolders
      */
     public function getFolderIds()
     {
-      return $this->folderIds;
+        return $this->folderIds;
     }
 
     /**
      * @param ArrayOfguid $folderIds
-     * @return \Panopto\SessionManagement\DeleteFolders
+     * @return DeleteFolders
      */
-    public function setFolderIds($folderIds)
+    public function setFolderIds($folderIds): DeleteFolders
     {
-      $this->folderIds = $folderIds;
-      return $this;
+        $this->folderIds = $folderIds;
+        return $this;
     }
 
 }

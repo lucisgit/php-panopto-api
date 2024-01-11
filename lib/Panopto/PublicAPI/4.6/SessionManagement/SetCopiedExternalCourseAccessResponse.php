@@ -6,7 +6,7 @@ class SetCopiedExternalCourseAccessResponse
 {
 
     /**
-     * @var ArrayOfFolder $SetCopiedExternalCourseAccessResult
+     * @var ArrayOfFolder|null $SetCopiedExternalCourseAccessResult
      */
     protected $SetCopiedExternalCourseAccessResult = null;
 
@@ -23,17 +23,17 @@ class SetCopiedExternalCourseAccessResponse
      */
     public function getSetCopiedExternalCourseAccessResult()
     {
-      return $this->SetCopiedExternalCourseAccessResult;
+        return $this->SetCopiedExternalCourseAccessResult;
     }
 
     /**
      * @param ArrayOfFolder $SetCopiedExternalCourseAccessResult
-     * @return \Panopto\SessionManagement\SetCopiedExternalCourseAccessResponse
+     * @return SetCopiedExternalCourseAccessResponse
      */
-    public function setSetCopiedExternalCourseAccessResult($SetCopiedExternalCourseAccessResult)
+    public function setSetCopiedExternalCourseAccessResult($SetCopiedExternalCourseAccessResult): SetCopiedExternalCourseAccessResponse
     {
-      $this->SetCopiedExternalCourseAccessResult = $SetCopiedExternalCourseAccessResult;
-      return $this;
+        $this->SetCopiedExternalCourseAccessResult = $SetCopiedExternalCourseAccessResult;
+        return $this;
     }
 
 }

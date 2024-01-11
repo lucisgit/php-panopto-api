@@ -6,24 +6,24 @@ class UpdateSessionsAvailabilityStartSettings
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var ArrayOfguid $sessionIds
+     * @var ArrayOfguid|null $sessionIds
      */
     protected $sessionIds = null;
 
     /**
-     * @var SessionStartSettingType $settingType
+     * @var SessionStartSettingType|null $settingType
      */
     protected $settingType = null;
 
     /**
-     * @var \DateTime $startDate
+     * @var \DateTime|string|null $startDate
      */
-    protected $startDate = null;
+    protected \DateTime|string|null $startDate = null;
 
     /**
      * @param AuthenticationInfo $auth
@@ -44,17 +44,17 @@ class UpdateSessionsAvailabilityStartSettings
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\UpdateSessionsAvailabilityStartSettings
+     * @return UpdateSessionsAvailabilityStartSettings
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateSessionsAvailabilityStartSettings
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -62,17 +62,17 @@ class UpdateSessionsAvailabilityStartSettings
      */
     public function getSessionIds()
     {
-      return $this->sessionIds;
+        return $this->sessionIds;
     }
 
     /**
      * @param ArrayOfguid $sessionIds
-     * @return \Panopto\SessionManagement\UpdateSessionsAvailabilityStartSettings
+     * @return UpdateSessionsAvailabilityStartSettings
      */
-    public function setSessionIds($sessionIds)
+    public function setSessionIds($sessionIds): UpdateSessionsAvailabilityStartSettings
     {
-      $this->sessionIds = $sessionIds;
-      return $this;
+        $this->sessionIds = $sessionIds;
+        return $this;
     }
 
     /**
@@ -80,43 +80,43 @@ class UpdateSessionsAvailabilityStartSettings
      */
     public function getSettingType()
     {
-      return $this->settingType;
+        return $this->settingType;
     }
 
     /**
      * @param SessionStartSettingType $settingType
-     * @return \Panopto\SessionManagement\UpdateSessionsAvailabilityStartSettings
+     * @return UpdateSessionsAvailabilityStartSettings
      */
-    public function setSettingType($settingType)
+    public function setSettingType($settingType): UpdateSessionsAvailabilityStartSettings
     {
-      $this->settingType = $settingType;
-      return $this;
+        $this->settingType = $settingType;
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getStartDate()
+    public function getStartDate(): \DateTime|bool|null
     {
-      if ($this->startDate == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->startDate);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->startDate == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->startDate);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
      * @param \DateTime $startDate
-     * @return \Panopto\SessionManagement\UpdateSessionsAvailabilityStartSettings
+     * @return UpdateSessionsAvailabilityStartSettings
      */
-    public function setStartDate(\DateTime $startDate)
+    public function setStartDate(\DateTime $startDate): UpdateSessionsAvailabilityStartSettings
     {
-      $this->startDate = $startDate->format(\DateTime::ATOM);
-      return $this;
+        $this->startDate = $startDate->format(\DateTime::ATOM);
+        return $this;
     }
 
 }

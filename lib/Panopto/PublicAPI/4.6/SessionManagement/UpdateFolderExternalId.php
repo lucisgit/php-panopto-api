@@ -6,23 +6,23 @@ class UpdateFolderExternalId
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $folderId
+     * @var string|null $folderId
      */
     protected $folderId = null;
 
     /**
-     * @var string $externalId
+     * @var string|null $externalId
      */
     protected $externalId = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $folderId
+     * @param string $folderId
      * @param string $externalId
      */
     public function __construct($auth, $folderId, $externalId)
@@ -37,35 +37,35 @@ class UpdateFolderExternalId
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\UpdateFolderExternalId
+     * @return UpdateFolderExternalId
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateFolderExternalId
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->folderId;
+        return $this->folderId;
     }
 
     /**
-     * @param guid $folderId
-     * @return \Panopto\SessionManagement\UpdateFolderExternalId
+     * @param string $folderId
+     * @return UpdateFolderExternalId
      */
-    public function setFolderId($folderId)
+    public function setFolderId($folderId): UpdateFolderExternalId
     {
-      $this->folderId = $folderId;
-      return $this;
+        $this->folderId = $folderId;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class UpdateFolderExternalId
      */
     public function getExternalId()
     {
-      return $this->externalId;
+        return $this->externalId;
     }
 
     /**
      * @param string $externalId
-     * @return \Panopto\SessionManagement\UpdateFolderExternalId
+     * @return UpdateFolderExternalId
      */
-    public function setExternalId($externalId)
+    public function setExternalId($externalId): UpdateFolderExternalId
     {
-      $this->externalId = $externalId;
-      return $this;
+        $this->externalId = $externalId;
+        return $this;
     }
 
 }

@@ -6,17 +6,17 @@ class ProvisionExternalCourse
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var string $name
+     * @var string|null $name
      */
     protected $name = null;
 
     /**
-     * @var string $externalId
+     * @var string|null $externalId
      */
     protected $externalId = null;
 
@@ -37,17 +37,17 @@ class ProvisionExternalCourse
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\ProvisionExternalCourse
+     * @return ProvisionExternalCourse
      */
-    public function setAuth($auth)
+    public function setAuth($auth): ProvisionExternalCourse
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -55,17 +55,17 @@ class ProvisionExternalCourse
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
      * @param string $name
-     * @return \Panopto\SessionManagement\ProvisionExternalCourse
+     * @return ProvisionExternalCourse
      */
-    public function setName($name)
+    public function setName($name): ProvisionExternalCourse
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class ProvisionExternalCourse
      */
     public function getExternalId()
     {
-      return $this->externalId;
+        return $this->externalId;
     }
 
     /**
      * @param string $externalId
-     * @return \Panopto\SessionManagement\ProvisionExternalCourse
+     * @return ProvisionExternalCourse
      */
-    public function setExternalId($externalId)
+    public function setExternalId($externalId): ProvisionExternalCourse
     {
-      $this->externalId = $externalId;
-      return $this;
+        $this->externalId = $externalId;
+        return $this;
     }
 
 }

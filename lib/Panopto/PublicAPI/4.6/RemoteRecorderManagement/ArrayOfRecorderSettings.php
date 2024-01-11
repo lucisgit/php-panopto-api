@@ -8,41 +8,41 @@ class ArrayOfRecorderSettings implements \ArrayAccess, \Iterator, \Countable
     /**
      * @var RecorderSettings[] $RecorderSettings
      */
-    protected $RecorderSettings = null;
+    protected array $RecorderSettings = [];
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
-     * @return RecorderSettings[]
+     * @return RecorderSettings[]|null
      */
-    public function getRecorderSettings()
+    public function getRecorderSettings(): ?array
     {
-      return $this->RecorderSettings;
+        return $this->RecorderSettings;
     }
 
     /**
-     * @param RecorderSettings[] $RecorderSettings
-     * @return \Panopto\RemoteRecorderManagement\ArrayOfRecorderSettings
+     * @param RecorderSettings[]|null $RecorderSettings
+     * @return ArrayOfRecorderSettings
      */
-    public function setRecorderSettings(array $RecorderSettings = null)
+    public function setRecorderSettings(?array $RecorderSettings = null): ArrayOfRecorderSettings
     {
-      $this->RecorderSettings = $RecorderSettings;
-      return $this;
+        $this->RecorderSettings = $RecorderSettings;
+        return $this;
     }
 
     /**
      * ArrayAccess implementation
      *
      * @param mixed $offset An offset to check for
-     * @return boolean true on success or false on failure
+     * @return bool True on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
-      return isset($this->RecorderSettings[$offset]);
+        return isset($this->RecorderSettings[$offset]);
     }
 
     /**
@@ -51,9 +51,9 @@ class ArrayOfRecorderSettings implements \ArrayAccess, \Iterator, \Countable
      * @param mixed $offset The offset to retrieve
      * @return RecorderSettings
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): RecorderSettings
     {
-      return $this->RecorderSettings[$offset];
+        return $this->RecorderSettings[$offset];
     }
 
     /**
@@ -63,13 +63,13 @@ class ArrayOfRecorderSettings implements \ArrayAccess, \Iterator, \Countable
      * @param RecorderSettings $value The value to set
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
-      if (!isset($offset)) {
-        $this->RecorderSettings[] = $value;
-      } else {
-        $this->RecorderSettings[$offset] = $value;
-      }
+        if (!isset($offset)) {
+            $this->RecorderSettings[] = $value;
+        } else {
+            $this->RecorderSettings[$offset] = $value;
+        }
     }
 
     /**
@@ -78,9 +78,9 @@ class ArrayOfRecorderSettings implements \ArrayAccess, \Iterator, \Countable
      * @param mixed $offset The offset to unset
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
-      unset($this->RecorderSettings[$offset]);
+        unset($this->RecorderSettings[$offset]);
     }
 
     /**
@@ -88,9 +88,9 @@ class ArrayOfRecorderSettings implements \ArrayAccess, \Iterator, \Countable
      *
      * @return RecorderSettings Return the current element
      */
-    public function current()
+    public function current(): RecorderSettings
     {
-      return current($this->RecorderSettings);
+        return current($this->RecorderSettings);
     }
 
     /**
@@ -99,9 +99,9 @@ class ArrayOfRecorderSettings implements \ArrayAccess, \Iterator, \Countable
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
-      next($this->RecorderSettings);
+        next($this->RecorderSettings);
     }
 
     /**
@@ -109,19 +109,19 @@ class ArrayOfRecorderSettings implements \ArrayAccess, \Iterator, \Countable
      *
      * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): ?string
     {
-      return key($this->RecorderSettings);
+        return key($this->RecorderSettings);
     }
 
     /**
      * Iterator implementation
      *
-     * @return boolean Return the validity of the current position
+     * @return bool Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
-      return $this->key() !== null;
+        return $this->key() !== null;
     }
 
     /**
@@ -130,19 +130,19 @@ class ArrayOfRecorderSettings implements \ArrayAccess, \Iterator, \Countable
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
-      reset($this->RecorderSettings);
+        reset($this->RecorderSettings);
     }
 
     /**
      * Countable implementation
      *
-     * @return RecorderSettings Return count of elements
+     * @return int Return count of elements
      */
-    public function count()
+    public function count(): int
     {
-      return count($this->RecorderSettings);
+        return count($this->RecorderSettings);
     }
 
 }

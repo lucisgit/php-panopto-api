@@ -6,23 +6,23 @@ class UpdateUserBio
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $userId
+     * @var string|null $userId
      */
     protected $userId = null;
 
     /**
-     * @var string $bio
+     * @var string|null $bio
      */
     protected $bio = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $userId
+     * @param string $userId
      * @param string $bio
      */
     public function __construct($auth, $userId, $bio)
@@ -37,35 +37,35 @@ class UpdateUserBio
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UserManagement\UpdateUserBio
+     * @return UpdateUserBio
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateUserBio
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getUserId()
     {
-      return $this->userId;
+        return $this->userId;
     }
 
     /**
-     * @param guid $userId
-     * @return \Panopto\UserManagement\UpdateUserBio
+     * @param string $userId
+     * @return UpdateUserBio
      */
-    public function setUserId($userId)
+    public function setUserId($userId): UpdateUserBio
     {
-      $this->userId = $userId;
-      return $this;
+        $this->userId = $userId;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class UpdateUserBio
      */
     public function getBio()
     {
-      return $this->bio;
+        return $this->bio;
     }
 
     /**
      * @param string $bio
-     * @return \Panopto\UserManagement\UpdateUserBio
+     * @return UpdateUserBio
      */
-    public function setBio($bio)
+    public function setBio($bio): UpdateUserBio
     {
-      $this->bio = $bio;
-      return $this;
+        $this->bio = $bio;
+        return $this;
     }
 
 }

@@ -6,7 +6,7 @@ class GetSessionSummaryUsageResponse
 {
 
     /**
-     * @var ArrayOfSummaryUsageResponseItem $GetSessionSummaryUsageResult
+     * @var ArrayOfSummaryUsageResponseItem|null $GetSessionSummaryUsageResult
      */
     protected $GetSessionSummaryUsageResult = null;
 
@@ -23,17 +23,17 @@ class GetSessionSummaryUsageResponse
      */
     public function getGetSessionSummaryUsageResult()
     {
-      return $this->GetSessionSummaryUsageResult;
+        return $this->GetSessionSummaryUsageResult;
     }
 
     /**
      * @param ArrayOfSummaryUsageResponseItem $GetSessionSummaryUsageResult
-     * @return \Panopto\UsageReporting\GetSessionSummaryUsageResponse
+     * @return GetSessionSummaryUsageResponse
      */
-    public function setGetSessionSummaryUsageResult($GetSessionSummaryUsageResult)
+    public function setGetSessionSummaryUsageResult($GetSessionSummaryUsageResult): GetSessionSummaryUsageResponse
     {
-      $this->GetSessionSummaryUsageResult = $GetSessionSummaryUsageResult;
-      return $this;
+        $this->GetSessionSummaryUsageResult = $GetSessionSummaryUsageResult;
+        return $this;
     }
 
 }

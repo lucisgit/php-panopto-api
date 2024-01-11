@@ -8,7 +8,7 @@ class AccessManagement extends \SoapClient
     /**
      * @var array $classmap The defined classes
      */
-    private static $classmap = array (
+    private static array $classmap = array (
       'ArrayOfguid' => 'Panopto\\AccessManagement\\ArrayOfguid',
       'AuthenticationInfo' => 'Panopto\\AccessManagement\\AuthenticationInfo',
       'UserAccessDetails' => 'Panopto\\AccessManagement\\UserAccessDetails',
@@ -86,7 +86,7 @@ class AccessManagement extends \SoapClient
      * @param GetUserAccessDetails $parameters
      * @return GetUserAccessDetailsResponse
      */
-    public function GetUserAccessDetails(GetUserAccessDetails $parameters)
+    public function GetUserAccessDetails(GetUserAccessDetails $parameters): GetUserAccessDetailsResponse
     {
       return $this->__soapCall('GetUserAccessDetails', array($parameters));
     }
@@ -95,7 +95,7 @@ class AccessManagement extends \SoapClient
      * @param GetSelfUserAccessDetails $parameters
      * @return GetSelfUserAccessDetailsResponse
      */
-    public function GetSelfUserAccessDetails(GetSelfUserAccessDetails $parameters)
+    public function GetSelfUserAccessDetails(GetSelfUserAccessDetails $parameters): GetSelfUserAccessDetailsResponse
     {
       return $this->__soapCall('GetSelfUserAccessDetails', array($parameters));
     }
@@ -104,7 +104,7 @@ class AccessManagement extends \SoapClient
      * @param GetSessionAccessDetails $parameters
      * @return GetSessionAccessDetailsResponse
      */
-    public function GetSessionAccessDetails(GetSessionAccessDetails $parameters)
+    public function GetSessionAccessDetails(GetSessionAccessDetails $parameters): GetSessionAccessDetailsResponse
     {
       return $this->__soapCall('GetSessionAccessDetails', array($parameters));
     }
@@ -113,7 +113,7 @@ class AccessManagement extends \SoapClient
      * @param GetFolderAccessDetails $parameters
      * @return GetFolderAccessDetailsResponse
      */
-    public function GetFolderAccessDetails(GetFolderAccessDetails $parameters)
+    public function GetFolderAccessDetails(GetFolderAccessDetails $parameters): GetFolderAccessDetailsResponse
     {
       return $this->__soapCall('GetFolderAccessDetails', array($parameters));
     }
@@ -122,7 +122,7 @@ class AccessManagement extends \SoapClient
      * @param GetGroupAccessDetails $parameters
      * @return GetGroupAccessDetailsResponse
      */
-    public function GetGroupAccessDetails(GetGroupAccessDetails $parameters)
+    public function GetGroupAccessDetails(GetGroupAccessDetails $parameters): GetGroupAccessDetailsResponse
     {
       return $this->__soapCall('GetGroupAccessDetails', array($parameters));
     }
@@ -131,7 +131,7 @@ class AccessManagement extends \SoapClient
      * @param GrantUsersAccessToFolder $parameters
      * @return GrantUsersAccessToFolderResponse
      */
-    public function GrantUsersAccessToFolder(GrantUsersAccessToFolder $parameters)
+    public function GrantUsersAccessToFolder(GrantUsersAccessToFolder $parameters): GrantUsersAccessToFolderResponse
     {
       return $this->__soapCall('GrantUsersAccessToFolder', array($parameters));
     }
@@ -140,7 +140,7 @@ class AccessManagement extends \SoapClient
      * @param GrantUsersViewerAccessToSession $parameters
      * @return GrantUsersViewerAccessToSessionResponse
      */
-    public function GrantUsersViewerAccessToSession(GrantUsersViewerAccessToSession $parameters)
+    public function GrantUsersViewerAccessToSession(GrantUsersViewerAccessToSession $parameters): GrantUsersViewerAccessToSessionResponse
     {
       return $this->__soapCall('GrantUsersViewerAccessToSession', array($parameters));
     }
@@ -149,7 +149,7 @@ class AccessManagement extends \SoapClient
      * @param GrantGroupAccessToFolder $parameters
      * @return GrantGroupAccessToFolderResponse
      */
-    public function GrantGroupAccessToFolder(GrantGroupAccessToFolder $parameters)
+    public function GrantGroupAccessToFolder(GrantGroupAccessToFolder $parameters): GrantGroupAccessToFolderResponse
     {
       return $this->__soapCall('GrantGroupAccessToFolder', array($parameters));
     }
@@ -158,7 +158,7 @@ class AccessManagement extends \SoapClient
      * @param GrantGroupViewerAccessToSession $parameters
      * @return GrantGroupViewerAccessToSessionResponse
      */
-    public function GrantGroupViewerAccessToSession(GrantGroupViewerAccessToSession $parameters)
+    public function GrantGroupViewerAccessToSession(GrantGroupViewerAccessToSession $parameters): GrantGroupViewerAccessToSessionResponse
     {
       return $this->__soapCall('GrantGroupViewerAccessToSession', array($parameters));
     }
@@ -167,7 +167,7 @@ class AccessManagement extends \SoapClient
      * @param GrantAllAuthenticatedUsersGroupAccessToFolder $parameters
      * @return GrantAllAuthenticatedUsersGroupAccessToFolderResponse
      */
-    public function GrantAllAuthenticatedUsersGroupAccessToFolder(GrantAllAuthenticatedUsersGroupAccessToFolder $parameters)
+    public function GrantAllAuthenticatedUsersGroupAccessToFolder(GrantAllAuthenticatedUsersGroupAccessToFolder $parameters): GrantAllAuthenticatedUsersGroupAccessToFolderResponse
     {
       return $this->__soapCall('GrantAllAuthenticatedUsersGroupAccessToFolder', array($parameters));
     }
@@ -176,7 +176,7 @@ class AccessManagement extends \SoapClient
      * @param GrantAllAuthenticatedUsersGroupAccessToSession $parameters
      * @return GrantAllAuthenticatedUsersGroupAccessToSessionResponse
      */
-    public function GrantAllAuthenticatedUsersGroupAccessToSession(GrantAllAuthenticatedUsersGroupAccessToSession $parameters)
+    public function GrantAllAuthenticatedUsersGroupAccessToSession(GrantAllAuthenticatedUsersGroupAccessToSession $parameters): GrantAllAuthenticatedUsersGroupAccessToSessionResponse
     {
       return $this->__soapCall('GrantAllAuthenticatedUsersGroupAccessToSession', array($parameters));
     }
@@ -185,7 +185,7 @@ class AccessManagement extends \SoapClient
      * @param GrantPublicGroupAccessToFolder $parameters
      * @return GrantPublicGroupAccessToFolderResponse
      */
-    public function GrantPublicGroupAccessToFolder(GrantPublicGroupAccessToFolder $parameters)
+    public function GrantPublicGroupAccessToFolder(GrantPublicGroupAccessToFolder $parameters): GrantPublicGroupAccessToFolderResponse
     {
       return $this->__soapCall('GrantPublicGroupAccessToFolder', array($parameters));
     }
@@ -194,7 +194,7 @@ class AccessManagement extends \SoapClient
      * @param GrantPublicGroupAccessToSession $parameters
      * @return GrantPublicGroupAccessToSessionResponse
      */
-    public function GrantPublicGroupAccessToSession(GrantPublicGroupAccessToSession $parameters)
+    public function GrantPublicGroupAccessToSession(GrantPublicGroupAccessToSession $parameters): GrantPublicGroupAccessToSessionResponse
     {
       return $this->__soapCall('GrantPublicGroupAccessToSession', array($parameters));
     }
@@ -203,7 +203,7 @@ class AccessManagement extends \SoapClient
      * @param RevokeAllImplicitGroupAccessToFolder $parameters
      * @return RevokeAllImplicitGroupAccessToFolderResponse
      */
-    public function RevokeAllImplicitGroupAccessToFolder(RevokeAllImplicitGroupAccessToFolder $parameters)
+    public function RevokeAllImplicitGroupAccessToFolder(RevokeAllImplicitGroupAccessToFolder $parameters): RevokeAllImplicitGroupAccessToFolderResponse
     {
       return $this->__soapCall('RevokeAllImplicitGroupAccessToFolder', array($parameters));
     }
@@ -212,7 +212,7 @@ class AccessManagement extends \SoapClient
      * @param RevokeAllImplicitGroupAccessToSession $parameters
      * @return RevokeAllImplicitGroupAccessToSessionResponse
      */
-    public function RevokeAllImplicitGroupAccessToSession(RevokeAllImplicitGroupAccessToSession $parameters)
+    public function RevokeAllImplicitGroupAccessToSession(RevokeAllImplicitGroupAccessToSession $parameters): RevokeAllImplicitGroupAccessToSessionResponse
     {
       return $this->__soapCall('RevokeAllImplicitGroupAccessToSession', array($parameters));
     }
@@ -221,7 +221,7 @@ class AccessManagement extends \SoapClient
      * @param UpdateFolderIsPublic $parameters
      * @return UpdateFolderIsPublicResponse
      */
-    public function UpdateFolderIsPublic(UpdateFolderIsPublic $parameters)
+    public function UpdateFolderIsPublic(UpdateFolderIsPublic $parameters): UpdateFolderIsPublicResponse
     {
       return $this->__soapCall('UpdateFolderIsPublic', array($parameters));
     }
@@ -230,7 +230,7 @@ class AccessManagement extends \SoapClient
      * @param UpdateSessionIsPublic $parameters
      * @return UpdateSessionIsPublicResponse
      */
-    public function UpdateSessionIsPublic(UpdateSessionIsPublic $parameters)
+    public function UpdateSessionIsPublic(UpdateSessionIsPublic $parameters): UpdateSessionIsPublicResponse
     {
       return $this->__soapCall('UpdateSessionIsPublic', array($parameters));
     }
@@ -239,7 +239,7 @@ class AccessManagement extends \SoapClient
      * @param UpdateSessionInheritViewerAccess $parameters
      * @return UpdateSessionInheritViewerAccessResponse
      */
-    public function UpdateSessionInheritViewerAccess(UpdateSessionInheritViewerAccess $parameters)
+    public function UpdateSessionInheritViewerAccess(UpdateSessionInheritViewerAccess $parameters): UpdateSessionInheritViewerAccessResponse
     {
       return $this->__soapCall('UpdateSessionInheritViewerAccess', array($parameters));
     }
@@ -248,7 +248,7 @@ class AccessManagement extends \SoapClient
      * @param RevokeUsersAccessFromFolder $parameters
      * @return RevokeUsersAccessFromFolderResponse
      */
-    public function RevokeUsersAccessFromFolder(RevokeUsersAccessFromFolder $parameters)
+    public function RevokeUsersAccessFromFolder(RevokeUsersAccessFromFolder $parameters): RevokeUsersAccessFromFolderResponse
     {
       return $this->__soapCall('RevokeUsersAccessFromFolder', array($parameters));
     }
@@ -257,7 +257,7 @@ class AccessManagement extends \SoapClient
      * @param RevokeUsersViewerAccessFromSession $parameters
      * @return RevokeUsersViewerAccessFromSessionResponse
      */
-    public function RevokeUsersViewerAccessFromSession(RevokeUsersViewerAccessFromSession $parameters)
+    public function RevokeUsersViewerAccessFromSession(RevokeUsersViewerAccessFromSession $parameters): RevokeUsersViewerAccessFromSessionResponse
     {
       return $this->__soapCall('RevokeUsersViewerAccessFromSession', array($parameters));
     }
@@ -266,7 +266,7 @@ class AccessManagement extends \SoapClient
      * @param RevokeGroupAccessFromFolder $parameters
      * @return RevokeGroupAccessFromFolderResponse
      */
-    public function RevokeGroupAccessFromFolder(RevokeGroupAccessFromFolder $parameters)
+    public function RevokeGroupAccessFromFolder(RevokeGroupAccessFromFolder $parameters): RevokeGroupAccessFromFolderResponse
     {
       return $this->__soapCall('RevokeGroupAccessFromFolder', array($parameters));
     }
@@ -275,7 +275,7 @@ class AccessManagement extends \SoapClient
      * @param RevokeGroupViewerAccessFromSession $parameters
      * @return RevokeGroupViewerAccessFromSessionResponse
      */
-    public function RevokeGroupViewerAccessFromSession(RevokeGroupViewerAccessFromSession $parameters)
+    public function RevokeGroupViewerAccessFromSession(RevokeGroupViewerAccessFromSession $parameters): RevokeGroupViewerAccessFromSessionResponse
     {
       return $this->__soapCall('RevokeGroupViewerAccessFromSession', array($parameters));
     }

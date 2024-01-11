@@ -6,18 +6,18 @@ class GetUsersInGroup
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $groupId
+     * @var string|null $groupId
      */
     protected $groupId = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $groupId
+     * @param string $groupId
      */
     public function __construct($auth, $groupId)
     {
@@ -30,35 +30,35 @@ class GetUsersInGroup
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UserManagement\GetUsersInGroup
+     * @return GetUsersInGroup
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetUsersInGroup
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getGroupId()
     {
-      return $this->groupId;
+        return $this->groupId;
     }
 
     /**
-     * @param guid $groupId
-     * @return \Panopto\UserManagement\GetUsersInGroup
+     * @param string $groupId
+     * @return GetUsersInGroup
      */
-    public function setGroupId($groupId)
+    public function setGroupId($groupId): GetUsersInGroup
     {
-      $this->groupId = $groupId;
-      return $this;
+        $this->groupId = $groupId;
+        return $this;
     }
 
 }

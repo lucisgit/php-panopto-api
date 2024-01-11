@@ -6,12 +6,12 @@ class GetFoldersAvailabilitySettings
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var ArrayOfguid $folderIds
+     * @var ArrayOfguid|null $folderIds
      */
     protected $folderIds = null;
 
@@ -30,17 +30,17 @@ class GetFoldersAvailabilitySettings
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\GetFoldersAvailabilitySettings
+     * @return GetFoldersAvailabilitySettings
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetFoldersAvailabilitySettings
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -48,17 +48,17 @@ class GetFoldersAvailabilitySettings
      */
     public function getFolderIds()
     {
-      return $this->folderIds;
+        return $this->folderIds;
     }
 
     /**
      * @param ArrayOfguid $folderIds
-     * @return \Panopto\SessionManagement\GetFoldersAvailabilitySettings
+     * @return GetFoldersAvailabilitySettings
      */
-    public function setFolderIds($folderIds)
+    public function setFolderIds($folderIds): GetFoldersAvailabilitySettings
     {
-      $this->folderIds = $folderIds;
-      return $this;
+        $this->folderIds = $folderIds;
+        return $this;
     }
 
 }

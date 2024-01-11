@@ -6,29 +6,29 @@ class SummaryUsageResponseItem
 {
 
     /**
-     * @var float $MinutesViewed
+     * @var float|null $MinutesViewed
      */
     protected $MinutesViewed = null;
 
     /**
-     * @var \DateTime $Time
+     * @var \DateTime|string|null $Time
      */
-    protected $Time = null;
+    protected \DateTime|string|null $Time = null;
 
     /**
-     * @var int $UniqueUsers
+     * @var int|null $UniqueUsers
      */
     protected $UniqueUsers = null;
 
     /**
-     * @var int $Views
+     * @var int|null $Views
      */
     protected $Views = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -36,47 +36,47 @@ class SummaryUsageResponseItem
      */
     public function getMinutesViewed()
     {
-      return $this->MinutesViewed;
+        return $this->MinutesViewed;
     }
 
     /**
      * @param float $MinutesViewed
-     * @return \Panopto\UsageReporting\SummaryUsageResponseItem
+     * @return SummaryUsageResponseItem
      */
-    public function setMinutesViewed($MinutesViewed)
+    public function setMinutesViewed($MinutesViewed): SummaryUsageResponseItem
     {
-      $this->MinutesViewed = $MinutesViewed;
-      return $this;
+        $this->MinutesViewed = $MinutesViewed;
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getTime()
+    public function getTime(): \DateTime|bool|null
     {
-      if ($this->Time == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->Time);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->Time == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->Time);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
-     * @param \DateTime $Time
-     * @return \Panopto\UsageReporting\SummaryUsageResponseItem
+     * @param \DateTime|null $Time
+     * @return SummaryUsageResponseItem
      */
-    public function setTime(\DateTime $Time = null)
+    public function setTime(?\DateTime $Time = null): SummaryUsageResponseItem
     {
-      if ($Time == null) {
-       $this->Time = null;
-      } else {
-        $this->Time = $Time->format(\DateTime::ATOM);
-      }
-      return $this;
+        if ($Time == null) {
+            $this->Time = null;
+        } else {
+            $this->Time = $Time->format(\DateTime::ATOM);
+        }
+        return $this;
     }
 
     /**
@@ -84,17 +84,17 @@ class SummaryUsageResponseItem
      */
     public function getUniqueUsers()
     {
-      return $this->UniqueUsers;
+        return $this->UniqueUsers;
     }
 
     /**
      * @param int $UniqueUsers
-     * @return \Panopto\UsageReporting\SummaryUsageResponseItem
+     * @return SummaryUsageResponseItem
      */
-    public function setUniqueUsers($UniqueUsers)
+    public function setUniqueUsers($UniqueUsers): SummaryUsageResponseItem
     {
-      $this->UniqueUsers = $UniqueUsers;
-      return $this;
+        $this->UniqueUsers = $UniqueUsers;
+        return $this;
     }
 
     /**
@@ -102,17 +102,17 @@ class SummaryUsageResponseItem
      */
     public function getViews()
     {
-      return $this->Views;
+        return $this->Views;
     }
 
     /**
      * @param int $Views
-     * @return \Panopto\UsageReporting\SummaryUsageResponseItem
+     * @return SummaryUsageResponseItem
      */
-    public function setViews($Views)
+    public function setViews($Views): SummaryUsageResponseItem
     {
-      $this->Views = $Views;
-      return $this;
+        $this->Views = $Views;
+        return $this;
     }
 
 }

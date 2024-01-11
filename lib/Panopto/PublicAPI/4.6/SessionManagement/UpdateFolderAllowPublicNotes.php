@@ -6,24 +6,24 @@ class UpdateFolderAllowPublicNotes
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $folderId
+     * @var string|null $folderId
      */
     protected $folderId = null;
 
     /**
-     * @var boolean $allowPublicNotes
+     * @var bool|null $allowPublicNotes
      */
     protected $allowPublicNotes = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $folderId
-     * @param boolean $allowPublicNotes
+     * @param string $folderId
+     * @param bool $allowPublicNotes
      */
     public function __construct($auth, $folderId, $allowPublicNotes)
     {
@@ -37,53 +37,53 @@ class UpdateFolderAllowPublicNotes
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\UpdateFolderAllowPublicNotes
+     * @return UpdateFolderAllowPublicNotes
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateFolderAllowPublicNotes
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->folderId;
+        return $this->folderId;
     }
 
     /**
-     * @param guid $folderId
-     * @return \Panopto\SessionManagement\UpdateFolderAllowPublicNotes
+     * @param string $folderId
+     * @return UpdateFolderAllowPublicNotes
      */
-    public function setFolderId($folderId)
+    public function setFolderId($folderId): UpdateFolderAllowPublicNotes
     {
-      $this->folderId = $folderId;
-      return $this;
+        $this->folderId = $folderId;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getAllowPublicNotes()
     {
-      return $this->allowPublicNotes;
+        return $this->allowPublicNotes;
     }
 
     /**
-     * @param boolean $allowPublicNotes
-     * @return \Panopto\SessionManagement\UpdateFolderAllowPublicNotes
+     * @param bool $allowPublicNotes
+     * @return UpdateFolderAllowPublicNotes
      */
-    public function setAllowPublicNotes($allowPublicNotes)
+    public function setAllowPublicNotes($allowPublicNotes): UpdateFolderAllowPublicNotes
     {
-      $this->allowPublicNotes = $allowPublicNotes;
-      return $this;
+        $this->allowPublicNotes = $allowPublicNotes;
+        return $this;
     }
 
 }

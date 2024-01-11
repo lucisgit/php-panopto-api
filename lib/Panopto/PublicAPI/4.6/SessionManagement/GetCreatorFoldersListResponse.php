@@ -6,7 +6,7 @@ class GetCreatorFoldersListResponse
 {
 
     /**
-     * @var ListFoldersResponse $GetCreatorFoldersListResult
+     * @var ListFoldersResponse|null $GetCreatorFoldersListResult
      */
     protected $GetCreatorFoldersListResult = null;
 
@@ -23,17 +23,17 @@ class GetCreatorFoldersListResponse
      */
     public function getGetCreatorFoldersListResult()
     {
-      return $this->GetCreatorFoldersListResult;
+        return $this->GetCreatorFoldersListResult;
     }
 
     /**
      * @param ListFoldersResponse $GetCreatorFoldersListResult
-     * @return \Panopto\SessionManagement\GetCreatorFoldersListResponse
+     * @return GetCreatorFoldersListResponse
      */
-    public function setGetCreatorFoldersListResult($GetCreatorFoldersListResult)
+    public function setGetCreatorFoldersListResult($GetCreatorFoldersListResult): GetCreatorFoldersListResponse
     {
-      $this->GetCreatorFoldersListResult = $GetCreatorFoldersListResult;
-      return $this;
+        $this->GetCreatorFoldersListResult = $GetCreatorFoldersListResult;
+        return $this;
     }
 
 }

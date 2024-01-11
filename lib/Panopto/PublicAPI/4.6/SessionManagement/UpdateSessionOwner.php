@@ -6,17 +6,17 @@ class UpdateSessionOwner
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var ArrayOfguid $sessionIds
+     * @var ArrayOfguid|null $sessionIds
      */
     protected $sessionIds = null;
 
     /**
-     * @var string $newOwnerUserKey
+     * @var string|null $newOwnerUserKey
      */
     protected $newOwnerUserKey = null;
 
@@ -37,17 +37,17 @@ class UpdateSessionOwner
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\UpdateSessionOwner
+     * @return UpdateSessionOwner
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateSessionOwner
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -55,17 +55,17 @@ class UpdateSessionOwner
      */
     public function getSessionIds()
     {
-      return $this->sessionIds;
+        return $this->sessionIds;
     }
 
     /**
      * @param ArrayOfguid $sessionIds
-     * @return \Panopto\SessionManagement\UpdateSessionOwner
+     * @return UpdateSessionOwner
      */
-    public function setSessionIds($sessionIds)
+    public function setSessionIds($sessionIds): UpdateSessionOwner
     {
-      $this->sessionIds = $sessionIds;
-      return $this;
+        $this->sessionIds = $sessionIds;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class UpdateSessionOwner
      */
     public function getNewOwnerUserKey()
     {
-      return $this->newOwnerUserKey;
+        return $this->newOwnerUserKey;
     }
 
     /**
      * @param string $newOwnerUserKey
-     * @return \Panopto\SessionManagement\UpdateSessionOwner
+     * @return UpdateSessionOwner
      */
-    public function setNewOwnerUserKey($newOwnerUserKey)
+    public function setNewOwnerUserKey($newOwnerUserKey): UpdateSessionOwner
     {
-      $this->newOwnerUserKey = $newOwnerUserKey;
-      return $this;
+        $this->newOwnerUserKey = $newOwnerUserKey;
+        return $this;
     }
 
 }

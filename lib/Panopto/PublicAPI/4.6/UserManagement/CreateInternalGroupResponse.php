@@ -6,7 +6,7 @@ class CreateInternalGroupResponse
 {
 
     /**
-     * @var Group $CreateInternalGroupResult
+     * @var Group|null $CreateInternalGroupResult
      */
     protected $CreateInternalGroupResult = null;
 
@@ -23,17 +23,17 @@ class CreateInternalGroupResponse
      */
     public function getCreateInternalGroupResult()
     {
-      return $this->CreateInternalGroupResult;
+        return $this->CreateInternalGroupResult;
     }
 
     /**
      * @param Group $CreateInternalGroupResult
-     * @return \Panopto\UserManagement\CreateInternalGroupResponse
+     * @return CreateInternalGroupResponse
      */
-    public function setCreateInternalGroupResult($CreateInternalGroupResult)
+    public function setCreateInternalGroupResult($CreateInternalGroupResult): CreateInternalGroupResponse
     {
-      $this->CreateInternalGroupResult = $CreateInternalGroupResult;
-      return $this;
+        $this->CreateInternalGroupResult = $CreateInternalGroupResult;
+        return $this;
     }
 
 }

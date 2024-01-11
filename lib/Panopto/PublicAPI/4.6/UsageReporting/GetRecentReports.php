@@ -6,12 +6,12 @@ class GetRecentReports
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var StatsReportType $reportType
+     * @var StatsReportType|null $reportType
      */
     protected $reportType = null;
 
@@ -30,17 +30,17 @@ class GetRecentReports
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UsageReporting\GetRecentReports
+     * @return GetRecentReports
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetRecentReports
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -48,17 +48,17 @@ class GetRecentReports
      */
     public function getReportType()
     {
-      return $this->reportType;
+        return $this->reportType;
     }
 
     /**
      * @param StatsReportType $reportType
-     * @return \Panopto\UsageReporting\GetRecentReports
+     * @return GetRecentReports
      */
-    public function setReportType($reportType)
+    public function setReportType($reportType): GetRecentReports
     {
-      $this->reportType = $reportType;
-      return $this;
+        $this->reportType = $reportType;
+        return $this;
     }
 
 }

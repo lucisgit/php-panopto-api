@@ -6,135 +6,135 @@ class StatsReportStatus
 {
 
     /**
-     * @var \DateTime $EndTime
+     * @var \DateTime|string|null $EndTime
      */
-    protected $EndTime = null;
+    protected \DateTime|string|null $EndTime = null;
 
     /**
-     * @var boolean $IsAvailable
+     * @var bool|null $IsAvailable
      */
     protected $IsAvailable = null;
 
     /**
-     * @var guid $ReportId
+     * @var string|null $ReportId
      */
     protected $ReportId = null;
 
     /**
-     * @var \DateTime $ReportTime
+     * @var \DateTime|string|null $ReportTime
      */
-    protected $ReportTime = null;
+    protected \DateTime|string|null $ReportTime = null;
 
     /**
-     * @var StatsReportType $ReportType
+     * @var StatsReportType|null $ReportType
      */
     protected $ReportType = null;
 
     /**
-     * @var \DateTime $StartTime
+     * @var \DateTime|string|null $StartTime
      */
-    protected $StartTime = null;
+    protected \DateTime|string|null $StartTime = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getEndTime()
+    public function getEndTime(): \DateTime|bool|null
     {
-      if ($this->EndTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->EndTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->EndTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->EndTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
-     * @param \DateTime $EndTime
-     * @return \Panopto\UsageReporting\StatsReportStatus
+     * @param \DateTime|null $EndTime
+     * @return StatsReportStatus
      */
-    public function setEndTime(\DateTime $EndTime = null)
+    public function setEndTime(?\DateTime $EndTime = null): StatsReportStatus
     {
-      if ($EndTime == null) {
-       $this->EndTime = null;
-      } else {
-        $this->EndTime = $EndTime->format(\DateTime::ATOM);
-      }
-      return $this;
+        if ($EndTime == null) {
+            $this->EndTime = null;
+        } else {
+            $this->EndTime = $EndTime->format(\DateTime::ATOM);
+        }
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getIsAvailable()
     {
-      return $this->IsAvailable;
+        return $this->IsAvailable;
     }
 
     /**
-     * @param boolean $IsAvailable
-     * @return \Panopto\UsageReporting\StatsReportStatus
+     * @param bool $IsAvailable
+     * @return StatsReportStatus
      */
-    public function setIsAvailable($IsAvailable)
+    public function setIsAvailable($IsAvailable): StatsReportStatus
     {
-      $this->IsAvailable = $IsAvailable;
-      return $this;
+        $this->IsAvailable = $IsAvailable;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getReportId()
     {
-      return $this->ReportId;
+        return $this->ReportId;
     }
 
     /**
-     * @param guid $ReportId
-     * @return \Panopto\UsageReporting\StatsReportStatus
+     * @param string $ReportId
+     * @return StatsReportStatus
      */
-    public function setReportId($ReportId)
+    public function setReportId($ReportId): StatsReportStatus
     {
-      $this->ReportId = $ReportId;
-      return $this;
+        $this->ReportId = $ReportId;
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getReportTime()
+    public function getReportTime(): \DateTime|bool|null
     {
-      if ($this->ReportTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->ReportTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->ReportTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->ReportTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
-     * @param \DateTime $ReportTime
-     * @return \Panopto\UsageReporting\StatsReportStatus
+     * @param \DateTime|null $ReportTime
+     * @return StatsReportStatus
      */
-    public function setReportTime(\DateTime $ReportTime = null)
+    public function setReportTime(?\DateTime $ReportTime = null): StatsReportStatus
     {
-      if ($ReportTime == null) {
-       $this->ReportTime = null;
-      } else {
-        $this->ReportTime = $ReportTime->format(\DateTime::ATOM);
-      }
-      return $this;
+        if ($ReportTime == null) {
+            $this->ReportTime = null;
+        } else {
+            $this->ReportTime = $ReportTime->format(\DateTime::ATOM);
+        }
+        return $this;
     }
 
     /**
@@ -142,47 +142,47 @@ class StatsReportStatus
      */
     public function getReportType()
     {
-      return $this->ReportType;
+        return $this->ReportType;
     }
 
     /**
      * @param StatsReportType $ReportType
-     * @return \Panopto\UsageReporting\StatsReportStatus
+     * @return StatsReportStatus
      */
-    public function setReportType($ReportType)
+    public function setReportType($ReportType): StatsReportStatus
     {
-      $this->ReportType = $ReportType;
-      return $this;
+        $this->ReportType = $ReportType;
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getStartTime()
+    public function getStartTime(): \DateTime|bool|null
     {
-      if ($this->StartTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->StartTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->StartTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->StartTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
-     * @param \DateTime $StartTime
-     * @return \Panopto\UsageReporting\StatsReportStatus
+     * @param \DateTime|null $StartTime
+     * @return StatsReportStatus
      */
-    public function setStartTime(\DateTime $StartTime = null)
+    public function setStartTime(?\DateTime $StartTime = null): StatsReportStatus
     {
-      if ($StartTime == null) {
-       $this->StartTime = null;
-      } else {
-        $this->StartTime = $StartTime->format(\DateTime::ATOM);
-      }
-      return $this;
+        if ($StartTime == null) {
+            $this->StartTime = null;
+        } else {
+            $this->StartTime = $StartTime->format(\DateTime::ATOM);
+        }
+        return $this;
     }
 
 }

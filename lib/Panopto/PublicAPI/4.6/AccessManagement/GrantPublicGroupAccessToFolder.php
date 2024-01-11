@@ -6,23 +6,23 @@ class GrantPublicGroupAccessToFolder
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $folderId
+     * @var string|null $folderId
      */
     protected $folderId = null;
 
     /**
-     * @var AccessRole $role
+     * @var AccessRole|null $role
      */
     protected $role = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $folderId
+     * @param string $folderId
      * @param AccessRole $role
      */
     public function __construct($auth, $folderId, $role)
@@ -37,35 +37,35 @@ class GrantPublicGroupAccessToFolder
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\AccessManagement\GrantPublicGroupAccessToFolder
+     * @return GrantPublicGroupAccessToFolder
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GrantPublicGroupAccessToFolder
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->folderId;
+        return $this->folderId;
     }
 
     /**
-     * @param guid $folderId
-     * @return \Panopto\AccessManagement\GrantPublicGroupAccessToFolder
+     * @param string $folderId
+     * @return GrantPublicGroupAccessToFolder
      */
-    public function setFolderId($folderId)
+    public function setFolderId($folderId): GrantPublicGroupAccessToFolder
     {
-      $this->folderId = $folderId;
-      return $this;
+        $this->folderId = $folderId;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class GrantPublicGroupAccessToFolder
      */
     public function getRole()
     {
-      return $this->role;
+        return $this->role;
     }
 
     /**
      * @param AccessRole $role
-     * @return \Panopto\AccessManagement\GrantPublicGroupAccessToFolder
+     * @return GrantPublicGroupAccessToFolder
      */
-    public function setRole($role)
+    public function setRole($role): GrantPublicGroupAccessToFolder
     {
-      $this->role = $role;
-      return $this;
+        $this->role = $role;
+        return $this;
     }
 
 }

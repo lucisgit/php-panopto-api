@@ -6,18 +6,18 @@ class GetFolderAccessDetails
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $folderId
+     * @var string|null $folderId
      */
     protected $folderId = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $folderId
+     * @param string $folderId
      */
     public function __construct($auth, $folderId)
     {
@@ -30,35 +30,35 @@ class GetFolderAccessDetails
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\AccessManagement\GetFolderAccessDetails
+     * @return GetFolderAccessDetails
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetFolderAccessDetails
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->folderId;
+        return $this->folderId;
     }
 
     /**
-     * @param guid $folderId
-     * @return \Panopto\AccessManagement\GetFolderAccessDetails
+     * @param string $folderId
+     * @return GetFolderAccessDetails
      */
-    public function setFolderId($folderId)
+    public function setFolderId($folderId): GetFolderAccessDetails
     {
-      $this->folderId = $folderId;
-      return $this;
+        $this->folderId = $folderId;
+        return $this;
     }
 
 }

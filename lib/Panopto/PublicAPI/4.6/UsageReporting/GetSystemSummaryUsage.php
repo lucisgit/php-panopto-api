@@ -6,22 +6,22 @@ class GetSystemSummaryUsage
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var \DateTime $beginRange
+     * @var \DateTime|string|null $beginRange
      */
-    protected $beginRange = null;
+    protected \DateTime|string|null $beginRange = null;
 
     /**
-     * @var \DateTime $endRange
+     * @var \DateTime|string|null $endRange
      */
-    protected $endRange = null;
+    protected \DateTime|string|null $endRange = null;
 
     /**
-     * @var UsageGranularity $granularity
+     * @var UsageGranularity|null $granularity
      */
     protected $granularity = null;
 
@@ -44,69 +44,69 @@ class GetSystemSummaryUsage
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UsageReporting\GetSystemSummaryUsage
+     * @return GetSystemSummaryUsage
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetSystemSummaryUsage
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getBeginRange()
+    public function getBeginRange(): \DateTime|bool|null
     {
-      if ($this->beginRange == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->beginRange);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->beginRange == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->beginRange);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
      * @param \DateTime $beginRange
-     * @return \Panopto\UsageReporting\GetSystemSummaryUsage
+     * @return GetSystemSummaryUsage
      */
-    public function setBeginRange(\DateTime $beginRange)
+    public function setBeginRange(\DateTime $beginRange): GetSystemSummaryUsage
     {
-      $this->beginRange = $beginRange->format(\DateTime::ATOM);
-      return $this;
+        $this->beginRange = $beginRange->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getEndRange()
+    public function getEndRange(): \DateTime|bool|null
     {
-      if ($this->endRange == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->endRange);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->endRange == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->endRange);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
      * @param \DateTime $endRange
-     * @return \Panopto\UsageReporting\GetSystemSummaryUsage
+     * @return GetSystemSummaryUsage
      */
-    public function setEndRange(\DateTime $endRange)
+    public function setEndRange(\DateTime $endRange): GetSystemSummaryUsage
     {
-      $this->endRange = $endRange->format(\DateTime::ATOM);
-      return $this;
+        $this->endRange = $endRange->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
@@ -114,17 +114,17 @@ class GetSystemSummaryUsage
      */
     public function getGranularity()
     {
-      return $this->granularity;
+        return $this->granularity;
     }
 
     /**
      * @param UsageGranularity $granularity
-     * @return \Panopto\UsageReporting\GetSystemSummaryUsage
+     * @return GetSystemSummaryUsage
      */
-    public function setGranularity($granularity)
+    public function setGranularity($granularity): GetSystemSummaryUsage
     {
-      $this->granularity = $granularity;
-      return $this;
+        $this->granularity = $granularity;
+        return $this;
     }
 
 }

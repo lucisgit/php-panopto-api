@@ -6,34 +6,34 @@ class FolderAvailabilitySettings
 {
 
     /**
-     * @var DateTimeOffset $EndSettingDate
+     * @var DateTimeOffset|null $EndSettingDate
      */
     protected $EndSettingDate = null;
 
     /**
-     * @var FolderEndSettingType $EndSettingType
+     * @var FolderEndSettingType|null $EndSettingType
      */
     protected $EndSettingType = null;
 
     /**
-     * @var guid $FolderId
+     * @var string|null $FolderId
      */
     protected $FolderId = null;
 
     /**
-     * @var DateTimeOffset $StartSettingDate
+     * @var DateTimeOffset|null $StartSettingDate
      */
     protected $StartSettingDate = null;
 
     /**
-     * @var FolderStartSettingType $StartSettingType
+     * @var FolderStartSettingType|null $StartSettingType
      */
     protected $StartSettingType = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -41,17 +41,17 @@ class FolderAvailabilitySettings
      */
     public function getEndSettingDate()
     {
-      return $this->EndSettingDate;
+        return $this->EndSettingDate;
     }
 
     /**
      * @param DateTimeOffset $EndSettingDate
-     * @return \Panopto\SessionManagement\FolderAvailabilitySettings
+     * @return FolderAvailabilitySettings
      */
-    public function setEndSettingDate($EndSettingDate)
+    public function setEndSettingDate($EndSettingDate): FolderAvailabilitySettings
     {
-      $this->EndSettingDate = $EndSettingDate;
-      return $this;
+        $this->EndSettingDate = $EndSettingDate;
+        return $this;
     }
 
     /**
@@ -59,35 +59,35 @@ class FolderAvailabilitySettings
      */
     public function getEndSettingType()
     {
-      return $this->EndSettingType;
+        return $this->EndSettingType;
     }
 
     /**
      * @param FolderEndSettingType $EndSettingType
-     * @return \Panopto\SessionManagement\FolderAvailabilitySettings
+     * @return FolderAvailabilitySettings
      */
-    public function setEndSettingType($EndSettingType)
+    public function setEndSettingType($EndSettingType): FolderAvailabilitySettings
     {
-      $this->EndSettingType = $EndSettingType;
-      return $this;
+        $this->EndSettingType = $EndSettingType;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->FolderId;
+        return $this->FolderId;
     }
 
     /**
-     * @param guid $FolderId
-     * @return \Panopto\SessionManagement\FolderAvailabilitySettings
+     * @param string $FolderId
+     * @return FolderAvailabilitySettings
      */
-    public function setFolderId($FolderId)
+    public function setFolderId($FolderId): FolderAvailabilitySettings
     {
-      $this->FolderId = $FolderId;
-      return $this;
+        $this->FolderId = $FolderId;
+        return $this;
     }
 
     /**
@@ -95,17 +95,17 @@ class FolderAvailabilitySettings
      */
     public function getStartSettingDate()
     {
-      return $this->StartSettingDate;
+        return $this->StartSettingDate;
     }
 
     /**
      * @param DateTimeOffset $StartSettingDate
-     * @return \Panopto\SessionManagement\FolderAvailabilitySettings
+     * @return FolderAvailabilitySettings
      */
-    public function setStartSettingDate($StartSettingDate)
+    public function setStartSettingDate($StartSettingDate): FolderAvailabilitySettings
     {
-      $this->StartSettingDate = $StartSettingDate;
-      return $this;
+        $this->StartSettingDate = $StartSettingDate;
+        return $this;
     }
 
     /**
@@ -113,17 +113,17 @@ class FolderAvailabilitySettings
      */
     public function getStartSettingType()
     {
-      return $this->StartSettingType;
+        return $this->StartSettingType;
     }
 
     /**
      * @param FolderStartSettingType $StartSettingType
-     * @return \Panopto\SessionManagement\FolderAvailabilitySettings
+     * @return FolderAvailabilitySettings
      */
-    public function setStartSettingType($StartSettingType)
+    public function setStartSettingType($StartSettingType): FolderAvailabilitySettings
     {
-      $this->StartSettingType = $StartSettingType;
-      return $this;
+        $this->StartSettingType = $StartSettingType;
+        return $this;
     }
 
 }

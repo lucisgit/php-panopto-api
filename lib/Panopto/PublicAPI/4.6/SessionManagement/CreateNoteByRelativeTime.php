@@ -6,33 +6,33 @@ class CreateNoteByRelativeTime
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var string $text
+     * @var string|null $text
      */
     protected $text = null;
 
     /**
-     * @var string $channel
+     * @var string|null $channel
      */
     protected $channel = null;
 
     /**
-     * @var float $timestamp
+     * @var float|null $timestamp
      */
     protected $timestamp = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
+     * @param string $sessionId
      * @param string $text
      * @param string $channel
      * @param float $timestamp
@@ -51,35 +51,35 @@ class CreateNoteByRelativeTime
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\CreateNoteByRelativeTime
+     * @return CreateNoteByRelativeTime
      */
-    public function setAuth($auth)
+    public function setAuth($auth): CreateNoteByRelativeTime
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\SessionManagement\CreateNoteByRelativeTime
+     * @param string $sessionId
+     * @return CreateNoteByRelativeTime
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): CreateNoteByRelativeTime
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
@@ -87,17 +87,17 @@ class CreateNoteByRelativeTime
      */
     public function getText()
     {
-      return $this->text;
+        return $this->text;
     }
 
     /**
      * @param string $text
-     * @return \Panopto\SessionManagement\CreateNoteByRelativeTime
+     * @return CreateNoteByRelativeTime
      */
-    public function setText($text)
+    public function setText($text): CreateNoteByRelativeTime
     {
-      $this->text = $text;
-      return $this;
+        $this->text = $text;
+        return $this;
     }
 
     /**
@@ -105,17 +105,17 @@ class CreateNoteByRelativeTime
      */
     public function getChannel()
     {
-      return $this->channel;
+        return $this->channel;
     }
 
     /**
      * @param string $channel
-     * @return \Panopto\SessionManagement\CreateNoteByRelativeTime
+     * @return CreateNoteByRelativeTime
      */
-    public function setChannel($channel)
+    public function setChannel($channel): CreateNoteByRelativeTime
     {
-      $this->channel = $channel;
-      return $this;
+        $this->channel = $channel;
+        return $this;
     }
 
     /**
@@ -123,17 +123,17 @@ class CreateNoteByRelativeTime
      */
     public function getTimestamp()
     {
-      return $this->timestamp;
+        return $this->timestamp;
     }
 
     /**
      * @param float $timestamp
-     * @return \Panopto\SessionManagement\CreateNoteByRelativeTime
+     * @return CreateNoteByRelativeTime
      */
-    public function setTimestamp($timestamp)
+    public function setTimestamp($timestamp): CreateNoteByRelativeTime
     {
-      $this->timestamp = $timestamp;
-      return $this;
+        $this->timestamp = $timestamp;
+        return $this;
     }
 
 }

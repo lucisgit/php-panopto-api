@@ -6,7 +6,7 @@ class GetSelfUserAccessDetails
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
@@ -23,17 +23,17 @@ class GetSelfUserAccessDetails
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\AccessManagement\GetSelfUserAccessDetails
+     * @return GetSelfUserAccessDetails
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetSelfUserAccessDetails
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
 }

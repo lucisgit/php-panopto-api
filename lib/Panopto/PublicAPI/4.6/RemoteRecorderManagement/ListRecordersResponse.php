@@ -6,7 +6,7 @@ class ListRecordersResponse
 {
 
     /**
-     * @var ListRecordersResponse $ListRecordersResult
+     * @var ListRecordersResponse|null $ListRecordersResult
      */
     protected $ListRecordersResult = null;
 
@@ -23,17 +23,17 @@ class ListRecordersResponse
      */
     public function getListRecordersResult()
     {
-      return $this->ListRecordersResult;
+        return $this->ListRecordersResult;
     }
 
     /**
      * @param ListRecordersResponse $ListRecordersResult
-     * @return \Panopto\RemoteRecorderManagement\ListRecordersResponse
+     * @return ListRecordersResponse
      */
-    public function setListRecordersResult($ListRecordersResult)
+    public function setListRecordersResult($ListRecordersResult): ListRecordersResponse
     {
-      $this->ListRecordersResult = $ListRecordersResult;
-      return $this;
+        $this->ListRecordersResult = $ListRecordersResult;
+        return $this;
     }
 
 }

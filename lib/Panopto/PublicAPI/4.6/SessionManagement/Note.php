@@ -6,39 +6,39 @@ class Note
 {
 
     /**
-     * @var string $Channel
+     * @var string|null $Channel
      */
     protected $Channel = null;
 
     /**
-     * @var guid $CreatorId
+     * @var string|null $CreatorId
      */
     protected $CreatorId = null;
 
     /**
-     * @var guid $ID
+     * @var string|null $ID
      */
     protected $ID = null;
 
     /**
-     * @var guid $SessionID
+     * @var string|null $SessionID
      */
     protected $SessionID = null;
 
     /**
-     * @var string $Text
+     * @var string|null $Text
      */
     protected $Text = null;
 
     /**
-     * @var float $Timestamp
+     * @var float|null $Timestamp
      */
     protected $Timestamp = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -46,71 +46,71 @@ class Note
      */
     public function getChannel()
     {
-      return $this->Channel;
+        return $this->Channel;
     }
 
     /**
      * @param string $Channel
-     * @return \Panopto\SessionManagement\Note
+     * @return Note
      */
-    public function setChannel($Channel)
+    public function setChannel($Channel): Note
     {
-      $this->Channel = $Channel;
-      return $this;
+        $this->Channel = $Channel;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getCreatorId()
     {
-      return $this->CreatorId;
+        return $this->CreatorId;
     }
 
     /**
-     * @param guid $CreatorId
-     * @return \Panopto\SessionManagement\Note
+     * @param string $CreatorId
+     * @return Note
      */
-    public function setCreatorId($CreatorId)
+    public function setCreatorId($CreatorId): Note
     {
-      $this->CreatorId = $CreatorId;
-      return $this;
+        $this->CreatorId = $CreatorId;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getID()
     {
-      return $this->ID;
+        return $this->ID;
     }
 
     /**
-     * @param guid $ID
-     * @return \Panopto\SessionManagement\Note
+     * @param string $ID
+     * @return Note
      */
-    public function setID($ID)
+    public function setID($ID): Note
     {
-      $this->ID = $ID;
-      return $this;
+        $this->ID = $ID;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionID()
     {
-      return $this->SessionID;
+        return $this->SessionID;
     }
 
     /**
-     * @param guid $SessionID
-     * @return \Panopto\SessionManagement\Note
+     * @param string $SessionID
+     * @return Note
      */
-    public function setSessionID($SessionID)
+    public function setSessionID($SessionID): Note
     {
-      $this->SessionID = $SessionID;
-      return $this;
+        $this->SessionID = $SessionID;
+        return $this;
     }
 
     /**
@@ -118,17 +118,17 @@ class Note
      */
     public function getText()
     {
-      return $this->Text;
+        return $this->Text;
     }
 
     /**
      * @param string $Text
-     * @return \Panopto\SessionManagement\Note
+     * @return Note
      */
-    public function setText($Text)
+    public function setText($Text): Note
     {
-      $this->Text = $Text;
-      return $this;
+        $this->Text = $Text;
+        return $this;
     }
 
     /**
@@ -136,17 +136,17 @@ class Note
      */
     public function getTimestamp()
     {
-      return $this->Timestamp;
+        return $this->Timestamp;
     }
 
     /**
      * @param float $Timestamp
-     * @return \Panopto\SessionManagement\Note
+     * @return Note
      */
-    public function setTimestamp($Timestamp)
+    public function setTimestamp($Timestamp): Note
     {
-      $this->Timestamp = $Timestamp;
-      return $this;
+        $this->Timestamp = $Timestamp;
+        return $this;
     }
 
 }

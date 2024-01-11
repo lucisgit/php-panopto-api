@@ -6,7 +6,7 @@ class GetRecorderDownloadUrlsResponse
 {
 
     /**
-     * @var RecorderDownloadUrlResponse $GetRecorderDownloadUrlsResult
+     * @var RecorderDownloadUrlResponse|null $GetRecorderDownloadUrlsResult
      */
     protected $GetRecorderDownloadUrlsResult = null;
 
@@ -23,17 +23,17 @@ class GetRecorderDownloadUrlsResponse
      */
     public function getGetRecorderDownloadUrlsResult()
     {
-      return $this->GetRecorderDownloadUrlsResult;
+        return $this->GetRecorderDownloadUrlsResult;
     }
 
     /**
      * @param RecorderDownloadUrlResponse $GetRecorderDownloadUrlsResult
-     * @return \Panopto\SessionManagement\GetRecorderDownloadUrlsResponse
+     * @return GetRecorderDownloadUrlsResponse
      */
-    public function setGetRecorderDownloadUrlsResult($GetRecorderDownloadUrlsResult)
+    public function setGetRecorderDownloadUrlsResult($GetRecorderDownloadUrlsResult): GetRecorderDownloadUrlsResponse
     {
-      $this->GetRecorderDownloadUrlsResult = $GetRecorderDownloadUrlsResult;
-      return $this;
+        $this->GetRecorderDownloadUrlsResult = $GetRecorderDownloadUrlsResult;
+        return $this;
     }
 
 }

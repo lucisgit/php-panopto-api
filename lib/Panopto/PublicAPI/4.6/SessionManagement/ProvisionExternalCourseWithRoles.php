@@ -6,22 +6,22 @@ class ProvisionExternalCourseWithRoles
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var string $name
+     * @var string|null $name
      */
     protected $name = null;
 
     /**
-     * @var string $externalId
+     * @var string|null $externalId
      */
     protected $externalId = null;
 
     /**
-     * @var ArrayOfAccessRole $roles
+     * @var ArrayOfAccessRole|null $roles
      */
     protected $roles = null;
 
@@ -44,17 +44,17 @@ class ProvisionExternalCourseWithRoles
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\ProvisionExternalCourseWithRoles
+     * @return ProvisionExternalCourseWithRoles
      */
-    public function setAuth($auth)
+    public function setAuth($auth): ProvisionExternalCourseWithRoles
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -62,17 +62,17 @@ class ProvisionExternalCourseWithRoles
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
      * @param string $name
-     * @return \Panopto\SessionManagement\ProvisionExternalCourseWithRoles
+     * @return ProvisionExternalCourseWithRoles
      */
-    public function setName($name)
+    public function setName($name): ProvisionExternalCourseWithRoles
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -80,17 +80,17 @@ class ProvisionExternalCourseWithRoles
      */
     public function getExternalId()
     {
-      return $this->externalId;
+        return $this->externalId;
     }
 
     /**
      * @param string $externalId
-     * @return \Panopto\SessionManagement\ProvisionExternalCourseWithRoles
+     * @return ProvisionExternalCourseWithRoles
      */
-    public function setExternalId($externalId)
+    public function setExternalId($externalId): ProvisionExternalCourseWithRoles
     {
-      $this->externalId = $externalId;
-      return $this;
+        $this->externalId = $externalId;
+        return $this;
     }
 
     /**
@@ -98,17 +98,17 @@ class ProvisionExternalCourseWithRoles
      */
     public function getRoles()
     {
-      return $this->roles;
+        return $this->roles;
     }
 
     /**
      * @param ArrayOfAccessRole $roles
-     * @return \Panopto\SessionManagement\ProvisionExternalCourseWithRoles
+     * @return ProvisionExternalCourseWithRoles
      */
-    public function setRoles($roles)
+    public function setRoles($roles): ProvisionExternalCourseWithRoles
     {
-      $this->roles = $roles;
-      return $this;
+        $this->roles = $roles;
+        return $this;
     }
 
 }

@@ -8,7 +8,7 @@ class SessionManagement extends \SoapClient
     /**
      * @var array $classmap The defined classes
      */
-    private static $classmap = array (
+    private static array $classmap = array (
       'AuthenticationInfo' => 'Panopto\\SessionManagement\\AuthenticationInfo',
       'ListSessionsRequest' => 'Panopto\\SessionManagement\\ListSessionsRequest',
       'Pagination' => 'Panopto\\SessionManagement\\Pagination',
@@ -32,6 +32,13 @@ class SessionManagement extends \SoapClient
       'ListSessionsResponse' => 'Panopto\\SessionManagement\\ListSessionsResponse',
       'ListFoldersResponse' => 'Panopto\\SessionManagement\\ListFoldersResponse',
       'ListFoldersResponseWithExternalContext' => 'Panopto\\SessionManagement\\ListFoldersResponseWithExternalContext',
+      'ListExtendedFoldersResponse' => 'Panopto\\SessionManagement\\ListExtendedFoldersResponse',
+      'ArrayOfExtendedFolder' => 'Panopto\\SessionManagement\\ArrayOfExtendedFolder',
+      'ExtendedFolder' => 'Panopto\\SessionManagement\\ExtendedFolder',
+      'ArrayOfListSessionRTMPStreamKeysResponse' => 'Panopto\\SessionManagement\\ArrayOfListSessionRTMPStreamKeysResponse',
+      'ListSessionRTMPStreamKeysResponse' => 'Panopto\\SessionManagement\\ListSessionRTMPStreamKeysResponse',
+      'ArrayOfExternalHierarchyInfo' => 'Panopto\\SessionManagement\\ArrayOfExternalHierarchyInfo',
+      'ExternalHierarchyInfo' => 'Panopto\\SessionManagement\\ExternalHierarchyInfo',
       'FoldersWithAvailabilitySettings' => 'Panopto\\SessionManagement\\FoldersWithAvailabilitySettings',
       'ArrayOfFolderAvailabilitySettings' => 'Panopto\\SessionManagement\\ArrayOfFolderAvailabilitySettings',
       'FolderAvailabilitySettings' => 'Panopto\\SessionManagement\\FolderAvailabilitySettings',
@@ -66,6 +73,8 @@ class SessionManagement extends \SoapClient
       'GetFoldersWithExternalContextListResponse' => 'Panopto\\SessionManagement\\GetFoldersWithExternalContextListResponse',
       'GetCreatorFoldersList' => 'Panopto\\SessionManagement\\GetCreatorFoldersList',
       'GetCreatorFoldersListResponse' => 'Panopto\\SessionManagement\\GetCreatorFoldersListResponse',
+      'GetExtendedCreatorFoldersList' => 'Panopto\\SessionManagement\\GetExtendedCreatorFoldersList',
+      'GetExtendedCreatorFoldersListResponse' => 'Panopto\\SessionManagement\\GetExtendedCreatorFoldersListResponse',
       'GetCreatorFoldersWithExternalContextList' => 'Panopto\\SessionManagement\\GetCreatorFoldersWithExternalContextList',
       'GetCreatorFoldersWithExternalContextListResponse' => 'Panopto\\SessionManagement\\GetCreatorFoldersWithExternalContextListResponse',
       'UpdateSessionName' => 'Panopto\\SessionManagement\\UpdateSessionName',
@@ -82,6 +91,9 @@ class SessionManagement extends \SoapClient
       'UpdateSessionCreateRTMPStreamsResponse' => 'Panopto\\SessionManagement\\UpdateSessionCreateRTMPStreamsResponse',
       'UpdateSessionUpdateRTMPStreamTypes' => 'Panopto\\SessionManagement\\UpdateSessionUpdateRTMPStreamTypes',
       'UpdateSessionUpdateRTMPStreamTypesResponse' => 'Panopto\\SessionManagement\\UpdateSessionUpdateRTMPStreamTypesResponse',
+      'UpdateSessionUpdateRTMPStreamSetShouldConvertToOnDemand' => 'Panopto\\SessionManagement\\UpdateSessionUpdateRTMPStreamSetShouldConvertToOnDemand',
+      'UpdateSessionUpdateRTMPStreamSetShouldConvertToOnDemandResponse' => 'Panopto\\SessionManagement\\UpdateSessionUpdateRTMPStreamSetShouldConvertToOnDemandResponse',
+      'ListSessionRTMPStreamKeys' => 'Panopto\\SessionManagement\\ListSessionRTMPStreamKeys',
       'UpdateSessionOwner' => 'Panopto\\SessionManagement\\UpdateSessionOwner',
       'UpdateSessionOwnerResponse' => 'Panopto\\SessionManagement\\UpdateSessionOwnerResponse',
       'MoveSessions' => 'Panopto\\SessionManagement\\MoveSessions',
@@ -110,6 +122,8 @@ class SessionManagement extends \SoapClient
       'DeleteFoldersResponse' => 'Panopto\\SessionManagement\\DeleteFoldersResponse',
       'ProvisionExternalCourse' => 'Panopto\\SessionManagement\\ProvisionExternalCourse',
       'ProvisionExternalCourseResponse' => 'Panopto\\SessionManagement\\ProvisionExternalCourseResponse',
+      'EnsureExternalHierarchyBranch' => 'Panopto\\SessionManagement\\EnsureExternalHierarchyBranch',
+      'EnsureExternalHierarchyBranchResponse' => 'Panopto\\SessionManagement\\EnsureExternalHierarchyBranchResponse',
       'ProvisionExternalCourseWithRoles' => 'Panopto\\SessionManagement\\ProvisionExternalCourseWithRoles',
       'ProvisionExternalCourseWithRolesResponse' => 'Panopto\\SessionManagement\\ProvisionExternalCourseWithRolesResponse',
       'SetExternalCourseAccess' => 'Panopto\\SessionManagement\\SetExternalCourseAccess',
@@ -145,6 +159,8 @@ class SessionManagement extends \SoapClient
       'CreateCaptionByAbsoluteTimeResponse' => 'Panopto\\SessionManagement\\CreateCaptionByAbsoluteTimeResponse',
       'UploadTranscript' => 'Panopto\\SessionManagement\\UploadTranscript',
       'UploadTranscriptResponse' => 'Panopto\\SessionManagement\\UploadTranscriptResponse',
+      'ReplaceMachineCaptionsAndUploadTranscript' => 'Panopto\\SessionManagement\\ReplaceMachineCaptionsAndUploadTranscript',
+      'ReplaceMachineCaptionsAndUploadTranscriptResponse' => 'Panopto\\SessionManagement\\ReplaceMachineCaptionsAndUploadTranscriptResponse',
       'GetFoldersAvailabilitySettings' => 'Panopto\\SessionManagement\\GetFoldersAvailabilitySettings',
       'GetFoldersAvailabilitySettingsResponse' => 'Panopto\\SessionManagement\\GetFoldersAvailabilitySettingsResponse',
       'GetSessionsAvailabilitySettings' => 'Panopto\\SessionManagement\\GetSessionsAvailabilitySettings',
@@ -159,6 +175,12 @@ class SessionManagement extends \SoapClient
       'UpdateSessionsAvailabilityEndSettingsResponse' => 'Panopto\\SessionManagement\\UpdateSessionsAvailabilityEndSettingsResponse',
       'GetPersonalFolderForUser' => 'Panopto\\SessionManagement\\GetPersonalFolderForUser',
       'GetPersonalFolderForUserResponse' => 'Panopto\\SessionManagement\\GetPersonalFolderForUserResponse',
+      'GetVideoDownloadURL' => 'Panopto\\SessionManagement\\GetVideoDownloadURL',
+      'GetVideoDownloadURLResponse' => 'Panopto\\SessionManagement\\GetVideoDownloadURLResponse',
+      'GetAudioDownloadURL' => 'Panopto\\SessionManagement\\GetAudioDownloadURL',
+      'GetAudioDownloadURLResponse' => 'Panopto\\SessionManagement\\GetAudioDownloadURLResponse',
+      'UnprovisionExternalCourse' => 'Panopto\\SessionManagement\\UnprovisionExternalCourse',
+      'UnprovisionExternalCourseResponse' => 'Panopto\\SessionManagement\\UnprovisionExternalCourseResponse',
     );
 
     /**
@@ -185,7 +207,7 @@ class SessionManagement extends \SoapClient
      * @param AddFolder $parameters
      * @return AddFolderResponse
      */
-    public function AddFolder(AddFolder $parameters)
+    public function AddFolder(AddFolder $parameters): AddFolderResponse
     {
       return $this->__soapCall('AddFolder', array($parameters));
     }
@@ -194,7 +216,7 @@ class SessionManagement extends \SoapClient
      * @param AddSession $parameters
      * @return AddSessionResponse
      */
-    public function AddSession(AddSession $parameters)
+    public function AddSession(AddSession $parameters): AddSessionResponse
     {
       return $this->__soapCall('AddSession', array($parameters));
     }
@@ -203,7 +225,7 @@ class SessionManagement extends \SoapClient
      * @param GetFoldersById $parameters
      * @return GetFoldersByIdResponse
      */
-    public function GetFoldersById(GetFoldersById $parameters)
+    public function GetFoldersById(GetFoldersById $parameters): GetFoldersByIdResponse
     {
       return $this->__soapCall('GetFoldersById', array($parameters));
     }
@@ -212,7 +234,7 @@ class SessionManagement extends \SoapClient
      * @param GetFoldersWithExternalContextById $parameters
      * @return GetFoldersWithExternalContextByIdResponse
      */
-    public function GetFoldersWithExternalContextById(GetFoldersWithExternalContextById $parameters)
+    public function GetFoldersWithExternalContextById(GetFoldersWithExternalContextById $parameters): GetFoldersWithExternalContextByIdResponse
     {
       return $this->__soapCall('GetFoldersWithExternalContextById', array($parameters));
     }
@@ -221,7 +243,7 @@ class SessionManagement extends \SoapClient
      * @param GetFoldersByExternalId $parameters
      * @return GetFoldersByExternalIdResponse
      */
-    public function GetFoldersByExternalId(GetFoldersByExternalId $parameters)
+    public function GetFoldersByExternalId(GetFoldersByExternalId $parameters): GetFoldersByExternalIdResponse
     {
       return $this->__soapCall('GetFoldersByExternalId', array($parameters));
     }
@@ -230,7 +252,7 @@ class SessionManagement extends \SoapClient
      * @param GetFoldersWithExternalContextByExternalId $parameters
      * @return GetFoldersWithExternalContextByExternalIdResponse
      */
-    public function GetFoldersWithExternalContextByExternalId(GetFoldersWithExternalContextByExternalId $parameters)
+    public function GetFoldersWithExternalContextByExternalId(GetFoldersWithExternalContextByExternalId $parameters): GetFoldersWithExternalContextByExternalIdResponse
     {
       return $this->__soapCall('GetFoldersWithExternalContextByExternalId', array($parameters));
     }
@@ -239,7 +261,7 @@ class SessionManagement extends \SoapClient
      * @param GetAllFoldersByExternalId $parameters
      * @return GetAllFoldersByExternalIdResponse
      */
-    public function GetAllFoldersByExternalId(GetAllFoldersByExternalId $parameters)
+    public function GetAllFoldersByExternalId(GetAllFoldersByExternalId $parameters): GetAllFoldersByExternalIdResponse
     {
       return $this->__soapCall('GetAllFoldersByExternalId', array($parameters));
     }
@@ -248,7 +270,7 @@ class SessionManagement extends \SoapClient
      * @param GetAllFoldersWithExternalContextByExternalId $parameters
      * @return GetAllFoldersWithExternalContextByExternalIdResponse
      */
-    public function GetAllFoldersWithExternalContextByExternalId(GetAllFoldersWithExternalContextByExternalId $parameters)
+    public function GetAllFoldersWithExternalContextByExternalId(GetAllFoldersWithExternalContextByExternalId $parameters): GetAllFoldersWithExternalContextByExternalIdResponse
     {
       return $this->__soapCall('GetAllFoldersWithExternalContextByExternalId', array($parameters));
     }
@@ -257,7 +279,7 @@ class SessionManagement extends \SoapClient
      * @param GetSessionsById $parameters
      * @return GetSessionsByIdResponse
      */
-    public function GetSessionsById(GetSessionsById $parameters)
+    public function GetSessionsById(GetSessionsById $parameters): GetSessionsByIdResponse
     {
       return $this->__soapCall('GetSessionsById', array($parameters));
     }
@@ -266,7 +288,7 @@ class SessionManagement extends \SoapClient
      * @param GetSessionsByExternalId $parameters
      * @return GetSessionsByExternalIdResponse
      */
-    public function GetSessionsByExternalId(GetSessionsByExternalId $parameters)
+    public function GetSessionsByExternalId(GetSessionsByExternalId $parameters): GetSessionsByExternalIdResponse
     {
       return $this->__soapCall('GetSessionsByExternalId', array($parameters));
     }
@@ -275,7 +297,7 @@ class SessionManagement extends \SoapClient
      * @param GetSessionsList $parameters
      * @return GetSessionsListResponse
      */
-    public function GetSessionsList(GetSessionsList $parameters)
+    public function GetSessionsList(GetSessionsList $parameters): GetSessionsListResponse
     {
       return $this->__soapCall('GetSessionsList', array($parameters));
     }
@@ -284,7 +306,7 @@ class SessionManagement extends \SoapClient
      * @param GetFoldersList $parameters
      * @return GetFoldersListResponse
      */
-    public function GetFoldersList(GetFoldersList $parameters)
+    public function GetFoldersList(GetFoldersList $parameters): GetFoldersListResponse
     {
       return $this->__soapCall('GetFoldersList', array($parameters));
     }
@@ -293,7 +315,7 @@ class SessionManagement extends \SoapClient
      * @param GetFoldersWithExternalContextList $parameters
      * @return GetFoldersWithExternalContextListResponse
      */
-    public function GetFoldersWithExternalContextList(GetFoldersWithExternalContextList $parameters)
+    public function GetFoldersWithExternalContextList(GetFoldersWithExternalContextList $parameters): GetFoldersWithExternalContextListResponse
     {
       return $this->__soapCall('GetFoldersWithExternalContextList', array($parameters));
     }
@@ -302,16 +324,25 @@ class SessionManagement extends \SoapClient
      * @param GetCreatorFoldersList $parameters
      * @return GetCreatorFoldersListResponse
      */
-    public function GetCreatorFoldersList(GetCreatorFoldersList $parameters)
+    public function GetCreatorFoldersList(GetCreatorFoldersList $parameters): GetCreatorFoldersListResponse
     {
       return $this->__soapCall('GetCreatorFoldersList', array($parameters));
+    }
+
+    /**
+     * @param GetExtendedCreatorFoldersList $parameters
+     * @return GetExtendedCreatorFoldersListResponse
+     */
+    public function GetExtendedCreatorFoldersList(GetExtendedCreatorFoldersList $parameters): GetExtendedCreatorFoldersListResponse
+    {
+      return $this->__soapCall('GetExtendedCreatorFoldersList', array($parameters));
     }
 
     /**
      * @param GetCreatorFoldersWithExternalContextList $parameters
      * @return GetCreatorFoldersWithExternalContextListResponse
      */
-    public function GetCreatorFoldersWithExternalContextList(GetCreatorFoldersWithExternalContextList $parameters)
+    public function GetCreatorFoldersWithExternalContextList(GetCreatorFoldersWithExternalContextList $parameters): GetCreatorFoldersWithExternalContextListResponse
     {
       return $this->__soapCall('GetCreatorFoldersWithExternalContextList', array($parameters));
     }
@@ -320,7 +351,7 @@ class SessionManagement extends \SoapClient
      * @param UpdateSessionName $parameters
      * @return UpdateSessionNameResponse
      */
-    public function UpdateSessionName(UpdateSessionName $parameters)
+    public function UpdateSessionName(UpdateSessionName $parameters): UpdateSessionNameResponse
     {
       return $this->__soapCall('UpdateSessionName', array($parameters));
     }
@@ -329,7 +360,7 @@ class SessionManagement extends \SoapClient
      * @param UpdateSessionDescription $parameters
      * @return UpdateSessionDescriptionResponse
      */
-    public function UpdateSessionDescription(UpdateSessionDescription $parameters)
+    public function UpdateSessionDescription(UpdateSessionDescription $parameters): UpdateSessionDescriptionResponse
     {
       return $this->__soapCall('UpdateSessionDescription', array($parameters));
     }
@@ -338,7 +369,7 @@ class SessionManagement extends \SoapClient
      * @param UpdateSessionIsBroadcast $parameters
      * @return UpdateSessionIsBroadcastResponse
      */
-    public function UpdateSessionIsBroadcast(UpdateSessionIsBroadcast $parameters)
+    public function UpdateSessionIsBroadcast(UpdateSessionIsBroadcast $parameters): UpdateSessionIsBroadcastResponse
     {
       return $this->__soapCall('UpdateSessionIsBroadcast', array($parameters));
     }
@@ -347,7 +378,7 @@ class SessionManagement extends \SoapClient
      * @param UpdateSessionSetPanoptoBroadcast $parameters
      * @return UpdateSessionSetPanoptoBroadcastResponse
      */
-    public function UpdateSessionSetPanoptoBroadcast(UpdateSessionSetPanoptoBroadcast $parameters)
+    public function UpdateSessionSetPanoptoBroadcast(UpdateSessionSetPanoptoBroadcast $parameters): UpdateSessionSetPanoptoBroadcastResponse
     {
       return $this->__soapCall('UpdateSessionSetPanoptoBroadcast', array($parameters));
     }
@@ -356,7 +387,7 @@ class SessionManagement extends \SoapClient
      * @param UpdateSessionSetRTMPBroadcast $parameters
      * @return UpdateSessionSetRTMPBroadcastResponse
      */
-    public function UpdateSessionSetRTMPBroadcast(UpdateSessionSetRTMPBroadcast $parameters)
+    public function UpdateSessionSetRTMPBroadcast(UpdateSessionSetRTMPBroadcast $parameters): UpdateSessionSetRTMPBroadcastResponse
     {
       return $this->__soapCall('UpdateSessionSetRTMPBroadcast', array($parameters));
     }
@@ -365,7 +396,7 @@ class SessionManagement extends \SoapClient
      * @param UpdateSessionCreateRTMPStreams $parameters
      * @return UpdateSessionCreateRTMPStreamsResponse
      */
-    public function UpdateSessionCreateRTMPStreams(UpdateSessionCreateRTMPStreams $parameters)
+    public function UpdateSessionCreateRTMPStreams(UpdateSessionCreateRTMPStreams $parameters): UpdateSessionCreateRTMPStreamsResponse
     {
       return $this->__soapCall('UpdateSessionCreateRTMPStreams', array($parameters));
     }
@@ -374,16 +405,34 @@ class SessionManagement extends \SoapClient
      * @param UpdateSessionUpdateRTMPStreamTypes $parameters
      * @return UpdateSessionUpdateRTMPStreamTypesResponse
      */
-    public function UpdateSessionUpdateRTMPStreamTypes(UpdateSessionUpdateRTMPStreamTypes $parameters)
+    public function UpdateSessionUpdateRTMPStreamTypes(UpdateSessionUpdateRTMPStreamTypes $parameters): UpdateSessionUpdateRTMPStreamTypesResponse
     {
       return $this->__soapCall('UpdateSessionUpdateRTMPStreamTypes', array($parameters));
+    }
+
+    /**
+     * @param UpdateSessionUpdateRTMPStreamSetShouldConvertToOnDemand $parameters
+     * @return UpdateSessionUpdateRTMPStreamSetShouldConvertToOnDemandResponse
+     */
+    public function UpdateSessionUpdateRTMPStreamSetShouldConvertToOnDemand(UpdateSessionUpdateRTMPStreamSetShouldConvertToOnDemand $parameters): UpdateSessionUpdateRTMPStreamSetShouldConvertToOnDemandResponse
+    {
+      return $this->__soapCall('UpdateSessionUpdateRTMPStreamSetShouldConvertToOnDemand', array($parameters));
+    }
+
+    /**
+     * @param ListSessionRTMPStreamKeys $parameters
+     * @return ListSessionRTMPStreamKeysResponse
+     */
+    public function ListSessionRTMPStreamKeys(ListSessionRTMPStreamKeys $parameters): ListSessionRTMPStreamKeysResponse
+    {
+      return $this->__soapCall('ListSessionRTMPStreamKeys', array($parameters));
     }
 
     /**
      * @param UpdateSessionOwner $parameters
      * @return UpdateSessionOwnerResponse
      */
-    public function UpdateSessionOwner(UpdateSessionOwner $parameters)
+    public function UpdateSessionOwner(UpdateSessionOwner $parameters): UpdateSessionOwnerResponse
     {
       return $this->__soapCall('UpdateSessionOwner', array($parameters));
     }
@@ -392,7 +441,7 @@ class SessionManagement extends \SoapClient
      * @param MoveSessions $parameters
      * @return MoveSessionsResponse
      */
-    public function MoveSessions(MoveSessions $parameters)
+    public function MoveSessions(MoveSessions $parameters): MoveSessionsResponse
     {
       return $this->__soapCall('MoveSessions', array($parameters));
     }
@@ -401,7 +450,7 @@ class SessionManagement extends \SoapClient
      * @param UpdateSessionExternalId $parameters
      * @return UpdateSessionExternalIdResponse
      */
-    public function UpdateSessionExternalId(UpdateSessionExternalId $parameters)
+    public function UpdateSessionExternalId(UpdateSessionExternalId $parameters): UpdateSessionExternalIdResponse
     {
       return $this->__soapCall('UpdateSessionExternalId', array($parameters));
     }
@@ -410,7 +459,7 @@ class SessionManagement extends \SoapClient
      * @param UpdateFolderName $parameters
      * @return UpdateFolderNameResponse
      */
-    public function UpdateFolderName(UpdateFolderName $parameters)
+    public function UpdateFolderName(UpdateFolderName $parameters): UpdateFolderNameResponse
     {
       return $this->__soapCall('UpdateFolderName', array($parameters));
     }
@@ -419,7 +468,7 @@ class SessionManagement extends \SoapClient
      * @param UpdateFolderDescription $parameters
      * @return UpdateFolderDescriptionResponse
      */
-    public function UpdateFolderDescription(UpdateFolderDescription $parameters)
+    public function UpdateFolderDescription(UpdateFolderDescription $parameters): UpdateFolderDescriptionResponse
     {
       return $this->__soapCall('UpdateFolderDescription', array($parameters));
     }
@@ -428,7 +477,7 @@ class SessionManagement extends \SoapClient
      * @param UpdateFolderEnablePodcast $parameters
      * @return UpdateFolderEnablePodcastResponse
      */
-    public function UpdateFolderEnablePodcast(UpdateFolderEnablePodcast $parameters)
+    public function UpdateFolderEnablePodcast(UpdateFolderEnablePodcast $parameters): UpdateFolderEnablePodcastResponse
     {
       return $this->__soapCall('UpdateFolderEnablePodcast', array($parameters));
     }
@@ -437,7 +486,7 @@ class SessionManagement extends \SoapClient
      * @param UpdateFolderAllowPublicNotes $parameters
      * @return UpdateFolderAllowPublicNotesResponse
      */
-    public function UpdateFolderAllowPublicNotes(UpdateFolderAllowPublicNotes $parameters)
+    public function UpdateFolderAllowPublicNotes(UpdateFolderAllowPublicNotes $parameters): UpdateFolderAllowPublicNotesResponse
     {
       return $this->__soapCall('UpdateFolderAllowPublicNotes', array($parameters));
     }
@@ -446,7 +495,7 @@ class SessionManagement extends \SoapClient
      * @param UpdateFolderAllowSessionDownload $parameters
      * @return UpdateFolderAllowSessionDownloadResponse
      */
-    public function UpdateFolderAllowSessionDownload(UpdateFolderAllowSessionDownload $parameters)
+    public function UpdateFolderAllowSessionDownload(UpdateFolderAllowSessionDownload $parameters): UpdateFolderAllowSessionDownloadResponse
     {
       return $this->__soapCall('UpdateFolderAllowSessionDownload', array($parameters));
     }
@@ -455,7 +504,7 @@ class SessionManagement extends \SoapClient
      * @param UpdateFolderParent $parameters
      * @return UpdateFolderParentResponse
      */
-    public function UpdateFolderParent(UpdateFolderParent $parameters)
+    public function UpdateFolderParent(UpdateFolderParent $parameters): UpdateFolderParentResponse
     {
       return $this->__soapCall('UpdateFolderParent', array($parameters));
     }
@@ -464,7 +513,7 @@ class SessionManagement extends \SoapClient
      * @param UpdateFolderExternalId $parameters
      * @return UpdateFolderExternalIdResponse
      */
-    public function UpdateFolderExternalId(UpdateFolderExternalId $parameters)
+    public function UpdateFolderExternalId(UpdateFolderExternalId $parameters): UpdateFolderExternalIdResponse
     {
       return $this->__soapCall('UpdateFolderExternalId', array($parameters));
     }
@@ -473,7 +522,7 @@ class SessionManagement extends \SoapClient
      * @param UpdateFolderExternalIdWithProvider $parameters
      * @return UpdateFolderExternalIdWithProviderResponse
      */
-    public function UpdateFolderExternalIdWithProvider(UpdateFolderExternalIdWithProvider $parameters)
+    public function UpdateFolderExternalIdWithProvider(UpdateFolderExternalIdWithProvider $parameters): UpdateFolderExternalIdWithProviderResponse
     {
       return $this->__soapCall('UpdateFolderExternalIdWithProvider', array($parameters));
     }
@@ -482,7 +531,7 @@ class SessionManagement extends \SoapClient
      * @param DeleteSessions $parameters
      * @return DeleteSessionsResponse
      */
-    public function DeleteSessions(DeleteSessions $parameters)
+    public function DeleteSessions(DeleteSessions $parameters): DeleteSessionsResponse
     {
       return $this->__soapCall('DeleteSessions', array($parameters));
     }
@@ -491,7 +540,7 @@ class SessionManagement extends \SoapClient
      * @param DeleteFolders $parameters
      * @return DeleteFoldersResponse
      */
-    public function DeleteFolders(DeleteFolders $parameters)
+    public function DeleteFolders(DeleteFolders $parameters): DeleteFoldersResponse
     {
       return $this->__soapCall('DeleteFolders', array($parameters));
     }
@@ -500,16 +549,25 @@ class SessionManagement extends \SoapClient
      * @param ProvisionExternalCourse $parameters
      * @return ProvisionExternalCourseResponse
      */
-    public function ProvisionExternalCourse(ProvisionExternalCourse $parameters)
+    public function ProvisionExternalCourse(ProvisionExternalCourse $parameters): ProvisionExternalCourseResponse
     {
       return $this->__soapCall('ProvisionExternalCourse', array($parameters));
+    }
+
+    /**
+     * @param EnsureExternalHierarchyBranch $parameters
+     * @return EnsureExternalHierarchyBranchResponse
+     */
+    public function EnsureExternalHierarchyBranch(EnsureExternalHierarchyBranch $parameters): EnsureExternalHierarchyBranchResponse
+    {
+      return $this->__soapCall('EnsureExternalHierarchyBranch', array($parameters));
     }
 
     /**
      * @param ProvisionExternalCourseWithRoles $parameters
      * @return ProvisionExternalCourseWithRolesResponse
      */
-    public function ProvisionExternalCourseWithRoles(ProvisionExternalCourseWithRoles $parameters)
+    public function ProvisionExternalCourseWithRoles(ProvisionExternalCourseWithRoles $parameters): ProvisionExternalCourseWithRolesResponse
     {
       return $this->__soapCall('ProvisionExternalCourseWithRoles', array($parameters));
     }
@@ -518,7 +576,7 @@ class SessionManagement extends \SoapClient
      * @param SetExternalCourseAccess $parameters
      * @return SetExternalCourseAccessResponse
      */
-    public function SetExternalCourseAccess(SetExternalCourseAccess $parameters)
+    public function SetExternalCourseAccess(SetExternalCourseAccess $parameters): SetExternalCourseAccessResponse
     {
       return $this->__soapCall('SetExternalCourseAccess', array($parameters));
     }
@@ -527,7 +585,7 @@ class SessionManagement extends \SoapClient
      * @param SetExternalCourseAccessForRoles $parameters
      * @return SetExternalCourseAccessForRolesResponse
      */
-    public function SetExternalCourseAccessForRoles(SetExternalCourseAccessForRoles $parameters)
+    public function SetExternalCourseAccessForRoles(SetExternalCourseAccessForRoles $parameters): SetExternalCourseAccessForRolesResponse
     {
       return $this->__soapCall('SetExternalCourseAccessForRoles', array($parameters));
     }
@@ -536,7 +594,7 @@ class SessionManagement extends \SoapClient
      * @param SetCopiedExternalCourseAccess $parameters
      * @return SetCopiedExternalCourseAccessResponse
      */
-    public function SetCopiedExternalCourseAccess(SetCopiedExternalCourseAccess $parameters)
+    public function SetCopiedExternalCourseAccess(SetCopiedExternalCourseAccess $parameters): SetCopiedExternalCourseAccessResponse
     {
       return $this->__soapCall('SetCopiedExternalCourseAccess', array($parameters));
     }
@@ -545,7 +603,7 @@ class SessionManagement extends \SoapClient
      * @param SetCopiedExternalCourseAccessForRoles $parameters
      * @return SetCopiedExternalCourseAccessForRolesResponse
      */
-    public function SetCopiedExternalCourseAccessForRoles(SetCopiedExternalCourseAccessForRoles $parameters)
+    public function SetCopiedExternalCourseAccessForRoles(SetCopiedExternalCourseAccessForRoles $parameters): SetCopiedExternalCourseAccessForRolesResponse
     {
       return $this->__soapCall('SetCopiedExternalCourseAccessForRoles', array($parameters));
     }
@@ -554,7 +612,7 @@ class SessionManagement extends \SoapClient
      * @param GetRecorderDownloadUrls $parameters
      * @return GetRecorderDownloadUrlsResponse
      */
-    public function GetRecorderDownloadUrls(GetRecorderDownloadUrls $parameters)
+    public function GetRecorderDownloadUrls(GetRecorderDownloadUrls $parameters): GetRecorderDownloadUrlsResponse
     {
       return $this->__soapCall('GetRecorderDownloadUrls', array($parameters));
     }
@@ -563,7 +621,7 @@ class SessionManagement extends \SoapClient
      * @param CreateNoteByRelativeTime $parameters
      * @return CreateNoteByRelativeTimeResponse
      */
-    public function CreateNoteByRelativeTime(CreateNoteByRelativeTime $parameters)
+    public function CreateNoteByRelativeTime(CreateNoteByRelativeTime $parameters): CreateNoteByRelativeTimeResponse
     {
       return $this->__soapCall('CreateNoteByRelativeTime', array($parameters));
     }
@@ -572,7 +630,7 @@ class SessionManagement extends \SoapClient
      * @param CreateNoteByAbsoluteTime $parameters
      * @return CreateNoteByAbsoluteTimeResponse
      */
-    public function CreateNoteByAbsoluteTime(CreateNoteByAbsoluteTime $parameters)
+    public function CreateNoteByAbsoluteTime(CreateNoteByAbsoluteTime $parameters): CreateNoteByAbsoluteTimeResponse
     {
       return $this->__soapCall('CreateNoteByAbsoluteTime', array($parameters));
     }
@@ -581,7 +639,7 @@ class SessionManagement extends \SoapClient
      * @param EditNote $parameters
      * @return EditNoteResponse
      */
-    public function EditNote(EditNote $parameters)
+    public function EditNote(EditNote $parameters): EditNoteResponse
     {
       return $this->__soapCall('EditNote', array($parameters));
     }
@@ -590,7 +648,7 @@ class SessionManagement extends \SoapClient
      * @param DeleteNote $parameters
      * @return DeleteNoteResponse
      */
-    public function DeleteNote(DeleteNote $parameters)
+    public function DeleteNote(DeleteNote $parameters): DeleteNoteResponse
     {
       return $this->__soapCall('DeleteNote', array($parameters));
     }
@@ -599,7 +657,7 @@ class SessionManagement extends \SoapClient
      * @param GetNote $parameters
      * @return GetNoteResponse
      */
-    public function GetNote(GetNote $parameters)
+    public function GetNote(GetNote $parameters): GetNoteResponse
     {
       return $this->__soapCall('GetNote', array($parameters));
     }
@@ -608,7 +666,7 @@ class SessionManagement extends \SoapClient
      * @param ListNotes $parameters
      * @return ListNotesResponse
      */
-    public function ListNotes(ListNotes $parameters)
+    public function ListNotes(ListNotes $parameters): ListNotesResponse
     {
       return $this->__soapCall('ListNotes', array($parameters));
     }
@@ -617,7 +675,7 @@ class SessionManagement extends \SoapClient
      * @param AreUsersNotesPublic $parameters
      * @return AreUsersNotesPublicResponse
      */
-    public function AreUsersNotesPublic(AreUsersNotesPublic $parameters)
+    public function AreUsersNotesPublic(AreUsersNotesPublic $parameters): AreUsersNotesPublicResponse
     {
       return $this->__soapCall('AreUsersNotesPublic', array($parameters));
     }
@@ -626,7 +684,7 @@ class SessionManagement extends \SoapClient
      * @param SetNotesPublic $parameters
      * @return SetNotesPublicResponse
      */
-    public function SetNotesPublic(SetNotesPublic $parameters)
+    public function SetNotesPublic(SetNotesPublic $parameters): SetNotesPublicResponse
     {
       return $this->__soapCall('SetNotesPublic', array($parameters));
     }
@@ -635,7 +693,7 @@ class SessionManagement extends \SoapClient
      * @param IsDropbox $parameters
      * @return IsDropboxResponse
      */
-    public function IsDropbox(IsDropbox $parameters)
+    public function IsDropbox(IsDropbox $parameters): IsDropboxResponse
     {
       return $this->__soapCall('IsDropbox', array($parameters));
     }
@@ -644,7 +702,7 @@ class SessionManagement extends \SoapClient
      * @param CreateCaptionByRelativeTime $parameters
      * @return CreateCaptionByRelativeTimeResponse
      */
-    public function CreateCaptionByRelativeTime(CreateCaptionByRelativeTime $parameters)
+    public function CreateCaptionByRelativeTime(CreateCaptionByRelativeTime $parameters): CreateCaptionByRelativeTimeResponse
     {
       return $this->__soapCall('CreateCaptionByRelativeTime', array($parameters));
     }
@@ -653,7 +711,7 @@ class SessionManagement extends \SoapClient
      * @param CreateCaptionByAbsoluteTime $parameters
      * @return CreateCaptionByAbsoluteTimeResponse
      */
-    public function CreateCaptionByAbsoluteTime(CreateCaptionByAbsoluteTime $parameters)
+    public function CreateCaptionByAbsoluteTime(CreateCaptionByAbsoluteTime $parameters): CreateCaptionByAbsoluteTimeResponse
     {
       return $this->__soapCall('CreateCaptionByAbsoluteTime', array($parameters));
     }
@@ -662,16 +720,25 @@ class SessionManagement extends \SoapClient
      * @param UploadTranscript $parameters
      * @return UploadTranscriptResponse
      */
-    public function UploadTranscript(UploadTranscript $parameters)
+    public function UploadTranscript(UploadTranscript $parameters): UploadTranscriptResponse
     {
       return $this->__soapCall('UploadTranscript', array($parameters));
+    }
+
+    /**
+     * @param ReplaceMachineCaptionsAndUploadTranscript $parameters
+     * @return ReplaceMachineCaptionsAndUploadTranscriptResponse
+     */
+    public function ReplaceMachineCaptionsAndUploadTranscript(ReplaceMachineCaptionsAndUploadTranscript $parameters): ReplaceMachineCaptionsAndUploadTranscriptResponse
+    {
+      return $this->__soapCall('ReplaceMachineCaptionsAndUploadTranscript', array($parameters));
     }
 
     /**
      * @param GetFoldersAvailabilitySettings $parameters
      * @return GetFoldersAvailabilitySettingsResponse
      */
-    public function GetFoldersAvailabilitySettings(GetFoldersAvailabilitySettings $parameters)
+    public function GetFoldersAvailabilitySettings(GetFoldersAvailabilitySettings $parameters): GetFoldersAvailabilitySettingsResponse
     {
       return $this->__soapCall('GetFoldersAvailabilitySettings', array($parameters));
     }
@@ -680,7 +747,7 @@ class SessionManagement extends \SoapClient
      * @param GetSessionsAvailabilitySettings $parameters
      * @return GetSessionsAvailabilitySettingsResponse
      */
-    public function GetSessionsAvailabilitySettings(GetSessionsAvailabilitySettings $parameters)
+    public function GetSessionsAvailabilitySettings(GetSessionsAvailabilitySettings $parameters): GetSessionsAvailabilitySettingsResponse
     {
       return $this->__soapCall('GetSessionsAvailabilitySettings', array($parameters));
     }
@@ -689,7 +756,7 @@ class SessionManagement extends \SoapClient
      * @param UpdateFoldersAvailabilityStartSettings $parameters
      * @return UpdateFoldersAvailabilityStartSettingsResponse
      */
-    public function UpdateFoldersAvailabilityStartSettings(UpdateFoldersAvailabilityStartSettings $parameters)
+    public function UpdateFoldersAvailabilityStartSettings(UpdateFoldersAvailabilityStartSettings $parameters): UpdateFoldersAvailabilityStartSettingsResponse
     {
       return $this->__soapCall('UpdateFoldersAvailabilityStartSettings', array($parameters));
     }
@@ -698,7 +765,7 @@ class SessionManagement extends \SoapClient
      * @param UpdateFoldersAvailabilityEndSettings $parameters
      * @return UpdateFoldersAvailabilityEndSettingsResponse
      */
-    public function UpdateFoldersAvailabilityEndSettings(UpdateFoldersAvailabilityEndSettings $parameters)
+    public function UpdateFoldersAvailabilityEndSettings(UpdateFoldersAvailabilityEndSettings $parameters): UpdateFoldersAvailabilityEndSettingsResponse
     {
       return $this->__soapCall('UpdateFoldersAvailabilityEndSettings', array($parameters));
     }
@@ -707,7 +774,7 @@ class SessionManagement extends \SoapClient
      * @param UpdateSessionsAvailabilityStartSettings $parameters
      * @return UpdateSessionsAvailabilityStartSettingsResponse
      */
-    public function UpdateSessionsAvailabilityStartSettings(UpdateSessionsAvailabilityStartSettings $parameters)
+    public function UpdateSessionsAvailabilityStartSettings(UpdateSessionsAvailabilityStartSettings $parameters): UpdateSessionsAvailabilityStartSettingsResponse
     {
       return $this->__soapCall('UpdateSessionsAvailabilityStartSettings', array($parameters));
     }
@@ -716,7 +783,7 @@ class SessionManagement extends \SoapClient
      * @param UpdateSessionsAvailabilityEndSettings $parameters
      * @return UpdateSessionsAvailabilityEndSettingsResponse
      */
-    public function UpdateSessionsAvailabilityEndSettings(UpdateSessionsAvailabilityEndSettings $parameters)
+    public function UpdateSessionsAvailabilityEndSettings(UpdateSessionsAvailabilityEndSettings $parameters): UpdateSessionsAvailabilityEndSettingsResponse
     {
       return $this->__soapCall('UpdateSessionsAvailabilityEndSettings', array($parameters));
     }
@@ -725,9 +792,36 @@ class SessionManagement extends \SoapClient
      * @param GetPersonalFolderForUser $parameters
      * @return GetPersonalFolderForUserResponse
      */
-    public function GetPersonalFolderForUser(GetPersonalFolderForUser $parameters)
+    public function GetPersonalFolderForUser(GetPersonalFolderForUser $parameters): GetPersonalFolderForUserResponse
     {
       return $this->__soapCall('GetPersonalFolderForUser', array($parameters));
+    }
+
+    /**
+     * @param GetVideoDownloadURL $parameters
+     * @return GetVideoDownloadURLResponse
+     */
+    public function GetVideoDownloadURL(GetVideoDownloadURL $parameters): GetVideoDownloadURLResponse
+    {
+      return $this->__soapCall('GetVideoDownloadURL', array($parameters));
+    }
+
+    /**
+     * @param GetAudioDownloadURL $parameters
+     * @return GetAudioDownloadURLResponse
+     */
+    public function GetAudioDownloadURL(GetAudioDownloadURL $parameters): GetAudioDownloadURLResponse
+    {
+      return $this->__soapCall('GetAudioDownloadURL', array($parameters));
+    }
+
+    /**
+     * @param UnprovisionExternalCourse $parameters
+     * @return UnprovisionExternalCourseResponse
+     */
+    public function UnprovisionExternalCourse(UnprovisionExternalCourse $parameters): UnprovisionExternalCourseResponse
+    {
+      return $this->__soapCall('UnprovisionExternalCourse', array($parameters));
     }
 
 }

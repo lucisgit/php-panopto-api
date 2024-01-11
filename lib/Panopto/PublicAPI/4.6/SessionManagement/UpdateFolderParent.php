@@ -6,24 +6,24 @@ class UpdateFolderParent
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $folderId
+     * @var string|null $folderId
      */
     protected $folderId = null;
 
     /**
-     * @var guid $parentId
+     * @var string|null $parentId
      */
     protected $parentId = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $folderId
-     * @param guid $parentId
+     * @param string $folderId
+     * @param string $parentId
      */
     public function __construct($auth, $folderId, $parentId)
     {
@@ -37,53 +37,53 @@ class UpdateFolderParent
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\UpdateFolderParent
+     * @return UpdateFolderParent
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateFolderParent
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->folderId;
+        return $this->folderId;
     }
 
     /**
-     * @param guid $folderId
-     * @return \Panopto\SessionManagement\UpdateFolderParent
+     * @param string $folderId
+     * @return UpdateFolderParent
      */
-    public function setFolderId($folderId)
+    public function setFolderId($folderId): UpdateFolderParent
     {
-      $this->folderId = $folderId;
-      return $this;
+        $this->folderId = $folderId;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getParentId()
     {
-      return $this->parentId;
+        return $this->parentId;
     }
 
     /**
-     * @param guid $parentId
-     * @return \Panopto\SessionManagement\UpdateFolderParent
+     * @param string $parentId
+     * @return UpdateFolderParent
      */
-    public function setParentId($parentId)
+    public function setParentId($parentId): UpdateFolderParent
     {
-      $this->parentId = $parentId;
-      return $this;
+        $this->parentId = $parentId;
+        return $this;
     }
 
 }

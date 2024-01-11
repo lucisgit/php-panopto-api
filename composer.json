@@ -16,12 +16,18 @@
             "role": "Developer"
         }
     ],
+    "repositories": [
+        {
+            "type": "github",
+            "url": "https://github.com/tonyjbutler/wsdl2phpgenerator.git"
+        }
+    ],
     "require": {
-        "php": "^5.3 || ^7.0",
+        "php": "^8.0",
         "ext-soap": "*"
     },
     "require-dev": {
-        "wsdl2phpgenerator/wsdl2phpgenerator": "^3.4"
+        "wsdl2phpgenerator/wsdl2phpgenerator": "^3.5"
     },
     "autoload": {
         "psr-4": { "Panopto\\": "lib/" },

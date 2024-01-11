@@ -6,7 +6,7 @@ class GetSessionsByIdResponse
 {
 
     /**
-     * @var ArrayOfSession $GetSessionsByIdResult
+     * @var ArrayOfSession|null $GetSessionsByIdResult
      */
     protected $GetSessionsByIdResult = null;
 
@@ -23,17 +23,17 @@ class GetSessionsByIdResponse
      */
     public function getGetSessionsByIdResult()
     {
-      return $this->GetSessionsByIdResult;
+        return $this->GetSessionsByIdResult;
     }
 
     /**
      * @param ArrayOfSession $GetSessionsByIdResult
-     * @return \Panopto\SessionManagement\GetSessionsByIdResponse
+     * @return GetSessionsByIdResponse
      */
-    public function setGetSessionsByIdResult($GetSessionsByIdResult)
+    public function setGetSessionsByIdResult($GetSessionsByIdResult): GetSessionsByIdResponse
     {
-      $this->GetSessionsByIdResult = $GetSessionsByIdResult;
-      return $this;
+        $this->GetSessionsByIdResult = $GetSessionsByIdResult;
+        return $this;
     }
 
 }

@@ -8,41 +8,41 @@ class ArrayOfSessionState implements \ArrayAccess, \Iterator, \Countable
     /**
      * @var SessionState[] $SessionState
      */
-    protected $SessionState = null;
+    protected array $SessionState = [];
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
-     * @return SessionState[]
+     * @return SessionState[]|null
      */
-    public function getSessionState()
+    public function getSessionState(): ?array
     {
-      return $this->SessionState;
+        return $this->SessionState;
     }
 
     /**
-     * @param SessionState[] $SessionState
-     * @return \Panopto\SessionManagement\ArrayOfSessionState
+     * @param SessionState[]|null $SessionState
+     * @return ArrayOfSessionState
      */
-    public function setSessionState(array $SessionState = null)
+    public function setSessionState(?array $SessionState = null): ArrayOfSessionState
     {
-      $this->SessionState = $SessionState;
-      return $this;
+        $this->SessionState = $SessionState;
+        return $this;
     }
 
     /**
      * ArrayAccess implementation
      *
      * @param mixed $offset An offset to check for
-     * @return boolean true on success or false on failure
+     * @return bool True on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
-      return isset($this->SessionState[$offset]);
+        return isset($this->SessionState[$offset]);
     }
 
     /**
@@ -51,9 +51,9 @@ class ArrayOfSessionState implements \ArrayAccess, \Iterator, \Countable
      * @param mixed $offset The offset to retrieve
      * @return SessionState
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): SessionState
     {
-      return $this->SessionState[$offset];
+        return $this->SessionState[$offset];
     }
 
     /**
@@ -63,13 +63,13 @@ class ArrayOfSessionState implements \ArrayAccess, \Iterator, \Countable
      * @param SessionState $value The value to set
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
-      if (!isset($offset)) {
-        $this->SessionState[] = $value;
-      } else {
-        $this->SessionState[$offset] = $value;
-      }
+        if (!isset($offset)) {
+            $this->SessionState[] = $value;
+        } else {
+            $this->SessionState[$offset] = $value;
+        }
     }
 
     /**
@@ -78,9 +78,9 @@ class ArrayOfSessionState implements \ArrayAccess, \Iterator, \Countable
      * @param mixed $offset The offset to unset
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
-      unset($this->SessionState[$offset]);
+        unset($this->SessionState[$offset]);
     }
 
     /**
@@ -88,9 +88,9 @@ class ArrayOfSessionState implements \ArrayAccess, \Iterator, \Countable
      *
      * @return SessionState Return the current element
      */
-    public function current()
+    public function current(): SessionState
     {
-      return current($this->SessionState);
+        return current($this->SessionState);
     }
 
     /**
@@ -99,9 +99,9 @@ class ArrayOfSessionState implements \ArrayAccess, \Iterator, \Countable
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
-      next($this->SessionState);
+        next($this->SessionState);
     }
 
     /**
@@ -109,19 +109,19 @@ class ArrayOfSessionState implements \ArrayAccess, \Iterator, \Countable
      *
      * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): ?string
     {
-      return key($this->SessionState);
+        return key($this->SessionState);
     }
 
     /**
      * Iterator implementation
      *
-     * @return boolean Return the validity of the current position
+     * @return bool Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
-      return $this->key() !== null;
+        return $this->key() !== null;
     }
 
     /**
@@ -130,19 +130,19 @@ class ArrayOfSessionState implements \ArrayAccess, \Iterator, \Countable
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
-      reset($this->SessionState);
+        reset($this->SessionState);
     }
 
     /**
      * Countable implementation
      *
-     * @return SessionState Return count of elements
+     * @return int Return count of elements
      */
-    public function count()
+    public function count(): int
     {
-      return count($this->SessionState);
+        return count($this->SessionState);
     }
 
 }

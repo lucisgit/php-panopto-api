@@ -8,41 +8,41 @@ class ArrayOfScheduledRecordingInfo implements \ArrayAccess, \Iterator, \Countab
     /**
      * @var ScheduledRecordingInfo[] $ScheduledRecordingInfo
      */
-    protected $ScheduledRecordingInfo = null;
+    protected array $ScheduledRecordingInfo = [];
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
-     * @return ScheduledRecordingInfo[]
+     * @return ScheduledRecordingInfo[]|null
      */
-    public function getScheduledRecordingInfo()
+    public function getScheduledRecordingInfo(): ?array
     {
-      return $this->ScheduledRecordingInfo;
+        return $this->ScheduledRecordingInfo;
     }
 
     /**
-     * @param ScheduledRecordingInfo[] $ScheduledRecordingInfo
-     * @return \Panopto\RemoteRecorderManagement\ArrayOfScheduledRecordingInfo
+     * @param ScheduledRecordingInfo[]|null $ScheduledRecordingInfo
+     * @return ArrayOfScheduledRecordingInfo
      */
-    public function setScheduledRecordingInfo(array $ScheduledRecordingInfo = null)
+    public function setScheduledRecordingInfo(?array $ScheduledRecordingInfo = null): ArrayOfScheduledRecordingInfo
     {
-      $this->ScheduledRecordingInfo = $ScheduledRecordingInfo;
-      return $this;
+        $this->ScheduledRecordingInfo = $ScheduledRecordingInfo;
+        return $this;
     }
 
     /**
      * ArrayAccess implementation
      *
      * @param mixed $offset An offset to check for
-     * @return boolean true on success or false on failure
+     * @return bool True on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
-      return isset($this->ScheduledRecordingInfo[$offset]);
+        return isset($this->ScheduledRecordingInfo[$offset]);
     }
 
     /**
@@ -51,9 +51,9 @@ class ArrayOfScheduledRecordingInfo implements \ArrayAccess, \Iterator, \Countab
      * @param mixed $offset The offset to retrieve
      * @return ScheduledRecordingInfo
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): ScheduledRecordingInfo
     {
-      return $this->ScheduledRecordingInfo[$offset];
+        return $this->ScheduledRecordingInfo[$offset];
     }
 
     /**
@@ -63,13 +63,13 @@ class ArrayOfScheduledRecordingInfo implements \ArrayAccess, \Iterator, \Countab
      * @param ScheduledRecordingInfo $value The value to set
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
-      if (!isset($offset)) {
-        $this->ScheduledRecordingInfo[] = $value;
-      } else {
-        $this->ScheduledRecordingInfo[$offset] = $value;
-      }
+        if (!isset($offset)) {
+            $this->ScheduledRecordingInfo[] = $value;
+        } else {
+            $this->ScheduledRecordingInfo[$offset] = $value;
+        }
     }
 
     /**
@@ -78,9 +78,9 @@ class ArrayOfScheduledRecordingInfo implements \ArrayAccess, \Iterator, \Countab
      * @param mixed $offset The offset to unset
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
-      unset($this->ScheduledRecordingInfo[$offset]);
+        unset($this->ScheduledRecordingInfo[$offset]);
     }
 
     /**
@@ -88,9 +88,9 @@ class ArrayOfScheduledRecordingInfo implements \ArrayAccess, \Iterator, \Countab
      *
      * @return ScheduledRecordingInfo Return the current element
      */
-    public function current()
+    public function current(): ScheduledRecordingInfo
     {
-      return current($this->ScheduledRecordingInfo);
+        return current($this->ScheduledRecordingInfo);
     }
 
     /**
@@ -99,9 +99,9 @@ class ArrayOfScheduledRecordingInfo implements \ArrayAccess, \Iterator, \Countab
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
-      next($this->ScheduledRecordingInfo);
+        next($this->ScheduledRecordingInfo);
     }
 
     /**
@@ -109,19 +109,19 @@ class ArrayOfScheduledRecordingInfo implements \ArrayAccess, \Iterator, \Countab
      *
      * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): ?string
     {
-      return key($this->ScheduledRecordingInfo);
+        return key($this->ScheduledRecordingInfo);
     }
 
     /**
      * Iterator implementation
      *
-     * @return boolean Return the validity of the current position
+     * @return bool Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
-      return $this->key() !== null;
+        return $this->key() !== null;
     }
 
     /**
@@ -130,19 +130,19 @@ class ArrayOfScheduledRecordingInfo implements \ArrayAccess, \Iterator, \Countab
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
-      reset($this->ScheduledRecordingInfo);
+        reset($this->ScheduledRecordingInfo);
     }
 
     /**
      * Countable implementation
      *
-     * @return ScheduledRecordingInfo Return count of elements
+     * @return int Return count of elements
      */
-    public function count()
+    public function count(): int
     {
-      return count($this->ScheduledRecordingInfo);
+        return count($this->ScheduledRecordingInfo);
     }
 
 }

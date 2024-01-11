@@ -6,28 +6,28 @@ class ScheduleRecurringRecording
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $scheduledSessionId
+     * @var string|null $scheduledSessionId
      */
     protected $scheduledSessionId = null;
 
     /**
-     * @var ArrayOfDayOfWeek $daysOfWeek
+     * @var ArrayOfDayOfWeek|null $daysOfWeek
      */
     protected $daysOfWeek = null;
 
     /**
-     * @var \DateTime $end
+     * @var \DateTime|string|null $end
      */
-    protected $end = null;
+    protected \DateTime|string|null $end = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $scheduledSessionId
+     * @param string $scheduledSessionId
      * @param ArrayOfDayOfWeek $daysOfWeek
      * @param \DateTime $end
      */
@@ -44,35 +44,35 @@ class ScheduleRecurringRecording
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\RemoteRecorderManagement\ScheduleRecurringRecording
+     * @return ScheduleRecurringRecording
      */
-    public function setAuth($auth)
+    public function setAuth($auth): ScheduleRecurringRecording
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getScheduledSessionId()
     {
-      return $this->scheduledSessionId;
+        return $this->scheduledSessionId;
     }
 
     /**
-     * @param guid $scheduledSessionId
-     * @return \Panopto\RemoteRecorderManagement\ScheduleRecurringRecording
+     * @param string $scheduledSessionId
+     * @return ScheduleRecurringRecording
      */
-    public function setScheduledSessionId($scheduledSessionId)
+    public function setScheduledSessionId($scheduledSessionId): ScheduleRecurringRecording
     {
-      $this->scheduledSessionId = $scheduledSessionId;
-      return $this;
+        $this->scheduledSessionId = $scheduledSessionId;
+        return $this;
     }
 
     /**
@@ -80,43 +80,43 @@ class ScheduleRecurringRecording
      */
     public function getDaysOfWeek()
     {
-      return $this->daysOfWeek;
+        return $this->daysOfWeek;
     }
 
     /**
      * @param ArrayOfDayOfWeek $daysOfWeek
-     * @return \Panopto\RemoteRecorderManagement\ScheduleRecurringRecording
+     * @return ScheduleRecurringRecording
      */
-    public function setDaysOfWeek($daysOfWeek)
+    public function setDaysOfWeek($daysOfWeek): ScheduleRecurringRecording
     {
-      $this->daysOfWeek = $daysOfWeek;
-      return $this;
+        $this->daysOfWeek = $daysOfWeek;
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getEnd()
+    public function getEnd(): \DateTime|bool|null
     {
-      if ($this->end == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->end);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->end == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->end);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
      * @param \DateTime $end
-     * @return \Panopto\RemoteRecorderManagement\ScheduleRecurringRecording
+     * @return ScheduleRecurringRecording
      */
-    public function setEnd(\DateTime $end)
+    public function setEnd(\DateTime $end): ScheduleRecurringRecording
     {
-      $this->end = $end->format(\DateTime::ATOM);
-      return $this;
+        $this->end = $end->format(\DateTime::ATOM);
+        return $this;
     }
 
 }

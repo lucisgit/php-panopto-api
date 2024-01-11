@@ -6,24 +6,24 @@ class GrantGroupViewerAccessToSession
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var guid $groupId
+     * @var string|null $groupId
      */
     protected $groupId = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
-     * @param guid $groupId
+     * @param string $sessionId
+     * @param string $groupId
      */
     public function __construct($auth, $sessionId, $groupId)
     {
@@ -37,53 +37,53 @@ class GrantGroupViewerAccessToSession
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\AccessManagement\GrantGroupViewerAccessToSession
+     * @return GrantGroupViewerAccessToSession
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GrantGroupViewerAccessToSession
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\AccessManagement\GrantGroupViewerAccessToSession
+     * @param string $sessionId
+     * @return GrantGroupViewerAccessToSession
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): GrantGroupViewerAccessToSession
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getGroupId()
     {
-      return $this->groupId;
+        return $this->groupId;
     }
 
     /**
-     * @param guid $groupId
-     * @return \Panopto\AccessManagement\GrantGroupViewerAccessToSession
+     * @param string $groupId
+     * @return GrantGroupViewerAccessToSession
      */
-    public function setGroupId($groupId)
+    public function setGroupId($groupId): GrantGroupViewerAccessToSession
     {
-      $this->groupId = $groupId;
-      return $this;
+        $this->groupId = $groupId;
+        return $this;
     }
 
 }

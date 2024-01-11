@@ -6,30 +6,30 @@ class UpdateSessionCreateRTMPStreams
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var int $countToAdd
+     * @var int|null $countToAdd
      */
     protected $countToAdd = null;
 
     /**
-     * @var boolean $arePrimaries
+     * @var bool|null $arePrimaries
      */
     protected $arePrimaries = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
+     * @param string $sessionId
      * @param int $countToAdd
-     * @param boolean $arePrimaries
+     * @param bool $arePrimaries
      */
     public function __construct($auth, $sessionId, $countToAdd, $arePrimaries)
     {
@@ -44,35 +44,35 @@ class UpdateSessionCreateRTMPStreams
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\UpdateSessionCreateRTMPStreams
+     * @return UpdateSessionCreateRTMPStreams
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateSessionCreateRTMPStreams
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\SessionManagement\UpdateSessionCreateRTMPStreams
+     * @param string $sessionId
+     * @return UpdateSessionCreateRTMPStreams
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): UpdateSessionCreateRTMPStreams
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
@@ -80,35 +80,35 @@ class UpdateSessionCreateRTMPStreams
      */
     public function getCountToAdd()
     {
-      return $this->countToAdd;
+        return $this->countToAdd;
     }
 
     /**
      * @param int $countToAdd
-     * @return \Panopto\SessionManagement\UpdateSessionCreateRTMPStreams
+     * @return UpdateSessionCreateRTMPStreams
      */
-    public function setCountToAdd($countToAdd)
+    public function setCountToAdd($countToAdd): UpdateSessionCreateRTMPStreams
     {
-      $this->countToAdd = $countToAdd;
-      return $this;
+        $this->countToAdd = $countToAdd;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getArePrimaries()
     {
-      return $this->arePrimaries;
+        return $this->arePrimaries;
     }
 
     /**
-     * @param boolean $arePrimaries
-     * @return \Panopto\SessionManagement\UpdateSessionCreateRTMPStreams
+     * @param bool $arePrimaries
+     * @return UpdateSessionCreateRTMPStreams
      */
-    public function setArePrimaries($arePrimaries)
+    public function setArePrimaries($arePrimaries): UpdateSessionCreateRTMPStreams
     {
-      $this->arePrimaries = $arePrimaries;
-      return $this;
+        $this->arePrimaries = $arePrimaries;
+        return $this;
     }
 
 }

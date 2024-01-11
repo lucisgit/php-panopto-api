@@ -8,41 +8,41 @@ class ArrayOfDayOfWeek implements \ArrayAccess, \Iterator, \Countable
     /**
      * @var DayOfWeek[] $DayOfWeek
      */
-    protected $DayOfWeek = null;
+    protected array $DayOfWeek = [];
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
-     * @return DayOfWeek[]
+     * @return DayOfWeek[]|null
      */
-    public function getDayOfWeek()
+    public function getDayOfWeek(): ?array
     {
-      return $this->DayOfWeek;
+        return $this->DayOfWeek;
     }
 
     /**
-     * @param DayOfWeek[] $DayOfWeek
-     * @return \Panopto\RemoteRecorderManagement\ArrayOfDayOfWeek
+     * @param DayOfWeek[]|null $DayOfWeek
+     * @return ArrayOfDayOfWeek
      */
-    public function setDayOfWeek(array $DayOfWeek = null)
+    public function setDayOfWeek(?array $DayOfWeek = null): ArrayOfDayOfWeek
     {
-      $this->DayOfWeek = $DayOfWeek;
-      return $this;
+        $this->DayOfWeek = $DayOfWeek;
+        return $this;
     }
 
     /**
      * ArrayAccess implementation
      *
      * @param mixed $offset An offset to check for
-     * @return boolean true on success or false on failure
+     * @return bool True on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
-      return isset($this->DayOfWeek[$offset]);
+        return isset($this->DayOfWeek[$offset]);
     }
 
     /**
@@ -51,9 +51,9 @@ class ArrayOfDayOfWeek implements \ArrayAccess, \Iterator, \Countable
      * @param mixed $offset The offset to retrieve
      * @return DayOfWeek
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): DayOfWeek
     {
-      return $this->DayOfWeek[$offset];
+        return $this->DayOfWeek[$offset];
     }
 
     /**
@@ -63,13 +63,13 @@ class ArrayOfDayOfWeek implements \ArrayAccess, \Iterator, \Countable
      * @param DayOfWeek $value The value to set
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
-      if (!isset($offset)) {
-        $this->DayOfWeek[] = $value;
-      } else {
-        $this->DayOfWeek[$offset] = $value;
-      }
+        if (!isset($offset)) {
+            $this->DayOfWeek[] = $value;
+        } else {
+            $this->DayOfWeek[$offset] = $value;
+        }
     }
 
     /**
@@ -78,9 +78,9 @@ class ArrayOfDayOfWeek implements \ArrayAccess, \Iterator, \Countable
      * @param mixed $offset The offset to unset
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
-      unset($this->DayOfWeek[$offset]);
+        unset($this->DayOfWeek[$offset]);
     }
 
     /**
@@ -88,9 +88,9 @@ class ArrayOfDayOfWeek implements \ArrayAccess, \Iterator, \Countable
      *
      * @return DayOfWeek Return the current element
      */
-    public function current()
+    public function current(): DayOfWeek
     {
-      return current($this->DayOfWeek);
+        return current($this->DayOfWeek);
     }
 
     /**
@@ -99,9 +99,9 @@ class ArrayOfDayOfWeek implements \ArrayAccess, \Iterator, \Countable
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
-      next($this->DayOfWeek);
+        next($this->DayOfWeek);
     }
 
     /**
@@ -109,19 +109,19 @@ class ArrayOfDayOfWeek implements \ArrayAccess, \Iterator, \Countable
      *
      * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): ?string
     {
-      return key($this->DayOfWeek);
+        return key($this->DayOfWeek);
     }
 
     /**
      * Iterator implementation
      *
-     * @return boolean Return the validity of the current position
+     * @return bool Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
-      return $this->key() !== null;
+        return $this->key() !== null;
     }
 
     /**
@@ -130,19 +130,19 @@ class ArrayOfDayOfWeek implements \ArrayAccess, \Iterator, \Countable
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
-      reset($this->DayOfWeek);
+        reset($this->DayOfWeek);
     }
 
     /**
      * Countable implementation
      *
-     * @return DayOfWeek Return count of elements
+     * @return int Return count of elements
      */
-    public function count()
+    public function count(): int
     {
-      return count($this->DayOfWeek);
+        return count($this->DayOfWeek);
     }
 
 }

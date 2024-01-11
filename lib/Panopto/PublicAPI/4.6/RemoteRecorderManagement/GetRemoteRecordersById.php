@@ -6,12 +6,12 @@ class GetRemoteRecordersById
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var ArrayOfguid $remoteRecorderIds
+     * @var ArrayOfguid|null $remoteRecorderIds
      */
     protected $remoteRecorderIds = null;
 
@@ -30,17 +30,17 @@ class GetRemoteRecordersById
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\RemoteRecorderManagement\GetRemoteRecordersById
+     * @return GetRemoteRecordersById
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetRemoteRecordersById
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -48,17 +48,17 @@ class GetRemoteRecordersById
      */
     public function getRemoteRecorderIds()
     {
-      return $this->remoteRecorderIds;
+        return $this->remoteRecorderIds;
     }
 
     /**
      * @param ArrayOfguid $remoteRecorderIds
-     * @return \Panopto\RemoteRecorderManagement\GetRemoteRecordersById
+     * @return GetRemoteRecordersById
      */
-    public function setRemoteRecorderIds($remoteRecorderIds)
+    public function setRemoteRecorderIds($remoteRecorderIds): GetRemoteRecordersById
     {
-      $this->remoteRecorderIds = $remoteRecorderIds;
-      return $this;
+        $this->remoteRecorderIds = $remoteRecorderIds;
+        return $this;
     }
 
 }

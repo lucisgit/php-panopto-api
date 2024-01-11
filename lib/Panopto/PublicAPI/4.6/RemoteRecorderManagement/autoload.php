@@ -1,7 +1,7 @@
 <?php
 
 
- function autoload_245e14180df06cf455e7e671ed387763($class)
+ function autoload_245e14180df06cf455e7e671ed387763($class): void
 {
     $classes = array(
         'Panopto\RemoteRecorderManagement\RemoteRecorderManagement' => __DIR__ .'/RemoteRecorderManagement.php',
@@ -46,7 +46,7 @@
     );
     if (!empty($classes[$class])) {
         include $classes[$class];
-    };
+    }
 }
 
 spl_autoload_register('autoload_245e14180df06cf455e7e671ed387763');

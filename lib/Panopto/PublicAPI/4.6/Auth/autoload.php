@@ -1,7 +1,7 @@
 <?php
 
 
- function autoload_e5b4eba96e32c1535fca9125bc268bc6($class)
+ function autoload_e5b4eba96e32c1535fca9125bc268bc6($class): void
 {
     $classes = array(
         'Panopto\Auth\Auth' => __DIR__ .'/Auth.php',
@@ -19,7 +19,7 @@
     );
     if (!empty($classes[$class])) {
         include $classes[$class];
-    };
+    }
 }
 
 spl_autoload_register('autoload_e5b4eba96e32c1535fca9125bc268bc6');

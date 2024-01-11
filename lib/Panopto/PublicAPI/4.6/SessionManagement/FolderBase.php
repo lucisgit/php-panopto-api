@@ -6,145 +6,145 @@ class FolderBase
 {
 
     /**
-     * @var boolean $AllowPublicNotes
+     * @var bool|null $AllowPublicNotes
      */
     protected $AllowPublicNotes = null;
 
     /**
-     * @var boolean $AllowSessionDownload
+     * @var bool|null $AllowSessionDownload
      */
     protected $AllowSessionDownload = null;
 
     /**
-     * @var string $AudioPodcastITunesUrl
+     * @var string|null $AudioPodcastITunesUrl
      */
     protected $AudioPodcastITunesUrl = null;
 
     /**
-     * @var string $AudioRssUrl
+     * @var string|null $AudioRssUrl
      */
     protected $AudioRssUrl = null;
 
     /**
-     * @var ArrayOfguid $ChildFolders
+     * @var ArrayOfguid|null $ChildFolders
      */
     protected $ChildFolders = null;
 
     /**
-     * @var boolean $DeliveriesHaveSpecifiedOrder
+     * @var bool|null $DeliveriesHaveSpecifiedOrder
      */
     protected $DeliveriesHaveSpecifiedOrder = null;
 
     /**
-     * @var string $Description
+     * @var string|null $Description
      */
     protected $Description = null;
 
     /**
-     * @var string $EmbedUploaderUrl
+     * @var string|null $EmbedUploaderUrl
      */
     protected $EmbedUploaderUrl = null;
 
     /**
-     * @var string $EmbedUrl
+     * @var string|null $EmbedUrl
      */
     protected $EmbedUrl = null;
 
     /**
-     * @var boolean $EnablePodcast
+     * @var bool|null $EnablePodcast
      */
     protected $EnablePodcast = null;
 
     /**
-     * @var guid $Id
+     * @var string|null $Id
      */
     protected $Id = null;
 
     /**
-     * @var boolean $IsPublic
+     * @var bool|null $IsPublic
      */
     protected $IsPublic = null;
 
     /**
-     * @var string $ListUrl
+     * @var string|null $ListUrl
      */
     protected $ListUrl = null;
 
     /**
-     * @var string $Name
+     * @var string|null $Name
      */
     protected $Name = null;
 
     /**
-     * @var guid $ParentFolder
+     * @var string|null $ParentFolder
      */
     protected $ParentFolder = null;
 
     /**
-     * @var ArrayOfstring $Presenters
+     * @var ArrayOfstring|null $Presenters
      */
     protected $Presenters = null;
 
     /**
-     * @var ArrayOfguid $Sessions
+     * @var ArrayOfguid|null $Sessions
      */
     protected $Sessions = null;
 
     /**
-     * @var string $SettingsUrl
+     * @var string|null $SettingsUrl
      */
     protected $SettingsUrl = null;
 
     /**
-     * @var string $VideoPodcastITunesUrl
+     * @var string|null $VideoPodcastITunesUrl
      */
     protected $VideoPodcastITunesUrl = null;
 
     /**
-     * @var string $VideoRssUrl
+     * @var string|null $VideoRssUrl
      */
     protected $VideoRssUrl = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getAllowPublicNotes()
     {
-      return $this->AllowPublicNotes;
+        return $this->AllowPublicNotes;
     }
 
     /**
-     * @param boolean $AllowPublicNotes
-     * @return \Panopto\SessionManagement\FolderBase
+     * @param bool $AllowPublicNotes
+     * @return FolderBase
      */
-    public function setAllowPublicNotes($AllowPublicNotes)
+    public function setAllowPublicNotes($AllowPublicNotes): FolderBase
     {
-      $this->AllowPublicNotes = $AllowPublicNotes;
-      return $this;
+        $this->AllowPublicNotes = $AllowPublicNotes;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getAllowSessionDownload()
     {
-      return $this->AllowSessionDownload;
+        return $this->AllowSessionDownload;
     }
 
     /**
-     * @param boolean $AllowSessionDownload
-     * @return \Panopto\SessionManagement\FolderBase
+     * @param bool $AllowSessionDownload
+     * @return FolderBase
      */
-    public function setAllowSessionDownload($AllowSessionDownload)
+    public function setAllowSessionDownload($AllowSessionDownload): FolderBase
     {
-      $this->AllowSessionDownload = $AllowSessionDownload;
-      return $this;
+        $this->AllowSessionDownload = $AllowSessionDownload;
+        return $this;
     }
 
     /**
@@ -152,17 +152,17 @@ class FolderBase
      */
     public function getAudioPodcastITunesUrl()
     {
-      return $this->AudioPodcastITunesUrl;
+        return $this->AudioPodcastITunesUrl;
     }
 
     /**
      * @param string $AudioPodcastITunesUrl
-     * @return \Panopto\SessionManagement\FolderBase
+     * @return FolderBase
      */
-    public function setAudioPodcastITunesUrl($AudioPodcastITunesUrl)
+    public function setAudioPodcastITunesUrl($AudioPodcastITunesUrl): FolderBase
     {
-      $this->AudioPodcastITunesUrl = $AudioPodcastITunesUrl;
-      return $this;
+        $this->AudioPodcastITunesUrl = $AudioPodcastITunesUrl;
+        return $this;
     }
 
     /**
@@ -170,17 +170,17 @@ class FolderBase
      */
     public function getAudioRssUrl()
     {
-      return $this->AudioRssUrl;
+        return $this->AudioRssUrl;
     }
 
     /**
      * @param string $AudioRssUrl
-     * @return \Panopto\SessionManagement\FolderBase
+     * @return FolderBase
      */
-    public function setAudioRssUrl($AudioRssUrl)
+    public function setAudioRssUrl($AudioRssUrl): FolderBase
     {
-      $this->AudioRssUrl = $AudioRssUrl;
-      return $this;
+        $this->AudioRssUrl = $AudioRssUrl;
+        return $this;
     }
 
     /**
@@ -188,35 +188,35 @@ class FolderBase
      */
     public function getChildFolders()
     {
-      return $this->ChildFolders;
+        return $this->ChildFolders;
     }
 
     /**
      * @param ArrayOfguid $ChildFolders
-     * @return \Panopto\SessionManagement\FolderBase
+     * @return FolderBase
      */
-    public function setChildFolders($ChildFolders)
+    public function setChildFolders($ChildFolders): FolderBase
     {
-      $this->ChildFolders = $ChildFolders;
-      return $this;
+        $this->ChildFolders = $ChildFolders;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getDeliveriesHaveSpecifiedOrder()
     {
-      return $this->DeliveriesHaveSpecifiedOrder;
+        return $this->DeliveriesHaveSpecifiedOrder;
     }
 
     /**
-     * @param boolean $DeliveriesHaveSpecifiedOrder
-     * @return \Panopto\SessionManagement\FolderBase
+     * @param bool $DeliveriesHaveSpecifiedOrder
+     * @return FolderBase
      */
-    public function setDeliveriesHaveSpecifiedOrder($DeliveriesHaveSpecifiedOrder)
+    public function setDeliveriesHaveSpecifiedOrder($DeliveriesHaveSpecifiedOrder): FolderBase
     {
-      $this->DeliveriesHaveSpecifiedOrder = $DeliveriesHaveSpecifiedOrder;
-      return $this;
+        $this->DeliveriesHaveSpecifiedOrder = $DeliveriesHaveSpecifiedOrder;
+        return $this;
     }
 
     /**
@@ -224,17 +224,17 @@ class FolderBase
      */
     public function getDescription()
     {
-      return $this->Description;
+        return $this->Description;
     }
 
     /**
      * @param string $Description
-     * @return \Panopto\SessionManagement\FolderBase
+     * @return FolderBase
      */
-    public function setDescription($Description)
+    public function setDescription($Description): FolderBase
     {
-      $this->Description = $Description;
-      return $this;
+        $this->Description = $Description;
+        return $this;
     }
 
     /**
@@ -242,17 +242,17 @@ class FolderBase
      */
     public function getEmbedUploaderUrl()
     {
-      return $this->EmbedUploaderUrl;
+        return $this->EmbedUploaderUrl;
     }
 
     /**
      * @param string $EmbedUploaderUrl
-     * @return \Panopto\SessionManagement\FolderBase
+     * @return FolderBase
      */
-    public function setEmbedUploaderUrl($EmbedUploaderUrl)
+    public function setEmbedUploaderUrl($EmbedUploaderUrl): FolderBase
     {
-      $this->EmbedUploaderUrl = $EmbedUploaderUrl;
-      return $this;
+        $this->EmbedUploaderUrl = $EmbedUploaderUrl;
+        return $this;
     }
 
     /**
@@ -260,71 +260,71 @@ class FolderBase
      */
     public function getEmbedUrl()
     {
-      return $this->EmbedUrl;
+        return $this->EmbedUrl;
     }
 
     /**
      * @param string $EmbedUrl
-     * @return \Panopto\SessionManagement\FolderBase
+     * @return FolderBase
      */
-    public function setEmbedUrl($EmbedUrl)
+    public function setEmbedUrl($EmbedUrl): FolderBase
     {
-      $this->EmbedUrl = $EmbedUrl;
-      return $this;
+        $this->EmbedUrl = $EmbedUrl;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getEnablePodcast()
     {
-      return $this->EnablePodcast;
+        return $this->EnablePodcast;
     }
 
     /**
-     * @param boolean $EnablePodcast
-     * @return \Panopto\SessionManagement\FolderBase
+     * @param bool $EnablePodcast
+     * @return FolderBase
      */
-    public function setEnablePodcast($EnablePodcast)
+    public function setEnablePodcast($EnablePodcast): FolderBase
     {
-      $this->EnablePodcast = $EnablePodcast;
-      return $this;
+        $this->EnablePodcast = $EnablePodcast;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getId()
     {
-      return $this->Id;
+        return $this->Id;
     }
 
     /**
-     * @param guid $Id
-     * @return \Panopto\SessionManagement\FolderBase
+     * @param string $Id
+     * @return FolderBase
      */
-    public function setId($Id)
+    public function setId($Id): FolderBase
     {
-      $this->Id = $Id;
-      return $this;
+        $this->Id = $Id;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getIsPublic()
     {
-      return $this->IsPublic;
+        return $this->IsPublic;
     }
 
     /**
-     * @param boolean $IsPublic
-     * @return \Panopto\SessionManagement\FolderBase
+     * @param bool $IsPublic
+     * @return FolderBase
      */
-    public function setIsPublic($IsPublic)
+    public function setIsPublic($IsPublic): FolderBase
     {
-      $this->IsPublic = $IsPublic;
-      return $this;
+        $this->IsPublic = $IsPublic;
+        return $this;
     }
 
     /**
@@ -332,17 +332,17 @@ class FolderBase
      */
     public function getListUrl()
     {
-      return $this->ListUrl;
+        return $this->ListUrl;
     }
 
     /**
      * @param string $ListUrl
-     * @return \Panopto\SessionManagement\FolderBase
+     * @return FolderBase
      */
-    public function setListUrl($ListUrl)
+    public function setListUrl($ListUrl): FolderBase
     {
-      $this->ListUrl = $ListUrl;
-      return $this;
+        $this->ListUrl = $ListUrl;
+        return $this;
     }
 
     /**
@@ -350,35 +350,35 @@ class FolderBase
      */
     public function getName()
     {
-      return $this->Name;
+        return $this->Name;
     }
 
     /**
      * @param string $Name
-     * @return \Panopto\SessionManagement\FolderBase
+     * @return FolderBase
      */
-    public function setName($Name)
+    public function setName($Name): FolderBase
     {
-      $this->Name = $Name;
-      return $this;
+        $this->Name = $Name;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getParentFolder()
     {
-      return $this->ParentFolder;
+        return $this->ParentFolder;
     }
 
     /**
-     * @param guid $ParentFolder
-     * @return \Panopto\SessionManagement\FolderBase
+     * @param string $ParentFolder
+     * @return FolderBase
      */
-    public function setParentFolder($ParentFolder)
+    public function setParentFolder($ParentFolder): FolderBase
     {
-      $this->ParentFolder = $ParentFolder;
-      return $this;
+        $this->ParentFolder = $ParentFolder;
+        return $this;
     }
 
     /**
@@ -386,17 +386,17 @@ class FolderBase
      */
     public function getPresenters()
     {
-      return $this->Presenters;
+        return $this->Presenters;
     }
 
     /**
      * @param ArrayOfstring $Presenters
-     * @return \Panopto\SessionManagement\FolderBase
+     * @return FolderBase
      */
-    public function setPresenters($Presenters)
+    public function setPresenters($Presenters): FolderBase
     {
-      $this->Presenters = $Presenters;
-      return $this;
+        $this->Presenters = $Presenters;
+        return $this;
     }
 
     /**
@@ -404,17 +404,17 @@ class FolderBase
      */
     public function getSessions()
     {
-      return $this->Sessions;
+        return $this->Sessions;
     }
 
     /**
      * @param ArrayOfguid $Sessions
-     * @return \Panopto\SessionManagement\FolderBase
+     * @return FolderBase
      */
-    public function setSessions($Sessions)
+    public function setSessions($Sessions): FolderBase
     {
-      $this->Sessions = $Sessions;
-      return $this;
+        $this->Sessions = $Sessions;
+        return $this;
     }
 
     /**
@@ -422,17 +422,17 @@ class FolderBase
      */
     public function getSettingsUrl()
     {
-      return $this->SettingsUrl;
+        return $this->SettingsUrl;
     }
 
     /**
      * @param string $SettingsUrl
-     * @return \Panopto\SessionManagement\FolderBase
+     * @return FolderBase
      */
-    public function setSettingsUrl($SettingsUrl)
+    public function setSettingsUrl($SettingsUrl): FolderBase
     {
-      $this->SettingsUrl = $SettingsUrl;
-      return $this;
+        $this->SettingsUrl = $SettingsUrl;
+        return $this;
     }
 
     /**
@@ -440,17 +440,17 @@ class FolderBase
      */
     public function getVideoPodcastITunesUrl()
     {
-      return $this->VideoPodcastITunesUrl;
+        return $this->VideoPodcastITunesUrl;
     }
 
     /**
      * @param string $VideoPodcastITunesUrl
-     * @return \Panopto\SessionManagement\FolderBase
+     * @return FolderBase
      */
-    public function setVideoPodcastITunesUrl($VideoPodcastITunesUrl)
+    public function setVideoPodcastITunesUrl($VideoPodcastITunesUrl): FolderBase
     {
-      $this->VideoPodcastITunesUrl = $VideoPodcastITunesUrl;
-      return $this;
+        $this->VideoPodcastITunesUrl = $VideoPodcastITunesUrl;
+        return $this;
     }
 
     /**
@@ -458,17 +458,17 @@ class FolderBase
      */
     public function getVideoRssUrl()
     {
-      return $this->VideoRssUrl;
+        return $this->VideoRssUrl;
     }
 
     /**
      * @param string $VideoRssUrl
-     * @return \Panopto\SessionManagement\FolderBase
+     * @return FolderBase
      */
-    public function setVideoRssUrl($VideoRssUrl)
+    public function setVideoRssUrl($VideoRssUrl): FolderBase
     {
-      $this->VideoRssUrl = $VideoRssUrl;
-      return $this;
+        $this->VideoRssUrl = $VideoRssUrl;
+        return $this;
     }
 
 }

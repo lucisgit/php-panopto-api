@@ -6,7 +6,7 @@ class GetFolderAccessDetailsResponse
 {
 
     /**
-     * @var FolderAccessDetails $GetFolderAccessDetailsResult
+     * @var FolderAccessDetails|null $GetFolderAccessDetailsResult
      */
     protected $GetFolderAccessDetailsResult = null;
 
@@ -23,17 +23,17 @@ class GetFolderAccessDetailsResponse
      */
     public function getGetFolderAccessDetailsResult()
     {
-      return $this->GetFolderAccessDetailsResult;
+        return $this->GetFolderAccessDetailsResult;
     }
 
     /**
      * @param FolderAccessDetails $GetFolderAccessDetailsResult
-     * @return \Panopto\AccessManagement\GetFolderAccessDetailsResponse
+     * @return GetFolderAccessDetailsResponse
      */
-    public function setGetFolderAccessDetailsResult($GetFolderAccessDetailsResult)
+    public function setGetFolderAccessDetailsResult($GetFolderAccessDetailsResult): GetFolderAccessDetailsResponse
     {
-      $this->GetFolderAccessDetailsResult = $GetFolderAccessDetailsResult;
-      return $this;
+        $this->GetFolderAccessDetailsResult = $GetFolderAccessDetailsResult;
+        return $this;
     }
 
 }

@@ -6,24 +6,24 @@ class RemoteRecorderDevice
 {
 
     /**
-     * @var RemoteRecorderDeviceType $DeviceType
+     * @var RemoteRecorderDeviceType|null $DeviceType
      */
     protected $DeviceType = null;
 
     /**
-     * @var boolean $IsCapturing
+     * @var bool|null $IsCapturing
      */
     protected $IsCapturing = null;
 
     /**
-     * @var string $Name
+     * @var string|null $Name
      */
     protected $Name = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -31,35 +31,35 @@ class RemoteRecorderDevice
      */
     public function getDeviceType()
     {
-      return $this->DeviceType;
+        return $this->DeviceType;
     }
 
     /**
      * @param RemoteRecorderDeviceType $DeviceType
-     * @return \Panopto\RemoteRecorderManagement\RemoteRecorderDevice
+     * @return RemoteRecorderDevice
      */
-    public function setDeviceType($DeviceType)
+    public function setDeviceType($DeviceType): RemoteRecorderDevice
     {
-      $this->DeviceType = $DeviceType;
-      return $this;
+        $this->DeviceType = $DeviceType;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getIsCapturing()
     {
-      return $this->IsCapturing;
+        return $this->IsCapturing;
     }
 
     /**
-     * @param boolean $IsCapturing
-     * @return \Panopto\RemoteRecorderManagement\RemoteRecorderDevice
+     * @param bool $IsCapturing
+     * @return RemoteRecorderDevice
      */
-    public function setIsCapturing($IsCapturing)
+    public function setIsCapturing($IsCapturing): RemoteRecorderDevice
     {
-      $this->IsCapturing = $IsCapturing;
-      return $this;
+        $this->IsCapturing = $IsCapturing;
+        return $this;
     }
 
     /**
@@ -67,17 +67,17 @@ class RemoteRecorderDevice
      */
     public function getName()
     {
-      return $this->Name;
+        return $this->Name;
     }
 
     /**
      * @param string $Name
-     * @return \Panopto\RemoteRecorderManagement\RemoteRecorderDevice
+     * @return RemoteRecorderDevice
      */
-    public function setName($Name)
+    public function setName($Name): RemoteRecorderDevice
     {
-      $this->Name = $Name;
-      return $this;
+        $this->Name = $Name;
+        return $this;
     }
 
 }

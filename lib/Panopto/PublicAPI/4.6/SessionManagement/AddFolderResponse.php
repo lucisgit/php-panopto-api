@@ -6,7 +6,7 @@ class AddFolderResponse
 {
 
     /**
-     * @var Folder $AddFolderResult
+     * @var Folder|null $AddFolderResult
      */
     protected $AddFolderResult = null;
 
@@ -23,17 +23,17 @@ class AddFolderResponse
      */
     public function getAddFolderResult()
     {
-      return $this->AddFolderResult;
+        return $this->AddFolderResult;
     }
 
     /**
      * @param Folder $AddFolderResult
-     * @return \Panopto\SessionManagement\AddFolderResponse
+     * @return AddFolderResponse
      */
-    public function setAddFolderResult($AddFolderResult)
+    public function setAddFolderResult($AddFolderResult): AddFolderResponse
     {
-      $this->AddFolderResult = $AddFolderResult;
-      return $this;
+        $this->AddFolderResult = $AddFolderResult;
+        return $this;
     }
 
 }

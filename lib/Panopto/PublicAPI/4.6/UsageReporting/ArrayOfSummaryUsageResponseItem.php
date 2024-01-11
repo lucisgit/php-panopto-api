@@ -8,41 +8,41 @@ class ArrayOfSummaryUsageResponseItem implements \ArrayAccess, \Iterator, \Count
     /**
      * @var SummaryUsageResponseItem[] $SummaryUsageResponseItem
      */
-    protected $SummaryUsageResponseItem = null;
+    protected array $SummaryUsageResponseItem = [];
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
-     * @return SummaryUsageResponseItem[]
+     * @return SummaryUsageResponseItem[]|null
      */
-    public function getSummaryUsageResponseItem()
+    public function getSummaryUsageResponseItem(): ?array
     {
-      return $this->SummaryUsageResponseItem;
+        return $this->SummaryUsageResponseItem;
     }
 
     /**
-     * @param SummaryUsageResponseItem[] $SummaryUsageResponseItem
-     * @return \Panopto\UsageReporting\ArrayOfSummaryUsageResponseItem
+     * @param SummaryUsageResponseItem[]|null $SummaryUsageResponseItem
+     * @return ArrayOfSummaryUsageResponseItem
      */
-    public function setSummaryUsageResponseItem(array $SummaryUsageResponseItem = null)
+    public function setSummaryUsageResponseItem(?array $SummaryUsageResponseItem = null): ArrayOfSummaryUsageResponseItem
     {
-      $this->SummaryUsageResponseItem = $SummaryUsageResponseItem;
-      return $this;
+        $this->SummaryUsageResponseItem = $SummaryUsageResponseItem;
+        return $this;
     }
 
     /**
      * ArrayAccess implementation
      *
      * @param mixed $offset An offset to check for
-     * @return boolean true on success or false on failure
+     * @return bool True on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
-      return isset($this->SummaryUsageResponseItem[$offset]);
+        return isset($this->SummaryUsageResponseItem[$offset]);
     }
 
     /**
@@ -51,9 +51,9 @@ class ArrayOfSummaryUsageResponseItem implements \ArrayAccess, \Iterator, \Count
      * @param mixed $offset The offset to retrieve
      * @return SummaryUsageResponseItem
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): SummaryUsageResponseItem
     {
-      return $this->SummaryUsageResponseItem[$offset];
+        return $this->SummaryUsageResponseItem[$offset];
     }
 
     /**
@@ -63,13 +63,13 @@ class ArrayOfSummaryUsageResponseItem implements \ArrayAccess, \Iterator, \Count
      * @param SummaryUsageResponseItem $value The value to set
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
-      if (!isset($offset)) {
-        $this->SummaryUsageResponseItem[] = $value;
-      } else {
-        $this->SummaryUsageResponseItem[$offset] = $value;
-      }
+        if (!isset($offset)) {
+            $this->SummaryUsageResponseItem[] = $value;
+        } else {
+            $this->SummaryUsageResponseItem[$offset] = $value;
+        }
     }
 
     /**
@@ -78,9 +78,9 @@ class ArrayOfSummaryUsageResponseItem implements \ArrayAccess, \Iterator, \Count
      * @param mixed $offset The offset to unset
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
-      unset($this->SummaryUsageResponseItem[$offset]);
+        unset($this->SummaryUsageResponseItem[$offset]);
     }
 
     /**
@@ -88,9 +88,9 @@ class ArrayOfSummaryUsageResponseItem implements \ArrayAccess, \Iterator, \Count
      *
      * @return SummaryUsageResponseItem Return the current element
      */
-    public function current()
+    public function current(): SummaryUsageResponseItem
     {
-      return current($this->SummaryUsageResponseItem);
+        return current($this->SummaryUsageResponseItem);
     }
 
     /**
@@ -99,9 +99,9 @@ class ArrayOfSummaryUsageResponseItem implements \ArrayAccess, \Iterator, \Count
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
-      next($this->SummaryUsageResponseItem);
+        next($this->SummaryUsageResponseItem);
     }
 
     /**
@@ -109,19 +109,19 @@ class ArrayOfSummaryUsageResponseItem implements \ArrayAccess, \Iterator, \Count
      *
      * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): ?string
     {
-      return key($this->SummaryUsageResponseItem);
+        return key($this->SummaryUsageResponseItem);
     }
 
     /**
      * Iterator implementation
      *
-     * @return boolean Return the validity of the current position
+     * @return bool Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
-      return $this->key() !== null;
+        return $this->key() !== null;
     }
 
     /**
@@ -130,19 +130,19 @@ class ArrayOfSummaryUsageResponseItem implements \ArrayAccess, \Iterator, \Count
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
-      reset($this->SummaryUsageResponseItem);
+        reset($this->SummaryUsageResponseItem);
     }
 
     /**
      * Countable implementation
      *
-     * @return SummaryUsageResponseItem Return count of elements
+     * @return int Return count of elements
      */
-    public function count()
+    public function count(): int
     {
-      return count($this->SummaryUsageResponseItem);
+        return count($this->SummaryUsageResponseItem);
     }
 
 }

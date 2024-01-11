@@ -6,23 +6,23 @@ class UpdatePassword
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $userId
+     * @var string|null $userId
      */
     protected $userId = null;
 
     /**
-     * @var string $newPassword
+     * @var string|null $newPassword
      */
     protected $newPassword = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $userId
+     * @param string $userId
      * @param string $newPassword
      */
     public function __construct($auth, $userId, $newPassword)
@@ -37,35 +37,35 @@ class UpdatePassword
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UserManagement\UpdatePassword
+     * @return UpdatePassword
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdatePassword
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getUserId()
     {
-      return $this->userId;
+        return $this->userId;
     }
 
     /**
-     * @param guid $userId
-     * @return \Panopto\UserManagement\UpdatePassword
+     * @param string $userId
+     * @return UpdatePassword
      */
-    public function setUserId($userId)
+    public function setUserId($userId): UpdatePassword
     {
-      $this->userId = $userId;
-      return $this;
+        $this->userId = $userId;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class UpdatePassword
      */
     public function getNewPassword()
     {
-      return $this->newPassword;
+        return $this->newPassword;
     }
 
     /**
      * @param string $newPassword
-     * @return \Panopto\UserManagement\UpdatePassword
+     * @return UpdatePassword
      */
-    public function setNewPassword($newPassword)
+    public function setNewPassword($newPassword): UpdatePassword
     {
-      $this->newPassword = $newPassword;
-      return $this;
+        $this->newPassword = $newPassword;
+        return $this;
     }
 
 }

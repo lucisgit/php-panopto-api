@@ -6,23 +6,23 @@ class GrantAllAuthenticatedUsersGroupAccessToSession
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var AccessRole $role
+     * @var AccessRole|null $role
      */
     protected $role = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
+     * @param string $sessionId
      * @param AccessRole $role
      */
     public function __construct($auth, $sessionId, $role)
@@ -37,35 +37,35 @@ class GrantAllAuthenticatedUsersGroupAccessToSession
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\AccessManagement\GrantAllAuthenticatedUsersGroupAccessToSession
+     * @return GrantAllAuthenticatedUsersGroupAccessToSession
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GrantAllAuthenticatedUsersGroupAccessToSession
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\AccessManagement\GrantAllAuthenticatedUsersGroupAccessToSession
+     * @param string $sessionId
+     * @return GrantAllAuthenticatedUsersGroupAccessToSession
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): GrantAllAuthenticatedUsersGroupAccessToSession
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class GrantAllAuthenticatedUsersGroupAccessToSession
      */
     public function getRole()
     {
-      return $this->role;
+        return $this->role;
     }
 
     /**
      * @param AccessRole $role
-     * @return \Panopto\AccessManagement\GrantAllAuthenticatedUsersGroupAccessToSession
+     * @return GrantAllAuthenticatedUsersGroupAccessToSession
      */
-    public function setRole($role)
+    public function setRole($role): GrantAllAuthenticatedUsersGroupAccessToSession
     {
-      $this->role = $role;
-      return $this;
+        $this->role = $role;
+        return $this;
     }
 
 }

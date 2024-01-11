@@ -1,7 +1,7 @@
 <?php
 
 
- function autoload_66c23a8ce5a49ca9cd6737d94693e740($class)
+ function autoload_66c23a8ce5a49ca9cd6737d94693e740($class): void
 {
     $classes = array(
         'Panopto\AccessManagement\AccessManagement' => __DIR__ .'/AccessManagement.php',
@@ -61,7 +61,7 @@
     );
     if (!empty($classes[$class])) {
         include $classes[$class];
-    };
+    }
 }
 
 spl_autoload_register('autoload_66c23a8ce5a49ca9cd6737d94693e740');

@@ -6,12 +6,12 @@ class UpdateSessionsAvailabilityStartSettingsResponse
 {
 
     /**
-     * @var boolean $UpdateSessionsAvailabilityStartSettingsResult
+     * @var bool|null $UpdateSessionsAvailabilityStartSettingsResult
      */
     protected $UpdateSessionsAvailabilityStartSettingsResult = null;
 
     /**
-     * @param boolean $UpdateSessionsAvailabilityStartSettingsResult
+     * @param bool $UpdateSessionsAvailabilityStartSettingsResult
      */
     public function __construct($UpdateSessionsAvailabilityStartSettingsResult)
     {
@@ -19,21 +19,21 @@ class UpdateSessionsAvailabilityStartSettingsResponse
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getUpdateSessionsAvailabilityStartSettingsResult()
     {
-      return $this->UpdateSessionsAvailabilityStartSettingsResult;
+        return $this->UpdateSessionsAvailabilityStartSettingsResult;
     }
 
     /**
-     * @param boolean $UpdateSessionsAvailabilityStartSettingsResult
-     * @return \Panopto\SessionManagement\UpdateSessionsAvailabilityStartSettingsResponse
+     * @param bool $UpdateSessionsAvailabilityStartSettingsResult
+     * @return UpdateSessionsAvailabilityStartSettingsResponse
      */
-    public function setUpdateSessionsAvailabilityStartSettingsResult($UpdateSessionsAvailabilityStartSettingsResult)
+    public function setUpdateSessionsAvailabilityStartSettingsResult($UpdateSessionsAvailabilityStartSettingsResult): UpdateSessionsAvailabilityStartSettingsResponse
     {
-      $this->UpdateSessionsAvailabilityStartSettingsResult = $UpdateSessionsAvailabilityStartSettingsResult;
-      return $this;
+        $this->UpdateSessionsAvailabilityStartSettingsResult = $UpdateSessionsAvailabilityStartSettingsResult;
+        return $this;
     }
 
 }

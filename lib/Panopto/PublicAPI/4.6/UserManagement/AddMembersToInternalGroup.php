@@ -6,23 +6,23 @@ class AddMembersToInternalGroup
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $groupId
+     * @var string|null $groupId
      */
     protected $groupId = null;
 
     /**
-     * @var ArrayOfguid $memberIds
+     * @var ArrayOfguid|null $memberIds
      */
     protected $memberIds = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $groupId
+     * @param string $groupId
      * @param ArrayOfguid $memberIds
      */
     public function __construct($auth, $groupId, $memberIds)
@@ -37,35 +37,35 @@ class AddMembersToInternalGroup
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UserManagement\AddMembersToInternalGroup
+     * @return AddMembersToInternalGroup
      */
-    public function setAuth($auth)
+    public function setAuth($auth): AddMembersToInternalGroup
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getGroupId()
     {
-      return $this->groupId;
+        return $this->groupId;
     }
 
     /**
-     * @param guid $groupId
-     * @return \Panopto\UserManagement\AddMembersToInternalGroup
+     * @param string $groupId
+     * @return AddMembersToInternalGroup
      */
-    public function setGroupId($groupId)
+    public function setGroupId($groupId): AddMembersToInternalGroup
     {
-      $this->groupId = $groupId;
-      return $this;
+        $this->groupId = $groupId;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class AddMembersToInternalGroup
      */
     public function getMemberIds()
     {
-      return $this->memberIds;
+        return $this->memberIds;
     }
 
     /**
      * @param ArrayOfguid $memberIds
-     * @return \Panopto\UserManagement\AddMembersToInternalGroup
+     * @return AddMembersToInternalGroup
      */
-    public function setMemberIds($memberIds)
+    public function setMemberIds($memberIds): AddMembersToInternalGroup
     {
-      $this->memberIds = $memberIds;
-      return $this;
+        $this->memberIds = $memberIds;
+        return $this;
     }
 
 }

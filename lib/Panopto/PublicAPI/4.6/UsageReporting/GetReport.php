@@ -6,18 +6,18 @@ class GetReport
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $reportId
+     * @var string|null $reportId
      */
     protected $reportId = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $reportId
+     * @param string $reportId
      */
     public function __construct($auth, $reportId)
     {
@@ -30,35 +30,35 @@ class GetReport
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UsageReporting\GetReport
+     * @return GetReport
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetReport
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getReportId()
     {
-      return $this->reportId;
+        return $this->reportId;
     }
 
     /**
-     * @param guid $reportId
-     * @return \Panopto\UsageReporting\GetReport
+     * @param string $reportId
+     * @return GetReport
      */
-    public function setReportId($reportId)
+    public function setReportId($reportId): GetReport
     {
-      $this->reportId = $reportId;
-      return $this;
+        $this->reportId = $reportId;
+        return $this;
     }
 
 }

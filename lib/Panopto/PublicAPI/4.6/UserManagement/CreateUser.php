@@ -6,17 +6,17 @@ class CreateUser
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var User $user
+     * @var User|null $user
      */
     protected $user = null;
 
     /**
-     * @var string $initialPassword
+     * @var string|null $initialPassword
      */
     protected $initialPassword = null;
 
@@ -37,17 +37,17 @@ class CreateUser
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UserManagement\CreateUser
+     * @return CreateUser
      */
-    public function setAuth($auth)
+    public function setAuth($auth): CreateUser
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -55,17 +55,17 @@ class CreateUser
      */
     public function getUser()
     {
-      return $this->user;
+        return $this->user;
     }
 
     /**
      * @param User $user
-     * @return \Panopto\UserManagement\CreateUser
+     * @return CreateUser
      */
-    public function setUser($user)
+    public function setUser($user): CreateUser
     {
-      $this->user = $user;
-      return $this;
+        $this->user = $user;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class CreateUser
      */
     public function getInitialPassword()
     {
-      return $this->initialPassword;
+        return $this->initialPassword;
     }
 
     /**
      * @param string $initialPassword
-     * @return \Panopto\UserManagement\CreateUser
+     * @return CreateUser
      */
-    public function setInitialPassword($initialPassword)
+    public function setInitialPassword($initialPassword): CreateUser
     {
-      $this->initialPassword = $initialPassword;
-      return $this;
+        $this->initialPassword = $initialPassword;
+        return $this;
     }
 
 }

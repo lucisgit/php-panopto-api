@@ -6,30 +6,30 @@ class UpdateSessionUpdateRTMPStreamTypes
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var ArrayOfstring $streamKeys
+     * @var ArrayOfstring|null $streamKeys
      */
     protected $streamKeys = null;
 
     /**
-     * @var boolean $setAsPrimaries
+     * @var bool|null $setAsPrimaries
      */
     protected $setAsPrimaries = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
+     * @param string $sessionId
      * @param ArrayOfstring $streamKeys
-     * @param boolean $setAsPrimaries
+     * @param bool $setAsPrimaries
      */
     public function __construct($auth, $sessionId, $streamKeys, $setAsPrimaries)
     {
@@ -44,35 +44,35 @@ class UpdateSessionUpdateRTMPStreamTypes
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\UpdateSessionUpdateRTMPStreamTypes
+     * @return UpdateSessionUpdateRTMPStreamTypes
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateSessionUpdateRTMPStreamTypes
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\SessionManagement\UpdateSessionUpdateRTMPStreamTypes
+     * @param string $sessionId
+     * @return UpdateSessionUpdateRTMPStreamTypes
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): UpdateSessionUpdateRTMPStreamTypes
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
@@ -80,35 +80,35 @@ class UpdateSessionUpdateRTMPStreamTypes
      */
     public function getStreamKeys()
     {
-      return $this->streamKeys;
+        return $this->streamKeys;
     }
 
     /**
      * @param ArrayOfstring $streamKeys
-     * @return \Panopto\SessionManagement\UpdateSessionUpdateRTMPStreamTypes
+     * @return UpdateSessionUpdateRTMPStreamTypes
      */
-    public function setStreamKeys($streamKeys)
+    public function setStreamKeys($streamKeys): UpdateSessionUpdateRTMPStreamTypes
     {
-      $this->streamKeys = $streamKeys;
-      return $this;
+        $this->streamKeys = $streamKeys;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getSetAsPrimaries()
     {
-      return $this->setAsPrimaries;
+        return $this->setAsPrimaries;
     }
 
     /**
-     * @param boolean $setAsPrimaries
-     * @return \Panopto\SessionManagement\UpdateSessionUpdateRTMPStreamTypes
+     * @param bool $setAsPrimaries
+     * @return UpdateSessionUpdateRTMPStreamTypes
      */
-    public function setSetAsPrimaries($setAsPrimaries)
+    public function setSetAsPrimaries($setAsPrimaries): UpdateSessionUpdateRTMPStreamTypes
     {
-      $this->setAsPrimaries = $setAsPrimaries;
-      return $this;
+        $this->setAsPrimaries = $setAsPrimaries;
+        return $this;
     }
 
 }

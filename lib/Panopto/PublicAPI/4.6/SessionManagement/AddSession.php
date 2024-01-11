@@ -6,30 +6,30 @@ class AddSession
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var string $name
+     * @var string|null $name
      */
     protected $name = null;
 
     /**
-     * @var guid $folderId
+     * @var string|null $folderId
      */
     protected $folderId = null;
 
     /**
-     * @var boolean $isBroadcast
+     * @var bool|null $isBroadcast
      */
     protected $isBroadcast = null;
 
     /**
      * @param AuthenticationInfo $auth
      * @param string $name
-     * @param guid $folderId
-     * @param boolean $isBroadcast
+     * @param string $folderId
+     * @param bool $isBroadcast
      */
     public function __construct($auth, $name, $folderId, $isBroadcast)
     {
@@ -44,17 +44,17 @@ class AddSession
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\AddSession
+     * @return AddSession
      */
-    public function setAuth($auth)
+    public function setAuth($auth): AddSession
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -62,53 +62,53 @@ class AddSession
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
      * @param string $name
-     * @return \Panopto\SessionManagement\AddSession
+     * @return AddSession
      */
-    public function setName($name)
+    public function setName($name): AddSession
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->folderId;
+        return $this->folderId;
     }
 
     /**
-     * @param guid $folderId
-     * @return \Panopto\SessionManagement\AddSession
+     * @param string $folderId
+     * @return AddSession
      */
-    public function setFolderId($folderId)
+    public function setFolderId($folderId): AddSession
     {
-      $this->folderId = $folderId;
-      return $this;
+        $this->folderId = $folderId;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getIsBroadcast()
     {
-      return $this->isBroadcast;
+        return $this->isBroadcast;
     }
 
     /**
-     * @param boolean $isBroadcast
-     * @return \Panopto\SessionManagement\AddSession
+     * @param bool $isBroadcast
+     * @return AddSession
      */
-    public function setIsBroadcast($isBroadcast)
+    public function setIsBroadcast($isBroadcast): AddSession
     {
-      $this->isBroadcast = $isBroadcast;
-      return $this;
+        $this->isBroadcast = $isBroadcast;
+        return $this;
     }
 
 }

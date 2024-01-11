@@ -6,28 +6,28 @@ class UpdateRecordingTime
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var \DateTime $start
+     * @var \DateTime|string|null $start
      */
-    protected $start = null;
+    protected \DateTime|string|null $start = null;
 
     /**
-     * @var \DateTime $end
+     * @var \DateTime|string|null $end
      */
-    protected $end = null;
+    protected \DateTime|string|null $end = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
+     * @param string $sessionId
      * @param \DateTime $start
      * @param \DateTime $end
      */
@@ -44,87 +44,87 @@ class UpdateRecordingTime
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\RemoteRecorderManagement\UpdateRecordingTime
+     * @return UpdateRecordingTime
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateRecordingTime
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\RemoteRecorderManagement\UpdateRecordingTime
+     * @param string $sessionId
+     * @return UpdateRecordingTime
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): UpdateRecordingTime
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getStart()
+    public function getStart(): \DateTime|bool|null
     {
-      if ($this->start == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->start);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->start == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->start);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
      * @param \DateTime $start
-     * @return \Panopto\RemoteRecorderManagement\UpdateRecordingTime
+     * @return UpdateRecordingTime
      */
-    public function setStart(\DateTime $start)
+    public function setStart(\DateTime $start): UpdateRecordingTime
     {
-      $this->start = $start->format(\DateTime::ATOM);
-      return $this;
+        $this->start = $start->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getEnd()
+    public function getEnd(): \DateTime|bool|null
     {
-      if ($this->end == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->end);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->end == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->end);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
      * @param \DateTime $end
-     * @return \Panopto\RemoteRecorderManagement\UpdateRecordingTime
+     * @return UpdateRecordingTime
      */
-    public function setEnd(\DateTime $end)
+    public function setEnd(\DateTime $end): UpdateRecordingTime
     {
-      $this->end = $end->format(\DateTime::ATOM);
-      return $this;
+        $this->end = $end->format(\DateTime::ATOM);
+        return $this;
     }
 
 }

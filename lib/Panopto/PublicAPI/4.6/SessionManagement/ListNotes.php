@@ -6,40 +6,40 @@ class ListNotes
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var Pagination $pagination
+     * @var Pagination|null $pagination
      */
     protected $pagination = null;
 
     /**
-     * @var guid $creatorId
+     * @var string|null $creatorId
      */
     protected $creatorId = null;
 
     /**
-     * @var string $channel
+     * @var string|null $channel
      */
     protected $channel = null;
 
     /**
-     * @var string $searchQuery
+     * @var string|null $searchQuery
      */
     protected $searchQuery = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
+     * @param string $sessionId
      * @param Pagination $pagination
-     * @param guid $creatorId
+     * @param string $creatorId
      * @param string $channel
      * @param string $searchQuery
      */
@@ -58,35 +58,35 @@ class ListNotes
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\ListNotes
+     * @return ListNotes
      */
-    public function setAuth($auth)
+    public function setAuth($auth): ListNotes
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\SessionManagement\ListNotes
+     * @param string $sessionId
+     * @return ListNotes
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): ListNotes
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
@@ -94,35 +94,35 @@ class ListNotes
      */
     public function getPagination()
     {
-      return $this->pagination;
+        return $this->pagination;
     }
 
     /**
      * @param Pagination $pagination
-     * @return \Panopto\SessionManagement\ListNotes
+     * @return ListNotes
      */
-    public function setPagination($pagination)
+    public function setPagination($pagination): ListNotes
     {
-      $this->pagination = $pagination;
-      return $this;
+        $this->pagination = $pagination;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getCreatorId()
     {
-      return $this->creatorId;
+        return $this->creatorId;
     }
 
     /**
-     * @param guid $creatorId
-     * @return \Panopto\SessionManagement\ListNotes
+     * @param string $creatorId
+     * @return ListNotes
      */
-    public function setCreatorId($creatorId)
+    public function setCreatorId($creatorId): ListNotes
     {
-      $this->creatorId = $creatorId;
-      return $this;
+        $this->creatorId = $creatorId;
+        return $this;
     }
 
     /**
@@ -130,17 +130,17 @@ class ListNotes
      */
     public function getChannel()
     {
-      return $this->channel;
+        return $this->channel;
     }
 
     /**
      * @param string $channel
-     * @return \Panopto\SessionManagement\ListNotes
+     * @return ListNotes
      */
-    public function setChannel($channel)
+    public function setChannel($channel): ListNotes
     {
-      $this->channel = $channel;
-      return $this;
+        $this->channel = $channel;
+        return $this;
     }
 
     /**
@@ -148,17 +148,17 @@ class ListNotes
      */
     public function getSearchQuery()
     {
-      return $this->searchQuery;
+        return $this->searchQuery;
     }
 
     /**
      * @param string $searchQuery
-     * @return \Panopto\SessionManagement\ListNotes
+     * @return ListNotes
      */
-    public function setSearchQuery($searchQuery)
+    public function setSearchQuery($searchQuery): ListNotes
     {
-      $this->searchQuery = $searchQuery;
-      return $this;
+        $this->searchQuery = $searchQuery;
+        return $this;
     }
 
 }

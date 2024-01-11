@@ -6,12 +6,12 @@ class QueueReportResponse
 {
 
     /**
-     * @var guid $QueueReportResult
+     * @var string|null $QueueReportResult
      */
     protected $QueueReportResult = null;
 
     /**
-     * @param guid $QueueReportResult
+     * @param string $QueueReportResult
      */
     public function __construct($QueueReportResult)
     {
@@ -19,21 +19,21 @@ class QueueReportResponse
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getQueueReportResult()
     {
-      return $this->QueueReportResult;
+        return $this->QueueReportResult;
     }
 
     /**
-     * @param guid $QueueReportResult
-     * @return \Panopto\UsageReporting\QueueReportResponse
+     * @param string $QueueReportResult
+     * @return QueueReportResponse
      */
-    public function setQueueReportResult($QueueReportResult)
+    public function setQueueReportResult($QueueReportResult): QueueReportResponse
     {
-      $this->QueueReportResult = $QueueReportResult;
-      return $this;
+        $this->QueueReportResult = $QueueReportResult;
+        return $this;
     }
 
 }

@@ -6,12 +6,12 @@ class LogOnWithPasswordResponse
 {
 
     /**
-     * @var boolean $LogOnWithPasswordResult
+     * @var bool|null $LogOnWithPasswordResult
      */
     protected $LogOnWithPasswordResult = null;
 
     /**
-     * @param boolean $LogOnWithPasswordResult
+     * @param bool $LogOnWithPasswordResult
      */
     public function __construct($LogOnWithPasswordResult)
     {
@@ -19,21 +19,21 @@ class LogOnWithPasswordResponse
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getLogOnWithPasswordResult()
     {
-      return $this->LogOnWithPasswordResult;
+        return $this->LogOnWithPasswordResult;
     }
 
     /**
-     * @param boolean $LogOnWithPasswordResult
-     * @return \Panopto\Auth\LogOnWithPasswordResponse
+     * @param bool $LogOnWithPasswordResult
+     * @return LogOnWithPasswordResponse
      */
-    public function setLogOnWithPasswordResult($LogOnWithPasswordResult)
+    public function setLogOnWithPasswordResult($LogOnWithPasswordResult): LogOnWithPasswordResponse
     {
-      $this->LogOnWithPasswordResult = $LogOnWithPasswordResult;
-      return $this;
+        $this->LogOnWithPasswordResult = $LogOnWithPasswordResult;
+        return $this;
     }
 
 }

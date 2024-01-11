@@ -6,7 +6,7 @@ class GetRecentReportsResponse
 {
 
     /**
-     * @var ArrayOfStatsReportStatus $GetRecentReportsResult
+     * @var ArrayOfStatsReportStatus|null $GetRecentReportsResult
      */
     protected $GetRecentReportsResult = null;
 
@@ -23,17 +23,17 @@ class GetRecentReportsResponse
      */
     public function getGetRecentReportsResult()
     {
-      return $this->GetRecentReportsResult;
+        return $this->GetRecentReportsResult;
     }
 
     /**
      * @param ArrayOfStatsReportStatus $GetRecentReportsResult
-     * @return \Panopto\UsageReporting\GetRecentReportsResponse
+     * @return GetRecentReportsResponse
      */
-    public function setGetRecentReportsResult($GetRecentReportsResult)
+    public function setGetRecentReportsResult($GetRecentReportsResult): GetRecentReportsResponse
     {
-      $this->GetRecentReportsResult = $GetRecentReportsResult;
-      return $this;
+        $this->GetRecentReportsResult = $GetRecentReportsResult;
+        return $this;
     }
 
 }

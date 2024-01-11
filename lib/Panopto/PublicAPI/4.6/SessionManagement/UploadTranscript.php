@@ -6,23 +6,23 @@ class UploadTranscript
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var string $file
+     * @var string|null $file
      */
     protected $file = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
+     * @param string $sessionId
      * @param string $file
      */
     public function __construct($auth, $sessionId, $file)
@@ -37,35 +37,35 @@ class UploadTranscript
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\UploadTranscript
+     * @return UploadTranscript
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UploadTranscript
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\SessionManagement\UploadTranscript
+     * @param string $sessionId
+     * @return UploadTranscript
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): UploadTranscript
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class UploadTranscript
      */
     public function getFile()
     {
-      return $this->file;
+        return $this->file;
     }
 
     /**
      * @param string $file
-     * @return \Panopto\SessionManagement\UploadTranscript
+     * @return UploadTranscript
      */
-    public function setFile($file)
+    public function setFile($file): UploadTranscript
     {
-      $this->file = $file;
-      return $this;
+        $this->file = $file;
+        return $this;
     }
 
 }

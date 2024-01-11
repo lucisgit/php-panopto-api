@@ -6,7 +6,7 @@ class GetMachineSidForRecorderResponse
 {
 
     /**
-     * @var string $GetMachineSidForRecorderResult
+     * @var string|null $GetMachineSidForRecorderResult
      */
     protected $GetMachineSidForRecorderResult = null;
 
@@ -23,17 +23,17 @@ class GetMachineSidForRecorderResponse
      */
     public function getGetMachineSidForRecorderResult()
     {
-      return $this->GetMachineSidForRecorderResult;
+        return $this->GetMachineSidForRecorderResult;
     }
 
     /**
      * @param string $GetMachineSidForRecorderResult
-     * @return \Panopto\RemoteRecorderManagement\GetMachineSidForRecorderResponse
+     * @return GetMachineSidForRecorderResponse
      */
-    public function setGetMachineSidForRecorderResult($GetMachineSidForRecorderResult)
+    public function setGetMachineSidForRecorderResult($GetMachineSidForRecorderResult): GetMachineSidForRecorderResponse
     {
-      $this->GetMachineSidForRecorderResult = $GetMachineSidForRecorderResult;
-      return $this;
+        $this->GetMachineSidForRecorderResult = $GetMachineSidForRecorderResult;
+        return $this;
     }
 
 }

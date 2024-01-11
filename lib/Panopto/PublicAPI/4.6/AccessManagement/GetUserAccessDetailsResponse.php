@@ -6,7 +6,7 @@ class GetUserAccessDetailsResponse
 {
 
     /**
-     * @var UserAccessDetails $GetUserAccessDetailsResult
+     * @var UserAccessDetails|null $GetUserAccessDetailsResult
      */
     protected $GetUserAccessDetailsResult = null;
 
@@ -23,17 +23,17 @@ class GetUserAccessDetailsResponse
      */
     public function getGetUserAccessDetailsResult()
     {
-      return $this->GetUserAccessDetailsResult;
+        return $this->GetUserAccessDetailsResult;
     }
 
     /**
      * @param UserAccessDetails $GetUserAccessDetailsResult
-     * @return \Panopto\AccessManagement\GetUserAccessDetailsResponse
+     * @return GetUserAccessDetailsResponse
      */
-    public function setGetUserAccessDetailsResult($GetUserAccessDetailsResult)
+    public function setGetUserAccessDetailsResult($GetUserAccessDetailsResult): GetUserAccessDetailsResponse
     {
-      $this->GetUserAccessDetailsResult = $GetUserAccessDetailsResult;
-      return $this;
+        $this->GetUserAccessDetailsResult = $GetUserAccessDetailsResult;
+        return $this;
     }
 
 }

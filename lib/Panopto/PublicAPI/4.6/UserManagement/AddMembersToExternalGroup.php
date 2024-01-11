@@ -6,22 +6,22 @@ class AddMembersToExternalGroup
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var string $externalProviderName
+     * @var string|null $externalProviderName
      */
     protected $externalProviderName = null;
 
     /**
-     * @var string $externalGroupId
+     * @var string|null $externalGroupId
      */
     protected $externalGroupId = null;
 
     /**
-     * @var ArrayOfguid $memberIds
+     * @var ArrayOfguid|null $memberIds
      */
     protected $memberIds = null;
 
@@ -44,17 +44,17 @@ class AddMembersToExternalGroup
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UserManagement\AddMembersToExternalGroup
+     * @return AddMembersToExternalGroup
      */
-    public function setAuth($auth)
+    public function setAuth($auth): AddMembersToExternalGroup
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -62,17 +62,17 @@ class AddMembersToExternalGroup
      */
     public function getExternalProviderName()
     {
-      return $this->externalProviderName;
+        return $this->externalProviderName;
     }
 
     /**
      * @param string $externalProviderName
-     * @return \Panopto\UserManagement\AddMembersToExternalGroup
+     * @return AddMembersToExternalGroup
      */
-    public function setExternalProviderName($externalProviderName)
+    public function setExternalProviderName($externalProviderName): AddMembersToExternalGroup
     {
-      $this->externalProviderName = $externalProviderName;
-      return $this;
+        $this->externalProviderName = $externalProviderName;
+        return $this;
     }
 
     /**
@@ -80,17 +80,17 @@ class AddMembersToExternalGroup
      */
     public function getExternalGroupId()
     {
-      return $this->externalGroupId;
+        return $this->externalGroupId;
     }
 
     /**
      * @param string $externalGroupId
-     * @return \Panopto\UserManagement\AddMembersToExternalGroup
+     * @return AddMembersToExternalGroup
      */
-    public function setExternalGroupId($externalGroupId)
+    public function setExternalGroupId($externalGroupId): AddMembersToExternalGroup
     {
-      $this->externalGroupId = $externalGroupId;
-      return $this;
+        $this->externalGroupId = $externalGroupId;
+        return $this;
     }
 
     /**
@@ -98,17 +98,17 @@ class AddMembersToExternalGroup
      */
     public function getMemberIds()
     {
-      return $this->memberIds;
+        return $this->memberIds;
     }
 
     /**
      * @param ArrayOfguid $memberIds
-     * @return \Panopto\UserManagement\AddMembersToExternalGroup
+     * @return AddMembersToExternalGroup
      */
-    public function setMemberIds($memberIds)
+    public function setMemberIds($memberIds): AddMembersToExternalGroup
     {
-      $this->memberIds = $memberIds;
-      return $this;
+        $this->memberIds = $memberIds;
+        return $this;
     }
 
 }

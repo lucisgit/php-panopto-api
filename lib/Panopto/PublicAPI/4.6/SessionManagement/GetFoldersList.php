@@ -6,17 +6,17 @@ class GetFoldersList
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var ListFoldersRequest $request
+     * @var ListFoldersRequest|null $request
      */
     protected $request = null;
 
     /**
-     * @var string $searchQuery
+     * @var string|null $searchQuery
      */
     protected $searchQuery = null;
 
@@ -37,17 +37,17 @@ class GetFoldersList
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\GetFoldersList
+     * @return GetFoldersList
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetFoldersList
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -55,17 +55,17 @@ class GetFoldersList
      */
     public function getRequest()
     {
-      return $this->request;
+        return $this->request;
     }
 
     /**
      * @param ListFoldersRequest $request
-     * @return \Panopto\SessionManagement\GetFoldersList
+     * @return GetFoldersList
      */
-    public function setRequest($request)
+    public function setRequest($request): GetFoldersList
     {
-      $this->request = $request;
-      return $this;
+        $this->request = $request;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class GetFoldersList
      */
     public function getSearchQuery()
     {
-      return $this->searchQuery;
+        return $this->searchQuery;
     }
 
     /**
      * @param string $searchQuery
-     * @return \Panopto\SessionManagement\GetFoldersList
+     * @return GetFoldersList
      */
-    public function setSearchQuery($searchQuery)
+    public function setSearchQuery($searchQuery): GetFoldersList
     {
-      $this->searchQuery = $searchQuery;
-      return $this;
+        $this->searchQuery = $searchQuery;
+        return $this;
     }
 
 }

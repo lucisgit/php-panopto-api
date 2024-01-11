@@ -8,41 +8,41 @@ class ArrayOfNote implements \ArrayAccess, \Iterator, \Countable
     /**
      * @var Note[] $Note
      */
-    protected $Note = null;
+    protected array $Note = [];
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
-     * @return Note[]
+     * @return Note[]|null
      */
-    public function getNote()
+    public function getNote(): ?array
     {
-      return $this->Note;
+        return $this->Note;
     }
 
     /**
-     * @param Note[] $Note
-     * @return \Panopto\SessionManagement\ArrayOfNote
+     * @param Note[]|null $Note
+     * @return ArrayOfNote
      */
-    public function setNote(array $Note = null)
+    public function setNote(?array $Note = null): ArrayOfNote
     {
-      $this->Note = $Note;
-      return $this;
+        $this->Note = $Note;
+        return $this;
     }
 
     /**
      * ArrayAccess implementation
      *
      * @param mixed $offset An offset to check for
-     * @return boolean true on success or false on failure
+     * @return bool True on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
-      return isset($this->Note[$offset]);
+        return isset($this->Note[$offset]);
     }
 
     /**
@@ -51,9 +51,9 @@ class ArrayOfNote implements \ArrayAccess, \Iterator, \Countable
      * @param mixed $offset The offset to retrieve
      * @return Note
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): Note
     {
-      return $this->Note[$offset];
+        return $this->Note[$offset];
     }
 
     /**
@@ -63,13 +63,13 @@ class ArrayOfNote implements \ArrayAccess, \Iterator, \Countable
      * @param Note $value The value to set
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
-      if (!isset($offset)) {
-        $this->Note[] = $value;
-      } else {
-        $this->Note[$offset] = $value;
-      }
+        if (!isset($offset)) {
+            $this->Note[] = $value;
+        } else {
+            $this->Note[$offset] = $value;
+        }
     }
 
     /**
@@ -78,9 +78,9 @@ class ArrayOfNote implements \ArrayAccess, \Iterator, \Countable
      * @param mixed $offset The offset to unset
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
-      unset($this->Note[$offset]);
+        unset($this->Note[$offset]);
     }
 
     /**
@@ -88,9 +88,9 @@ class ArrayOfNote implements \ArrayAccess, \Iterator, \Countable
      *
      * @return Note Return the current element
      */
-    public function current()
+    public function current(): Note
     {
-      return current($this->Note);
+        return current($this->Note);
     }
 
     /**
@@ -99,9 +99,9 @@ class ArrayOfNote implements \ArrayAccess, \Iterator, \Countable
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
-      next($this->Note);
+        next($this->Note);
     }
 
     /**
@@ -109,19 +109,19 @@ class ArrayOfNote implements \ArrayAccess, \Iterator, \Countable
      *
      * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): ?string
     {
-      return key($this->Note);
+        return key($this->Note);
     }
 
     /**
      * Iterator implementation
      *
-     * @return boolean Return the validity of the current position
+     * @return bool Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
-      return $this->key() !== null;
+        return $this->key() !== null;
     }
 
     /**
@@ -130,19 +130,19 @@ class ArrayOfNote implements \ArrayAccess, \Iterator, \Countable
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
-      reset($this->Note);
+        reset($this->Note);
     }
 
     /**
      * Countable implementation
      *
-     * @return Note Return count of elements
+     * @return int Return count of elements
      */
-    public function count()
+    public function count(): int
     {
-      return count($this->Note);
+        return count($this->Note);
     }
 
 }

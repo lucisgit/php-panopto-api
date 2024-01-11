@@ -6,7 +6,7 @@ class ProvisionExternalCourseWithRolesResponse
 {
 
     /**
-     * @var Folder $ProvisionExternalCourseWithRolesResult
+     * @var Folder|null $ProvisionExternalCourseWithRolesResult
      */
     protected $ProvisionExternalCourseWithRolesResult = null;
 
@@ -23,17 +23,17 @@ class ProvisionExternalCourseWithRolesResponse
      */
     public function getProvisionExternalCourseWithRolesResult()
     {
-      return $this->ProvisionExternalCourseWithRolesResult;
+        return $this->ProvisionExternalCourseWithRolesResult;
     }
 
     /**
      * @param Folder $ProvisionExternalCourseWithRolesResult
-     * @return \Panopto\SessionManagement\ProvisionExternalCourseWithRolesResponse
+     * @return ProvisionExternalCourseWithRolesResponse
      */
-    public function setProvisionExternalCourseWithRolesResult($ProvisionExternalCourseWithRolesResult)
+    public function setProvisionExternalCourseWithRolesResult($ProvisionExternalCourseWithRolesResult): ProvisionExternalCourseWithRolesResponse
     {
-      $this->ProvisionExternalCourseWithRolesResult = $ProvisionExternalCourseWithRolesResult;
-      return $this;
+        $this->ProvisionExternalCourseWithRolesResult = $ProvisionExternalCourseWithRolesResult;
+        return $this;
     }
 
 }

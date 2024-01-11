@@ -6,42 +6,42 @@ class UpdateContactInfo
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $userId
+     * @var string|null $userId
      */
     protected $userId = null;
 
     /**
-     * @var string $firstName
+     * @var string|null $firstName
      */
     protected $firstName = null;
 
     /**
-     * @var string $lastName
+     * @var string|null $lastName
      */
     protected $lastName = null;
 
     /**
-     * @var string $email
+     * @var string|null $email
      */
     protected $email = null;
 
     /**
-     * @var boolean $sendNotifications
+     * @var bool|null $sendNotifications
      */
     protected $sendNotifications = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $userId
+     * @param string $userId
      * @param string $firstName
      * @param string $lastName
      * @param string $email
-     * @param boolean $sendNotifications
+     * @param bool $sendNotifications
      */
     public function __construct($auth, $userId, $firstName, $lastName, $email, $sendNotifications)
     {
@@ -58,35 +58,35 @@ class UpdateContactInfo
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UserManagement\UpdateContactInfo
+     * @return UpdateContactInfo
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateContactInfo
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getUserId()
     {
-      return $this->userId;
+        return $this->userId;
     }
 
     /**
-     * @param guid $userId
-     * @return \Panopto\UserManagement\UpdateContactInfo
+     * @param string $userId
+     * @return UpdateContactInfo
      */
-    public function setUserId($userId)
+    public function setUserId($userId): UpdateContactInfo
     {
-      $this->userId = $userId;
-      return $this;
+        $this->userId = $userId;
+        return $this;
     }
 
     /**
@@ -94,17 +94,17 @@ class UpdateContactInfo
      */
     public function getFirstName()
     {
-      return $this->firstName;
+        return $this->firstName;
     }
 
     /**
      * @param string $firstName
-     * @return \Panopto\UserManagement\UpdateContactInfo
+     * @return UpdateContactInfo
      */
-    public function setFirstName($firstName)
+    public function setFirstName($firstName): UpdateContactInfo
     {
-      $this->firstName = $firstName;
-      return $this;
+        $this->firstName = $firstName;
+        return $this;
     }
 
     /**
@@ -112,17 +112,17 @@ class UpdateContactInfo
      */
     public function getLastName()
     {
-      return $this->lastName;
+        return $this->lastName;
     }
 
     /**
      * @param string $lastName
-     * @return \Panopto\UserManagement\UpdateContactInfo
+     * @return UpdateContactInfo
      */
-    public function setLastName($lastName)
+    public function setLastName($lastName): UpdateContactInfo
     {
-      $this->lastName = $lastName;
-      return $this;
+        $this->lastName = $lastName;
+        return $this;
     }
 
     /**
@@ -130,35 +130,35 @@ class UpdateContactInfo
      */
     public function getEmail()
     {
-      return $this->email;
+        return $this->email;
     }
 
     /**
      * @param string $email
-     * @return \Panopto\UserManagement\UpdateContactInfo
+     * @return UpdateContactInfo
      */
-    public function setEmail($email)
+    public function setEmail($email): UpdateContactInfo
     {
-      $this->email = $email;
-      return $this;
+        $this->email = $email;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getSendNotifications()
     {
-      return $this->sendNotifications;
+        return $this->sendNotifications;
     }
 
     /**
-     * @param boolean $sendNotifications
-     * @return \Panopto\UserManagement\UpdateContactInfo
+     * @param bool $sendNotifications
+     * @return UpdateContactInfo
      */
-    public function setSendNotifications($sendNotifications)
+    public function setSendNotifications($sendNotifications): UpdateContactInfo
     {
-      $this->sendNotifications = $sendNotifications;
-      return $this;
+        $this->sendNotifications = $sendNotifications;
+        return $this;
     }
 
 }

@@ -6,23 +6,23 @@ class GetUserDetailedUsage
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $userId
+     * @var string|null $userId
      */
     protected $userId = null;
 
     /**
-     * @var Pagination $pagination
+     * @var Pagination|null $pagination
      */
     protected $pagination = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $userId
+     * @param string $userId
      * @param Pagination $pagination
      */
     public function __construct($auth, $userId, $pagination)
@@ -37,35 +37,35 @@ class GetUserDetailedUsage
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UsageReporting\GetUserDetailedUsage
+     * @return GetUserDetailedUsage
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetUserDetailedUsage
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getUserId()
     {
-      return $this->userId;
+        return $this->userId;
     }
 
     /**
-     * @param guid $userId
-     * @return \Panopto\UsageReporting\GetUserDetailedUsage
+     * @param string $userId
+     * @return GetUserDetailedUsage
      */
-    public function setUserId($userId)
+    public function setUserId($userId): GetUserDetailedUsage
     {
-      $this->userId = $userId;
-      return $this;
+        $this->userId = $userId;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class GetUserDetailedUsage
      */
     public function getPagination()
     {
-      return $this->pagination;
+        return $this->pagination;
     }
 
     /**
      * @param Pagination $pagination
-     * @return \Panopto\UsageReporting\GetUserDetailedUsage
+     * @return GetUserDetailedUsage
      */
-    public function setPagination($pagination)
+    public function setPagination($pagination): GetUserDetailedUsage
     {
-      $this->pagination = $pagination;
-      return $this;
+        $this->pagination = $pagination;
+        return $this;
     }
 
 }

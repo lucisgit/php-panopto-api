@@ -6,19 +6,19 @@ class ListFoldersResponseWithExternalContext
 {
 
     /**
-     * @var ArrayOfFolderWithExternalContext $Results
+     * @var ArrayOfFolderWithExternalContext|null $Results
      */
     protected $Results = null;
 
     /**
-     * @var int $TotalNumberResults
+     * @var int|null $TotalNumberResults
      */
     protected $TotalNumberResults = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -26,17 +26,17 @@ class ListFoldersResponseWithExternalContext
      */
     public function getResults()
     {
-      return $this->Results;
+        return $this->Results;
     }
 
     /**
      * @param ArrayOfFolderWithExternalContext $Results
-     * @return \Panopto\SessionManagement\ListFoldersResponseWithExternalContext
+     * @return ListFoldersResponseWithExternalContext
      */
-    public function setResults($Results)
+    public function setResults($Results): ListFoldersResponseWithExternalContext
     {
-      $this->Results = $Results;
-      return $this;
+        $this->Results = $Results;
+        return $this;
     }
 
     /**
@@ -44,17 +44,17 @@ class ListFoldersResponseWithExternalContext
      */
     public function getTotalNumberResults()
     {
-      return $this->TotalNumberResults;
+        return $this->TotalNumberResults;
     }
 
     /**
      * @param int $TotalNumberResults
-     * @return \Panopto\SessionManagement\ListFoldersResponseWithExternalContext
+     * @return ListFoldersResponseWithExternalContext
      */
-    public function setTotalNumberResults($TotalNumberResults)
+    public function setTotalNumberResults($TotalNumberResults): ListFoldersResponseWithExternalContext
     {
-      $this->TotalNumberResults = $TotalNumberResults;
-      return $this;
+        $this->TotalNumberResults = $TotalNumberResults;
+        return $this;
     }
 
 }

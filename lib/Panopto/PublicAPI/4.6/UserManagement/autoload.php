@@ -1,7 +1,7 @@
 <?php
 
 
- function autoload_ce096417baeee140338215f53f5a5487($class)
+ function autoload_ce096417baeee140338215f53f5a5487($class): void
 {
     $classes = array(
         'Panopto\UserManagement\UserManagement' => __DIR__ .'/UserManagement.php',
@@ -70,11 +70,15 @@
         'Panopto\UserManagement\GetUsersInGroup' => __DIR__ .'/GetUsersInGroup.php',
         'Panopto\UserManagement\GetUsersInGroupResponse' => __DIR__ .'/GetUsersInGroupResponse.php',
         'Panopto\UserManagement\SetUserHasLoggedIn' => __DIR__ .'/SetUserHasLoggedIn.php',
-        'Panopto\UserManagement\SetUserHasLoggedInResponse' => __DIR__ .'/SetUserHasLoggedInResponse.php'
+        'Panopto\UserManagement\SetUserHasLoggedInResponse' => __DIR__ .'/SetUserHasLoggedInResponse.php',
+        'Panopto\UserManagement\GetUserMeetingsRecordingFolderIdForUser' => __DIR__ .'/GetUserMeetingsRecordingFolderIdForUser.php',
+        'Panopto\UserManagement\GetUserMeetingsRecordingFolderIdForUserResponse' => __DIR__ .'/GetUserMeetingsRecordingFolderIdForUserResponse.php',
+        'Panopto\UserManagement\SetUserMeetingsRecordingFolderIdForUser' => __DIR__ .'/SetUserMeetingsRecordingFolderIdForUser.php',
+        'Panopto\UserManagement\SetUserMeetingsRecordingFolderIdForUserResponse' => __DIR__ .'/SetUserMeetingsRecordingFolderIdForUserResponse.php'
     );
     if (!empty($classes[$class])) {
         include $classes[$class];
-    };
+    }
 }
 
 spl_autoload_register('autoload_ce096417baeee140338215f53f5a5487');

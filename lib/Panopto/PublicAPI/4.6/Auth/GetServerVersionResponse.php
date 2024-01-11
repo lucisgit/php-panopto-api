@@ -6,7 +6,7 @@ class GetServerVersionResponse
 {
 
     /**
-     * @var string $GetServerVersionResult
+     * @var string|null $GetServerVersionResult
      */
     protected $GetServerVersionResult = null;
 
@@ -23,17 +23,17 @@ class GetServerVersionResponse
      */
     public function getGetServerVersionResult()
     {
-      return $this->GetServerVersionResult;
+        return $this->GetServerVersionResult;
     }
 
     /**
      * @param string $GetServerVersionResult
-     * @return \Panopto\Auth\GetServerVersionResponse
+     * @return GetServerVersionResponse
      */
-    public function setGetServerVersionResult($GetServerVersionResult)
+    public function setGetServerVersionResult($GetServerVersionResult): GetServerVersionResponse
     {
-      $this->GetServerVersionResult = $GetServerVersionResult;
-      return $this;
+        $this->GetServerVersionResult = $GetServerVersionResult;
+        return $this;
     }
 
 }

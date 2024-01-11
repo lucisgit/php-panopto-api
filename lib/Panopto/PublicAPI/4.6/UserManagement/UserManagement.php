@@ -8,7 +8,7 @@ class UserManagement extends \SoapClient
     /**
      * @var array $classmap The defined classes
      */
-    private static $classmap = array (
+    private static array $classmap = array (
       'ArrayOfguid' => 'Panopto\\UserManagement\\ArrayOfguid',
       'ArrayOfstring' => 'Panopto\\UserManagement\\ArrayOfstring',
       'AuthenticationInfo' => 'Panopto\\UserManagement\\AuthenticationInfo',
@@ -72,6 +72,10 @@ class UserManagement extends \SoapClient
       'GetUsersInGroupResponse' => 'Panopto\\UserManagement\\GetUsersInGroupResponse',
       'SetUserHasLoggedIn' => 'Panopto\\UserManagement\\SetUserHasLoggedIn',
       'SetUserHasLoggedInResponse' => 'Panopto\\UserManagement\\SetUserHasLoggedInResponse',
+      'GetUserMeetingsRecordingFolderIdForUser' => 'Panopto\\UserManagement\\GetUserMeetingsRecordingFolderIdForUser',
+      'GetUserMeetingsRecordingFolderIdForUserResponse' => 'Panopto\\UserManagement\\GetUserMeetingsRecordingFolderIdForUserResponse',
+      'SetUserMeetingsRecordingFolderIdForUser' => 'Panopto\\UserManagement\\SetUserMeetingsRecordingFolderIdForUser',
+      'SetUserMeetingsRecordingFolderIdForUserResponse' => 'Panopto\\UserManagement\\SetUserMeetingsRecordingFolderIdForUserResponse',
     );
 
     /**
@@ -98,7 +102,7 @@ class UserManagement extends \SoapClient
      * @param CreateUser $parameters
      * @return CreateUserResponse
      */
-    public function CreateUser(CreateUser $parameters)
+    public function CreateUser(CreateUser $parameters): CreateUserResponse
     {
       return $this->__soapCall('CreateUser', array($parameters));
     }
@@ -107,7 +111,7 @@ class UserManagement extends \SoapClient
      * @param CreateUsers $parameters
      * @return CreateUsersResponse
      */
-    public function CreateUsers(CreateUsers $parameters)
+    public function CreateUsers(CreateUsers $parameters): CreateUsersResponse
     {
       return $this->__soapCall('CreateUsers', array($parameters));
     }
@@ -116,7 +120,7 @@ class UserManagement extends \SoapClient
      * @param GetUserByKey $parameters
      * @return GetUserByKeyResponse
      */
-    public function GetUserByKey(GetUserByKey $parameters)
+    public function GetUserByKey(GetUserByKey $parameters): GetUserByKeyResponse
     {
       return $this->__soapCall('GetUserByKey', array($parameters));
     }
@@ -125,7 +129,7 @@ class UserManagement extends \SoapClient
      * @param GetUsers $parameters
      * @return GetUsersResponse
      */
-    public function GetUsers(GetUsers $parameters)
+    public function GetUsers(GetUsers $parameters): GetUsersResponse
     {
       return $this->__soapCall('GetUsers', array($parameters));
     }
@@ -134,7 +138,7 @@ class UserManagement extends \SoapClient
      * @param ListUsers $parameters
      * @return ListUsersResponse
      */
-    public function ListUsers(ListUsers $parameters)
+    public function ListUsers(ListUsers $parameters): ListUsersResponse
     {
       return $this->__soapCall('ListUsers', array($parameters));
     }
@@ -143,7 +147,7 @@ class UserManagement extends \SoapClient
      * @param UpdateContactInfo $parameters
      * @return UpdateContactInfoResponse
      */
-    public function UpdateContactInfo(UpdateContactInfo $parameters)
+    public function UpdateContactInfo(UpdateContactInfo $parameters): UpdateContactInfoResponse
     {
       return $this->__soapCall('UpdateContactInfo', array($parameters));
     }
@@ -152,7 +156,7 @@ class UserManagement extends \SoapClient
      * @param UpdateUserBio $parameters
      * @return UpdateUserBioResponse
      */
-    public function UpdateUserBio(UpdateUserBio $parameters)
+    public function UpdateUserBio(UpdateUserBio $parameters): UpdateUserBioResponse
     {
       return $this->__soapCall('UpdateUserBio', array($parameters));
     }
@@ -161,7 +165,7 @@ class UserManagement extends \SoapClient
      * @param UpdatePassword $parameters
      * @return UpdatePasswordResponse
      */
-    public function UpdatePassword(UpdatePassword $parameters)
+    public function UpdatePassword(UpdatePassword $parameters): UpdatePasswordResponse
     {
       return $this->__soapCall('UpdatePassword', array($parameters));
     }
@@ -170,7 +174,7 @@ class UserManagement extends \SoapClient
      * @param ResetPassword $parameters
      * @return ResetPasswordResponse
      */
-    public function ResetPassword(ResetPassword $parameters)
+    public function ResetPassword(ResetPassword $parameters): ResetPasswordResponse
     {
       return $this->__soapCall('ResetPassword', array($parameters));
     }
@@ -179,7 +183,7 @@ class UserManagement extends \SoapClient
      * @param UnlockAccount $parameters
      * @return UnlockAccountResponse
      */
-    public function UnlockAccount(UnlockAccount $parameters)
+    public function UnlockAccount(UnlockAccount $parameters): UnlockAccountResponse
     {
       return $this->__soapCall('UnlockAccount', array($parameters));
     }
@@ -188,7 +192,7 @@ class UserManagement extends \SoapClient
      * @param SetSystemRole $parameters
      * @return SetSystemRoleResponse
      */
-    public function SetSystemRole(SetSystemRole $parameters)
+    public function SetSystemRole(SetSystemRole $parameters): SetSystemRoleResponse
     {
       return $this->__soapCall('SetSystemRole', array($parameters));
     }
@@ -197,7 +201,7 @@ class UserManagement extends \SoapClient
      * @param DeleteUsers $parameters
      * @return DeleteUsersResponse
      */
-    public function DeleteUsers(DeleteUsers $parameters)
+    public function DeleteUsers(DeleteUsers $parameters): DeleteUsersResponse
     {
       return $this->__soapCall('DeleteUsers', array($parameters));
     }
@@ -206,7 +210,7 @@ class UserManagement extends \SoapClient
      * @param CreateInternalGroup $parameters
      * @return CreateInternalGroupResponse
      */
-    public function CreateInternalGroup(CreateInternalGroup $parameters)
+    public function CreateInternalGroup(CreateInternalGroup $parameters): CreateInternalGroupResponse
     {
       return $this->__soapCall('CreateInternalGroup', array($parameters));
     }
@@ -215,7 +219,7 @@ class UserManagement extends \SoapClient
      * @param GetGroupIsPublic $parameters
      * @return GetGroupIsPublicResponse
      */
-    public function GetGroupIsPublic(GetGroupIsPublic $parameters)
+    public function GetGroupIsPublic(GetGroupIsPublic $parameters): GetGroupIsPublicResponse
     {
       return $this->__soapCall('GetGroupIsPublic', array($parameters));
     }
@@ -224,7 +228,7 @@ class UserManagement extends \SoapClient
      * @param SetGroupIsPublic $parameters
      * @return SetGroupIsPublicResponse
      */
-    public function SetGroupIsPublic(SetGroupIsPublic $parameters)
+    public function SetGroupIsPublic(SetGroupIsPublic $parameters): SetGroupIsPublicResponse
     {
       return $this->__soapCall('SetGroupIsPublic', array($parameters));
     }
@@ -233,7 +237,7 @@ class UserManagement extends \SoapClient
      * @param CreateExternalGroup $parameters
      * @return CreateExternalGroupResponse
      */
-    public function CreateExternalGroup(CreateExternalGroup $parameters)
+    public function CreateExternalGroup(CreateExternalGroup $parameters): CreateExternalGroupResponse
     {
       return $this->__soapCall('CreateExternalGroup', array($parameters));
     }
@@ -242,7 +246,7 @@ class UserManagement extends \SoapClient
      * @param AddMembersToInternalGroup $parameters
      * @return AddMembersToInternalGroupResponse
      */
-    public function AddMembersToInternalGroup(AddMembersToInternalGroup $parameters)
+    public function AddMembersToInternalGroup(AddMembersToInternalGroup $parameters): AddMembersToInternalGroupResponse
     {
       return $this->__soapCall('AddMembersToInternalGroup', array($parameters));
     }
@@ -251,7 +255,7 @@ class UserManagement extends \SoapClient
      * @param RemoveMembersFromInternalGroup $parameters
      * @return RemoveMembersFromInternalGroupResponse
      */
-    public function RemoveMembersFromInternalGroup(RemoveMembersFromInternalGroup $parameters)
+    public function RemoveMembersFromInternalGroup(RemoveMembersFromInternalGroup $parameters): RemoveMembersFromInternalGroupResponse
     {
       return $this->__soapCall('RemoveMembersFromInternalGroup', array($parameters));
     }
@@ -260,7 +264,7 @@ class UserManagement extends \SoapClient
      * @param AddMembersToExternalGroup $parameters
      * @return AddMembersToExternalGroupResponse
      */
-    public function AddMembersToExternalGroup(AddMembersToExternalGroup $parameters)
+    public function AddMembersToExternalGroup(AddMembersToExternalGroup $parameters): AddMembersToExternalGroupResponse
     {
       return $this->__soapCall('AddMembersToExternalGroup', array($parameters));
     }
@@ -269,7 +273,7 @@ class UserManagement extends \SoapClient
      * @param RemoveMembersFromExternalGroup $parameters
      * @return RemoveMembersFromExternalGroupResponse
      */
-    public function RemoveMembersFromExternalGroup(RemoveMembersFromExternalGroup $parameters)
+    public function RemoveMembersFromExternalGroup(RemoveMembersFromExternalGroup $parameters): RemoveMembersFromExternalGroupResponse
     {
       return $this->__soapCall('RemoveMembersFromExternalGroup', array($parameters));
     }
@@ -278,7 +282,7 @@ class UserManagement extends \SoapClient
      * @param SyncExternalUser $parameters
      * @return SyncExternalUserResponse
      */
-    public function SyncExternalUser(SyncExternalUser $parameters)
+    public function SyncExternalUser(SyncExternalUser $parameters): SyncExternalUserResponse
     {
       return $this->__soapCall('SyncExternalUser', array($parameters));
     }
@@ -287,7 +291,7 @@ class UserManagement extends \SoapClient
      * @param DeleteGroup $parameters
      * @return DeleteGroupResponse
      */
-    public function DeleteGroup(DeleteGroup $parameters)
+    public function DeleteGroup(DeleteGroup $parameters): DeleteGroupResponse
     {
       return $this->__soapCall('DeleteGroup', array($parameters));
     }
@@ -296,7 +300,7 @@ class UserManagement extends \SoapClient
      * @param GetGroup $parameters
      * @return GetGroupResponse
      */
-    public function GetGroup(GetGroup $parameters)
+    public function GetGroup(GetGroup $parameters): GetGroupResponse
     {
       return $this->__soapCall('GetGroup', array($parameters));
     }
@@ -305,7 +309,7 @@ class UserManagement extends \SoapClient
      * @param ListGroups $parameters
      * @return ListGroupsResponse
      */
-    public function ListGroups(ListGroups $parameters)
+    public function ListGroups(ListGroups $parameters): ListGroupsResponse
     {
       return $this->__soapCall('ListGroups', array($parameters));
     }
@@ -314,7 +318,7 @@ class UserManagement extends \SoapClient
      * @param GetGroupsByName $parameters
      * @return GetGroupsByNameResponse
      */
-    public function GetGroupsByName(GetGroupsByName $parameters)
+    public function GetGroupsByName(GetGroupsByName $parameters): GetGroupsByNameResponse
     {
       return $this->__soapCall('GetGroupsByName', array($parameters));
     }
@@ -323,7 +327,7 @@ class UserManagement extends \SoapClient
      * @param GetUsersInGroup $parameters
      * @return GetUsersInGroupResponse
      */
-    public function GetUsersInGroup(GetUsersInGroup $parameters)
+    public function GetUsersInGroup(GetUsersInGroup $parameters): GetUsersInGroupResponse
     {
       return $this->__soapCall('GetUsersInGroup', array($parameters));
     }
@@ -332,9 +336,27 @@ class UserManagement extends \SoapClient
      * @param SetUserHasLoggedIn $parameters
      * @return SetUserHasLoggedInResponse
      */
-    public function SetUserHasLoggedIn(SetUserHasLoggedIn $parameters)
+    public function SetUserHasLoggedIn(SetUserHasLoggedIn $parameters): SetUserHasLoggedInResponse
     {
       return $this->__soapCall('SetUserHasLoggedIn', array($parameters));
+    }
+
+    /**
+     * @param GetUserMeetingsRecordingFolderIdForUser $parameters
+     * @return GetUserMeetingsRecordingFolderIdForUserResponse
+     */
+    public function GetUserMeetingsRecordingFolderIdForUser(GetUserMeetingsRecordingFolderIdForUser $parameters): GetUserMeetingsRecordingFolderIdForUserResponse
+    {
+      return $this->__soapCall('GetUserMeetingsRecordingFolderIdForUser', array($parameters));
+    }
+
+    /**
+     * @param SetUserMeetingsRecordingFolderIdForUser $parameters
+     * @return SetUserMeetingsRecordingFolderIdForUserResponse
+     */
+    public function SetUserMeetingsRecordingFolderIdForUser(SetUserMeetingsRecordingFolderIdForUser $parameters): SetUserMeetingsRecordingFolderIdForUserResponse
+    {
+      return $this->__soapCall('SetUserMeetingsRecordingFolderIdForUser', array($parameters));
     }
 
 }

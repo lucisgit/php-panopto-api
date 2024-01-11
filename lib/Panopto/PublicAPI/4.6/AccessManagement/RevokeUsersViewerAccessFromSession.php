@@ -6,23 +6,23 @@ class RevokeUsersViewerAccessFromSession
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var ArrayOfguid $userIds
+     * @var ArrayOfguid|null $userIds
      */
     protected $userIds = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
+     * @param string $sessionId
      * @param ArrayOfguid $userIds
      */
     public function __construct($auth, $sessionId, $userIds)
@@ -37,35 +37,35 @@ class RevokeUsersViewerAccessFromSession
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\AccessManagement\RevokeUsersViewerAccessFromSession
+     * @return RevokeUsersViewerAccessFromSession
      */
-    public function setAuth($auth)
+    public function setAuth($auth): RevokeUsersViewerAccessFromSession
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\AccessManagement\RevokeUsersViewerAccessFromSession
+     * @param string $sessionId
+     * @return RevokeUsersViewerAccessFromSession
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): RevokeUsersViewerAccessFromSession
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class RevokeUsersViewerAccessFromSession
      */
     public function getUserIds()
     {
-      return $this->userIds;
+        return $this->userIds;
     }
 
     /**
      * @param ArrayOfguid $userIds
-     * @return \Panopto\AccessManagement\RevokeUsersViewerAccessFromSession
+     * @return RevokeUsersViewerAccessFromSession
      */
-    public function setUserIds($userIds)
+    public function setUserIds($userIds): RevokeUsersViewerAccessFromSession
     {
-      $this->userIds = $userIds;
-      return $this;
+        $this->userIds = $userIds;
+        return $this;
     }
 
 }

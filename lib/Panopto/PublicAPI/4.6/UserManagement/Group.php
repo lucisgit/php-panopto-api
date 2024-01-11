@@ -6,39 +6,39 @@ class Group
 {
 
     /**
-     * @var string $ExternalId
+     * @var string|null $ExternalId
      */
     protected $ExternalId = null;
 
     /**
-     * @var GroupType $GroupType
+     * @var GroupType|null $GroupType
      */
     protected $GroupType = null;
 
     /**
-     * @var guid $Id
+     * @var string|null $Id
      */
     protected $Id = null;
 
     /**
-     * @var string $MembershipProviderName
+     * @var string|null $MembershipProviderName
      */
     protected $MembershipProviderName = null;
 
     /**
-     * @var string $Name
+     * @var string|null $Name
      */
     protected $Name = null;
 
     /**
-     * @var SystemRole $SystemRole
+     * @var SystemRole|null $SystemRole
      */
     protected $SystemRole = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -46,17 +46,17 @@ class Group
      */
     public function getExternalId()
     {
-      return $this->ExternalId;
+        return $this->ExternalId;
     }
 
     /**
      * @param string $ExternalId
-     * @return \Panopto\UserManagement\Group
+     * @return Group
      */
-    public function setExternalId($ExternalId)
+    public function setExternalId($ExternalId): Group
     {
-      $this->ExternalId = $ExternalId;
-      return $this;
+        $this->ExternalId = $ExternalId;
+        return $this;
     }
 
     /**
@@ -64,35 +64,35 @@ class Group
      */
     public function getGroupType()
     {
-      return $this->GroupType;
+        return $this->GroupType;
     }
 
     /**
      * @param GroupType $GroupType
-     * @return \Panopto\UserManagement\Group
+     * @return Group
      */
-    public function setGroupType($GroupType)
+    public function setGroupType($GroupType): Group
     {
-      $this->GroupType = $GroupType;
-      return $this;
+        $this->GroupType = $GroupType;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getId()
     {
-      return $this->Id;
+        return $this->Id;
     }
 
     /**
-     * @param guid $Id
-     * @return \Panopto\UserManagement\Group
+     * @param string $Id
+     * @return Group
      */
-    public function setId($Id)
+    public function setId($Id): Group
     {
-      $this->Id = $Id;
-      return $this;
+        $this->Id = $Id;
+        return $this;
     }
 
     /**
@@ -100,17 +100,17 @@ class Group
      */
     public function getMembershipProviderName()
     {
-      return $this->MembershipProviderName;
+        return $this->MembershipProviderName;
     }
 
     /**
      * @param string $MembershipProviderName
-     * @return \Panopto\UserManagement\Group
+     * @return Group
      */
-    public function setMembershipProviderName($MembershipProviderName)
+    public function setMembershipProviderName($MembershipProviderName): Group
     {
-      $this->MembershipProviderName = $MembershipProviderName;
-      return $this;
+        $this->MembershipProviderName = $MembershipProviderName;
+        return $this;
     }
 
     /**
@@ -118,17 +118,17 @@ class Group
      */
     public function getName()
     {
-      return $this->Name;
+        return $this->Name;
     }
 
     /**
      * @param string $Name
-     * @return \Panopto\UserManagement\Group
+     * @return Group
      */
-    public function setName($Name)
+    public function setName($Name): Group
     {
-      $this->Name = $Name;
-      return $this;
+        $this->Name = $Name;
+        return $this;
     }
 
     /**
@@ -136,17 +136,17 @@ class Group
      */
     public function getSystemRole()
     {
-      return $this->SystemRole;
+        return $this->SystemRole;
     }
 
     /**
      * @param SystemRole $SystemRole
-     * @return \Panopto\UserManagement\Group
+     * @return Group
      */
-    public function setSystemRole($SystemRole)
+    public function setSystemRole($SystemRole): Group
     {
-      $this->SystemRole = $SystemRole;
-      return $this;
+        $this->SystemRole = $SystemRole;
+        return $this;
     }
 
 }

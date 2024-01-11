@@ -6,33 +6,33 @@ class GetSessionDetailedUsage
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var Pagination $pagination
+     * @var Pagination|null $pagination
      */
     protected $pagination = null;
 
     /**
-     * @var \DateTime $beginRange
+     * @var \DateTime|string|null $beginRange
      */
-    protected $beginRange = null;
+    protected \DateTime|string|null $beginRange = null;
 
     /**
-     * @var \DateTime $endRange
+     * @var \DateTime|string|null $endRange
      */
-    protected $endRange = null;
+    protected \DateTime|string|null $endRange = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
+     * @param string $sessionId
      * @param Pagination $pagination
      * @param \DateTime $beginRange
      * @param \DateTime $endRange
@@ -51,35 +51,35 @@ class GetSessionDetailedUsage
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UsageReporting\GetSessionDetailedUsage
+     * @return GetSessionDetailedUsage
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetSessionDetailedUsage
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\UsageReporting\GetSessionDetailedUsage
+     * @param string $sessionId
+     * @return GetSessionDetailedUsage
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): GetSessionDetailedUsage
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
@@ -87,69 +87,69 @@ class GetSessionDetailedUsage
      */
     public function getPagination()
     {
-      return $this->pagination;
+        return $this->pagination;
     }
 
     /**
      * @param Pagination $pagination
-     * @return \Panopto\UsageReporting\GetSessionDetailedUsage
+     * @return GetSessionDetailedUsage
      */
-    public function setPagination($pagination)
+    public function setPagination($pagination): GetSessionDetailedUsage
     {
-      $this->pagination = $pagination;
-      return $this;
+        $this->pagination = $pagination;
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getBeginRange()
+    public function getBeginRange(): \DateTime|bool|null
     {
-      if ($this->beginRange == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->beginRange);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->beginRange == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->beginRange);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
      * @param \DateTime $beginRange
-     * @return \Panopto\UsageReporting\GetSessionDetailedUsage
+     * @return GetSessionDetailedUsage
      */
-    public function setBeginRange(\DateTime $beginRange)
+    public function setBeginRange(\DateTime $beginRange): GetSessionDetailedUsage
     {
-      $this->beginRange = $beginRange->format(\DateTime::ATOM);
-      return $this;
+        $this->beginRange = $beginRange->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getEndRange()
+    public function getEndRange(): \DateTime|bool|null
     {
-      if ($this->endRange == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->endRange);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->endRange == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->endRange);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
      * @param \DateTime $endRange
-     * @return \Panopto\UsageReporting\GetSessionDetailedUsage
+     * @return GetSessionDetailedUsage
      */
-    public function setEndRange(\DateTime $endRange)
+    public function setEndRange(\DateTime $endRange): GetSessionDetailedUsage
     {
-      $this->endRange = $endRange->format(\DateTime::ATOM);
-      return $this;
+        $this->endRange = $endRange->format(\DateTime::ATOM);
+        return $this;
     }
 
 }

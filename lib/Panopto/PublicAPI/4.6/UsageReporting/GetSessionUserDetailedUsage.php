@@ -6,29 +6,29 @@ class GetSessionUserDetailedUsage
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var guid $userId
+     * @var string|null $userId
      */
     protected $userId = null;
 
     /**
-     * @var Pagination $pagination
+     * @var Pagination|null $pagination
      */
     protected $pagination = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
-     * @param guid $userId
+     * @param string $sessionId
+     * @param string $userId
      * @param Pagination $pagination
      */
     public function __construct($auth, $sessionId, $userId, $pagination)
@@ -44,53 +44,53 @@ class GetSessionUserDetailedUsage
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UsageReporting\GetSessionUserDetailedUsage
+     * @return GetSessionUserDetailedUsage
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetSessionUserDetailedUsage
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\UsageReporting\GetSessionUserDetailedUsage
+     * @param string $sessionId
+     * @return GetSessionUserDetailedUsage
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): GetSessionUserDetailedUsage
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getUserId()
     {
-      return $this->userId;
+        return $this->userId;
     }
 
     /**
-     * @param guid $userId
-     * @return \Panopto\UsageReporting\GetSessionUserDetailedUsage
+     * @param string $userId
+     * @return GetSessionUserDetailedUsage
      */
-    public function setUserId($userId)
+    public function setUserId($userId): GetSessionUserDetailedUsage
     {
-      $this->userId = $userId;
-      return $this;
+        $this->userId = $userId;
+        return $this;
     }
 
     /**
@@ -98,17 +98,17 @@ class GetSessionUserDetailedUsage
      */
     public function getPagination()
     {
-      return $this->pagination;
+        return $this->pagination;
     }
 
     /**
      * @param Pagination $pagination
-     * @return \Panopto\UsageReporting\GetSessionUserDetailedUsage
+     * @return GetSessionUserDetailedUsage
      */
-    public function setPagination($pagination)
+    public function setPagination($pagination): GetSessionUserDetailedUsage
     {
-      $this->pagination = $pagination;
-      return $this;
+        $this->pagination = $pagination;
+        return $this;
     }
 
 }

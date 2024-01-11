@@ -6,23 +6,23 @@ class UpdateSessionName
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var string $name
+     * @var string|null $name
      */
     protected $name = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
+     * @param string $sessionId
      * @param string $name
      */
     public function __construct($auth, $sessionId, $name)
@@ -37,35 +37,35 @@ class UpdateSessionName
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\UpdateSessionName
+     * @return UpdateSessionName
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateSessionName
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\SessionManagement\UpdateSessionName
+     * @param string $sessionId
+     * @return UpdateSessionName
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): UpdateSessionName
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class UpdateSessionName
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
      * @param string $name
-     * @return \Panopto\SessionManagement\UpdateSessionName
+     * @return UpdateSessionName
      */
-    public function setName($name)
+    public function setName($name): UpdateSessionName
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
 }

@@ -6,28 +6,28 @@ class UpdateFolderExternalIdWithProvider
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $folderId
+     * @var string|null $folderId
      */
     protected $folderId = null;
 
     /**
-     * @var string $externalId
+     * @var string|null $externalId
      */
     protected $externalId = null;
 
     /**
-     * @var string $SiteMembershipProviderName
+     * @var string|null $SiteMembershipProviderName
      */
     protected $SiteMembershipProviderName = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $folderId
+     * @param string $folderId
      * @param string $externalId
      * @param string $SiteMembershipProviderName
      */
@@ -44,35 +44,35 @@ class UpdateFolderExternalIdWithProvider
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\UpdateFolderExternalIdWithProvider
+     * @return UpdateFolderExternalIdWithProvider
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateFolderExternalIdWithProvider
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->folderId;
+        return $this->folderId;
     }
 
     /**
-     * @param guid $folderId
-     * @return \Panopto\SessionManagement\UpdateFolderExternalIdWithProvider
+     * @param string $folderId
+     * @return UpdateFolderExternalIdWithProvider
      */
-    public function setFolderId($folderId)
+    public function setFolderId($folderId): UpdateFolderExternalIdWithProvider
     {
-      $this->folderId = $folderId;
-      return $this;
+        $this->folderId = $folderId;
+        return $this;
     }
 
     /**
@@ -80,17 +80,17 @@ class UpdateFolderExternalIdWithProvider
      */
     public function getExternalId()
     {
-      return $this->externalId;
+        return $this->externalId;
     }
 
     /**
      * @param string $externalId
-     * @return \Panopto\SessionManagement\UpdateFolderExternalIdWithProvider
+     * @return UpdateFolderExternalIdWithProvider
      */
-    public function setExternalId($externalId)
+    public function setExternalId($externalId): UpdateFolderExternalIdWithProvider
     {
-      $this->externalId = $externalId;
-      return $this;
+        $this->externalId = $externalId;
+        return $this;
     }
 
     /**
@@ -98,17 +98,17 @@ class UpdateFolderExternalIdWithProvider
      */
     public function getSiteMembershipProviderName()
     {
-      return $this->SiteMembershipProviderName;
+        return $this->SiteMembershipProviderName;
     }
 
     /**
      * @param string $SiteMembershipProviderName
-     * @return \Panopto\SessionManagement\UpdateFolderExternalIdWithProvider
+     * @return UpdateFolderExternalIdWithProvider
      */
-    public function setSiteMembershipProviderName($SiteMembershipProviderName)
+    public function setSiteMembershipProviderName($SiteMembershipProviderName): UpdateFolderExternalIdWithProvider
     {
-      $this->SiteMembershipProviderName = $SiteMembershipProviderName;
-      return $this;
+        $this->SiteMembershipProviderName = $SiteMembershipProviderName;
+        return $this;
     }
 
 }

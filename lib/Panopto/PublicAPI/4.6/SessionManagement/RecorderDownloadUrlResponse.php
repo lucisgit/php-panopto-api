@@ -6,24 +6,24 @@ class RecorderDownloadUrlResponse
 {
 
     /**
-     * @var string $MacRecorderDownloadUrl
+     * @var string|null $MacRecorderDownloadUrl
      */
     protected $MacRecorderDownloadUrl = null;
 
     /**
-     * @var string $WindowsRecorderDownloadUrl
+     * @var string|null $WindowsRecorderDownloadUrl
      */
     protected $WindowsRecorderDownloadUrl = null;
 
     /**
-     * @var string $WindowsRemoteRecorderDownloadUrl
+     * @var string|null $WindowsRemoteRecorderDownloadUrl
      */
     protected $WindowsRemoteRecorderDownloadUrl = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -31,17 +31,17 @@ class RecorderDownloadUrlResponse
      */
     public function getMacRecorderDownloadUrl()
     {
-      return $this->MacRecorderDownloadUrl;
+        return $this->MacRecorderDownloadUrl;
     }
 
     /**
      * @param string $MacRecorderDownloadUrl
-     * @return \Panopto\SessionManagement\RecorderDownloadUrlResponse
+     * @return RecorderDownloadUrlResponse
      */
-    public function setMacRecorderDownloadUrl($MacRecorderDownloadUrl)
+    public function setMacRecorderDownloadUrl($MacRecorderDownloadUrl): RecorderDownloadUrlResponse
     {
-      $this->MacRecorderDownloadUrl = $MacRecorderDownloadUrl;
-      return $this;
+        $this->MacRecorderDownloadUrl = $MacRecorderDownloadUrl;
+        return $this;
     }
 
     /**
@@ -49,17 +49,17 @@ class RecorderDownloadUrlResponse
      */
     public function getWindowsRecorderDownloadUrl()
     {
-      return $this->WindowsRecorderDownloadUrl;
+        return $this->WindowsRecorderDownloadUrl;
     }
 
     /**
      * @param string $WindowsRecorderDownloadUrl
-     * @return \Panopto\SessionManagement\RecorderDownloadUrlResponse
+     * @return RecorderDownloadUrlResponse
      */
-    public function setWindowsRecorderDownloadUrl($WindowsRecorderDownloadUrl)
+    public function setWindowsRecorderDownloadUrl($WindowsRecorderDownloadUrl): RecorderDownloadUrlResponse
     {
-      $this->WindowsRecorderDownloadUrl = $WindowsRecorderDownloadUrl;
-      return $this;
+        $this->WindowsRecorderDownloadUrl = $WindowsRecorderDownloadUrl;
+        return $this;
     }
 
     /**
@@ -67,17 +67,17 @@ class RecorderDownloadUrlResponse
      */
     public function getWindowsRemoteRecorderDownloadUrl()
     {
-      return $this->WindowsRemoteRecorderDownloadUrl;
+        return $this->WindowsRemoteRecorderDownloadUrl;
     }
 
     /**
      * @param string $WindowsRemoteRecorderDownloadUrl
-     * @return \Panopto\SessionManagement\RecorderDownloadUrlResponse
+     * @return RecorderDownloadUrlResponse
      */
-    public function setWindowsRemoteRecorderDownloadUrl($WindowsRemoteRecorderDownloadUrl)
+    public function setWindowsRemoteRecorderDownloadUrl($WindowsRemoteRecorderDownloadUrl): RecorderDownloadUrlResponse
     {
-      $this->WindowsRemoteRecorderDownloadUrl = $WindowsRemoteRecorderDownloadUrl;
-      return $this;
+        $this->WindowsRemoteRecorderDownloadUrl = $WindowsRemoteRecorderDownloadUrl;
+        return $this;
     }
 
 }

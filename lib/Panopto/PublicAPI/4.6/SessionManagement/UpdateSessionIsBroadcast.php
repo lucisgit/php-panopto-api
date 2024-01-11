@@ -6,24 +6,24 @@ class UpdateSessionIsBroadcast
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var boolean $isBroadcast
+     * @var bool|null $isBroadcast
      */
     protected $isBroadcast = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
-     * @param boolean $isBroadcast
+     * @param string $sessionId
+     * @param bool $isBroadcast
      */
     public function __construct($auth, $sessionId, $isBroadcast)
     {
@@ -37,53 +37,53 @@ class UpdateSessionIsBroadcast
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\UpdateSessionIsBroadcast
+     * @return UpdateSessionIsBroadcast
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateSessionIsBroadcast
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\SessionManagement\UpdateSessionIsBroadcast
+     * @param string $sessionId
+     * @return UpdateSessionIsBroadcast
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): UpdateSessionIsBroadcast
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getIsBroadcast()
     {
-      return $this->isBroadcast;
+        return $this->isBroadcast;
     }
 
     /**
-     * @param boolean $isBroadcast
-     * @return \Panopto\SessionManagement\UpdateSessionIsBroadcast
+     * @param bool $isBroadcast
+     * @return UpdateSessionIsBroadcast
      */
-    public function setIsBroadcast($isBroadcast)
+    public function setIsBroadcast($isBroadcast): UpdateSessionIsBroadcast
     {
-      $this->isBroadcast = $isBroadcast;
-      return $this;
+        $this->isBroadcast = $isBroadcast;
+        return $this;
     }
 
 }

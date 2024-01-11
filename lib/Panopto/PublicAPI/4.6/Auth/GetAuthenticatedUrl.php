@@ -6,12 +6,12 @@ class GetAuthenticatedUrl
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var string $targetUrl
+     * @var string|null $targetUrl
      */
     protected $targetUrl = null;
 
@@ -30,17 +30,17 @@ class GetAuthenticatedUrl
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\Auth\GetAuthenticatedUrl
+     * @return GetAuthenticatedUrl
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetAuthenticatedUrl
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -48,17 +48,17 @@ class GetAuthenticatedUrl
      */
     public function getTargetUrl()
     {
-      return $this->targetUrl;
+        return $this->targetUrl;
     }
 
     /**
      * @param string $targetUrl
-     * @return \Panopto\Auth\GetAuthenticatedUrl
+     * @return GetAuthenticatedUrl
      */
-    public function setTargetUrl($targetUrl)
+    public function setTargetUrl($targetUrl): GetAuthenticatedUrl
     {
-      $this->targetUrl = $targetUrl;
-      return $this;
+        $this->targetUrl = $targetUrl;
+        return $this;
     }
 
 }

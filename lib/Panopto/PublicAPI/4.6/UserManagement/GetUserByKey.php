@@ -6,12 +6,12 @@ class GetUserByKey
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var string $userKey
+     * @var string|null $userKey
      */
     protected $userKey = null;
 
@@ -30,17 +30,17 @@ class GetUserByKey
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UserManagement\GetUserByKey
+     * @return GetUserByKey
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetUserByKey
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -48,17 +48,17 @@ class GetUserByKey
      */
     public function getUserKey()
     {
-      return $this->userKey;
+        return $this->userKey;
     }
 
     /**
      * @param string $userKey
-     * @return \Panopto\UserManagement\GetUserByKey
+     * @return GetUserByKey
      */
-    public function setUserKey($userKey)
+    public function setUserKey($userKey): GetUserByKey
     {
-      $this->userKey = $userKey;
-      return $this;
+        $this->userKey = $userKey;
+        return $this;
     }
 
 }

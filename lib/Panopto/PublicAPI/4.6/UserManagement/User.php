@@ -6,59 +6,59 @@ class User
 {
 
     /**
-     * @var string $Email
+     * @var string|null $Email
      */
     protected $Email = null;
 
     /**
-     * @var boolean $EmailSessionNotifications
+     * @var bool|null $EmailSessionNotifications
      */
     protected $EmailSessionNotifications = null;
 
     /**
-     * @var string $FirstName
+     * @var string|null $FirstName
      */
     protected $FirstName = null;
 
     /**
-     * @var ArrayOfguid $GroupMemberships
+     * @var ArrayOfguid|null $GroupMemberships
      */
     protected $GroupMemberships = null;
 
     /**
-     * @var string $LastName
+     * @var string|null $LastName
      */
     protected $LastName = null;
 
     /**
-     * @var SystemRole $SystemRole
+     * @var SystemRole|null $SystemRole
      */
     protected $SystemRole = null;
 
     /**
-     * @var string $UserBio
+     * @var string|null $UserBio
      */
     protected $UserBio = null;
 
     /**
-     * @var guid $UserId
+     * @var string|null $UserId
      */
     protected $UserId = null;
 
     /**
-     * @var string $UserKey
+     * @var string|null $UserKey
      */
     protected $UserKey = null;
 
     /**
-     * @var string $UserSettingsUrl
+     * @var string|null $UserSettingsUrl
      */
     protected $UserSettingsUrl = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -66,35 +66,35 @@ class User
      */
     public function getEmail()
     {
-      return $this->Email;
+        return $this->Email;
     }
 
     /**
      * @param string $Email
-     * @return \Panopto\UserManagement\User
+     * @return User
      */
-    public function setEmail($Email)
+    public function setEmail($Email): User
     {
-      $this->Email = $Email;
-      return $this;
+        $this->Email = $Email;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getEmailSessionNotifications()
     {
-      return $this->EmailSessionNotifications;
+        return $this->EmailSessionNotifications;
     }
 
     /**
-     * @param boolean $EmailSessionNotifications
-     * @return \Panopto\UserManagement\User
+     * @param bool $EmailSessionNotifications
+     * @return User
      */
-    public function setEmailSessionNotifications($EmailSessionNotifications)
+    public function setEmailSessionNotifications($EmailSessionNotifications): User
     {
-      $this->EmailSessionNotifications = $EmailSessionNotifications;
-      return $this;
+        $this->EmailSessionNotifications = $EmailSessionNotifications;
+        return $this;
     }
 
     /**
@@ -102,17 +102,17 @@ class User
      */
     public function getFirstName()
     {
-      return $this->FirstName;
+        return $this->FirstName;
     }
 
     /**
      * @param string $FirstName
-     * @return \Panopto\UserManagement\User
+     * @return User
      */
-    public function setFirstName($FirstName)
+    public function setFirstName($FirstName): User
     {
-      $this->FirstName = $FirstName;
-      return $this;
+        $this->FirstName = $FirstName;
+        return $this;
     }
 
     /**
@@ -120,17 +120,17 @@ class User
      */
     public function getGroupMemberships()
     {
-      return $this->GroupMemberships;
+        return $this->GroupMemberships;
     }
 
     /**
      * @param ArrayOfguid $GroupMemberships
-     * @return \Panopto\UserManagement\User
+     * @return User
      */
-    public function setGroupMemberships($GroupMemberships)
+    public function setGroupMemberships($GroupMemberships): User
     {
-      $this->GroupMemberships = $GroupMemberships;
-      return $this;
+        $this->GroupMemberships = $GroupMemberships;
+        return $this;
     }
 
     /**
@@ -138,17 +138,17 @@ class User
      */
     public function getLastName()
     {
-      return $this->LastName;
+        return $this->LastName;
     }
 
     /**
      * @param string $LastName
-     * @return \Panopto\UserManagement\User
+     * @return User
      */
-    public function setLastName($LastName)
+    public function setLastName($LastName): User
     {
-      $this->LastName = $LastName;
-      return $this;
+        $this->LastName = $LastName;
+        return $this;
     }
 
     /**
@@ -156,17 +156,17 @@ class User
      */
     public function getSystemRole()
     {
-      return $this->SystemRole;
+        return $this->SystemRole;
     }
 
     /**
      * @param SystemRole $SystemRole
-     * @return \Panopto\UserManagement\User
+     * @return User
      */
-    public function setSystemRole($SystemRole)
+    public function setSystemRole($SystemRole): User
     {
-      $this->SystemRole = $SystemRole;
-      return $this;
+        $this->SystemRole = $SystemRole;
+        return $this;
     }
 
     /**
@@ -174,35 +174,35 @@ class User
      */
     public function getUserBio()
     {
-      return $this->UserBio;
+        return $this->UserBio;
     }
 
     /**
      * @param string $UserBio
-     * @return \Panopto\UserManagement\User
+     * @return User
      */
-    public function setUserBio($UserBio)
+    public function setUserBio($UserBio): User
     {
-      $this->UserBio = $UserBio;
-      return $this;
+        $this->UserBio = $UserBio;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getUserId()
     {
-      return $this->UserId;
+        return $this->UserId;
     }
 
     /**
-     * @param guid $UserId
-     * @return \Panopto\UserManagement\User
+     * @param string $UserId
+     * @return User
      */
-    public function setUserId($UserId)
+    public function setUserId($UserId): User
     {
-      $this->UserId = $UserId;
-      return $this;
+        $this->UserId = $UserId;
+        return $this;
     }
 
     /**
@@ -210,17 +210,17 @@ class User
      */
     public function getUserKey()
     {
-      return $this->UserKey;
+        return $this->UserKey;
     }
 
     /**
      * @param string $UserKey
-     * @return \Panopto\UserManagement\User
+     * @return User
      */
-    public function setUserKey($UserKey)
+    public function setUserKey($UserKey): User
     {
-      $this->UserKey = $UserKey;
-      return $this;
+        $this->UserKey = $UserKey;
+        return $this;
     }
 
     /**
@@ -228,17 +228,17 @@ class User
      */
     public function getUserSettingsUrl()
     {
-      return $this->UserSettingsUrl;
+        return $this->UserSettingsUrl;
     }
 
     /**
      * @param string $UserSettingsUrl
-     * @return \Panopto\UserManagement\User
+     * @return User
      */
-    public function setUserSettingsUrl($UserSettingsUrl)
+    public function setUserSettingsUrl($UserSettingsUrl): User
     {
-      $this->UserSettingsUrl = $UserSettingsUrl;
-      return $this;
+        $this->UserSettingsUrl = $UserSettingsUrl;
+        return $this;
     }
 
 }

@@ -6,12 +6,12 @@ class LogOnWithPassword
 {
 
     /**
-     * @var string $userKey
+     * @var string|null $userKey
      */
     protected $userKey = null;
 
     /**
-     * @var string $password
+     * @var string|null $password
      */
     protected $password = null;
 
@@ -30,17 +30,17 @@ class LogOnWithPassword
      */
     public function getUserKey()
     {
-      return $this->userKey;
+        return $this->userKey;
     }
 
     /**
      * @param string $userKey
-     * @return \Panopto\Auth\LogOnWithPassword
+     * @return LogOnWithPassword
      */
-    public function setUserKey($userKey)
+    public function setUserKey($userKey): LogOnWithPassword
     {
-      $this->userKey = $userKey;
-      return $this;
+        $this->userKey = $userKey;
+        return $this;
     }
 
     /**
@@ -48,17 +48,17 @@ class LogOnWithPassword
      */
     public function getPassword()
     {
-      return $this->password;
+        return $this->password;
     }
 
     /**
      * @param string $password
-     * @return \Panopto\Auth\LogOnWithPassword
+     * @return LogOnWithPassword
      */
-    public function setPassword($password)
+    public function setPassword($password): LogOnWithPassword
     {
-      $this->password = $password;
-      return $this;
+        $this->password = $password;
+        return $this;
     }
 
 }

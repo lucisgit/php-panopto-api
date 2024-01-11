@@ -6,7 +6,7 @@ class GetUsersResponse
 {
 
     /**
-     * @var ArrayOfUser $GetUsersResult
+     * @var ArrayOfUser|null $GetUsersResult
      */
     protected $GetUsersResult = null;
 
@@ -23,17 +23,17 @@ class GetUsersResponse
      */
     public function getGetUsersResult()
     {
-      return $this->GetUsersResult;
+        return $this->GetUsersResult;
     }
 
     /**
      * @param ArrayOfUser $GetUsersResult
-     * @return \Panopto\UserManagement\GetUsersResponse
+     * @return GetUsersResponse
      */
-    public function setGetUsersResult($GetUsersResult)
+    public function setGetUsersResult($GetUsersResult): GetUsersResponse
     {
-      $this->GetUsersResult = $GetUsersResult;
-      return $this;
+        $this->GetUsersResult = $GetUsersResult;
+        return $this;
     }
 
 }

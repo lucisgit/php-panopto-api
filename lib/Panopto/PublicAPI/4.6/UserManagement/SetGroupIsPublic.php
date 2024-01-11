@@ -6,24 +6,24 @@ class SetGroupIsPublic
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $groupId
+     * @var string|null $groupId
      */
     protected $groupId = null;
 
     /**
-     * @var boolean $isPublic
+     * @var bool|null $isPublic
      */
     protected $isPublic = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $groupId
-     * @param boolean $isPublic
+     * @param string $groupId
+     * @param bool $isPublic
      */
     public function __construct($auth, $groupId, $isPublic)
     {
@@ -37,53 +37,53 @@ class SetGroupIsPublic
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UserManagement\SetGroupIsPublic
+     * @return SetGroupIsPublic
      */
-    public function setAuth($auth)
+    public function setAuth($auth): SetGroupIsPublic
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getGroupId()
     {
-      return $this->groupId;
+        return $this->groupId;
     }
 
     /**
-     * @param guid $groupId
-     * @return \Panopto\UserManagement\SetGroupIsPublic
+     * @param string $groupId
+     * @return SetGroupIsPublic
      */
-    public function setGroupId($groupId)
+    public function setGroupId($groupId): SetGroupIsPublic
     {
-      $this->groupId = $groupId;
-      return $this;
+        $this->groupId = $groupId;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getIsPublic()
     {
-      return $this->isPublic;
+        return $this->isPublic;
     }
 
     /**
-     * @param boolean $isPublic
-     * @return \Panopto\UserManagement\SetGroupIsPublic
+     * @param bool $isPublic
+     * @return SetGroupIsPublic
      */
-    public function setIsPublic($isPublic)
+    public function setIsPublic($isPublic): SetGroupIsPublic
     {
-      $this->isPublic = $isPublic;
-      return $this;
+        $this->isPublic = $isPublic;
+        return $this;
     }
 
 }

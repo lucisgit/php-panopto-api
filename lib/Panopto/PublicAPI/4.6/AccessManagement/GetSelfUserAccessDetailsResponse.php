@@ -6,7 +6,7 @@ class GetSelfUserAccessDetailsResponse
 {
 
     /**
-     * @var UserAccessDetails $GetSelfUserAccessDetailsResult
+     * @var UserAccessDetails|null $GetSelfUserAccessDetailsResult
      */
     protected $GetSelfUserAccessDetailsResult = null;
 
@@ -23,17 +23,17 @@ class GetSelfUserAccessDetailsResponse
      */
     public function getGetSelfUserAccessDetailsResult()
     {
-      return $this->GetSelfUserAccessDetailsResult;
+        return $this->GetSelfUserAccessDetailsResult;
     }
 
     /**
      * @param UserAccessDetails $GetSelfUserAccessDetailsResult
-     * @return \Panopto\AccessManagement\GetSelfUserAccessDetailsResponse
+     * @return GetSelfUserAccessDetailsResponse
      */
-    public function setGetSelfUserAccessDetailsResult($GetSelfUserAccessDetailsResult)
+    public function setGetSelfUserAccessDetailsResult($GetSelfUserAccessDetailsResult): GetSelfUserAccessDetailsResponse
     {
-      $this->GetSelfUserAccessDetailsResult = $GetSelfUserAccessDetailsResult;
-      return $this;
+        $this->GetSelfUserAccessDetailsResult = $GetSelfUserAccessDetailsResult;
+        return $this;
     }
 
 }

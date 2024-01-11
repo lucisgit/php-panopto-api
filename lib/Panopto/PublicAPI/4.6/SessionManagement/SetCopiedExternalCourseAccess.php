@@ -6,22 +6,22 @@ class SetCopiedExternalCourseAccess
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var string $name
+     * @var string|null $name
      */
     protected $name = null;
 
     /**
-     * @var string $externalId
+     * @var string|null $externalId
      */
     protected $externalId = null;
 
     /**
-     * @var ArrayOfguid $folderIds
+     * @var ArrayOfguid|null $folderIds
      */
     protected $folderIds = null;
 
@@ -44,17 +44,17 @@ class SetCopiedExternalCourseAccess
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\SetCopiedExternalCourseAccess
+     * @return SetCopiedExternalCourseAccess
      */
-    public function setAuth($auth)
+    public function setAuth($auth): SetCopiedExternalCourseAccess
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -62,17 +62,17 @@ class SetCopiedExternalCourseAccess
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
      * @param string $name
-     * @return \Panopto\SessionManagement\SetCopiedExternalCourseAccess
+     * @return SetCopiedExternalCourseAccess
      */
-    public function setName($name)
+    public function setName($name): SetCopiedExternalCourseAccess
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -80,17 +80,17 @@ class SetCopiedExternalCourseAccess
      */
     public function getExternalId()
     {
-      return $this->externalId;
+        return $this->externalId;
     }
 
     /**
      * @param string $externalId
-     * @return \Panopto\SessionManagement\SetCopiedExternalCourseAccess
+     * @return SetCopiedExternalCourseAccess
      */
-    public function setExternalId($externalId)
+    public function setExternalId($externalId): SetCopiedExternalCourseAccess
     {
-      $this->externalId = $externalId;
-      return $this;
+        $this->externalId = $externalId;
+        return $this;
     }
 
     /**
@@ -98,17 +98,17 @@ class SetCopiedExternalCourseAccess
      */
     public function getFolderIds()
     {
-      return $this->folderIds;
+        return $this->folderIds;
     }
 
     /**
      * @param ArrayOfguid $folderIds
-     * @return \Panopto\SessionManagement\SetCopiedExternalCourseAccess
+     * @return SetCopiedExternalCourseAccess
      */
-    public function setFolderIds($folderIds)
+    public function setFolderIds($folderIds): SetCopiedExternalCourseAccess
     {
-      $this->folderIds = $folderIds;
-      return $this;
+        $this->folderIds = $folderIds;
+        return $this;
     }
 
 }

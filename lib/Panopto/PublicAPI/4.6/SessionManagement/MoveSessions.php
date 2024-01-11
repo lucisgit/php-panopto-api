@@ -6,24 +6,24 @@ class MoveSessions
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var ArrayOfguid $sessionIds
+     * @var ArrayOfguid|null $sessionIds
      */
     protected $sessionIds = null;
 
     /**
-     * @var guid $folderId
+     * @var string|null $folderId
      */
     protected $folderId = null;
 
     /**
      * @param AuthenticationInfo $auth
      * @param ArrayOfguid $sessionIds
-     * @param guid $folderId
+     * @param string $folderId
      */
     public function __construct($auth, $sessionIds, $folderId)
     {
@@ -37,17 +37,17 @@ class MoveSessions
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\MoveSessions
+     * @return MoveSessions
      */
-    public function setAuth($auth)
+    public function setAuth($auth): MoveSessions
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -55,35 +55,35 @@ class MoveSessions
      */
     public function getSessionIds()
     {
-      return $this->sessionIds;
+        return $this->sessionIds;
     }
 
     /**
      * @param ArrayOfguid $sessionIds
-     * @return \Panopto\SessionManagement\MoveSessions
+     * @return MoveSessions
      */
-    public function setSessionIds($sessionIds)
+    public function setSessionIds($sessionIds): MoveSessions
     {
-      $this->sessionIds = $sessionIds;
-      return $this;
+        $this->sessionIds = $sessionIds;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->folderId;
+        return $this->folderId;
     }
 
     /**
-     * @param guid $folderId
-     * @return \Panopto\SessionManagement\MoveSessions
+     * @param string $folderId
+     * @return MoveSessions
      */
-    public function setFolderId($folderId)
+    public function setFolderId($folderId): MoveSessions
     {
-      $this->folderId = $folderId;
-      return $this;
+        $this->folderId = $folderId;
+        return $this;
     }
 
 }

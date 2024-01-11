@@ -6,7 +6,7 @@ class AddSessionResponse
 {
 
     /**
-     * @var Session $AddSessionResult
+     * @var Session|null $AddSessionResult
      */
     protected $AddSessionResult = null;
 
@@ -23,17 +23,17 @@ class AddSessionResponse
      */
     public function getAddSessionResult()
     {
-      return $this->AddSessionResult;
+        return $this->AddSessionResult;
     }
 
     /**
      * @param Session $AddSessionResult
-     * @return \Panopto\SessionManagement\AddSessionResponse
+     * @return AddSessionResponse
      */
-    public function setAddSessionResult($AddSessionResult)
+    public function setAddSessionResult($AddSessionResult): AddSessionResponse
     {
-      $this->AddSessionResult = $AddSessionResult;
-      return $this;
+        $this->AddSessionResult = $AddSessionResult;
+        return $this;
     }
 
 }

@@ -6,12 +6,12 @@ class AreUsersNotesPublicResponse
 {
 
     /**
-     * @var boolean $AreUsersNotesPublicResult
+     * @var bool|null $AreUsersNotesPublicResult
      */
     protected $AreUsersNotesPublicResult = null;
 
     /**
-     * @param boolean $AreUsersNotesPublicResult
+     * @param bool $AreUsersNotesPublicResult
      */
     public function __construct($AreUsersNotesPublicResult)
     {
@@ -19,21 +19,21 @@ class AreUsersNotesPublicResponse
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getAreUsersNotesPublicResult()
     {
-      return $this->AreUsersNotesPublicResult;
+        return $this->AreUsersNotesPublicResult;
     }
 
     /**
-     * @param boolean $AreUsersNotesPublicResult
-     * @return \Panopto\SessionManagement\AreUsersNotesPublicResponse
+     * @param bool $AreUsersNotesPublicResult
+     * @return AreUsersNotesPublicResponse
      */
-    public function setAreUsersNotesPublicResult($AreUsersNotesPublicResult)
+    public function setAreUsersNotesPublicResult($AreUsersNotesPublicResult): AreUsersNotesPublicResponse
     {
-      $this->AreUsersNotesPublicResult = $AreUsersNotesPublicResult;
-      return $this;
+        $this->AreUsersNotesPublicResult = $AreUsersNotesPublicResult;
+        return $this;
     }
 
 }

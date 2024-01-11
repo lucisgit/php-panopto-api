@@ -6,23 +6,23 @@ class UpdateFolderName
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $folderId
+     * @var string|null $folderId
      */
     protected $folderId = null;
 
     /**
-     * @var string $name
+     * @var string|null $name
      */
     protected $name = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $folderId
+     * @param string $folderId
      * @param string $name
      */
     public function __construct($auth, $folderId, $name)
@@ -37,35 +37,35 @@ class UpdateFolderName
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\UpdateFolderName
+     * @return UpdateFolderName
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateFolderName
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->folderId;
+        return $this->folderId;
     }
 
     /**
-     * @param guid $folderId
-     * @return \Panopto\SessionManagement\UpdateFolderName
+     * @param string $folderId
+     * @return UpdateFolderName
      */
-    public function setFolderId($folderId)
+    public function setFolderId($folderId): UpdateFolderName
     {
-      $this->folderId = $folderId;
-      return $this;
+        $this->folderId = $folderId;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class UpdateFolderName
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
      * @param string $name
-     * @return \Panopto\SessionManagement\UpdateFolderName
+     * @return UpdateFolderName
      */
-    public function setName($name)
+    public function setName($name): UpdateFolderName
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
 }

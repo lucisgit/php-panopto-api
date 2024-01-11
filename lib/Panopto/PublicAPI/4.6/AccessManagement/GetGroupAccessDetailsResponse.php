@@ -6,7 +6,7 @@ class GetGroupAccessDetailsResponse
 {
 
     /**
-     * @var GroupAccessDetails $GetGroupAccessDetailsResult
+     * @var GroupAccessDetails|null $GetGroupAccessDetailsResult
      */
     protected $GetGroupAccessDetailsResult = null;
 
@@ -23,17 +23,17 @@ class GetGroupAccessDetailsResponse
      */
     public function getGetGroupAccessDetailsResult()
     {
-      return $this->GetGroupAccessDetailsResult;
+        return $this->GetGroupAccessDetailsResult;
     }
 
     /**
      * @param GroupAccessDetails $GetGroupAccessDetailsResult
-     * @return \Panopto\AccessManagement\GetGroupAccessDetailsResponse
+     * @return GetGroupAccessDetailsResponse
      */
-    public function setGetGroupAccessDetailsResult($GetGroupAccessDetailsResult)
+    public function setGetGroupAccessDetailsResult($GetGroupAccessDetailsResult): GetGroupAccessDetailsResponse
     {
-      $this->GetGroupAccessDetailsResult = $GetGroupAccessDetailsResult;
-      return $this;
+        $this->GetGroupAccessDetailsResult = $GetGroupAccessDetailsResult;
+        return $this;
     }
 
 }

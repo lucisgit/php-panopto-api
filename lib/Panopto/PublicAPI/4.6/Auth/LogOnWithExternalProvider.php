@@ -6,12 +6,12 @@ class LogOnWithExternalProvider
 {
 
     /**
-     * @var string $userKey
+     * @var string|null $userKey
      */
     protected $userKey = null;
 
     /**
-     * @var string $authCode
+     * @var string|null $authCode
      */
     protected $authCode = null;
 
@@ -30,17 +30,17 @@ class LogOnWithExternalProvider
      */
     public function getUserKey()
     {
-      return $this->userKey;
+        return $this->userKey;
     }
 
     /**
      * @param string $userKey
-     * @return \Panopto\Auth\LogOnWithExternalProvider
+     * @return LogOnWithExternalProvider
      */
-    public function setUserKey($userKey)
+    public function setUserKey($userKey): LogOnWithExternalProvider
     {
-      $this->userKey = $userKey;
-      return $this;
+        $this->userKey = $userKey;
+        return $this;
     }
 
     /**
@@ -48,17 +48,17 @@ class LogOnWithExternalProvider
      */
     public function getAuthCode()
     {
-      return $this->authCode;
+        return $this->authCode;
     }
 
     /**
      * @param string $authCode
-     * @return \Panopto\Auth\LogOnWithExternalProvider
+     * @return LogOnWithExternalProvider
      */
-    public function setAuthCode($authCode)
+    public function setAuthCode($authCode): LogOnWithExternalProvider
     {
-      $this->authCode = $authCode;
-      return $this;
+        $this->authCode = $authCode;
+        return $this;
     }
 
 }

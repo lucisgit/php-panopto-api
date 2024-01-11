@@ -6,23 +6,23 @@ class UpdateSessionDescription
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var string $description
+     * @var string|null $description
      */
     protected $description = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
+     * @param string $sessionId
      * @param string $description
      */
     public function __construct($auth, $sessionId, $description)
@@ -37,35 +37,35 @@ class UpdateSessionDescription
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\UpdateSessionDescription
+     * @return UpdateSessionDescription
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateSessionDescription
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\SessionManagement\UpdateSessionDescription
+     * @param string $sessionId
+     * @return UpdateSessionDescription
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): UpdateSessionDescription
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class UpdateSessionDescription
      */
     public function getDescription()
     {
-      return $this->description;
+        return $this->description;
     }
 
     /**
      * @param string $description
-     * @return \Panopto\SessionManagement\UpdateSessionDescription
+     * @return UpdateSessionDescription
      */
-    public function setDescription($description)
+    public function setDescription($description): UpdateSessionDescription
     {
-      $this->description = $description;
-      return $this;
+        $this->description = $description;
+        return $this;
     }
 
 }

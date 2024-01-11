@@ -6,7 +6,7 @@ class GetFoldersWithExternalContextListResponse
 {
 
     /**
-     * @var ListFoldersResponseWithExternalContext $GetFoldersWithExternalContextListResult
+     * @var ListFoldersResponseWithExternalContext|null $GetFoldersWithExternalContextListResult
      */
     protected $GetFoldersWithExternalContextListResult = null;
 
@@ -23,17 +23,17 @@ class GetFoldersWithExternalContextListResponse
      */
     public function getGetFoldersWithExternalContextListResult()
     {
-      return $this->GetFoldersWithExternalContextListResult;
+        return $this->GetFoldersWithExternalContextListResult;
     }
 
     /**
      * @param ListFoldersResponseWithExternalContext $GetFoldersWithExternalContextListResult
-     * @return \Panopto\SessionManagement\GetFoldersWithExternalContextListResponse
+     * @return GetFoldersWithExternalContextListResponse
      */
-    public function setGetFoldersWithExternalContextListResult($GetFoldersWithExternalContextListResult)
+    public function setGetFoldersWithExternalContextListResult($GetFoldersWithExternalContextListResult): GetFoldersWithExternalContextListResponse
     {
-      $this->GetFoldersWithExternalContextListResult = $GetFoldersWithExternalContextListResult;
-      return $this;
+        $this->GetFoldersWithExternalContextListResult = $GetFoldersWithExternalContextListResult;
+        return $this;
     }
 
 }

@@ -6,67 +6,67 @@ class FolderAccessDetails
 {
 
     /**
-     * @var guid $FolderId
+     * @var string|null $FolderId
      */
     protected $FolderId = null;
 
     /**
-     * @var ArrayOfguid $GroupsWithCreatorAccess
+     * @var ArrayOfguid|null $GroupsWithCreatorAccess
      */
     protected $GroupsWithCreatorAccess = null;
 
     /**
-     * @var ArrayOfguid $GroupsWithPublisherAccess
+     * @var ArrayOfguid|null $GroupsWithPublisherAccess
      */
     protected $GroupsWithPublisherAccess = null;
 
     /**
-     * @var ArrayOfguid $GroupsWithViewerAccess
+     * @var ArrayOfguid|null $GroupsWithViewerAccess
      */
     protected $GroupsWithViewerAccess = null;
 
     /**
-     * @var boolean $IsPublic
+     * @var bool|null $IsPublic
      */
     protected $IsPublic = null;
 
     /**
-     * @var ArrayOfguid $UsersWithCreatorAccess
+     * @var ArrayOfguid|null $UsersWithCreatorAccess
      */
     protected $UsersWithCreatorAccess = null;
 
     /**
-     * @var ArrayOfguid $UsersWithPublisherAccess
+     * @var ArrayOfguid|null $UsersWithPublisherAccess
      */
     protected $UsersWithPublisherAccess = null;
 
     /**
-     * @var ArrayOfguid $UsersWithViewerAccess
+     * @var ArrayOfguid|null $UsersWithViewerAccess
      */
     protected $UsersWithViewerAccess = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->FolderId;
+        return $this->FolderId;
     }
 
     /**
-     * @param guid $FolderId
-     * @return \Panopto\AccessManagement\FolderAccessDetails
+     * @param string $FolderId
+     * @return FolderAccessDetails
      */
-    public function setFolderId($FolderId)
+    public function setFolderId($FolderId): FolderAccessDetails
     {
-      $this->FolderId = $FolderId;
-      return $this;
+        $this->FolderId = $FolderId;
+        return $this;
     }
 
     /**
@@ -74,17 +74,17 @@ class FolderAccessDetails
      */
     public function getGroupsWithCreatorAccess()
     {
-      return $this->GroupsWithCreatorAccess;
+        return $this->GroupsWithCreatorAccess;
     }
 
     /**
      * @param ArrayOfguid $GroupsWithCreatorAccess
-     * @return \Panopto\AccessManagement\FolderAccessDetails
+     * @return FolderAccessDetails
      */
-    public function setGroupsWithCreatorAccess($GroupsWithCreatorAccess)
+    public function setGroupsWithCreatorAccess($GroupsWithCreatorAccess): FolderAccessDetails
     {
-      $this->GroupsWithCreatorAccess = $GroupsWithCreatorAccess;
-      return $this;
+        $this->GroupsWithCreatorAccess = $GroupsWithCreatorAccess;
+        return $this;
     }
 
     /**
@@ -92,17 +92,17 @@ class FolderAccessDetails
      */
     public function getGroupsWithPublisherAccess()
     {
-      return $this->GroupsWithPublisherAccess;
+        return $this->GroupsWithPublisherAccess;
     }
 
     /**
      * @param ArrayOfguid $GroupsWithPublisherAccess
-     * @return \Panopto\AccessManagement\FolderAccessDetails
+     * @return FolderAccessDetails
      */
-    public function setGroupsWithPublisherAccess($GroupsWithPublisherAccess)
+    public function setGroupsWithPublisherAccess($GroupsWithPublisherAccess): FolderAccessDetails
     {
-      $this->GroupsWithPublisherAccess = $GroupsWithPublisherAccess;
-      return $this;
+        $this->GroupsWithPublisherAccess = $GroupsWithPublisherAccess;
+        return $this;
     }
 
     /**
@@ -110,35 +110,35 @@ class FolderAccessDetails
      */
     public function getGroupsWithViewerAccess()
     {
-      return $this->GroupsWithViewerAccess;
+        return $this->GroupsWithViewerAccess;
     }
 
     /**
      * @param ArrayOfguid $GroupsWithViewerAccess
-     * @return \Panopto\AccessManagement\FolderAccessDetails
+     * @return FolderAccessDetails
      */
-    public function setGroupsWithViewerAccess($GroupsWithViewerAccess)
+    public function setGroupsWithViewerAccess($GroupsWithViewerAccess): FolderAccessDetails
     {
-      $this->GroupsWithViewerAccess = $GroupsWithViewerAccess;
-      return $this;
+        $this->GroupsWithViewerAccess = $GroupsWithViewerAccess;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getIsPublic()
     {
-      return $this->IsPublic;
+        return $this->IsPublic;
     }
 
     /**
-     * @param boolean $IsPublic
-     * @return \Panopto\AccessManagement\FolderAccessDetails
+     * @param bool $IsPublic
+     * @return FolderAccessDetails
      */
-    public function setIsPublic($IsPublic)
+    public function setIsPublic($IsPublic): FolderAccessDetails
     {
-      $this->IsPublic = $IsPublic;
-      return $this;
+        $this->IsPublic = $IsPublic;
+        return $this;
     }
 
     /**
@@ -146,17 +146,17 @@ class FolderAccessDetails
      */
     public function getUsersWithCreatorAccess()
     {
-      return $this->UsersWithCreatorAccess;
+        return $this->UsersWithCreatorAccess;
     }
 
     /**
      * @param ArrayOfguid $UsersWithCreatorAccess
-     * @return \Panopto\AccessManagement\FolderAccessDetails
+     * @return FolderAccessDetails
      */
-    public function setUsersWithCreatorAccess($UsersWithCreatorAccess)
+    public function setUsersWithCreatorAccess($UsersWithCreatorAccess): FolderAccessDetails
     {
-      $this->UsersWithCreatorAccess = $UsersWithCreatorAccess;
-      return $this;
+        $this->UsersWithCreatorAccess = $UsersWithCreatorAccess;
+        return $this;
     }
 
     /**
@@ -164,17 +164,17 @@ class FolderAccessDetails
      */
     public function getUsersWithPublisherAccess()
     {
-      return $this->UsersWithPublisherAccess;
+        return $this->UsersWithPublisherAccess;
     }
 
     /**
      * @param ArrayOfguid $UsersWithPublisherAccess
-     * @return \Panopto\AccessManagement\FolderAccessDetails
+     * @return FolderAccessDetails
      */
-    public function setUsersWithPublisherAccess($UsersWithPublisherAccess)
+    public function setUsersWithPublisherAccess($UsersWithPublisherAccess): FolderAccessDetails
     {
-      $this->UsersWithPublisherAccess = $UsersWithPublisherAccess;
-      return $this;
+        $this->UsersWithPublisherAccess = $UsersWithPublisherAccess;
+        return $this;
     }
 
     /**
@@ -182,17 +182,17 @@ class FolderAccessDetails
      */
     public function getUsersWithViewerAccess()
     {
-      return $this->UsersWithViewerAccess;
+        return $this->UsersWithViewerAccess;
     }
 
     /**
      * @param ArrayOfguid $UsersWithViewerAccess
-     * @return \Panopto\AccessManagement\FolderAccessDetails
+     * @return FolderAccessDetails
      */
-    public function setUsersWithViewerAccess($UsersWithViewerAccess)
+    public function setUsersWithViewerAccess($UsersWithViewerAccess): FolderAccessDetails
     {
-      $this->UsersWithViewerAccess = $UsersWithViewerAccess;
-      return $this;
+        $this->UsersWithViewerAccess = $UsersWithViewerAccess;
+        return $this;
     }
 
 }

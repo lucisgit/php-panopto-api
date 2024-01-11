@@ -6,7 +6,7 @@ class DescribeReportTypes
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
@@ -23,17 +23,17 @@ class DescribeReportTypes
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UsageReporting\DescribeReportTypes
+     * @return DescribeReportTypes
      */
-    public function setAuth($auth)
+    public function setAuth($auth): DescribeReportTypes
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
 }

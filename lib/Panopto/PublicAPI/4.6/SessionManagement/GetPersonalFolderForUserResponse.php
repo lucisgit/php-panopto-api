@@ -6,7 +6,7 @@ class GetPersonalFolderForUserResponse
 {
 
     /**
-     * @var Folder $GetPersonalFolderForUserResult
+     * @var Folder|null $GetPersonalFolderForUserResult
      */
     protected $GetPersonalFolderForUserResult = null;
 
@@ -23,17 +23,17 @@ class GetPersonalFolderForUserResponse
      */
     public function getGetPersonalFolderForUserResult()
     {
-      return $this->GetPersonalFolderForUserResult;
+        return $this->GetPersonalFolderForUserResult;
     }
 
     /**
      * @param Folder $GetPersonalFolderForUserResult
-     * @return \Panopto\SessionManagement\GetPersonalFolderForUserResponse
+     * @return GetPersonalFolderForUserResponse
      */
-    public function setGetPersonalFolderForUserResult($GetPersonalFolderForUserResult)
+    public function setGetPersonalFolderForUserResult($GetPersonalFolderForUserResult): GetPersonalFolderForUserResponse
     {
-      $this->GetPersonalFolderForUserResult = $GetPersonalFolderForUserResult;
-      return $this;
+        $this->GetPersonalFolderForUserResult = $GetPersonalFolderForUserResult;
+        return $this;
     }
 
 }

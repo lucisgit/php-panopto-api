@@ -6,7 +6,7 @@ class ListGroupsResponse
 {
 
     /**
-     * @var ListGroupsResponse $ListGroupsResult
+     * @var ListGroupsResponse|null $ListGroupsResult
      */
     protected $ListGroupsResult = null;
 
@@ -23,17 +23,17 @@ class ListGroupsResponse
      */
     public function getListGroupsResult()
     {
-      return $this->ListGroupsResult;
+        return $this->ListGroupsResult;
     }
 
     /**
      * @param ListGroupsResponse $ListGroupsResult
-     * @return \Panopto\UserManagement\ListGroupsResponse
+     * @return ListGroupsResponse
      */
-    public function setListGroupsResult($ListGroupsResult)
+    public function setListGroupsResult($ListGroupsResult): ListGroupsResponse
     {
-      $this->ListGroupsResult = $ListGroupsResult;
-      return $this;
+        $this->ListGroupsResult = $ListGroupsResult;
+        return $this;
     }
 
 }

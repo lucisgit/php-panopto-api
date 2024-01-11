@@ -6,7 +6,7 @@ class UpdateSessionCreateRTMPStreamsResponse
 {
 
     /**
-     * @var ArrayOfstring $UpdateSessionCreateRTMPStreamsResult
+     * @var ArrayOfstring|null $UpdateSessionCreateRTMPStreamsResult
      */
     protected $UpdateSessionCreateRTMPStreamsResult = null;
 
@@ -23,17 +23,17 @@ class UpdateSessionCreateRTMPStreamsResponse
      */
     public function getUpdateSessionCreateRTMPStreamsResult()
     {
-      return $this->UpdateSessionCreateRTMPStreamsResult;
+        return $this->UpdateSessionCreateRTMPStreamsResult;
     }
 
     /**
      * @param ArrayOfstring $UpdateSessionCreateRTMPStreamsResult
-     * @return \Panopto\SessionManagement\UpdateSessionCreateRTMPStreamsResponse
+     * @return UpdateSessionCreateRTMPStreamsResponse
      */
-    public function setUpdateSessionCreateRTMPStreamsResult($UpdateSessionCreateRTMPStreamsResult)
+    public function setUpdateSessionCreateRTMPStreamsResult($UpdateSessionCreateRTMPStreamsResult): UpdateSessionCreateRTMPStreamsResponse
     {
-      $this->UpdateSessionCreateRTMPStreamsResult = $UpdateSessionCreateRTMPStreamsResult;
-      return $this;
+        $this->UpdateSessionCreateRTMPStreamsResult = $UpdateSessionCreateRTMPStreamsResult;
+        return $this;
     }
 
 }

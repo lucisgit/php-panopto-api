@@ -6,7 +6,7 @@ class GetSessionAccessDetailsResponse
 {
 
     /**
-     * @var SessionAccessDetails $GetSessionAccessDetailsResult
+     * @var SessionAccessDetails|null $GetSessionAccessDetailsResult
      */
     protected $GetSessionAccessDetailsResult = null;
 
@@ -23,17 +23,17 @@ class GetSessionAccessDetailsResponse
      */
     public function getGetSessionAccessDetailsResult()
     {
-      return $this->GetSessionAccessDetailsResult;
+        return $this->GetSessionAccessDetailsResult;
     }
 
     /**
      * @param SessionAccessDetails $GetSessionAccessDetailsResult
-     * @return \Panopto\AccessManagement\GetSessionAccessDetailsResponse
+     * @return GetSessionAccessDetailsResponse
      */
-    public function setGetSessionAccessDetailsResult($GetSessionAccessDetailsResult)
+    public function setGetSessionAccessDetailsResult($GetSessionAccessDetailsResult): GetSessionAccessDetailsResponse
     {
-      $this->GetSessionAccessDetailsResult = $GetSessionAccessDetailsResult;
-      return $this;
+        $this->GetSessionAccessDetailsResult = $GetSessionAccessDetailsResult;
+        return $this;
     }
 
 }

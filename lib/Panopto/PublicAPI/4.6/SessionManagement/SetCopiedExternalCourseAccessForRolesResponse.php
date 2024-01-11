@@ -6,7 +6,7 @@ class SetCopiedExternalCourseAccessForRolesResponse
 {
 
     /**
-     * @var ArrayOfFolder $SetCopiedExternalCourseAccessForRolesResult
+     * @var ArrayOfFolder|null $SetCopiedExternalCourseAccessForRolesResult
      */
     protected $SetCopiedExternalCourseAccessForRolesResult = null;
 
@@ -23,17 +23,17 @@ class SetCopiedExternalCourseAccessForRolesResponse
      */
     public function getSetCopiedExternalCourseAccessForRolesResult()
     {
-      return $this->SetCopiedExternalCourseAccessForRolesResult;
+        return $this->SetCopiedExternalCourseAccessForRolesResult;
     }
 
     /**
      * @param ArrayOfFolder $SetCopiedExternalCourseAccessForRolesResult
-     * @return \Panopto\SessionManagement\SetCopiedExternalCourseAccessForRolesResponse
+     * @return SetCopiedExternalCourseAccessForRolesResponse
      */
-    public function setSetCopiedExternalCourseAccessForRolesResult($SetCopiedExternalCourseAccessForRolesResult)
+    public function setSetCopiedExternalCourseAccessForRolesResult($SetCopiedExternalCourseAccessForRolesResult): SetCopiedExternalCourseAccessForRolesResponse
     {
-      $this->SetCopiedExternalCourseAccessForRolesResult = $SetCopiedExternalCourseAccessForRolesResult;
-      return $this;
+        $this->SetCopiedExternalCourseAccessForRolesResult = $SetCopiedExternalCourseAccessForRolesResult;
+        return $this;
     }
 
 }

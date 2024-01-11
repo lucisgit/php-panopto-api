@@ -6,24 +6,24 @@ class GetNote
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $noteId
+     * @var string|null $noteId
      */
     protected $noteId = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $noteId
-     * @param guid $sessionId
+     * @param string $noteId
+     * @param string $sessionId
      */
     public function __construct($auth, $noteId, $sessionId)
     {
@@ -37,53 +37,53 @@ class GetNote
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\GetNote
+     * @return GetNote
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetNote
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getNoteId()
     {
-      return $this->noteId;
+        return $this->noteId;
     }
 
     /**
-     * @param guid $noteId
-     * @return \Panopto\SessionManagement\GetNote
+     * @param string $noteId
+     * @return GetNote
      */
-    public function setNoteId($noteId)
+    public function setNoteId($noteId): GetNote
     {
-      $this->noteId = $noteId;
-      return $this;
+        $this->noteId = $noteId;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\SessionManagement\GetNote
+     * @param string $sessionId
+     * @return GetNote
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): GetNote
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
 }

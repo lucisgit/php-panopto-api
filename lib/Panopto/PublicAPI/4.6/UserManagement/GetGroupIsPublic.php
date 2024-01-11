@@ -6,18 +6,18 @@ class GetGroupIsPublic
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $groupId
+     * @var string|null $groupId
      */
     protected $groupId = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $groupId
+     * @param string $groupId
      */
     public function __construct($auth, $groupId)
     {
@@ -30,35 +30,35 @@ class GetGroupIsPublic
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UserManagement\GetGroupIsPublic
+     * @return GetGroupIsPublic
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetGroupIsPublic
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getGroupId()
     {
-      return $this->groupId;
+        return $this->groupId;
     }
 
     /**
-     * @param guid $groupId
-     * @return \Panopto\UserManagement\GetGroupIsPublic
+     * @param string $groupId
+     * @return GetGroupIsPublic
      */
-    public function setGroupId($groupId)
+    public function setGroupId($groupId): GetGroupIsPublic
     {
-      $this->groupId = $groupId;
-      return $this;
+        $this->groupId = $groupId;
+        return $this;
     }
 
 }

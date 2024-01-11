@@ -6,7 +6,7 @@ class GetAuthenticatedUrlResponse
 {
 
     /**
-     * @var string $GetAuthenticatedUrlResult
+     * @var string|null $GetAuthenticatedUrlResult
      */
     protected $GetAuthenticatedUrlResult = null;
 
@@ -23,17 +23,17 @@ class GetAuthenticatedUrlResponse
      */
     public function getGetAuthenticatedUrlResult()
     {
-      return $this->GetAuthenticatedUrlResult;
+        return $this->GetAuthenticatedUrlResult;
     }
 
     /**
      * @param string $GetAuthenticatedUrlResult
-     * @return \Panopto\Auth\GetAuthenticatedUrlResponse
+     * @return GetAuthenticatedUrlResponse
      */
-    public function setGetAuthenticatedUrlResult($GetAuthenticatedUrlResult)
+    public function setGetAuthenticatedUrlResult($GetAuthenticatedUrlResult): GetAuthenticatedUrlResponse
     {
-      $this->GetAuthenticatedUrlResult = $GetAuthenticatedUrlResult;
-      return $this;
+        $this->GetAuthenticatedUrlResult = $GetAuthenticatedUrlResult;
+        return $this;
     }
 
 }

@@ -6,12 +6,12 @@ class GetSessionsByExternalId
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var ArrayOfstring $sessionExternalIds
+     * @var ArrayOfstring|null $sessionExternalIds
      */
     protected $sessionExternalIds = null;
 
@@ -30,17 +30,17 @@ class GetSessionsByExternalId
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\GetSessionsByExternalId
+     * @return GetSessionsByExternalId
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetSessionsByExternalId
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -48,17 +48,17 @@ class GetSessionsByExternalId
      */
     public function getSessionExternalIds()
     {
-      return $this->sessionExternalIds;
+        return $this->sessionExternalIds;
     }
 
     /**
      * @param ArrayOfstring $sessionExternalIds
-     * @return \Panopto\SessionManagement\GetSessionsByExternalId
+     * @return GetSessionsByExternalId
      */
-    public function setSessionExternalIds($sessionExternalIds)
+    public function setSessionExternalIds($sessionExternalIds): GetSessionsByExternalId
     {
-      $this->sessionExternalIds = $sessionExternalIds;
-      return $this;
+        $this->sessionExternalIds = $sessionExternalIds;
+        return $this;
     }
 
 }

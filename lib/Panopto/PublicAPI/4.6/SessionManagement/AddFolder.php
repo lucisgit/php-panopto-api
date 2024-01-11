@@ -6,30 +6,30 @@ class AddFolder
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var string $name
+     * @var string|null $name
      */
     protected $name = null;
 
     /**
-     * @var guid $parentFolder
+     * @var string|null $parentFolder
      */
     protected $parentFolder = null;
 
     /**
-     * @var boolean $isPublic
+     * @var bool|null $isPublic
      */
     protected $isPublic = null;
 
     /**
      * @param AuthenticationInfo $auth
      * @param string $name
-     * @param guid $parentFolder
-     * @param boolean $isPublic
+     * @param string $parentFolder
+     * @param bool $isPublic
      */
     public function __construct($auth, $name, $parentFolder, $isPublic)
     {
@@ -44,17 +44,17 @@ class AddFolder
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\AddFolder
+     * @return AddFolder
      */
-    public function setAuth($auth)
+    public function setAuth($auth): AddFolder
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -62,53 +62,53 @@ class AddFolder
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
      * @param string $name
-     * @return \Panopto\SessionManagement\AddFolder
+     * @return AddFolder
      */
-    public function setName($name)
+    public function setName($name): AddFolder
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getParentFolder()
     {
-      return $this->parentFolder;
+        return $this->parentFolder;
     }
 
     /**
-     * @param guid $parentFolder
-     * @return \Panopto\SessionManagement\AddFolder
+     * @param string $parentFolder
+     * @return AddFolder
      */
-    public function setParentFolder($parentFolder)
+    public function setParentFolder($parentFolder): AddFolder
     {
-      $this->parentFolder = $parentFolder;
-      return $this;
+        $this->parentFolder = $parentFolder;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getIsPublic()
     {
-      return $this->isPublic;
+        return $this->isPublic;
     }
 
     /**
-     * @param boolean $isPublic
-     * @return \Panopto\SessionManagement\AddFolder
+     * @param bool $isPublic
+     * @return AddFolder
      */
-    public function setIsPublic($isPublic)
+    public function setIsPublic($isPublic): AddFolder
     {
-      $this->isPublic = $isPublic;
-      return $this;
+        $this->isPublic = $isPublic;
+        return $this;
     }
 
 }

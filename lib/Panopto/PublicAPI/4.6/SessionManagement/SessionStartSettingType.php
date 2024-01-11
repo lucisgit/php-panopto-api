@@ -8,6 +8,7 @@ class SessionStartSettingType
     const Immediately = 'Immediately';
     const WithItsFolder = 'WithItsFolder';
     const SpecificDate = 'SpecificDate';
+    const Never = 'Never';
 
 
 }

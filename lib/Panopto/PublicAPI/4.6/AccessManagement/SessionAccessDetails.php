@@ -6,39 +6,39 @@ class SessionAccessDetails
 {
 
     /**
-     * @var FolderAccessDetails $FolderAccess
+     * @var FolderAccessDetails|null $FolderAccess
      */
     protected $FolderAccess = null;
 
     /**
-     * @var ArrayOfguid $GroupsWithDirectViewerAccess
+     * @var ArrayOfguid|null $GroupsWithDirectViewerAccess
      */
     protected $GroupsWithDirectViewerAccess = null;
 
     /**
-     * @var boolean $InheritViewerAccess
+     * @var bool|null $InheritViewerAccess
      */
     protected $InheritViewerAccess = null;
 
     /**
-     * @var boolean $IsPublic
+     * @var bool|null $IsPublic
      */
     protected $IsPublic = null;
 
     /**
-     * @var guid $SessionId
+     * @var string|null $SessionId
      */
     protected $SessionId = null;
 
     /**
-     * @var ArrayOfguid $UsersWithDirectViewerAccess
+     * @var ArrayOfguid|null $UsersWithDirectViewerAccess
      */
     protected $UsersWithDirectViewerAccess = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -46,17 +46,17 @@ class SessionAccessDetails
      */
     public function getFolderAccess()
     {
-      return $this->FolderAccess;
+        return $this->FolderAccess;
     }
 
     /**
      * @param FolderAccessDetails $FolderAccess
-     * @return \Panopto\AccessManagement\SessionAccessDetails
+     * @return SessionAccessDetails
      */
-    public function setFolderAccess($FolderAccess)
+    public function setFolderAccess($FolderAccess): SessionAccessDetails
     {
-      $this->FolderAccess = $FolderAccess;
-      return $this;
+        $this->FolderAccess = $FolderAccess;
+        return $this;
     }
 
     /**
@@ -64,71 +64,71 @@ class SessionAccessDetails
      */
     public function getGroupsWithDirectViewerAccess()
     {
-      return $this->GroupsWithDirectViewerAccess;
+        return $this->GroupsWithDirectViewerAccess;
     }
 
     /**
      * @param ArrayOfguid $GroupsWithDirectViewerAccess
-     * @return \Panopto\AccessManagement\SessionAccessDetails
+     * @return SessionAccessDetails
      */
-    public function setGroupsWithDirectViewerAccess($GroupsWithDirectViewerAccess)
+    public function setGroupsWithDirectViewerAccess($GroupsWithDirectViewerAccess): SessionAccessDetails
     {
-      $this->GroupsWithDirectViewerAccess = $GroupsWithDirectViewerAccess;
-      return $this;
+        $this->GroupsWithDirectViewerAccess = $GroupsWithDirectViewerAccess;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getInheritViewerAccess()
     {
-      return $this->InheritViewerAccess;
+        return $this->InheritViewerAccess;
     }
 
     /**
-     * @param boolean $InheritViewerAccess
-     * @return \Panopto\AccessManagement\SessionAccessDetails
+     * @param bool $InheritViewerAccess
+     * @return SessionAccessDetails
      */
-    public function setInheritViewerAccess($InheritViewerAccess)
+    public function setInheritViewerAccess($InheritViewerAccess): SessionAccessDetails
     {
-      $this->InheritViewerAccess = $InheritViewerAccess;
-      return $this;
+        $this->InheritViewerAccess = $InheritViewerAccess;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getIsPublic()
     {
-      return $this->IsPublic;
+        return $this->IsPublic;
     }
 
     /**
-     * @param boolean $IsPublic
-     * @return \Panopto\AccessManagement\SessionAccessDetails
+     * @param bool $IsPublic
+     * @return SessionAccessDetails
      */
-    public function setIsPublic($IsPublic)
+    public function setIsPublic($IsPublic): SessionAccessDetails
     {
-      $this->IsPublic = $IsPublic;
-      return $this;
+        $this->IsPublic = $IsPublic;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->SessionId;
+        return $this->SessionId;
     }
 
     /**
-     * @param guid $SessionId
-     * @return \Panopto\AccessManagement\SessionAccessDetails
+     * @param string $SessionId
+     * @return SessionAccessDetails
      */
-    public function setSessionId($SessionId)
+    public function setSessionId($SessionId): SessionAccessDetails
     {
-      $this->SessionId = $SessionId;
-      return $this;
+        $this->SessionId = $SessionId;
+        return $this;
     }
 
     /**
@@ -136,17 +136,17 @@ class SessionAccessDetails
      */
     public function getUsersWithDirectViewerAccess()
     {
-      return $this->UsersWithDirectViewerAccess;
+        return $this->UsersWithDirectViewerAccess;
     }
 
     /**
      * @param ArrayOfguid $UsersWithDirectViewerAccess
-     * @return \Panopto\AccessManagement\SessionAccessDetails
+     * @return SessionAccessDetails
      */
-    public function setUsersWithDirectViewerAccess($UsersWithDirectViewerAccess)
+    public function setUsersWithDirectViewerAccess($UsersWithDirectViewerAccess): SessionAccessDetails
     {
-      $this->UsersWithDirectViewerAccess = $UsersWithDirectViewerAccess;
-      return $this;
+        $this->UsersWithDirectViewerAccess = $UsersWithDirectViewerAccess;
+        return $this;
     }
 
 }

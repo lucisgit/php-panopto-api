@@ -6,7 +6,7 @@ class GetSessionUserDetailedUsageResponse
 {
 
     /**
-     * @var DetailedUsageResponse $GetSessionUserDetailedUsageResult
+     * @var DetailedUsageResponse|null $GetSessionUserDetailedUsageResult
      */
     protected $GetSessionUserDetailedUsageResult = null;
 
@@ -23,17 +23,17 @@ class GetSessionUserDetailedUsageResponse
      */
     public function getGetSessionUserDetailedUsageResult()
     {
-      return $this->GetSessionUserDetailedUsageResult;
+        return $this->GetSessionUserDetailedUsageResult;
     }
 
     /**
      * @param DetailedUsageResponse $GetSessionUserDetailedUsageResult
-     * @return \Panopto\UsageReporting\GetSessionUserDetailedUsageResponse
+     * @return GetSessionUserDetailedUsageResponse
      */
-    public function setGetSessionUserDetailedUsageResult($GetSessionUserDetailedUsageResult)
+    public function setGetSessionUserDetailedUsageResult($GetSessionUserDetailedUsageResult): GetSessionUserDetailedUsageResponse
     {
-      $this->GetSessionUserDetailedUsageResult = $GetSessionUserDetailedUsageResult;
-      return $this;
+        $this->GetSessionUserDetailedUsageResult = $GetSessionUserDetailedUsageResult;
+        return $this;
     }
 
 }

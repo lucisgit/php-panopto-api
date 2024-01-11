@@ -6,22 +6,22 @@ class ReportIntegrationInfo
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var string $idProviderName
+     * @var string|null $idProviderName
      */
     protected $idProviderName = null;
 
     /**
-     * @var string $moduleVersion
+     * @var string|null $moduleVersion
      */
     protected $moduleVersion = null;
 
     /**
-     * @var string $targetPlatformVersion
+     * @var string|null $targetPlatformVersion
      */
     protected $targetPlatformVersion = null;
 
@@ -44,17 +44,17 @@ class ReportIntegrationInfo
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\Auth\ReportIntegrationInfo
+     * @return ReportIntegrationInfo
      */
-    public function setAuth($auth)
+    public function setAuth($auth): ReportIntegrationInfo
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -62,17 +62,17 @@ class ReportIntegrationInfo
      */
     public function getIdProviderName()
     {
-      return $this->idProviderName;
+        return $this->idProviderName;
     }
 
     /**
      * @param string $idProviderName
-     * @return \Panopto\Auth\ReportIntegrationInfo
+     * @return ReportIntegrationInfo
      */
-    public function setIdProviderName($idProviderName)
+    public function setIdProviderName($idProviderName): ReportIntegrationInfo
     {
-      $this->idProviderName = $idProviderName;
-      return $this;
+        $this->idProviderName = $idProviderName;
+        return $this;
     }
 
     /**
@@ -80,17 +80,17 @@ class ReportIntegrationInfo
      */
     public function getModuleVersion()
     {
-      return $this->moduleVersion;
+        return $this->moduleVersion;
     }
 
     /**
      * @param string $moduleVersion
-     * @return \Panopto\Auth\ReportIntegrationInfo
+     * @return ReportIntegrationInfo
      */
-    public function setModuleVersion($moduleVersion)
+    public function setModuleVersion($moduleVersion): ReportIntegrationInfo
     {
-      $this->moduleVersion = $moduleVersion;
-      return $this;
+        $this->moduleVersion = $moduleVersion;
+        return $this;
     }
 
     /**
@@ -98,17 +98,17 @@ class ReportIntegrationInfo
      */
     public function getTargetPlatformVersion()
     {
-      return $this->targetPlatformVersion;
+        return $this->targetPlatformVersion;
     }
 
     /**
      * @param string $targetPlatformVersion
-     * @return \Panopto\Auth\ReportIntegrationInfo
+     * @return ReportIntegrationInfo
      */
-    public function setTargetPlatformVersion($targetPlatformVersion)
+    public function setTargetPlatformVersion($targetPlatformVersion): ReportIntegrationInfo
     {
-      $this->targetPlatformVersion = $targetPlatformVersion;
-      return $this;
+        $this->targetPlatformVersion = $targetPlatformVersion;
+        return $this;
     }
 
 }

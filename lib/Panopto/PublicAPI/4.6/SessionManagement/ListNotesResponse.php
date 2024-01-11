@@ -6,7 +6,7 @@ class ListNotesResponse
 {
 
     /**
-     * @var ListNotesResponse $ListNotesResult
+     * @var ListNotesResponse|null $ListNotesResult
      */
     protected $ListNotesResult = null;
 
@@ -23,17 +23,17 @@ class ListNotesResponse
      */
     public function getListNotesResult()
     {
-      return $this->ListNotesResult;
+        return $this->ListNotesResult;
     }
 
     /**
      * @param ListNotesResponse $ListNotesResult
-     * @return \Panopto\SessionManagement\ListNotesResponse
+     * @return ListNotesResponse
      */
-    public function setListNotesResult($ListNotesResult)
+    public function setListNotesResult($ListNotesResult): ListNotesResponse
     {
-      $this->ListNotesResult = $ListNotesResult;
-      return $this;
+        $this->ListNotesResult = $ListNotesResult;
+        return $this;
     }
 
 }

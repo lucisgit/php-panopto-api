@@ -6,18 +6,18 @@ class GetMachineSidForRecorder
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $remoteRecorderId
+     * @var string|null $remoteRecorderId
      */
     protected $remoteRecorderId = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $remoteRecorderId
+     * @param string $remoteRecorderId
      */
     public function __construct($auth, $remoteRecorderId)
     {
@@ -30,35 +30,35 @@ class GetMachineSidForRecorder
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\RemoteRecorderManagement\GetMachineSidForRecorder
+     * @return GetMachineSidForRecorder
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetMachineSidForRecorder
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getRemoteRecorderId()
     {
-      return $this->remoteRecorderId;
+        return $this->remoteRecorderId;
     }
 
     /**
-     * @param guid $remoteRecorderId
-     * @return \Panopto\RemoteRecorderManagement\GetMachineSidForRecorder
+     * @param string $remoteRecorderId
+     * @return GetMachineSidForRecorder
      */
-    public function setRemoteRecorderId($remoteRecorderId)
+    public function setRemoteRecorderId($remoteRecorderId): GetMachineSidForRecorder
     {
-      $this->remoteRecorderId = $remoteRecorderId;
-      return $this;
+        $this->remoteRecorderId = $remoteRecorderId;
+        return $this;
     }
 
 }

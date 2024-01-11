@@ -8,7 +8,7 @@ class ArrayOfAccessRole implements \ArrayAccess, \Iterator, \Countable
     /**
      * @var AccessRole[] $AccessRole
      */
-    protected $AccessRole = null;
+    protected array $AccessRole = [];
 
     
     public function __construct()
@@ -17,32 +17,32 @@ class ArrayOfAccessRole implements \ArrayAccess, \Iterator, \Countable
     }
 
     /**
-     * @return AccessRole[]
+     * @return AccessRole[]|null
      */
-    public function getAccessRole()
+    public function getAccessRole(): ?array
     {
-      return $this->AccessRole;
+        return $this->AccessRole;
     }
 
     /**
-     * @param AccessRole[] $AccessRole
-     * @return \Panopto\SessionManagement\ArrayOfAccessRole
+     * @param AccessRole[]|null $AccessRole
+     * @return ArrayOfAccessRole
      */
-    public function setAccessRole(array $AccessRole = null)
+    public function setAccessRole(?array $AccessRole = null): ArrayOfAccessRole
     {
-      $this->AccessRole = $AccessRole;
-      return $this;
+        $this->AccessRole = $AccessRole;
+        return $this;
     }
 
     /**
      * ArrayAccess implementation
      *
      * @param mixed $offset An offset to check for
-     * @return boolean true on success or false on failure
+     * @return bool True on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
-      return isset($this->AccessRole[$offset]);
+        return isset($this->AccessRole[$offset]);
     }
 
     /**
@@ -51,9 +51,9 @@ class ArrayOfAccessRole implements \ArrayAccess, \Iterator, \Countable
      * @param mixed $offset The offset to retrieve
      * @return AccessRole
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): AccessRole
     {
-      return $this->AccessRole[$offset];
+        return $this->AccessRole[$offset];
     }
 
     /**
@@ -63,13 +63,13 @@ class ArrayOfAccessRole implements \ArrayAccess, \Iterator, \Countable
      * @param AccessRole $value The value to set
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
-      if (!isset($offset)) {
-        $this->AccessRole[] = $value;
-      } else {
-        $this->AccessRole[$offset] = $value;
-      }
+        if (!isset($offset)) {
+            $this->AccessRole[] = $value;
+        } else {
+            $this->AccessRole[$offset] = $value;
+        }
     }
 
     /**
@@ -78,9 +78,9 @@ class ArrayOfAccessRole implements \ArrayAccess, \Iterator, \Countable
      * @param mixed $offset The offset to unset
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
-      unset($this->AccessRole[$offset]);
+        unset($this->AccessRole[$offset]);
     }
 
     /**
@@ -88,9 +88,9 @@ class ArrayOfAccessRole implements \ArrayAccess, \Iterator, \Countable
      *
      * @return AccessRole Return the current element
      */
-    public function current()
+    public function current(): AccessRole
     {
-      return current($this->AccessRole);
+        return current($this->AccessRole);
     }
 
     /**
@@ -99,9 +99,9 @@ class ArrayOfAccessRole implements \ArrayAccess, \Iterator, \Countable
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
-      next($this->AccessRole);
+        next($this->AccessRole);
     }
 
     /**
@@ -109,19 +109,19 @@ class ArrayOfAccessRole implements \ArrayAccess, \Iterator, \Countable
      *
      * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): ?string
     {
-      return key($this->AccessRole);
+        return key($this->AccessRole);
     }
 
     /**
      * Iterator implementation
      *
-     * @return boolean Return the validity of the current position
+     * @return bool Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
-      return $this->key() !== null;
+        return $this->key() !== null;
     }
 
     /**
@@ -130,19 +130,19 @@ class ArrayOfAccessRole implements \ArrayAccess, \Iterator, \Countable
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
-      reset($this->AccessRole);
+        reset($this->AccessRole);
     }
 
     /**
      * Countable implementation
      *
-     * @return AccessRole Return count of elements
+     * @return int Return count of elements
      */
-    public function count()
+    public function count(): int
     {
-      return count($this->AccessRole);
+        return count($this->AccessRole);
     }
 
 }

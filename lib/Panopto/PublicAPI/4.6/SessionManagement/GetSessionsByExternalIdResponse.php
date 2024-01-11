@@ -6,7 +6,7 @@ class GetSessionsByExternalIdResponse
 {
 
     /**
-     * @var ArrayOfSession $GetSessionsByExternalIdResult
+     * @var ArrayOfSession|null $GetSessionsByExternalIdResult
      */
     protected $GetSessionsByExternalIdResult = null;
 
@@ -23,17 +23,17 @@ class GetSessionsByExternalIdResponse
      */
     public function getGetSessionsByExternalIdResult()
     {
-      return $this->GetSessionsByExternalIdResult;
+        return $this->GetSessionsByExternalIdResult;
     }
 
     /**
      * @param ArrayOfSession $GetSessionsByExternalIdResult
-     * @return \Panopto\SessionManagement\GetSessionsByExternalIdResponse
+     * @return GetSessionsByExternalIdResponse
      */
-    public function setGetSessionsByExternalIdResult($GetSessionsByExternalIdResult)
+    public function setGetSessionsByExternalIdResult($GetSessionsByExternalIdResult): GetSessionsByExternalIdResponse
     {
-      $this->GetSessionsByExternalIdResult = $GetSessionsByExternalIdResult;
-      return $this;
+        $this->GetSessionsByExternalIdResult = $GetSessionsByExternalIdResult;
+        return $this;
     }
 
 }

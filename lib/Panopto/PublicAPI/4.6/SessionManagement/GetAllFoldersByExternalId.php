@@ -6,17 +6,17 @@ class GetAllFoldersByExternalId
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var ArrayOfstring $folderExternalIds
+     * @var ArrayOfstring|null $folderExternalIds
      */
     protected $folderExternalIds = null;
 
     /**
-     * @var ArrayOfstring $providerNames
+     * @var ArrayOfstring|null $providerNames
      */
     protected $providerNames = null;
 
@@ -37,17 +37,17 @@ class GetAllFoldersByExternalId
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\GetAllFoldersByExternalId
+     * @return GetAllFoldersByExternalId
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetAllFoldersByExternalId
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -55,17 +55,17 @@ class GetAllFoldersByExternalId
      */
     public function getFolderExternalIds()
     {
-      return $this->folderExternalIds;
+        return $this->folderExternalIds;
     }
 
     /**
      * @param ArrayOfstring $folderExternalIds
-     * @return \Panopto\SessionManagement\GetAllFoldersByExternalId
+     * @return GetAllFoldersByExternalId
      */
-    public function setFolderExternalIds($folderExternalIds)
+    public function setFolderExternalIds($folderExternalIds): GetAllFoldersByExternalId
     {
-      $this->folderExternalIds = $folderExternalIds;
-      return $this;
+        $this->folderExternalIds = $folderExternalIds;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class GetAllFoldersByExternalId
      */
     public function getProviderNames()
     {
-      return $this->providerNames;
+        return $this->providerNames;
     }
 
     /**
      * @param ArrayOfstring $providerNames
-     * @return \Panopto\SessionManagement\GetAllFoldersByExternalId
+     * @return GetAllFoldersByExternalId
      */
-    public function setProviderNames($providerNames)
+    public function setProviderNames($providerNames): GetAllFoldersByExternalId
     {
-      $this->providerNames = $providerNames;
-      return $this;
+        $this->providerNames = $providerNames;
+        return $this;
     }
 
 }

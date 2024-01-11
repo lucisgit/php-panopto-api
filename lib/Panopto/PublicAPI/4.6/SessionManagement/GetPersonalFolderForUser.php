@@ -6,24 +6,24 @@ class GetPersonalFolderForUser
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $userId
+     * @var string|null $userId
      */
     protected $userId = null;
 
     /**
-     * @var boolean $allowCreation
+     * @var bool|null $allowCreation
      */
     protected $allowCreation = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $userId
-     * @param boolean $allowCreation
+     * @param string $userId
+     * @param bool $allowCreation
      */
     public function __construct($auth, $userId, $allowCreation)
     {
@@ -37,53 +37,53 @@ class GetPersonalFolderForUser
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\GetPersonalFolderForUser
+     * @return GetPersonalFolderForUser
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetPersonalFolderForUser
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getUserId()
     {
-      return $this->userId;
+        return $this->userId;
     }
 
     /**
-     * @param guid $userId
-     * @return \Panopto\SessionManagement\GetPersonalFolderForUser
+     * @param string $userId
+     * @return GetPersonalFolderForUser
      */
-    public function setUserId($userId)
+    public function setUserId($userId): GetPersonalFolderForUser
     {
-      $this->userId = $userId;
-      return $this;
+        $this->userId = $userId;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getAllowCreation()
     {
-      return $this->allowCreation;
+        return $this->allowCreation;
     }
 
     /**
-     * @param boolean $allowCreation
-     * @return \Panopto\SessionManagement\GetPersonalFolderForUser
+     * @param bool $allowCreation
+     * @return GetPersonalFolderForUser
      */
-    public function setAllowCreation($allowCreation)
+    public function setAllowCreation($allowCreation): GetPersonalFolderForUser
     {
-      $this->allowCreation = $allowCreation;
-      return $this;
+        $this->allowCreation = $allowCreation;
+        return $this;
     }
 
 }

@@ -6,7 +6,7 @@ class CreateExternalGroupResponse
 {
 
     /**
-     * @var Group $CreateExternalGroupResult
+     * @var Group|null $CreateExternalGroupResult
      */
     protected $CreateExternalGroupResult = null;
 
@@ -23,17 +23,17 @@ class CreateExternalGroupResponse
      */
     public function getCreateExternalGroupResult()
     {
-      return $this->CreateExternalGroupResult;
+        return $this->CreateExternalGroupResult;
     }
 
     /**
      * @param Group $CreateExternalGroupResult
-     * @return \Panopto\UserManagement\CreateExternalGroupResponse
+     * @return CreateExternalGroupResponse
      */
-    public function setCreateExternalGroupResult($CreateExternalGroupResult)
+    public function setCreateExternalGroupResult($CreateExternalGroupResult): CreateExternalGroupResponse
     {
-      $this->CreateExternalGroupResult = $CreateExternalGroupResult;
-      return $this;
+        $this->CreateExternalGroupResult = $CreateExternalGroupResult;
+        return $this;
     }
 
 }

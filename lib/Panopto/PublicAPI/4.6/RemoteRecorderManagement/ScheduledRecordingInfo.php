@@ -6,77 +6,77 @@ class ScheduledRecordingInfo
 {
 
     /**
-     * @var \DateTime $EndTime
+     * @var \DateTime|string|null $EndTime
      */
-    protected $EndTime = null;
+    protected \DateTime|string|null $EndTime = null;
 
     /**
-     * @var guid $SessionID
+     * @var string|null $SessionID
      */
     protected $SessionID = null;
 
     /**
-     * @var string $SessionName
+     * @var string|null $SessionName
      */
     protected $SessionName = null;
 
     /**
-     * @var \DateTime $StartTime
+     * @var \DateTime|string|null $StartTime
      */
-    protected $StartTime = null;
+    protected \DateTime|string|null $StartTime = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getEndTime()
+    public function getEndTime(): \DateTime|bool|null
     {
-      if ($this->EndTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->EndTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->EndTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->EndTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
-     * @param \DateTime $EndTime
-     * @return \Panopto\RemoteRecorderManagement\ScheduledRecordingInfo
+     * @param \DateTime|null $EndTime
+     * @return ScheduledRecordingInfo
      */
-    public function setEndTime(\DateTime $EndTime = null)
+    public function setEndTime(?\DateTime $EndTime = null): ScheduledRecordingInfo
     {
-      if ($EndTime == null) {
-       $this->EndTime = null;
-      } else {
-        $this->EndTime = $EndTime->format(\DateTime::ATOM);
-      }
-      return $this;
+        if ($EndTime == null) {
+            $this->EndTime = null;
+        } else {
+            $this->EndTime = $EndTime->format(\DateTime::ATOM);
+        }
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionID()
     {
-      return $this->SessionID;
+        return $this->SessionID;
     }
 
     /**
-     * @param guid $SessionID
-     * @return \Panopto\RemoteRecorderManagement\ScheduledRecordingInfo
+     * @param string $SessionID
+     * @return ScheduledRecordingInfo
      */
-    public function setSessionID($SessionID)
+    public function setSessionID($SessionID): ScheduledRecordingInfo
     {
-      $this->SessionID = $SessionID;
-      return $this;
+        $this->SessionID = $SessionID;
+        return $this;
     }
 
     /**
@@ -84,47 +84,47 @@ class ScheduledRecordingInfo
      */
     public function getSessionName()
     {
-      return $this->SessionName;
+        return $this->SessionName;
     }
 
     /**
      * @param string $SessionName
-     * @return \Panopto\RemoteRecorderManagement\ScheduledRecordingInfo
+     * @return ScheduledRecordingInfo
      */
-    public function setSessionName($SessionName)
+    public function setSessionName($SessionName): ScheduledRecordingInfo
     {
-      $this->SessionName = $SessionName;
-      return $this;
+        $this->SessionName = $SessionName;
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getStartTime()
+    public function getStartTime(): \DateTime|bool|null
     {
-      if ($this->StartTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->StartTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->StartTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->StartTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
-     * @param \DateTime $StartTime
-     * @return \Panopto\RemoteRecorderManagement\ScheduledRecordingInfo
+     * @param \DateTime|null $StartTime
+     * @return ScheduledRecordingInfo
      */
-    public function setStartTime(\DateTime $StartTime = null)
+    public function setStartTime(?\DateTime $StartTime = null): ScheduledRecordingInfo
     {
-      if ($StartTime == null) {
-       $this->StartTime = null;
-      } else {
-        $this->StartTime = $StartTime->format(\DateTime::ATOM);
-      }
-      return $this;
+        if ($StartTime == null) {
+            $this->StartTime = null;
+        } else {
+            $this->StartTime = $StartTime->format(\DateTime::ATOM);
+        }
+        return $this;
     }
 
 }

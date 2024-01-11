@@ -6,23 +6,23 @@ class GrantUsersViewerAccessToSession
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var ArrayOfguid $userIds
+     * @var ArrayOfguid|null $userIds
      */
     protected $userIds = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
+     * @param string $sessionId
      * @param ArrayOfguid $userIds
      */
     public function __construct($auth, $sessionId, $userIds)
@@ -37,35 +37,35 @@ class GrantUsersViewerAccessToSession
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\AccessManagement\GrantUsersViewerAccessToSession
+     * @return GrantUsersViewerAccessToSession
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GrantUsersViewerAccessToSession
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\AccessManagement\GrantUsersViewerAccessToSession
+     * @param string $sessionId
+     * @return GrantUsersViewerAccessToSession
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): GrantUsersViewerAccessToSession
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class GrantUsersViewerAccessToSession
      */
     public function getUserIds()
     {
-      return $this->userIds;
+        return $this->userIds;
     }
 
     /**
      * @param ArrayOfguid $userIds
-     * @return \Panopto\AccessManagement\GrantUsersViewerAccessToSession
+     * @return GrantUsersViewerAccessToSession
      */
-    public function setUserIds($userIds)
+    public function setUserIds($userIds): GrantUsersViewerAccessToSession
     {
-      $this->userIds = $userIds;
-      return $this;
+        $this->userIds = $userIds;
+        return $this;
     }
 
 }

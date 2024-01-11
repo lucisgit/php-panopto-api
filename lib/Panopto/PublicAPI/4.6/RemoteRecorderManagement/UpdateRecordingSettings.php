@@ -6,23 +6,23 @@ class UpdateRecordingSettings
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var ArrayOfRecorderSettings $recorderSettings
+     * @var ArrayOfRecorderSettings|null $recorderSettings
      */
     protected $recorderSettings = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
+     * @param string $sessionId
      * @param ArrayOfRecorderSettings $recorderSettings
      */
     public function __construct($auth, $sessionId, $recorderSettings)
@@ -37,35 +37,35 @@ class UpdateRecordingSettings
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\RemoteRecorderManagement\UpdateRecordingSettings
+     * @return UpdateRecordingSettings
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateRecordingSettings
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\RemoteRecorderManagement\UpdateRecordingSettings
+     * @param string $sessionId
+     * @return UpdateRecordingSettings
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): UpdateRecordingSettings
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class UpdateRecordingSettings
      */
     public function getRecorderSettings()
     {
-      return $this->recorderSettings;
+        return $this->recorderSettings;
     }
 
     /**
      * @param ArrayOfRecorderSettings $recorderSettings
-     * @return \Panopto\RemoteRecorderManagement\UpdateRecordingSettings
+     * @return UpdateRecordingSettings
      */
-    public function setRecorderSettings($recorderSettings)
+    public function setRecorderSettings($recorderSettings): UpdateRecordingSettings
     {
-      $this->recorderSettings = $recorderSettings;
-      return $this;
+        $this->recorderSettings = $recorderSettings;
+        return $this;
     }
 
 }

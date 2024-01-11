@@ -6,7 +6,7 @@ class GetFoldersAvailabilitySettingsResponse
 {
 
     /**
-     * @var FoldersWithAvailabilitySettings $GetFoldersAvailabilitySettingsResult
+     * @var FoldersWithAvailabilitySettings|null $GetFoldersAvailabilitySettingsResult
      */
     protected $GetFoldersAvailabilitySettingsResult = null;
 
@@ -23,17 +23,17 @@ class GetFoldersAvailabilitySettingsResponse
      */
     public function getGetFoldersAvailabilitySettingsResult()
     {
-      return $this->GetFoldersAvailabilitySettingsResult;
+        return $this->GetFoldersAvailabilitySettingsResult;
     }
 
     /**
      * @param FoldersWithAvailabilitySettings $GetFoldersAvailabilitySettingsResult
-     * @return \Panopto\SessionManagement\GetFoldersAvailabilitySettingsResponse
+     * @return GetFoldersAvailabilitySettingsResponse
      */
-    public function setGetFoldersAvailabilitySettingsResult($GetFoldersAvailabilitySettingsResult)
+    public function setGetFoldersAvailabilitySettingsResult($GetFoldersAvailabilitySettingsResult): GetFoldersAvailabilitySettingsResponse
     {
-      $this->GetFoldersAvailabilitySettingsResult = $GetFoldersAvailabilitySettingsResult;
-      return $this;
+        $this->GetFoldersAvailabilitySettingsResult = $GetFoldersAvailabilitySettingsResult;
+        return $this;
     }
 
 }

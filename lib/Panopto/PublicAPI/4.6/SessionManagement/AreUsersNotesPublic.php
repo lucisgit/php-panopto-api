@@ -6,24 +6,24 @@ class AreUsersNotesPublic
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $userId
+     * @var string|null $userId
      */
     protected $userId = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $userId
-     * @param guid $sessionId
+     * @param string $userId
+     * @param string $sessionId
      */
     public function __construct($auth, $userId, $sessionId)
     {
@@ -37,53 +37,53 @@ class AreUsersNotesPublic
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\AreUsersNotesPublic
+     * @return AreUsersNotesPublic
      */
-    public function setAuth($auth)
+    public function setAuth($auth): AreUsersNotesPublic
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getUserId()
     {
-      return $this->userId;
+        return $this->userId;
     }
 
     /**
-     * @param guid $userId
-     * @return \Panopto\SessionManagement\AreUsersNotesPublic
+     * @param string $userId
+     * @return AreUsersNotesPublic
      */
-    public function setUserId($userId)
+    public function setUserId($userId): AreUsersNotesPublic
     {
-      $this->userId = $userId;
-      return $this;
+        $this->userId = $userId;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\SessionManagement\AreUsersNotesPublic
+     * @param string $sessionId
+     * @return AreUsersNotesPublic
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): AreUsersNotesPublic
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
 }

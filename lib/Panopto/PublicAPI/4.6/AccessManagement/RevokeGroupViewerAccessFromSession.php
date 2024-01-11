@@ -6,24 +6,24 @@ class RevokeGroupViewerAccessFromSession
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var guid $groupId
+     * @var string|null $groupId
      */
     protected $groupId = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
-     * @param guid $groupId
+     * @param string $sessionId
+     * @param string $groupId
      */
     public function __construct($auth, $sessionId, $groupId)
     {
@@ -37,53 +37,53 @@ class RevokeGroupViewerAccessFromSession
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\AccessManagement\RevokeGroupViewerAccessFromSession
+     * @return RevokeGroupViewerAccessFromSession
      */
-    public function setAuth($auth)
+    public function setAuth($auth): RevokeGroupViewerAccessFromSession
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\AccessManagement\RevokeGroupViewerAccessFromSession
+     * @param string $sessionId
+     * @return RevokeGroupViewerAccessFromSession
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): RevokeGroupViewerAccessFromSession
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getGroupId()
     {
-      return $this->groupId;
+        return $this->groupId;
     }
 
     /**
-     * @param guid $groupId
-     * @return \Panopto\AccessManagement\RevokeGroupViewerAccessFromSession
+     * @param string $groupId
+     * @return RevokeGroupViewerAccessFromSession
      */
-    public function setGroupId($groupId)
+    public function setGroupId($groupId): RevokeGroupViewerAccessFromSession
     {
-      $this->groupId = $groupId;
-      return $this;
+        $this->groupId = $groupId;
+        return $this;
     }
 
 }

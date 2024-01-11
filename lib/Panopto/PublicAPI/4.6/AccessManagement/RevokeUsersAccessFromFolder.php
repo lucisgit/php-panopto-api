@@ -6,28 +6,28 @@ class RevokeUsersAccessFromFolder
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $folderId
+     * @var string|null $folderId
      */
     protected $folderId = null;
 
     /**
-     * @var ArrayOfguid $userIds
+     * @var ArrayOfguid|null $userIds
      */
     protected $userIds = null;
 
     /**
-     * @var AccessRole $role
+     * @var AccessRole|null $role
      */
     protected $role = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $folderId
+     * @param string $folderId
      * @param ArrayOfguid $userIds
      * @param AccessRole $role
      */
@@ -44,35 +44,35 @@ class RevokeUsersAccessFromFolder
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\AccessManagement\RevokeUsersAccessFromFolder
+     * @return RevokeUsersAccessFromFolder
      */
-    public function setAuth($auth)
+    public function setAuth($auth): RevokeUsersAccessFromFolder
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->folderId;
+        return $this->folderId;
     }
 
     /**
-     * @param guid $folderId
-     * @return \Panopto\AccessManagement\RevokeUsersAccessFromFolder
+     * @param string $folderId
+     * @return RevokeUsersAccessFromFolder
      */
-    public function setFolderId($folderId)
+    public function setFolderId($folderId): RevokeUsersAccessFromFolder
     {
-      $this->folderId = $folderId;
-      return $this;
+        $this->folderId = $folderId;
+        return $this;
     }
 
     /**
@@ -80,17 +80,17 @@ class RevokeUsersAccessFromFolder
      */
     public function getUserIds()
     {
-      return $this->userIds;
+        return $this->userIds;
     }
 
     /**
      * @param ArrayOfguid $userIds
-     * @return \Panopto\AccessManagement\RevokeUsersAccessFromFolder
+     * @return RevokeUsersAccessFromFolder
      */
-    public function setUserIds($userIds)
+    public function setUserIds($userIds): RevokeUsersAccessFromFolder
     {
-      $this->userIds = $userIds;
-      return $this;
+        $this->userIds = $userIds;
+        return $this;
     }
 
     /**
@@ -98,17 +98,17 @@ class RevokeUsersAccessFromFolder
      */
     public function getRole()
     {
-      return $this->role;
+        return $this->role;
     }
 
     /**
      * @param AccessRole $role
-     * @return \Panopto\AccessManagement\RevokeUsersAccessFromFolder
+     * @return RevokeUsersAccessFromFolder
      */
-    public function setRole($role)
+    public function setRole($role): RevokeUsersAccessFromFolder
     {
-      $this->role = $role;
-      return $this;
+        $this->role = $role;
+        return $this;
     }
 
 }

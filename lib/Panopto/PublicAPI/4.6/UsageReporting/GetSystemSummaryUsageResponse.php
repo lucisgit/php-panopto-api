@@ -6,7 +6,7 @@ class GetSystemSummaryUsageResponse
 {
 
     /**
-     * @var ArrayOfSummaryUsageResponseItem $GetSystemSummaryUsageResult
+     * @var ArrayOfSummaryUsageResponseItem|null $GetSystemSummaryUsageResult
      */
     protected $GetSystemSummaryUsageResult = null;
 
@@ -23,17 +23,17 @@ class GetSystemSummaryUsageResponse
      */
     public function getGetSystemSummaryUsageResult()
     {
-      return $this->GetSystemSummaryUsageResult;
+        return $this->GetSystemSummaryUsageResult;
     }
 
     /**
      * @param ArrayOfSummaryUsageResponseItem $GetSystemSummaryUsageResult
-     * @return \Panopto\UsageReporting\GetSystemSummaryUsageResponse
+     * @return GetSystemSummaryUsageResponse
      */
-    public function setGetSystemSummaryUsageResult($GetSystemSummaryUsageResult)
+    public function setGetSystemSummaryUsageResult($GetSystemSummaryUsageResult): GetSystemSummaryUsageResponse
     {
-      $this->GetSystemSummaryUsageResult = $GetSystemSummaryUsageResult;
-      return $this;
+        $this->GetSystemSummaryUsageResult = $GetSystemSummaryUsageResult;
+        return $this;
     }
 
 }

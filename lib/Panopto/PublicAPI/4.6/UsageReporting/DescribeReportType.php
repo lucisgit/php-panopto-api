@@ -6,12 +6,12 @@ class DescribeReportType
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var StatsReportType $reportType
+     * @var StatsReportType|null $reportType
      */
     protected $reportType = null;
 
@@ -30,17 +30,17 @@ class DescribeReportType
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UsageReporting\DescribeReportType
+     * @return DescribeReportType
      */
-    public function setAuth($auth)
+    public function setAuth($auth): DescribeReportType
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -48,17 +48,17 @@ class DescribeReportType
      */
     public function getReportType()
     {
-      return $this->reportType;
+        return $this->reportType;
     }
 
     /**
      * @param StatsReportType $reportType
-     * @return \Panopto\UsageReporting\DescribeReportType
+     * @return DescribeReportType
      */
-    public function setReportType($reportType)
+    public function setReportType($reportType): DescribeReportType
     {
-      $this->reportType = $reportType;
-      return $this;
+        $this->reportType = $reportType;
+        return $this;
     }
 
 }

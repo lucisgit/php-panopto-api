@@ -6,12 +6,12 @@ class GetFoldersWithExternalContextByExternalId
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var ArrayOfstring $folderExternalIds
+     * @var ArrayOfstring|null $folderExternalIds
      */
     protected $folderExternalIds = null;
 
@@ -30,17 +30,17 @@ class GetFoldersWithExternalContextByExternalId
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\GetFoldersWithExternalContextByExternalId
+     * @return GetFoldersWithExternalContextByExternalId
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetFoldersWithExternalContextByExternalId
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -48,17 +48,17 @@ class GetFoldersWithExternalContextByExternalId
      */
     public function getFolderExternalIds()
     {
-      return $this->folderExternalIds;
+        return $this->folderExternalIds;
     }
 
     /**
      * @param ArrayOfstring $folderExternalIds
-     * @return \Panopto\SessionManagement\GetFoldersWithExternalContextByExternalId
+     * @return GetFoldersWithExternalContextByExternalId
      */
-    public function setFolderExternalIds($folderExternalIds)
+    public function setFolderExternalIds($folderExternalIds): GetFoldersWithExternalContextByExternalId
     {
-      $this->folderExternalIds = $folderExternalIds;
-      return $this;
+        $this->folderExternalIds = $folderExternalIds;
+        return $this;
     }
 
 }

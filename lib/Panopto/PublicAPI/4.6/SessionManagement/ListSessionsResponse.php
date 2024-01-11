@@ -6,19 +6,19 @@ class ListSessionsResponse
 {
 
     /**
-     * @var ArrayOfSession $Results
+     * @var ArrayOfSession|null $Results
      */
     protected $Results = null;
 
     /**
-     * @var int $TotalNumberResults
+     * @var int|null $TotalNumberResults
      */
     protected $TotalNumberResults = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -26,17 +26,17 @@ class ListSessionsResponse
      */
     public function getResults()
     {
-      return $this->Results;
+        return $this->Results;
     }
 
     /**
      * @param ArrayOfSession $Results
-     * @return \Panopto\SessionManagement\ListSessionsResponse
+     * @return ListSessionsResponse
      */
-    public function setResults($Results)
+    public function setResults($Results): ListSessionsResponse
     {
-      $this->Results = $Results;
-      return $this;
+        $this->Results = $Results;
+        return $this;
     }
 
     /**
@@ -44,17 +44,17 @@ class ListSessionsResponse
      */
     public function getTotalNumberResults()
     {
-      return $this->TotalNumberResults;
+        return $this->TotalNumberResults;
     }
 
     /**
      * @param int $TotalNumberResults
-     * @return \Panopto\SessionManagement\ListSessionsResponse
+     * @return ListSessionsResponse
      */
-    public function setTotalNumberResults($TotalNumberResults)
+    public function setTotalNumberResults($TotalNumberResults): ListSessionsResponse
     {
-      $this->TotalNumberResults = $TotalNumberResults;
-      return $this;
+        $this->TotalNumberResults = $TotalNumberResults;
+        return $this;
     }
 
 }

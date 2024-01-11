@@ -6,142 +6,142 @@ class Session
 {
 
     /**
-     * @var guid $CreatorId
+     * @var string|null $CreatorId
      */
     protected $CreatorId = null;
 
     /**
-     * @var string $Description
+     * @var string|null $Description
      */
     protected $Description = null;
 
     /**
-     * @var float $Duration
+     * @var float|null $Duration
      */
     protected $Duration = null;
 
     /**
-     * @var string $EditorUrl
+     * @var string|null $EditorUrl
      */
     protected $EditorUrl = null;
 
     /**
-     * @var string $ExternalId
+     * @var string|null $ExternalId
      */
     protected $ExternalId = null;
 
     /**
-     * @var guid $FolderId
+     * @var string|null $FolderId
      */
     protected $FolderId = null;
 
     /**
-     * @var string $FolderName
+     * @var string|null $FolderName
      */
     protected $FolderName = null;
 
     /**
-     * @var guid $Id
+     * @var string|null $Id
      */
     protected $Id = null;
 
     /**
-     * @var string $IosVideoUrl
+     * @var string|null $IosVideoUrl
      */
     protected $IosVideoUrl = null;
 
     /**
-     * @var boolean $IsBroadcast
+     * @var bool|null $IsBroadcast
      */
     protected $IsBroadcast = null;
 
     /**
-     * @var boolean $IsDownloadable
+     * @var bool|null $IsDownloadable
      */
     protected $IsDownloadable = null;
 
     /**
-     * @var string $MP3Url
+     * @var string|null $MP3Url
      */
     protected $MP3Url = null;
 
     /**
-     * @var string $MP4Url
+     * @var string|null $MP4Url
      */
     protected $MP4Url = null;
 
     /**
-     * @var string $Name
+     * @var string|null $Name
      */
     protected $Name = null;
 
     /**
-     * @var string $NotesURL
+     * @var string|null $NotesURL
      */
     protected $NotesURL = null;
 
     /**
-     * @var string $OutputsPageUrl
+     * @var string|null $OutputsPageUrl
      */
     protected $OutputsPageUrl = null;
 
     /**
-     * @var ArrayOfguid $RemoteRecorderIds
+     * @var ArrayOfguid|null $RemoteRecorderIds
      */
     protected $RemoteRecorderIds = null;
 
     /**
-     * @var string $SharePageUrl
+     * @var string|null $SharePageUrl
      */
     protected $SharePageUrl = null;
 
     /**
-     * @var \DateTime $StartTime
+     * @var \DateTime|string|null $StartTime
      */
-    protected $StartTime = null;
+    protected \DateTime|string|null $StartTime = null;
 
     /**
-     * @var SessionState $State
+     * @var SessionState|null $State
      */
     protected $State = null;
 
     /**
-     * @var string $StatusMessage
+     * @var string|null $StatusMessage
      */
     protected $StatusMessage = null;
 
     /**
-     * @var string $ThumbUrl
+     * @var string|null $ThumbUrl
      */
     protected $ThumbUrl = null;
 
     /**
-     * @var string $ViewerUrl
+     * @var string|null $ViewerUrl
      */
     protected $ViewerUrl = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getCreatorId()
     {
-      return $this->CreatorId;
+        return $this->CreatorId;
     }
 
     /**
-     * @param guid $CreatorId
-     * @return \Panopto\SessionManagement\Session
+     * @param string $CreatorId
+     * @return Session
      */
-    public function setCreatorId($CreatorId)
+    public function setCreatorId($CreatorId): Session
     {
-      $this->CreatorId = $CreatorId;
-      return $this;
+        $this->CreatorId = $CreatorId;
+        return $this;
     }
 
     /**
@@ -149,17 +149,17 @@ class Session
      */
     public function getDescription()
     {
-      return $this->Description;
+        return $this->Description;
     }
 
     /**
      * @param string $Description
-     * @return \Panopto\SessionManagement\Session
+     * @return Session
      */
-    public function setDescription($Description)
+    public function setDescription($Description): Session
     {
-      $this->Description = $Description;
-      return $this;
+        $this->Description = $Description;
+        return $this;
     }
 
     /**
@@ -167,17 +167,17 @@ class Session
      */
     public function getDuration()
     {
-      return $this->Duration;
+        return $this->Duration;
     }
 
     /**
      * @param float $Duration
-     * @return \Panopto\SessionManagement\Session
+     * @return Session
      */
-    public function setDuration($Duration)
+    public function setDuration($Duration): Session
     {
-      $this->Duration = $Duration;
-      return $this;
+        $this->Duration = $Duration;
+        return $this;
     }
 
     /**
@@ -185,17 +185,17 @@ class Session
      */
     public function getEditorUrl()
     {
-      return $this->EditorUrl;
+        return $this->EditorUrl;
     }
 
     /**
      * @param string $EditorUrl
-     * @return \Panopto\SessionManagement\Session
+     * @return Session
      */
-    public function setEditorUrl($EditorUrl)
+    public function setEditorUrl($EditorUrl): Session
     {
-      $this->EditorUrl = $EditorUrl;
-      return $this;
+        $this->EditorUrl = $EditorUrl;
+        return $this;
     }
 
     /**
@@ -203,35 +203,35 @@ class Session
      */
     public function getExternalId()
     {
-      return $this->ExternalId;
+        return $this->ExternalId;
     }
 
     /**
      * @param string $ExternalId
-     * @return \Panopto\SessionManagement\Session
+     * @return Session
      */
-    public function setExternalId($ExternalId)
+    public function setExternalId($ExternalId): Session
     {
-      $this->ExternalId = $ExternalId;
-      return $this;
+        $this->ExternalId = $ExternalId;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->FolderId;
+        return $this->FolderId;
     }
 
     /**
-     * @param guid $FolderId
-     * @return \Panopto\SessionManagement\Session
+     * @param string $FolderId
+     * @return Session
      */
-    public function setFolderId($FolderId)
+    public function setFolderId($FolderId): Session
     {
-      $this->FolderId = $FolderId;
-      return $this;
+        $this->FolderId = $FolderId;
+        return $this;
     }
 
     /**
@@ -239,35 +239,35 @@ class Session
      */
     public function getFolderName()
     {
-      return $this->FolderName;
+        return $this->FolderName;
     }
 
     /**
      * @param string $FolderName
-     * @return \Panopto\SessionManagement\Session
+     * @return Session
      */
-    public function setFolderName($FolderName)
+    public function setFolderName($FolderName): Session
     {
-      $this->FolderName = $FolderName;
-      return $this;
+        $this->FolderName = $FolderName;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getId()
     {
-      return $this->Id;
+        return $this->Id;
     }
 
     /**
-     * @param guid $Id
-     * @return \Panopto\SessionManagement\Session
+     * @param string $Id
+     * @return Session
      */
-    public function setId($Id)
+    public function setId($Id): Session
     {
-      $this->Id = $Id;
-      return $this;
+        $this->Id = $Id;
+        return $this;
     }
 
     /**
@@ -275,53 +275,53 @@ class Session
      */
     public function getIosVideoUrl()
     {
-      return $this->IosVideoUrl;
+        return $this->IosVideoUrl;
     }
 
     /**
      * @param string $IosVideoUrl
-     * @return \Panopto\SessionManagement\Session
+     * @return Session
      */
-    public function setIosVideoUrl($IosVideoUrl)
+    public function setIosVideoUrl($IosVideoUrl): Session
     {
-      $this->IosVideoUrl = $IosVideoUrl;
-      return $this;
+        $this->IosVideoUrl = $IosVideoUrl;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getIsBroadcast()
     {
-      return $this->IsBroadcast;
+        return $this->IsBroadcast;
     }
 
     /**
-     * @param boolean $IsBroadcast
-     * @return \Panopto\SessionManagement\Session
+     * @param bool $IsBroadcast
+     * @return Session
      */
-    public function setIsBroadcast($IsBroadcast)
+    public function setIsBroadcast($IsBroadcast): Session
     {
-      $this->IsBroadcast = $IsBroadcast;
-      return $this;
+        $this->IsBroadcast = $IsBroadcast;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getIsDownloadable()
     {
-      return $this->IsDownloadable;
+        return $this->IsDownloadable;
     }
 
     /**
-     * @param boolean $IsDownloadable
-     * @return \Panopto\SessionManagement\Session
+     * @param bool $IsDownloadable
+     * @return Session
      */
-    public function setIsDownloadable($IsDownloadable)
+    public function setIsDownloadable($IsDownloadable): Session
     {
-      $this->IsDownloadable = $IsDownloadable;
-      return $this;
+        $this->IsDownloadable = $IsDownloadable;
+        return $this;
     }
 
     /**
@@ -329,17 +329,17 @@ class Session
      */
     public function getMP3Url()
     {
-      return $this->MP3Url;
+        return $this->MP3Url;
     }
 
     /**
      * @param string $MP3Url
-     * @return \Panopto\SessionManagement\Session
+     * @return Session
      */
-    public function setMP3Url($MP3Url)
+    public function setMP3Url($MP3Url): Session
     {
-      $this->MP3Url = $MP3Url;
-      return $this;
+        $this->MP3Url = $MP3Url;
+        return $this;
     }
 
     /**
@@ -347,17 +347,17 @@ class Session
      */
     public function getMP4Url()
     {
-      return $this->MP4Url;
+        return $this->MP4Url;
     }
 
     /**
      * @param string $MP4Url
-     * @return \Panopto\SessionManagement\Session
+     * @return Session
      */
-    public function setMP4Url($MP4Url)
+    public function setMP4Url($MP4Url): Session
     {
-      $this->MP4Url = $MP4Url;
-      return $this;
+        $this->MP4Url = $MP4Url;
+        return $this;
     }
 
     /**
@@ -365,17 +365,17 @@ class Session
      */
     public function getName()
     {
-      return $this->Name;
+        return $this->Name;
     }
 
     /**
      * @param string $Name
-     * @return \Panopto\SessionManagement\Session
+     * @return Session
      */
-    public function setName($Name)
+    public function setName($Name): Session
     {
-      $this->Name = $Name;
-      return $this;
+        $this->Name = $Name;
+        return $this;
     }
 
     /**
@@ -383,17 +383,17 @@ class Session
      */
     public function getNotesURL()
     {
-      return $this->NotesURL;
+        return $this->NotesURL;
     }
 
     /**
      * @param string $NotesURL
-     * @return \Panopto\SessionManagement\Session
+     * @return Session
      */
-    public function setNotesURL($NotesURL)
+    public function setNotesURL($NotesURL): Session
     {
-      $this->NotesURL = $NotesURL;
-      return $this;
+        $this->NotesURL = $NotesURL;
+        return $this;
     }
 
     /**
@@ -401,17 +401,17 @@ class Session
      */
     public function getOutputsPageUrl()
     {
-      return $this->OutputsPageUrl;
+        return $this->OutputsPageUrl;
     }
 
     /**
      * @param string $OutputsPageUrl
-     * @return \Panopto\SessionManagement\Session
+     * @return Session
      */
-    public function setOutputsPageUrl($OutputsPageUrl)
+    public function setOutputsPageUrl($OutputsPageUrl): Session
     {
-      $this->OutputsPageUrl = $OutputsPageUrl;
-      return $this;
+        $this->OutputsPageUrl = $OutputsPageUrl;
+        return $this;
     }
 
     /**
@@ -419,17 +419,17 @@ class Session
      */
     public function getRemoteRecorderIds()
     {
-      return $this->RemoteRecorderIds;
+        return $this->RemoteRecorderIds;
     }
 
     /**
      * @param ArrayOfguid $RemoteRecorderIds
-     * @return \Panopto\SessionManagement\Session
+     * @return Session
      */
-    public function setRemoteRecorderIds($RemoteRecorderIds)
+    public function setRemoteRecorderIds($RemoteRecorderIds): Session
     {
-      $this->RemoteRecorderIds = $RemoteRecorderIds;
-      return $this;
+        $this->RemoteRecorderIds = $RemoteRecorderIds;
+        return $this;
     }
 
     /**
@@ -437,47 +437,47 @@ class Session
      */
     public function getSharePageUrl()
     {
-      return $this->SharePageUrl;
+        return $this->SharePageUrl;
     }
 
     /**
      * @param string $SharePageUrl
-     * @return \Panopto\SessionManagement\Session
+     * @return Session
      */
-    public function setSharePageUrl($SharePageUrl)
+    public function setSharePageUrl($SharePageUrl): Session
     {
-      $this->SharePageUrl = $SharePageUrl;
-      return $this;
+        $this->SharePageUrl = $SharePageUrl;
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getStartTime()
+    public function getStartTime(): \DateTime|bool|null
     {
-      if ($this->StartTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->StartTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->StartTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->StartTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
-     * @param \DateTime $StartTime
-     * @return \Panopto\SessionManagement\Session
+     * @param \DateTime|null $StartTime
+     * @return Session
      */
-    public function setStartTime(\DateTime $StartTime = null)
+    public function setStartTime(?\DateTime $StartTime = null): Session
     {
-      if ($StartTime == null) {
-       $this->StartTime = null;
-      } else {
-        $this->StartTime = $StartTime->format(\DateTime::ATOM);
-      }
-      return $this;
+        if ($StartTime == null) {
+            $this->StartTime = null;
+        } else {
+            $this->StartTime = $StartTime->format(\DateTime::ATOM);
+        }
+        return $this;
     }
 
     /**
@@ -485,17 +485,17 @@ class Session
      */
     public function getState()
     {
-      return $this->State;
+        return $this->State;
     }
 
     /**
      * @param SessionState $State
-     * @return \Panopto\SessionManagement\Session
+     * @return Session
      */
-    public function setState($State)
+    public function setState($State): Session
     {
-      $this->State = $State;
-      return $this;
+        $this->State = $State;
+        return $this;
     }
 
     /**
@@ -503,17 +503,17 @@ class Session
      */
     public function getStatusMessage()
     {
-      return $this->StatusMessage;
+        return $this->StatusMessage;
     }
 
     /**
      * @param string $StatusMessage
-     * @return \Panopto\SessionManagement\Session
+     * @return Session
      */
-    public function setStatusMessage($StatusMessage)
+    public function setStatusMessage($StatusMessage): Session
     {
-      $this->StatusMessage = $StatusMessage;
-      return $this;
+        $this->StatusMessage = $StatusMessage;
+        return $this;
     }
 
     /**
@@ -521,17 +521,17 @@ class Session
      */
     public function getThumbUrl()
     {
-      return $this->ThumbUrl;
+        return $this->ThumbUrl;
     }
 
     /**
      * @param string $ThumbUrl
-     * @return \Panopto\SessionManagement\Session
+     * @return Session
      */
-    public function setThumbUrl($ThumbUrl)
+    public function setThumbUrl($ThumbUrl): Session
     {
-      $this->ThumbUrl = $ThumbUrl;
-      return $this;
+        $this->ThumbUrl = $ThumbUrl;
+        return $this;
     }
 
     /**
@@ -539,17 +539,17 @@ class Session
      */
     public function getViewerUrl()
     {
-      return $this->ViewerUrl;
+        return $this->ViewerUrl;
     }
 
     /**
      * @param string $ViewerUrl
-     * @return \Panopto\SessionManagement\Session
+     * @return Session
      */
-    public function setViewerUrl($ViewerUrl)
+    public function setViewerUrl($ViewerUrl): Session
     {
-      $this->ViewerUrl = $ViewerUrl;
-      return $this;
+        $this->ViewerUrl = $ViewerUrl;
+        return $this;
     }
 
 }

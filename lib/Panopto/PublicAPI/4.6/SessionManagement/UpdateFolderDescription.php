@@ -6,23 +6,23 @@ class UpdateFolderDescription
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $folderId
+     * @var string|null $folderId
      */
     protected $folderId = null;
 
     /**
-     * @var string $description
+     * @var string|null $description
      */
     protected $description = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $folderId
+     * @param string $folderId
      * @param string $description
      */
     public function __construct($auth, $folderId, $description)
@@ -37,35 +37,35 @@ class UpdateFolderDescription
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\UpdateFolderDescription
+     * @return UpdateFolderDescription
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateFolderDescription
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->folderId;
+        return $this->folderId;
     }
 
     /**
-     * @param guid $folderId
-     * @return \Panopto\SessionManagement\UpdateFolderDescription
+     * @param string $folderId
+     * @return UpdateFolderDescription
      */
-    public function setFolderId($folderId)
+    public function setFolderId($folderId): UpdateFolderDescription
     {
-      $this->folderId = $folderId;
-      return $this;
+        $this->folderId = $folderId;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class UpdateFolderDescription
      */
     public function getDescription()
     {
-      return $this->description;
+        return $this->description;
     }
 
     /**
      * @param string $description
-     * @return \Panopto\SessionManagement\UpdateFolderDescription
+     * @return UpdateFolderDescription
      */
-    public function setDescription($description)
+    public function setDescription($description): UpdateFolderDescription
     {
-      $this->description = $description;
-      return $this;
+        $this->description = $description;
+        return $this;
     }
 
 }

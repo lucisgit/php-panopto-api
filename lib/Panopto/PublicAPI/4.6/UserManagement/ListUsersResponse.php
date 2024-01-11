@@ -6,7 +6,7 @@ class ListUsersResponse
 {
 
     /**
-     * @var ListUsersResponse $ListUsersResult
+     * @var ListUsersResponse|null $ListUsersResult
      */
     protected $ListUsersResult = null;
 
@@ -23,17 +23,17 @@ class ListUsersResponse
      */
     public function getListUsersResult()
     {
-      return $this->ListUsersResult;
+        return $this->ListUsersResult;
     }
 
     /**
      * @param ListUsersResponse $ListUsersResult
-     * @return \Panopto\UserManagement\ListUsersResponse
+     * @return ListUsersResponse
      */
-    public function setListUsersResult($ListUsersResult)
+    public function setListUsersResult($ListUsersResult): ListUsersResponse
     {
-      $this->ListUsersResult = $ListUsersResult;
-      return $this;
+        $this->ListUsersResult = $ListUsersResult;
+        return $this;
     }
 
 }

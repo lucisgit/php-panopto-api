@@ -6,34 +6,34 @@ class SessionAvailabilitySettings
 {
 
     /**
-     * @var DateTimeOffset $EndSettingDate
+     * @var DateTimeOffset|null $EndSettingDate
      */
     protected $EndSettingDate = null;
 
     /**
-     * @var SessionEndSettingType $EndSettingType
+     * @var SessionEndSettingType|null $EndSettingType
      */
     protected $EndSettingType = null;
 
     /**
-     * @var guid $SessionId
+     * @var string|null $SessionId
      */
     protected $SessionId = null;
 
     /**
-     * @var DateTimeOffset $StartSettingDate
+     * @var DateTimeOffset|null $StartSettingDate
      */
     protected $StartSettingDate = null;
 
     /**
-     * @var SessionStartSettingType $StartSettingType
+     * @var SessionStartSettingType|null $StartSettingType
      */
     protected $StartSettingType = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -41,17 +41,17 @@ class SessionAvailabilitySettings
      */
     public function getEndSettingDate()
     {
-      return $this->EndSettingDate;
+        return $this->EndSettingDate;
     }
 
     /**
      * @param DateTimeOffset $EndSettingDate
-     * @return \Panopto\SessionManagement\SessionAvailabilitySettings
+     * @return SessionAvailabilitySettings
      */
-    public function setEndSettingDate($EndSettingDate)
+    public function setEndSettingDate($EndSettingDate): SessionAvailabilitySettings
     {
-      $this->EndSettingDate = $EndSettingDate;
-      return $this;
+        $this->EndSettingDate = $EndSettingDate;
+        return $this;
     }
 
     /**
@@ -59,35 +59,35 @@ class SessionAvailabilitySettings
      */
     public function getEndSettingType()
     {
-      return $this->EndSettingType;
+        return $this->EndSettingType;
     }
 
     /**
      * @param SessionEndSettingType $EndSettingType
-     * @return \Panopto\SessionManagement\SessionAvailabilitySettings
+     * @return SessionAvailabilitySettings
      */
-    public function setEndSettingType($EndSettingType)
+    public function setEndSettingType($EndSettingType): SessionAvailabilitySettings
     {
-      $this->EndSettingType = $EndSettingType;
-      return $this;
+        $this->EndSettingType = $EndSettingType;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->SessionId;
+        return $this->SessionId;
     }
 
     /**
-     * @param guid $SessionId
-     * @return \Panopto\SessionManagement\SessionAvailabilitySettings
+     * @param string $SessionId
+     * @return SessionAvailabilitySettings
      */
-    public function setSessionId($SessionId)
+    public function setSessionId($SessionId): SessionAvailabilitySettings
     {
-      $this->SessionId = $SessionId;
-      return $this;
+        $this->SessionId = $SessionId;
+        return $this;
     }
 
     /**
@@ -95,17 +95,17 @@ class SessionAvailabilitySettings
      */
     public function getStartSettingDate()
     {
-      return $this->StartSettingDate;
+        return $this->StartSettingDate;
     }
 
     /**
      * @param DateTimeOffset $StartSettingDate
-     * @return \Panopto\SessionManagement\SessionAvailabilitySettings
+     * @return SessionAvailabilitySettings
      */
-    public function setStartSettingDate($StartSettingDate)
+    public function setStartSettingDate($StartSettingDate): SessionAvailabilitySettings
     {
-      $this->StartSettingDate = $StartSettingDate;
-      return $this;
+        $this->StartSettingDate = $StartSettingDate;
+        return $this;
     }
 
     /**
@@ -113,17 +113,17 @@ class SessionAvailabilitySettings
      */
     public function getStartSettingType()
     {
-      return $this->StartSettingType;
+        return $this->StartSettingType;
     }
 
     /**
      * @param SessionStartSettingType $StartSettingType
-     * @return \Panopto\SessionManagement\SessionAvailabilitySettings
+     * @return SessionAvailabilitySettings
      */
-    public function setStartSettingType($StartSettingType)
+    public function setStartSettingType($StartSettingType): SessionAvailabilitySettings
     {
-      $this->StartSettingType = $StartSettingType;
-      return $this;
+        $this->StartSettingType = $StartSettingType;
+        return $this;
     }
 
 }

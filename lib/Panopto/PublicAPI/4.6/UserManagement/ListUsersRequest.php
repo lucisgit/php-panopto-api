@@ -6,24 +6,24 @@ class ListUsersRequest
 {
 
     /**
-     * @var Pagination $Pagination
+     * @var Pagination|null $Pagination
      */
     protected $Pagination = null;
 
     /**
-     * @var UserSortField $SortBy
+     * @var UserSortField|null $SortBy
      */
     protected $SortBy = null;
 
     /**
-     * @var boolean $SortIncreasing
+     * @var bool|null $SortIncreasing
      */
     protected $SortIncreasing = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -31,17 +31,17 @@ class ListUsersRequest
      */
     public function getPagination()
     {
-      return $this->Pagination;
+        return $this->Pagination;
     }
 
     /**
      * @param Pagination $Pagination
-     * @return \Panopto\UserManagement\ListUsersRequest
+     * @return ListUsersRequest
      */
-    public function setPagination($Pagination)
+    public function setPagination($Pagination): ListUsersRequest
     {
-      $this->Pagination = $Pagination;
-      return $this;
+        $this->Pagination = $Pagination;
+        return $this;
     }
 
     /**
@@ -49,35 +49,35 @@ class ListUsersRequest
      */
     public function getSortBy()
     {
-      return $this->SortBy;
+        return $this->SortBy;
     }
 
     /**
      * @param UserSortField $SortBy
-     * @return \Panopto\UserManagement\ListUsersRequest
+     * @return ListUsersRequest
      */
-    public function setSortBy($SortBy)
+    public function setSortBy($SortBy): ListUsersRequest
     {
-      $this->SortBy = $SortBy;
-      return $this;
+        $this->SortBy = $SortBy;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getSortIncreasing()
     {
-      return $this->SortIncreasing;
+        return $this->SortIncreasing;
     }
 
     /**
-     * @param boolean $SortIncreasing
-     * @return \Panopto\UserManagement\ListUsersRequest
+     * @param bool $SortIncreasing
+     * @return ListUsersRequest
      */
-    public function setSortIncreasing($SortIncreasing)
+    public function setSortIncreasing($SortIncreasing): ListUsersRequest
     {
-      $this->SortIncreasing = $SortIncreasing;
-      return $this;
+        $this->SortIncreasing = $SortIncreasing;
+        return $this;
     }
 
 }

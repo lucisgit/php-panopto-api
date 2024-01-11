@@ -6,24 +6,24 @@ class UpdateSessionInheritViewerAccess
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var boolean $inheritViewerAccess
+     * @var bool|null $inheritViewerAccess
      */
     protected $inheritViewerAccess = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
-     * @param boolean $inheritViewerAccess
+     * @param string $sessionId
+     * @param bool $inheritViewerAccess
      */
     public function __construct($auth, $sessionId, $inheritViewerAccess)
     {
@@ -37,53 +37,53 @@ class UpdateSessionInheritViewerAccess
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\AccessManagement\UpdateSessionInheritViewerAccess
+     * @return UpdateSessionInheritViewerAccess
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateSessionInheritViewerAccess
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\AccessManagement\UpdateSessionInheritViewerAccess
+     * @param string $sessionId
+     * @return UpdateSessionInheritViewerAccess
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): UpdateSessionInheritViewerAccess
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getInheritViewerAccess()
     {
-      return $this->inheritViewerAccess;
+        return $this->inheritViewerAccess;
     }
 
     /**
-     * @param boolean $inheritViewerAccess
-     * @return \Panopto\AccessManagement\UpdateSessionInheritViewerAccess
+     * @param bool $inheritViewerAccess
+     * @return UpdateSessionInheritViewerAccess
      */
-    public function setInheritViewerAccess($inheritViewerAccess)
+    public function setInheritViewerAccess($inheritViewerAccess): UpdateSessionInheritViewerAccess
     {
-      $this->inheritViewerAccess = $inheritViewerAccess;
-      return $this;
+        $this->inheritViewerAccess = $inheritViewerAccess;
+        return $this;
     }
 
 }

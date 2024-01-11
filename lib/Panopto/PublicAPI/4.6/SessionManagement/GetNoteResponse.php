@@ -6,7 +6,7 @@ class GetNoteResponse
 {
 
     /**
-     * @var Note $GetNoteResult
+     * @var Note|null $GetNoteResult
      */
     protected $GetNoteResult = null;
 
@@ -23,17 +23,17 @@ class GetNoteResponse
      */
     public function getGetNoteResult()
     {
-      return $this->GetNoteResult;
+        return $this->GetNoteResult;
     }
 
     /**
      * @param Note $GetNoteResult
-     * @return \Panopto\SessionManagement\GetNoteResponse
+     * @return GetNoteResponse
      */
-    public function setGetNoteResult($GetNoteResult)
+    public function setGetNoteResult($GetNoteResult): GetNoteResponse
     {
-      $this->GetNoteResult = $GetNoteResult;
-      return $this;
+        $this->GetNoteResult = $GetNoteResult;
+        return $this;
     }
 
 }

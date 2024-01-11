@@ -8,41 +8,41 @@ class ArrayOfDetailedUsageResponseItem implements \ArrayAccess, \Iterator, \Coun
     /**
      * @var DetailedUsageResponseItem[] $DetailedUsageResponseItem
      */
-    protected $DetailedUsageResponseItem = null;
+    protected array $DetailedUsageResponseItem = [];
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
-     * @return DetailedUsageResponseItem[]
+     * @return DetailedUsageResponseItem[]|null
      */
-    public function getDetailedUsageResponseItem()
+    public function getDetailedUsageResponseItem(): ?array
     {
-      return $this->DetailedUsageResponseItem;
+        return $this->DetailedUsageResponseItem;
     }
 
     /**
-     * @param DetailedUsageResponseItem[] $DetailedUsageResponseItem
-     * @return \Panopto\UsageReporting\ArrayOfDetailedUsageResponseItem
+     * @param DetailedUsageResponseItem[]|null $DetailedUsageResponseItem
+     * @return ArrayOfDetailedUsageResponseItem
      */
-    public function setDetailedUsageResponseItem(array $DetailedUsageResponseItem = null)
+    public function setDetailedUsageResponseItem(?array $DetailedUsageResponseItem = null): ArrayOfDetailedUsageResponseItem
     {
-      $this->DetailedUsageResponseItem = $DetailedUsageResponseItem;
-      return $this;
+        $this->DetailedUsageResponseItem = $DetailedUsageResponseItem;
+        return $this;
     }
 
     /**
      * ArrayAccess implementation
      *
      * @param mixed $offset An offset to check for
-     * @return boolean true on success or false on failure
+     * @return bool True on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
-      return isset($this->DetailedUsageResponseItem[$offset]);
+        return isset($this->DetailedUsageResponseItem[$offset]);
     }
 
     /**
@@ -51,9 +51,9 @@ class ArrayOfDetailedUsageResponseItem implements \ArrayAccess, \Iterator, \Coun
      * @param mixed $offset The offset to retrieve
      * @return DetailedUsageResponseItem
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): DetailedUsageResponseItem
     {
-      return $this->DetailedUsageResponseItem[$offset];
+        return $this->DetailedUsageResponseItem[$offset];
     }
 
     /**
@@ -63,13 +63,13 @@ class ArrayOfDetailedUsageResponseItem implements \ArrayAccess, \Iterator, \Coun
      * @param DetailedUsageResponseItem $value The value to set
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
-      if (!isset($offset)) {
-        $this->DetailedUsageResponseItem[] = $value;
-      } else {
-        $this->DetailedUsageResponseItem[$offset] = $value;
-      }
+        if (!isset($offset)) {
+            $this->DetailedUsageResponseItem[] = $value;
+        } else {
+            $this->DetailedUsageResponseItem[$offset] = $value;
+        }
     }
 
     /**
@@ -78,9 +78,9 @@ class ArrayOfDetailedUsageResponseItem implements \ArrayAccess, \Iterator, \Coun
      * @param mixed $offset The offset to unset
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
-      unset($this->DetailedUsageResponseItem[$offset]);
+        unset($this->DetailedUsageResponseItem[$offset]);
     }
 
     /**
@@ -88,9 +88,9 @@ class ArrayOfDetailedUsageResponseItem implements \ArrayAccess, \Iterator, \Coun
      *
      * @return DetailedUsageResponseItem Return the current element
      */
-    public function current()
+    public function current(): DetailedUsageResponseItem
     {
-      return current($this->DetailedUsageResponseItem);
+        return current($this->DetailedUsageResponseItem);
     }
 
     /**
@@ -99,9 +99,9 @@ class ArrayOfDetailedUsageResponseItem implements \ArrayAccess, \Iterator, \Coun
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
-      next($this->DetailedUsageResponseItem);
+        next($this->DetailedUsageResponseItem);
     }
 
     /**
@@ -109,19 +109,19 @@ class ArrayOfDetailedUsageResponseItem implements \ArrayAccess, \Iterator, \Coun
      *
      * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): ?string
     {
-      return key($this->DetailedUsageResponseItem);
+        return key($this->DetailedUsageResponseItem);
     }
 
     /**
      * Iterator implementation
      *
-     * @return boolean Return the validity of the current position
+     * @return bool Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
-      return $this->key() !== null;
+        return $this->key() !== null;
     }
 
     /**
@@ -130,19 +130,19 @@ class ArrayOfDetailedUsageResponseItem implements \ArrayAccess, \Iterator, \Coun
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
-      reset($this->DetailedUsageResponseItem);
+        reset($this->DetailedUsageResponseItem);
     }
 
     /**
      * Countable implementation
      *
-     * @return DetailedUsageResponseItem Return count of elements
+     * @return int Return count of elements
      */
-    public function count()
+    public function count(): int
     {
-      return count($this->DetailedUsageResponseItem);
+        return count($this->DetailedUsageResponseItem);
     }
 
 }

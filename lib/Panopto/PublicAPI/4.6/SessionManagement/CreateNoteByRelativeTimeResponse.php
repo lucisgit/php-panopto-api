@@ -6,12 +6,12 @@ class CreateNoteByRelativeTimeResponse
 {
 
     /**
-     * @var guid $CreateNoteByRelativeTimeResult
+     * @var string|null $CreateNoteByRelativeTimeResult
      */
     protected $CreateNoteByRelativeTimeResult = null;
 
     /**
-     * @param guid $CreateNoteByRelativeTimeResult
+     * @param string $CreateNoteByRelativeTimeResult
      */
     public function __construct($CreateNoteByRelativeTimeResult)
     {
@@ -19,21 +19,21 @@ class CreateNoteByRelativeTimeResponse
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getCreateNoteByRelativeTimeResult()
     {
-      return $this->CreateNoteByRelativeTimeResult;
+        return $this->CreateNoteByRelativeTimeResult;
     }
 
     /**
-     * @param guid $CreateNoteByRelativeTimeResult
-     * @return \Panopto\SessionManagement\CreateNoteByRelativeTimeResponse
+     * @param string $CreateNoteByRelativeTimeResult
+     * @return CreateNoteByRelativeTimeResponse
      */
-    public function setCreateNoteByRelativeTimeResult($CreateNoteByRelativeTimeResult)
+    public function setCreateNoteByRelativeTimeResult($CreateNoteByRelativeTimeResult): CreateNoteByRelativeTimeResponse
     {
-      $this->CreateNoteByRelativeTimeResult = $CreateNoteByRelativeTimeResult;
-      return $this;
+        $this->CreateNoteByRelativeTimeResult = $CreateNoteByRelativeTimeResult;
+        return $this;
     }
 
 }

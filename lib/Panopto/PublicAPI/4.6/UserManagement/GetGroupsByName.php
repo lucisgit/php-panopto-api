@@ -6,12 +6,12 @@ class GetGroupsByName
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var string $groupName
+     * @var string|null $groupName
      */
     protected $groupName = null;
 
@@ -30,17 +30,17 @@ class GetGroupsByName
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UserManagement\GetGroupsByName
+     * @return GetGroupsByName
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetGroupsByName
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -48,17 +48,17 @@ class GetGroupsByName
      */
     public function getGroupName()
     {
-      return $this->groupName;
+        return $this->groupName;
     }
 
     /**
      * @param string $groupName
-     * @return \Panopto\UserManagement\GetGroupsByName
+     * @return GetGroupsByName
      */
-    public function setGroupName($groupName)
+    public function setGroupName($groupName): GetGroupsByName
     {
-      $this->groupName = $groupName;
-      return $this;
+        $this->groupName = $groupName;
+        return $this;
     }
 
 }

@@ -6,39 +6,39 @@ class GroupAccessDetails
 {
 
     /**
-     * @var ArrayOfguid $FoldersWithCreatorAccess
+     * @var ArrayOfguid|null $FoldersWithCreatorAccess
      */
     protected $FoldersWithCreatorAccess = null;
 
     /**
-     * @var ArrayOfguid $FoldersWithPublisherAccess
+     * @var ArrayOfguid|null $FoldersWithPublisherAccess
      */
     protected $FoldersWithPublisherAccess = null;
 
     /**
-     * @var ArrayOfguid $FoldersWithViewerAccess
+     * @var ArrayOfguid|null $FoldersWithViewerAccess
      */
     protected $FoldersWithViewerAccess = null;
 
     /**
-     * @var guid $GroupId
+     * @var string|null $GroupId
      */
     protected $GroupId = null;
 
     /**
-     * @var ArrayOfguid $SessionsWithViewerAccess
+     * @var ArrayOfguid|null $SessionsWithViewerAccess
      */
     protected $SessionsWithViewerAccess = null;
 
     /**
-     * @var SystemRole $SystemRole
+     * @var SystemRole|null $SystemRole
      */
     protected $SystemRole = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -46,17 +46,17 @@ class GroupAccessDetails
      */
     public function getFoldersWithCreatorAccess()
     {
-      return $this->FoldersWithCreatorAccess;
+        return $this->FoldersWithCreatorAccess;
     }
 
     /**
      * @param ArrayOfguid $FoldersWithCreatorAccess
-     * @return \Panopto\AccessManagement\GroupAccessDetails
+     * @return GroupAccessDetails
      */
-    public function setFoldersWithCreatorAccess($FoldersWithCreatorAccess)
+    public function setFoldersWithCreatorAccess($FoldersWithCreatorAccess): GroupAccessDetails
     {
-      $this->FoldersWithCreatorAccess = $FoldersWithCreatorAccess;
-      return $this;
+        $this->FoldersWithCreatorAccess = $FoldersWithCreatorAccess;
+        return $this;
     }
 
     /**
@@ -64,17 +64,17 @@ class GroupAccessDetails
      */
     public function getFoldersWithPublisherAccess()
     {
-      return $this->FoldersWithPublisherAccess;
+        return $this->FoldersWithPublisherAccess;
     }
 
     /**
      * @param ArrayOfguid $FoldersWithPublisherAccess
-     * @return \Panopto\AccessManagement\GroupAccessDetails
+     * @return GroupAccessDetails
      */
-    public function setFoldersWithPublisherAccess($FoldersWithPublisherAccess)
+    public function setFoldersWithPublisherAccess($FoldersWithPublisherAccess): GroupAccessDetails
     {
-      $this->FoldersWithPublisherAccess = $FoldersWithPublisherAccess;
-      return $this;
+        $this->FoldersWithPublisherAccess = $FoldersWithPublisherAccess;
+        return $this;
     }
 
     /**
@@ -82,35 +82,35 @@ class GroupAccessDetails
      */
     public function getFoldersWithViewerAccess()
     {
-      return $this->FoldersWithViewerAccess;
+        return $this->FoldersWithViewerAccess;
     }
 
     /**
      * @param ArrayOfguid $FoldersWithViewerAccess
-     * @return \Panopto\AccessManagement\GroupAccessDetails
+     * @return GroupAccessDetails
      */
-    public function setFoldersWithViewerAccess($FoldersWithViewerAccess)
+    public function setFoldersWithViewerAccess($FoldersWithViewerAccess): GroupAccessDetails
     {
-      $this->FoldersWithViewerAccess = $FoldersWithViewerAccess;
-      return $this;
+        $this->FoldersWithViewerAccess = $FoldersWithViewerAccess;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getGroupId()
     {
-      return $this->GroupId;
+        return $this->GroupId;
     }
 
     /**
-     * @param guid $GroupId
-     * @return \Panopto\AccessManagement\GroupAccessDetails
+     * @param string $GroupId
+     * @return GroupAccessDetails
      */
-    public function setGroupId($GroupId)
+    public function setGroupId($GroupId): GroupAccessDetails
     {
-      $this->GroupId = $GroupId;
-      return $this;
+        $this->GroupId = $GroupId;
+        return $this;
     }
 
     /**
@@ -118,17 +118,17 @@ class GroupAccessDetails
      */
     public function getSessionsWithViewerAccess()
     {
-      return $this->SessionsWithViewerAccess;
+        return $this->SessionsWithViewerAccess;
     }
 
     /**
      * @param ArrayOfguid $SessionsWithViewerAccess
-     * @return \Panopto\AccessManagement\GroupAccessDetails
+     * @return GroupAccessDetails
      */
-    public function setSessionsWithViewerAccess($SessionsWithViewerAccess)
+    public function setSessionsWithViewerAccess($SessionsWithViewerAccess): GroupAccessDetails
     {
-      $this->SessionsWithViewerAccess = $SessionsWithViewerAccess;
-      return $this;
+        $this->SessionsWithViewerAccess = $SessionsWithViewerAccess;
+        return $this;
     }
 
     /**
@@ -136,17 +136,17 @@ class GroupAccessDetails
      */
     public function getSystemRole()
     {
-      return $this->SystemRole;
+        return $this->SystemRole;
     }
 
     /**
      * @param SystemRole $SystemRole
-     * @return \Panopto\AccessManagement\GroupAccessDetails
+     * @return GroupAccessDetails
      */
-    public function setSystemRole($SystemRole)
+    public function setSystemRole($SystemRole): GroupAccessDetails
     {
-      $this->SystemRole = $SystemRole;
-      return $this;
+        $this->SystemRole = $SystemRole;
+        return $this;
     }
 
 }

@@ -6,7 +6,7 @@ class UpdateRecordingSettingsResponse
 {
 
     /**
-     * @var ScheduledRecordingResult $UpdateRecordingSettingsResult
+     * @var ScheduledRecordingResult|null $UpdateRecordingSettingsResult
      */
     protected $UpdateRecordingSettingsResult = null;
 
@@ -23,17 +23,17 @@ class UpdateRecordingSettingsResponse
      */
     public function getUpdateRecordingSettingsResult()
     {
-      return $this->UpdateRecordingSettingsResult;
+        return $this->UpdateRecordingSettingsResult;
     }
 
     /**
      * @param ScheduledRecordingResult $UpdateRecordingSettingsResult
-     * @return \Panopto\RemoteRecorderManagement\UpdateRecordingSettingsResponse
+     * @return UpdateRecordingSettingsResponse
      */
-    public function setUpdateRecordingSettingsResult($UpdateRecordingSettingsResult)
+    public function setUpdateRecordingSettingsResult($UpdateRecordingSettingsResult): UpdateRecordingSettingsResponse
     {
-      $this->UpdateRecordingSettingsResult = $UpdateRecordingSettingsResult;
-      return $this;
+        $this->UpdateRecordingSettingsResult = $UpdateRecordingSettingsResult;
+        return $this;
     }
 
 }

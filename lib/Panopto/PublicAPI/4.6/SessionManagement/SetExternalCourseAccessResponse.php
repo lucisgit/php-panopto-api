@@ -6,7 +6,7 @@ class SetExternalCourseAccessResponse
 {
 
     /**
-     * @var ArrayOfFolder $SetExternalCourseAccessResult
+     * @var ArrayOfFolder|null $SetExternalCourseAccessResult
      */
     protected $SetExternalCourseAccessResult = null;
 
@@ -23,17 +23,17 @@ class SetExternalCourseAccessResponse
      */
     public function getSetExternalCourseAccessResult()
     {
-      return $this->SetExternalCourseAccessResult;
+        return $this->SetExternalCourseAccessResult;
     }
 
     /**
      * @param ArrayOfFolder $SetExternalCourseAccessResult
-     * @return \Panopto\SessionManagement\SetExternalCourseAccessResponse
+     * @return SetExternalCourseAccessResponse
      */
-    public function setSetExternalCourseAccessResult($SetExternalCourseAccessResult)
+    public function setSetExternalCourseAccessResult($SetExternalCourseAccessResult): SetExternalCourseAccessResponse
     {
-      $this->SetExternalCourseAccessResult = $SetExternalCourseAccessResult;
-      return $this;
+        $this->SetExternalCourseAccessResult = $SetExternalCourseAccessResult;
+        return $this;
     }
 
 }

@@ -6,12 +6,12 @@ class UpdateFoldersAvailabilityStartSettingsResponse
 {
 
     /**
-     * @var boolean $UpdateFoldersAvailabilityStartSettingsResult
+     * @var bool|null $UpdateFoldersAvailabilityStartSettingsResult
      */
     protected $UpdateFoldersAvailabilityStartSettingsResult = null;
 
     /**
-     * @param boolean $UpdateFoldersAvailabilityStartSettingsResult
+     * @param bool $UpdateFoldersAvailabilityStartSettingsResult
      */
     public function __construct($UpdateFoldersAvailabilityStartSettingsResult)
     {
@@ -19,21 +19,21 @@ class UpdateFoldersAvailabilityStartSettingsResponse
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getUpdateFoldersAvailabilityStartSettingsResult()
     {
-      return $this->UpdateFoldersAvailabilityStartSettingsResult;
+        return $this->UpdateFoldersAvailabilityStartSettingsResult;
     }
 
     /**
-     * @param boolean $UpdateFoldersAvailabilityStartSettingsResult
-     * @return \Panopto\SessionManagement\UpdateFoldersAvailabilityStartSettingsResponse
+     * @param bool $UpdateFoldersAvailabilityStartSettingsResult
+     * @return UpdateFoldersAvailabilityStartSettingsResponse
      */
-    public function setUpdateFoldersAvailabilityStartSettingsResult($UpdateFoldersAvailabilityStartSettingsResult)
+    public function setUpdateFoldersAvailabilityStartSettingsResult($UpdateFoldersAvailabilityStartSettingsResult): UpdateFoldersAvailabilityStartSettingsResponse
     {
-      $this->UpdateFoldersAvailabilityStartSettingsResult = $UpdateFoldersAvailabilityStartSettingsResult;
-      return $this;
+        $this->UpdateFoldersAvailabilityStartSettingsResult = $UpdateFoldersAvailabilityStartSettingsResult;
+        return $this;
     }
 
 }

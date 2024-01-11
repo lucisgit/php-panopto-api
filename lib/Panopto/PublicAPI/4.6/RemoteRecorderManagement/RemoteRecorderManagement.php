@@ -8,7 +8,7 @@ class RemoteRecorderManagement extends \SoapClient
     /**
      * @var array $classmap The defined classes
      */
-    private static $classmap = array (
+    private static array $classmap = array (
       'AuthenticationInfo' => 'Panopto\\RemoteRecorderManagement\\AuthenticationInfo',
       'ArrayOfRemoteRecorderDevice' => 'Panopto\\RemoteRecorderManagement\\ArrayOfRemoteRecorderDevice',
       'RemoteRecorderDevice' => 'Panopto\\RemoteRecorderManagement\\RemoteRecorderDevice',
@@ -69,7 +69,7 @@ class RemoteRecorderManagement extends \SoapClient
      * @param GetRemoteRecordersById $parameters
      * @return GetRemoteRecordersByIdResponse
      */
-    public function GetRemoteRecordersById(GetRemoteRecordersById $parameters)
+    public function GetRemoteRecordersById(GetRemoteRecordersById $parameters): GetRemoteRecordersByIdResponse
     {
       return $this->__soapCall('GetRemoteRecordersById', array($parameters));
     }
@@ -78,7 +78,7 @@ class RemoteRecorderManagement extends \SoapClient
      * @param GetRemoteRecordersByExternalId $parameters
      * @return GetRemoteRecordersByExternalIdResponse
      */
-    public function GetRemoteRecordersByExternalId(GetRemoteRecordersByExternalId $parameters)
+    public function GetRemoteRecordersByExternalId(GetRemoteRecordersByExternalId $parameters): GetRemoteRecordersByExternalIdResponse
     {
       return $this->__soapCall('GetRemoteRecordersByExternalId', array($parameters));
     }
@@ -87,7 +87,7 @@ class RemoteRecorderManagement extends \SoapClient
      * @param UpdateRemoteRecorderExternalId $parameters
      * @return UpdateRemoteRecorderExternalIdResponse
      */
-    public function UpdateRemoteRecorderExternalId(UpdateRemoteRecorderExternalId $parameters)
+    public function UpdateRemoteRecorderExternalId(UpdateRemoteRecorderExternalId $parameters): UpdateRemoteRecorderExternalIdResponse
     {
       return $this->__soapCall('UpdateRemoteRecorderExternalId', array($parameters));
     }
@@ -96,7 +96,7 @@ class RemoteRecorderManagement extends \SoapClient
      * @param ListRecorders $parameters
      * @return ListRecordersResponse
      */
-    public function ListRecorders(ListRecorders $parameters)
+    public function ListRecorders(ListRecorders $parameters): ListRecordersResponse
     {
       return $this->__soapCall('ListRecorders', array($parameters));
     }
@@ -105,7 +105,7 @@ class RemoteRecorderManagement extends \SoapClient
      * @param ScheduleRecording $parameters
      * @return ScheduleRecordingResponse
      */
-    public function ScheduleRecording(ScheduleRecording $parameters)
+    public function ScheduleRecording(ScheduleRecording $parameters): ScheduleRecordingResponse
     {
       return $this->__soapCall('ScheduleRecording', array($parameters));
     }
@@ -114,7 +114,7 @@ class RemoteRecorderManagement extends \SoapClient
      * @param ScheduleRecurringRecording $parameters
      * @return ScheduleRecurringRecordingResponse
      */
-    public function ScheduleRecurringRecording(ScheduleRecurringRecording $parameters)
+    public function ScheduleRecurringRecording(ScheduleRecurringRecording $parameters): ScheduleRecurringRecordingResponse
     {
       return $this->__soapCall('ScheduleRecurringRecording', array($parameters));
     }
@@ -123,7 +123,7 @@ class RemoteRecorderManagement extends \SoapClient
      * @param UpdateRecordingTime $parameters
      * @return UpdateRecordingTimeResponse
      */
-    public function UpdateRecordingTime(UpdateRecordingTime $parameters)
+    public function UpdateRecordingTime(UpdateRecordingTime $parameters): UpdateRecordingTimeResponse
     {
       return $this->__soapCall('UpdateRecordingTime', array($parameters));
     }
@@ -132,7 +132,7 @@ class RemoteRecorderManagement extends \SoapClient
      * @param UpdateRecordingSettings $parameters
      * @return UpdateRecordingSettingsResponse
      */
-    public function UpdateRecordingSettings(UpdateRecordingSettings $parameters)
+    public function UpdateRecordingSettings(UpdateRecordingSettings $parameters): UpdateRecordingSettingsResponse
     {
       return $this->__soapCall('UpdateRecordingSettings', array($parameters));
     }
@@ -141,7 +141,7 @@ class RemoteRecorderManagement extends \SoapClient
      * @param GetDefaultFolderForRecorder $parameters
      * @return GetDefaultFolderForRecorderResponse
      */
-    public function GetDefaultFolderForRecorder(GetDefaultFolderForRecorder $parameters)
+    public function GetDefaultFolderForRecorder(GetDefaultFolderForRecorder $parameters): GetDefaultFolderForRecorderResponse
     {
       return $this->__soapCall('GetDefaultFolderForRecorder', array($parameters));
     }
@@ -150,7 +150,7 @@ class RemoteRecorderManagement extends \SoapClient
      * @param GetMachineSidForRecorder $parameters
      * @return GetMachineSidForRecorderResponse
      */
-    public function GetMachineSidForRecorder(GetMachineSidForRecorder $parameters)
+    public function GetMachineSidForRecorder(GetMachineSidForRecorder $parameters): GetMachineSidForRecorderResponse
     {
       return $this->__soapCall('GetMachineSidForRecorder', array($parameters));
     }

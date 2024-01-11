@@ -6,45 +6,45 @@ class ScheduleRecording
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var string $name
+     * @var string|null $name
      */
     protected $name = null;
 
     /**
-     * @var guid $folderId
+     * @var string|null $folderId
      */
     protected $folderId = null;
 
     /**
-     * @var boolean $isBroadcast
+     * @var bool|null $isBroadcast
      */
     protected $isBroadcast = null;
 
     /**
-     * @var \DateTime $start
+     * @var \DateTime|string|null $start
      */
-    protected $start = null;
+    protected \DateTime|string|null $start = null;
 
     /**
-     * @var \DateTime $end
+     * @var \DateTime|string|null $end
      */
-    protected $end = null;
+    protected \DateTime|string|null $end = null;
 
     /**
-     * @var ArrayOfRecorderSettings $recorderSettings
+     * @var ArrayOfRecorderSettings|null $recorderSettings
      */
     protected $recorderSettings = null;
 
     /**
      * @param AuthenticationInfo $auth
      * @param string $name
-     * @param guid $folderId
-     * @param boolean $isBroadcast
+     * @param string $folderId
+     * @param bool $isBroadcast
      * @param \DateTime $start
      * @param \DateTime $end
      * @param ArrayOfRecorderSettings $recorderSettings
@@ -65,17 +65,17 @@ class ScheduleRecording
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\RemoteRecorderManagement\ScheduleRecording
+     * @return ScheduleRecording
      */
-    public function setAuth($auth)
+    public function setAuth($auth): ScheduleRecording
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -83,105 +83,105 @@ class ScheduleRecording
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
      * @param string $name
-     * @return \Panopto\RemoteRecorderManagement\ScheduleRecording
+     * @return ScheduleRecording
      */
-    public function setName($name)
+    public function setName($name): ScheduleRecording
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->folderId;
+        return $this->folderId;
     }
 
     /**
-     * @param guid $folderId
-     * @return \Panopto\RemoteRecorderManagement\ScheduleRecording
+     * @param string $folderId
+     * @return ScheduleRecording
      */
-    public function setFolderId($folderId)
+    public function setFolderId($folderId): ScheduleRecording
     {
-      $this->folderId = $folderId;
-      return $this;
+        $this->folderId = $folderId;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getIsBroadcast()
     {
-      return $this->isBroadcast;
+        return $this->isBroadcast;
     }
 
     /**
-     * @param boolean $isBroadcast
-     * @return \Panopto\RemoteRecorderManagement\ScheduleRecording
+     * @param bool $isBroadcast
+     * @return ScheduleRecording
      */
-    public function setIsBroadcast($isBroadcast)
+    public function setIsBroadcast($isBroadcast): ScheduleRecording
     {
-      $this->isBroadcast = $isBroadcast;
-      return $this;
+        $this->isBroadcast = $isBroadcast;
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getStart()
+    public function getStart(): \DateTime|bool|null
     {
-      if ($this->start == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->start);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->start == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->start);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
      * @param \DateTime $start
-     * @return \Panopto\RemoteRecorderManagement\ScheduleRecording
+     * @return ScheduleRecording
      */
-    public function setStart(\DateTime $start)
+    public function setStart(\DateTime $start): ScheduleRecording
     {
-      $this->start = $start->format(\DateTime::ATOM);
-      return $this;
+        $this->start = $start->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getEnd()
+    public function getEnd(): \DateTime|bool|null
     {
-      if ($this->end == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->end);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->end == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->end);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
      * @param \DateTime $end
-     * @return \Panopto\RemoteRecorderManagement\ScheduleRecording
+     * @return ScheduleRecording
      */
-    public function setEnd(\DateTime $end)
+    public function setEnd(\DateTime $end): ScheduleRecording
     {
-      $this->end = $end->format(\DateTime::ATOM);
-      return $this;
+        $this->end = $end->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
@@ -189,17 +189,17 @@ class ScheduleRecording
      */
     public function getRecorderSettings()
     {
-      return $this->recorderSettings;
+        return $this->recorderSettings;
     }
 
     /**
      * @param ArrayOfRecorderSettings $recorderSettings
-     * @return \Panopto\RemoteRecorderManagement\ScheduleRecording
+     * @return ScheduleRecording
      */
-    public function setRecorderSettings($recorderSettings)
+    public function setRecorderSettings($recorderSettings): ScheduleRecording
     {
-      $this->recorderSettings = $recorderSettings;
-      return $this;
+        $this->recorderSettings = $recorderSettings;
+        return $this;
     }
 
 }

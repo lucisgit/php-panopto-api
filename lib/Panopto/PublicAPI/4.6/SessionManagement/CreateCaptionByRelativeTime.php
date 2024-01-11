@@ -6,28 +6,28 @@ class CreateCaptionByRelativeTime
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var string $text
+     * @var string|null $text
      */
     protected $text = null;
 
     /**
-     * @var float $timestamp
+     * @var float|null $timestamp
      */
     protected $timestamp = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
+     * @param string $sessionId
      * @param string $text
      * @param float $timestamp
      */
@@ -44,35 +44,35 @@ class CreateCaptionByRelativeTime
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\CreateCaptionByRelativeTime
+     * @return CreateCaptionByRelativeTime
      */
-    public function setAuth($auth)
+    public function setAuth($auth): CreateCaptionByRelativeTime
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\SessionManagement\CreateCaptionByRelativeTime
+     * @param string $sessionId
+     * @return CreateCaptionByRelativeTime
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): CreateCaptionByRelativeTime
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
@@ -80,17 +80,17 @@ class CreateCaptionByRelativeTime
      */
     public function getText()
     {
-      return $this->text;
+        return $this->text;
     }
 
     /**
      * @param string $text
-     * @return \Panopto\SessionManagement\CreateCaptionByRelativeTime
+     * @return CreateCaptionByRelativeTime
      */
-    public function setText($text)
+    public function setText($text): CreateCaptionByRelativeTime
     {
-      $this->text = $text;
-      return $this;
+        $this->text = $text;
+        return $this;
     }
 
     /**
@@ -98,17 +98,17 @@ class CreateCaptionByRelativeTime
      */
     public function getTimestamp()
     {
-      return $this->timestamp;
+        return $this->timestamp;
     }
 
     /**
      * @param float $timestamp
-     * @return \Panopto\SessionManagement\CreateCaptionByRelativeTime
+     * @return CreateCaptionByRelativeTime
      */
-    public function setTimestamp($timestamp)
+    public function setTimestamp($timestamp): CreateCaptionByRelativeTime
     {
-      $this->timestamp = $timestamp;
-      return $this;
+        $this->timestamp = $timestamp;
+        return $this;
     }
 
 }

@@ -6,17 +6,17 @@ class ListUsers
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var ListUsersRequest $parameters
+     * @var ListUsersRequest|null $parameters
      */
     protected $parameters = null;
 
     /**
-     * @var string $searchQuery
+     * @var string|null $searchQuery
      */
     protected $searchQuery = null;
 
@@ -37,17 +37,17 @@ class ListUsers
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UserManagement\ListUsers
+     * @return ListUsers
      */
-    public function setAuth($auth)
+    public function setAuth($auth): ListUsers
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -55,17 +55,17 @@ class ListUsers
      */
     public function getParameters()
     {
-      return $this->parameters;
+        return $this->parameters;
     }
 
     /**
      * @param ListUsersRequest $parameters
-     * @return \Panopto\UserManagement\ListUsers
+     * @return ListUsers
      */
-    public function setParameters($parameters)
+    public function setParameters($parameters): ListUsers
     {
-      $this->parameters = $parameters;
-      return $this;
+        $this->parameters = $parameters;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class ListUsers
      */
     public function getSearchQuery()
     {
-      return $this->searchQuery;
+        return $this->searchQuery;
     }
 
     /**
      * @param string $searchQuery
-     * @return \Panopto\UserManagement\ListUsers
+     * @return ListUsers
      */
-    public function setSearchQuery($searchQuery)
+    public function setSearchQuery($searchQuery): ListUsers
     {
-      $this->searchQuery = $searchQuery;
-      return $this;
+        $this->searchQuery = $searchQuery;
+        return $this;
     }
 
 }

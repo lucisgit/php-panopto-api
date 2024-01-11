@@ -6,7 +6,7 @@ class GetFoldersWithExternalContextByIdResponse
 {
 
     /**
-     * @var ArrayOfFolderWithExternalContext $GetFoldersWithExternalContextByIdResult
+     * @var ArrayOfFolderWithExternalContext|null $GetFoldersWithExternalContextByIdResult
      */
     protected $GetFoldersWithExternalContextByIdResult = null;
 
@@ -23,17 +23,17 @@ class GetFoldersWithExternalContextByIdResponse
      */
     public function getGetFoldersWithExternalContextByIdResult()
     {
-      return $this->GetFoldersWithExternalContextByIdResult;
+        return $this->GetFoldersWithExternalContextByIdResult;
     }
 
     /**
      * @param ArrayOfFolderWithExternalContext $GetFoldersWithExternalContextByIdResult
-     * @return \Panopto\SessionManagement\GetFoldersWithExternalContextByIdResponse
+     * @return GetFoldersWithExternalContextByIdResponse
      */
-    public function setGetFoldersWithExternalContextByIdResult($GetFoldersWithExternalContextByIdResult)
+    public function setGetFoldersWithExternalContextByIdResult($GetFoldersWithExternalContextByIdResult): GetFoldersWithExternalContextByIdResponse
     {
-      $this->GetFoldersWithExternalContextByIdResult = $GetFoldersWithExternalContextByIdResult;
-      return $this;
+        $this->GetFoldersWithExternalContextByIdResult = $GetFoldersWithExternalContextByIdResult;
+        return $this;
     }
 
 }

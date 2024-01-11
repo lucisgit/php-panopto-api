@@ -8,41 +8,41 @@ class ArrayOfStatsReportType implements \ArrayAccess, \Iterator, \Countable
     /**
      * @var StatsReportType[] $StatsReportType
      */
-    protected $StatsReportType = null;
+    protected array $StatsReportType = [];
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
-     * @return StatsReportType[]
+     * @return StatsReportType[]|null
      */
-    public function getStatsReportType()
+    public function getStatsReportType(): ?array
     {
-      return $this->StatsReportType;
+        return $this->StatsReportType;
     }
 
     /**
-     * @param StatsReportType[] $StatsReportType
-     * @return \Panopto\UsageReporting\ArrayOfStatsReportType
+     * @param StatsReportType[]|null $StatsReportType
+     * @return ArrayOfStatsReportType
      */
-    public function setStatsReportType(array $StatsReportType = null)
+    public function setStatsReportType(?array $StatsReportType = null): ArrayOfStatsReportType
     {
-      $this->StatsReportType = $StatsReportType;
-      return $this;
+        $this->StatsReportType = $StatsReportType;
+        return $this;
     }
 
     /**
      * ArrayAccess implementation
      *
      * @param mixed $offset An offset to check for
-     * @return boolean true on success or false on failure
+     * @return bool True on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
-      return isset($this->StatsReportType[$offset]);
+        return isset($this->StatsReportType[$offset]);
     }
 
     /**
@@ -51,9 +51,9 @@ class ArrayOfStatsReportType implements \ArrayAccess, \Iterator, \Countable
      * @param mixed $offset The offset to retrieve
      * @return StatsReportType
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): StatsReportType
     {
-      return $this->StatsReportType[$offset];
+        return $this->StatsReportType[$offset];
     }
 
     /**
@@ -63,13 +63,13 @@ class ArrayOfStatsReportType implements \ArrayAccess, \Iterator, \Countable
      * @param StatsReportType $value The value to set
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
-      if (!isset($offset)) {
-        $this->StatsReportType[] = $value;
-      } else {
-        $this->StatsReportType[$offset] = $value;
-      }
+        if (!isset($offset)) {
+            $this->StatsReportType[] = $value;
+        } else {
+            $this->StatsReportType[$offset] = $value;
+        }
     }
 
     /**
@@ -78,9 +78,9 @@ class ArrayOfStatsReportType implements \ArrayAccess, \Iterator, \Countable
      * @param mixed $offset The offset to unset
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
-      unset($this->StatsReportType[$offset]);
+        unset($this->StatsReportType[$offset]);
     }
 
     /**
@@ -88,9 +88,9 @@ class ArrayOfStatsReportType implements \ArrayAccess, \Iterator, \Countable
      *
      * @return StatsReportType Return the current element
      */
-    public function current()
+    public function current(): StatsReportType
     {
-      return current($this->StatsReportType);
+        return current($this->StatsReportType);
     }
 
     /**
@@ -99,9 +99,9 @@ class ArrayOfStatsReportType implements \ArrayAccess, \Iterator, \Countable
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
-      next($this->StatsReportType);
+        next($this->StatsReportType);
     }
 
     /**
@@ -109,19 +109,19 @@ class ArrayOfStatsReportType implements \ArrayAccess, \Iterator, \Countable
      *
      * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): ?string
     {
-      return key($this->StatsReportType);
+        return key($this->StatsReportType);
     }
 
     /**
      * Iterator implementation
      *
-     * @return boolean Return the validity of the current position
+     * @return bool Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
-      return $this->key() !== null;
+        return $this->key() !== null;
     }
 
     /**
@@ -130,19 +130,19 @@ class ArrayOfStatsReportType implements \ArrayAccess, \Iterator, \Countable
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
-      reset($this->StatsReportType);
+        reset($this->StatsReportType);
     }
 
     /**
      * Countable implementation
      *
-     * @return StatsReportType Return count of elements
+     * @return int Return count of elements
      */
-    public function count()
+    public function count(): int
     {
-      return count($this->StatsReportType);
+        return count($this->StatsReportType);
     }
 
 }

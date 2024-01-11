@@ -6,44 +6,44 @@ class UserAccessDetails
 {
 
     /**
-     * @var ArrayOfguid $FoldersWithCreatorAccess
+     * @var ArrayOfguid|null $FoldersWithCreatorAccess
      */
     protected $FoldersWithCreatorAccess = null;
 
     /**
-     * @var ArrayOfguid $FoldersWithPublisherAccess
+     * @var ArrayOfguid|null $FoldersWithPublisherAccess
      */
     protected $FoldersWithPublisherAccess = null;
 
     /**
-     * @var ArrayOfguid $FoldersWithViewerAccess
+     * @var ArrayOfguid|null $FoldersWithViewerAccess
      */
     protected $FoldersWithViewerAccess = null;
 
     /**
-     * @var ArrayOfGroupAccessDetails $GroupMembershipAccess
+     * @var ArrayOfGroupAccessDetails|null $GroupMembershipAccess
      */
     protected $GroupMembershipAccess = null;
 
     /**
-     * @var ArrayOfguid $SessionsWithViewerAccess
+     * @var ArrayOfguid|null $SessionsWithViewerAccess
      */
     protected $SessionsWithViewerAccess = null;
 
     /**
-     * @var SystemRole $SystemRole
+     * @var SystemRole|null $SystemRole
      */
     protected $SystemRole = null;
 
     /**
-     * @var guid $UserId
+     * @var string|null $UserId
      */
     protected $UserId = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -51,17 +51,17 @@ class UserAccessDetails
      */
     public function getFoldersWithCreatorAccess()
     {
-      return $this->FoldersWithCreatorAccess;
+        return $this->FoldersWithCreatorAccess;
     }
 
     /**
      * @param ArrayOfguid $FoldersWithCreatorAccess
-     * @return \Panopto\AccessManagement\UserAccessDetails
+     * @return UserAccessDetails
      */
-    public function setFoldersWithCreatorAccess($FoldersWithCreatorAccess)
+    public function setFoldersWithCreatorAccess($FoldersWithCreatorAccess): UserAccessDetails
     {
-      $this->FoldersWithCreatorAccess = $FoldersWithCreatorAccess;
-      return $this;
+        $this->FoldersWithCreatorAccess = $FoldersWithCreatorAccess;
+        return $this;
     }
 
     /**
@@ -69,17 +69,17 @@ class UserAccessDetails
      */
     public function getFoldersWithPublisherAccess()
     {
-      return $this->FoldersWithPublisherAccess;
+        return $this->FoldersWithPublisherAccess;
     }
 
     /**
      * @param ArrayOfguid $FoldersWithPublisherAccess
-     * @return \Panopto\AccessManagement\UserAccessDetails
+     * @return UserAccessDetails
      */
-    public function setFoldersWithPublisherAccess($FoldersWithPublisherAccess)
+    public function setFoldersWithPublisherAccess($FoldersWithPublisherAccess): UserAccessDetails
     {
-      $this->FoldersWithPublisherAccess = $FoldersWithPublisherAccess;
-      return $this;
+        $this->FoldersWithPublisherAccess = $FoldersWithPublisherAccess;
+        return $this;
     }
 
     /**
@@ -87,17 +87,17 @@ class UserAccessDetails
      */
     public function getFoldersWithViewerAccess()
     {
-      return $this->FoldersWithViewerAccess;
+        return $this->FoldersWithViewerAccess;
     }
 
     /**
      * @param ArrayOfguid $FoldersWithViewerAccess
-     * @return \Panopto\AccessManagement\UserAccessDetails
+     * @return UserAccessDetails
      */
-    public function setFoldersWithViewerAccess($FoldersWithViewerAccess)
+    public function setFoldersWithViewerAccess($FoldersWithViewerAccess): UserAccessDetails
     {
-      $this->FoldersWithViewerAccess = $FoldersWithViewerAccess;
-      return $this;
+        $this->FoldersWithViewerAccess = $FoldersWithViewerAccess;
+        return $this;
     }
 
     /**
@@ -105,17 +105,17 @@ class UserAccessDetails
      */
     public function getGroupMembershipAccess()
     {
-      return $this->GroupMembershipAccess;
+        return $this->GroupMembershipAccess;
     }
 
     /**
      * @param ArrayOfGroupAccessDetails $GroupMembershipAccess
-     * @return \Panopto\AccessManagement\UserAccessDetails
+     * @return UserAccessDetails
      */
-    public function setGroupMembershipAccess($GroupMembershipAccess)
+    public function setGroupMembershipAccess($GroupMembershipAccess): UserAccessDetails
     {
-      $this->GroupMembershipAccess = $GroupMembershipAccess;
-      return $this;
+        $this->GroupMembershipAccess = $GroupMembershipAccess;
+        return $this;
     }
 
     /**
@@ -123,17 +123,17 @@ class UserAccessDetails
      */
     public function getSessionsWithViewerAccess()
     {
-      return $this->SessionsWithViewerAccess;
+        return $this->SessionsWithViewerAccess;
     }
 
     /**
      * @param ArrayOfguid $SessionsWithViewerAccess
-     * @return \Panopto\AccessManagement\UserAccessDetails
+     * @return UserAccessDetails
      */
-    public function setSessionsWithViewerAccess($SessionsWithViewerAccess)
+    public function setSessionsWithViewerAccess($SessionsWithViewerAccess): UserAccessDetails
     {
-      $this->SessionsWithViewerAccess = $SessionsWithViewerAccess;
-      return $this;
+        $this->SessionsWithViewerAccess = $SessionsWithViewerAccess;
+        return $this;
     }
 
     /**
@@ -141,35 +141,35 @@ class UserAccessDetails
      */
     public function getSystemRole()
     {
-      return $this->SystemRole;
+        return $this->SystemRole;
     }
 
     /**
      * @param SystemRole $SystemRole
-     * @return \Panopto\AccessManagement\UserAccessDetails
+     * @return UserAccessDetails
      */
-    public function setSystemRole($SystemRole)
+    public function setSystemRole($SystemRole): UserAccessDetails
     {
-      $this->SystemRole = $SystemRole;
-      return $this;
+        $this->SystemRole = $SystemRole;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getUserId()
     {
-      return $this->UserId;
+        return $this->UserId;
     }
 
     /**
-     * @param guid $UserId
-     * @return \Panopto\AccessManagement\UserAccessDetails
+     * @param string $UserId
+     * @return UserAccessDetails
      */
-    public function setUserId($UserId)
+    public function setUserId($UserId): UserAccessDetails
     {
-      $this->UserId = $UserId;
-      return $this;
+        $this->UserId = $UserId;
+        return $this;
     }
 
 }

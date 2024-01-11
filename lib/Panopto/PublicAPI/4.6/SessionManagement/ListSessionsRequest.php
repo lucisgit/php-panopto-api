@@ -6,97 +6,97 @@ class ListSessionsRequest
 {
 
     /**
-     * @var \DateTime $EndDate
+     * @var \DateTime|string|null $EndDate
      */
-    protected $EndDate = null;
+    protected \DateTime|string|null $EndDate = null;
 
     /**
-     * @var guid $FolderId
+     * @var string|null $FolderId
      */
     protected $FolderId = null;
 
     /**
-     * @var Pagination $Pagination
+     * @var Pagination|null $Pagination
      */
     protected $Pagination = null;
 
     /**
-     * @var guid $RemoteRecorderId
+     * @var string|null $RemoteRecorderId
      */
     protected $RemoteRecorderId = null;
 
     /**
-     * @var SessionSortField $SortBy
+     * @var SessionSortField|null $SortBy
      */
     protected $SortBy = null;
 
     /**
-     * @var boolean $SortIncreasing
+     * @var bool|null $SortIncreasing
      */
     protected $SortIncreasing = null;
 
     /**
-     * @var \DateTime $StartDate
+     * @var \DateTime|string|null $StartDate
      */
-    protected $StartDate = null;
+    protected \DateTime|string|null $StartDate = null;
 
     /**
-     * @var ArrayOfSessionState $States
+     * @var ArrayOfSessionState|null $States
      */
     protected $States = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getEndDate()
+    public function getEndDate(): \DateTime|bool|null
     {
-      if ($this->EndDate == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->EndDate);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->EndDate == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->EndDate);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
-     * @param \DateTime $EndDate
-     * @return \Panopto\SessionManagement\ListSessionsRequest
+     * @param \DateTime|null $EndDate
+     * @return ListSessionsRequest
      */
-    public function setEndDate(\DateTime $EndDate = null)
+    public function setEndDate(?\DateTime $EndDate = null): ListSessionsRequest
     {
-      if ($EndDate == null) {
-       $this->EndDate = null;
-      } else {
-        $this->EndDate = $EndDate->format(\DateTime::ATOM);
-      }
-      return $this;
+        if ($EndDate == null) {
+            $this->EndDate = null;
+        } else {
+            $this->EndDate = $EndDate->format(\DateTime::ATOM);
+        }
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->FolderId;
+        return $this->FolderId;
     }
 
     /**
-     * @param guid $FolderId
-     * @return \Panopto\SessionManagement\ListSessionsRequest
+     * @param string $FolderId
+     * @return ListSessionsRequest
      */
-    public function setFolderId($FolderId)
+    public function setFolderId($FolderId): ListSessionsRequest
     {
-      $this->FolderId = $FolderId;
-      return $this;
+        $this->FolderId = $FolderId;
+        return $this;
     }
 
     /**
@@ -104,35 +104,35 @@ class ListSessionsRequest
      */
     public function getPagination()
     {
-      return $this->Pagination;
+        return $this->Pagination;
     }
 
     /**
      * @param Pagination $Pagination
-     * @return \Panopto\SessionManagement\ListSessionsRequest
+     * @return ListSessionsRequest
      */
-    public function setPagination($Pagination)
+    public function setPagination($Pagination): ListSessionsRequest
     {
-      $this->Pagination = $Pagination;
-      return $this;
+        $this->Pagination = $Pagination;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getRemoteRecorderId()
     {
-      return $this->RemoteRecorderId;
+        return $this->RemoteRecorderId;
     }
 
     /**
-     * @param guid $RemoteRecorderId
-     * @return \Panopto\SessionManagement\ListSessionsRequest
+     * @param string $RemoteRecorderId
+     * @return ListSessionsRequest
      */
-    public function setRemoteRecorderId($RemoteRecorderId)
+    public function setRemoteRecorderId($RemoteRecorderId): ListSessionsRequest
     {
-      $this->RemoteRecorderId = $RemoteRecorderId;
-      return $this;
+        $this->RemoteRecorderId = $RemoteRecorderId;
+        return $this;
     }
 
     /**
@@ -140,65 +140,65 @@ class ListSessionsRequest
      */
     public function getSortBy()
     {
-      return $this->SortBy;
+        return $this->SortBy;
     }
 
     /**
      * @param SessionSortField $SortBy
-     * @return \Panopto\SessionManagement\ListSessionsRequest
+     * @return ListSessionsRequest
      */
-    public function setSortBy($SortBy)
+    public function setSortBy($SortBy): ListSessionsRequest
     {
-      $this->SortBy = $SortBy;
-      return $this;
+        $this->SortBy = $SortBy;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getSortIncreasing()
     {
-      return $this->SortIncreasing;
+        return $this->SortIncreasing;
     }
 
     /**
-     * @param boolean $SortIncreasing
-     * @return \Panopto\SessionManagement\ListSessionsRequest
+     * @param bool $SortIncreasing
+     * @return ListSessionsRequest
      */
-    public function setSortIncreasing($SortIncreasing)
+    public function setSortIncreasing($SortIncreasing): ListSessionsRequest
     {
-      $this->SortIncreasing = $SortIncreasing;
-      return $this;
+        $this->SortIncreasing = $SortIncreasing;
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getStartDate()
+    public function getStartDate(): \DateTime|bool|null
     {
-      if ($this->StartDate == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->StartDate);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->StartDate == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->StartDate);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
-     * @param \DateTime $StartDate
-     * @return \Panopto\SessionManagement\ListSessionsRequest
+     * @param \DateTime|null $StartDate
+     * @return ListSessionsRequest
      */
-    public function setStartDate(\DateTime $StartDate = null)
+    public function setStartDate(?\DateTime $StartDate = null): ListSessionsRequest
     {
-      if ($StartDate == null) {
-       $this->StartDate = null;
-      } else {
-        $this->StartDate = $StartDate->format(\DateTime::ATOM);
-      }
-      return $this;
+        if ($StartDate == null) {
+            $this->StartDate = null;
+        } else {
+            $this->StartDate = $StartDate->format(\DateTime::ATOM);
+        }
+        return $this;
     }
 
     /**
@@ -206,17 +206,17 @@ class ListSessionsRequest
      */
     public function getStates()
     {
-      return $this->States;
+        return $this->States;
     }
 
     /**
      * @param ArrayOfSessionState $States
-     * @return \Panopto\SessionManagement\ListSessionsRequest
+     * @return ListSessionsRequest
      */
-    public function setStates($States)
+    public function setStates($States): ListSessionsRequest
     {
-      $this->States = $States;
-      return $this;
+        $this->States = $States;
+        return $this;
     }
 
 }

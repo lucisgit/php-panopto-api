@@ -6,78 +6,78 @@ class RecorderSettings
 {
 
     /**
-     * @var guid $RecorderId
+     * @var string|null $RecorderId
      */
     protected $RecorderId = null;
 
     /**
-     * @var boolean $SuppressPrimary
+     * @var bool|null $SuppressPrimary
      */
     protected $SuppressPrimary = null;
 
     /**
-     * @var boolean $SuppressSecondary
+     * @var bool|null $SuppressSecondary
      */
     protected $SuppressSecondary = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getRecorderId()
     {
-      return $this->RecorderId;
+        return $this->RecorderId;
     }
 
     /**
-     * @param guid $RecorderId
-     * @return \Panopto\RemoteRecorderManagement\RecorderSettings
+     * @param string $RecorderId
+     * @return RecorderSettings
      */
-    public function setRecorderId($RecorderId)
+    public function setRecorderId($RecorderId): RecorderSettings
     {
-      $this->RecorderId = $RecorderId;
-      return $this;
+        $this->RecorderId = $RecorderId;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getSuppressPrimary()
     {
-      return $this->SuppressPrimary;
+        return $this->SuppressPrimary;
     }
 
     /**
-     * @param boolean $SuppressPrimary
-     * @return \Panopto\RemoteRecorderManagement\RecorderSettings
+     * @param bool $SuppressPrimary
+     * @return RecorderSettings
      */
-    public function setSuppressPrimary($SuppressPrimary)
+    public function setSuppressPrimary($SuppressPrimary): RecorderSettings
     {
-      $this->SuppressPrimary = $SuppressPrimary;
-      return $this;
+        $this->SuppressPrimary = $SuppressPrimary;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getSuppressSecondary()
     {
-      return $this->SuppressSecondary;
+        return $this->SuppressSecondary;
     }
 
     /**
-     * @param boolean $SuppressSecondary
-     * @return \Panopto\RemoteRecorderManagement\RecorderSettings
+     * @param bool $SuppressSecondary
+     * @return RecorderSettings
      */
-    public function setSuppressSecondary($SuppressSecondary)
+    public function setSuppressSecondary($SuppressSecondary): RecorderSettings
     {
-      $this->SuppressSecondary = $SuppressSecondary;
-      return $this;
+        $this->SuppressSecondary = $SuppressSecondary;
+        return $this;
     }
 
 }

@@ -6,7 +6,7 @@ class UpdateRecordingTimeResponse
 {
 
     /**
-     * @var ScheduledRecordingResult $UpdateRecordingTimeResult
+     * @var ScheduledRecordingResult|null $UpdateRecordingTimeResult
      */
     protected $UpdateRecordingTimeResult = null;
 
@@ -23,17 +23,17 @@ class UpdateRecordingTimeResponse
      */
     public function getUpdateRecordingTimeResult()
     {
-      return $this->UpdateRecordingTimeResult;
+        return $this->UpdateRecordingTimeResult;
     }
 
     /**
      * @param ScheduledRecordingResult $UpdateRecordingTimeResult
-     * @return \Panopto\RemoteRecorderManagement\UpdateRecordingTimeResponse
+     * @return UpdateRecordingTimeResponse
      */
-    public function setUpdateRecordingTimeResult($UpdateRecordingTimeResult)
+    public function setUpdateRecordingTimeResult($UpdateRecordingTimeResult): UpdateRecordingTimeResponse
     {
-      $this->UpdateRecordingTimeResult = $UpdateRecordingTimeResult;
-      return $this;
+        $this->UpdateRecordingTimeResult = $UpdateRecordingTimeResult;
+        return $this;
     }
 
 }

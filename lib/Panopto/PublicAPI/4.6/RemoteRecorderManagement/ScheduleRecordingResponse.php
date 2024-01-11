@@ -6,7 +6,7 @@ class ScheduleRecordingResponse
 {
 
     /**
-     * @var ScheduledRecordingResult $ScheduleRecordingResult
+     * @var ScheduledRecordingResult|null $ScheduleRecordingResult
      */
     protected $ScheduleRecordingResult = null;
 
@@ -23,17 +23,17 @@ class ScheduleRecordingResponse
      */
     public function getScheduleRecordingResult()
     {
-      return $this->ScheduleRecordingResult;
+        return $this->ScheduleRecordingResult;
     }
 
     /**
      * @param ScheduledRecordingResult $ScheduleRecordingResult
-     * @return \Panopto\RemoteRecorderManagement\ScheduleRecordingResponse
+     * @return ScheduleRecordingResponse
      */
-    public function setScheduleRecordingResult($ScheduleRecordingResult)
+    public function setScheduleRecordingResult($ScheduleRecordingResult): ScheduleRecordingResponse
     {
-      $this->ScheduleRecordingResult = $ScheduleRecordingResult;
-      return $this;
+        $this->ScheduleRecordingResult = $ScheduleRecordingResult;
+        return $this;
     }
 
 }

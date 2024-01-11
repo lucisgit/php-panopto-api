@@ -6,18 +6,18 @@ class GetUserAccessDetails
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $userId
+     * @var string|null $userId
      */
     protected $userId = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $userId
+     * @param string $userId
      */
     public function __construct($auth, $userId)
     {
@@ -30,35 +30,35 @@ class GetUserAccessDetails
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\AccessManagement\GetUserAccessDetails
+     * @return GetUserAccessDetails
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetUserAccessDetails
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getUserId()
     {
-      return $this->userId;
+        return $this->userId;
     }
 
     /**
-     * @param guid $userId
-     * @return \Panopto\AccessManagement\GetUserAccessDetails
+     * @param string $userId
+     * @return GetUserAccessDetails
      */
-    public function setUserId($userId)
+    public function setUserId($userId): GetUserAccessDetails
     {
-      $this->userId = $userId;
-      return $this;
+        $this->userId = $userId;
+        return $this;
     }
 
 }

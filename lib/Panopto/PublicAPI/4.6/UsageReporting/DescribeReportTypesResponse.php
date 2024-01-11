@@ -6,7 +6,7 @@ class DescribeReportTypesResponse
 {
 
     /**
-     * @var ArrayOfStatsReportType $DescribeReportTypesResult
+     * @var ArrayOfStatsReportType|null $DescribeReportTypesResult
      */
     protected $DescribeReportTypesResult = null;
 
@@ -23,17 +23,17 @@ class DescribeReportTypesResponse
      */
     public function getDescribeReportTypesResult()
     {
-      return $this->DescribeReportTypesResult;
+        return $this->DescribeReportTypesResult;
     }
 
     /**
      * @param ArrayOfStatsReportType $DescribeReportTypesResult
-     * @return \Panopto\UsageReporting\DescribeReportTypesResponse
+     * @return DescribeReportTypesResponse
      */
-    public function setDescribeReportTypesResult($DescribeReportTypesResult)
+    public function setDescribeReportTypesResult($DescribeReportTypesResult): DescribeReportTypesResponse
     {
-      $this->DescribeReportTypesResult = $DescribeReportTypesResult;
-      return $this;
+        $this->DescribeReportTypesResult = $DescribeReportTypesResult;
+        return $this;
     }
 
 }

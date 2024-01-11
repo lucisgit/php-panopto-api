@@ -6,12 +6,12 @@ class DateTimeOffset
 {
 
     /**
-     * @var \DateTime $DateTime
+     * @var \DateTime|string|null $DateTime
      */
-    protected $DateTime = null;
+    protected \DateTime|string|null $DateTime = null;
 
     /**
-     * @var int $OffsetMinutes
+     * @var int|null $OffsetMinutes
      */
     protected $OffsetMinutes = null;
 
@@ -26,29 +26,29 @@ class DateTimeOffset
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getDateTime()
+    public function getDateTime(): \DateTime|bool|null
     {
-      if ($this->DateTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->DateTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->DateTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->DateTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
      * @param \DateTime $DateTime
-     * @return \Panopto\SessionManagement\DateTimeOffset
+     * @return DateTimeOffset
      */
-    public function setDateTime(\DateTime $DateTime)
+    public function setDateTime(\DateTime $DateTime): DateTimeOffset
     {
-      $this->DateTime = $DateTime->format(\DateTime::ATOM);
-      return $this;
+        $this->DateTime = $DateTime->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
@@ -56,17 +56,17 @@ class DateTimeOffset
      */
     public function getOffsetMinutes()
     {
-      return $this->OffsetMinutes;
+        return $this->OffsetMinutes;
     }
 
     /**
      * @param int $OffsetMinutes
-     * @return \Panopto\SessionManagement\DateTimeOffset
+     * @return DateTimeOffset
      */
-    public function setOffsetMinutes($OffsetMinutes)
+    public function setOffsetMinutes($OffsetMinutes): DateTimeOffset
     {
-      $this->OffsetMinutes = $OffsetMinutes;
-      return $this;
+        $this->OffsetMinutes = $OffsetMinutes;
+        return $this;
     }
 
 }

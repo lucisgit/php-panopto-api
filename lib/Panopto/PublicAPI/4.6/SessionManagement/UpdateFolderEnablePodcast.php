@@ -6,24 +6,24 @@ class UpdateFolderEnablePodcast
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $folderId
+     * @var string|null $folderId
      */
     protected $folderId = null;
 
     /**
-     * @var boolean $enablePodcast
+     * @var bool|null $enablePodcast
      */
     protected $enablePodcast = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $folderId
-     * @param boolean $enablePodcast
+     * @param string $folderId
+     * @param bool $enablePodcast
      */
     public function __construct($auth, $folderId, $enablePodcast)
     {
@@ -37,53 +37,53 @@ class UpdateFolderEnablePodcast
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\UpdateFolderEnablePodcast
+     * @return UpdateFolderEnablePodcast
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateFolderEnablePodcast
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->folderId;
+        return $this->folderId;
     }
 
     /**
-     * @param guid $folderId
-     * @return \Panopto\SessionManagement\UpdateFolderEnablePodcast
+     * @param string $folderId
+     * @return UpdateFolderEnablePodcast
      */
-    public function setFolderId($folderId)
+    public function setFolderId($folderId): UpdateFolderEnablePodcast
     {
-      $this->folderId = $folderId;
-      return $this;
+        $this->folderId = $folderId;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getEnablePodcast()
     {
-      return $this->enablePodcast;
+        return $this->enablePodcast;
     }
 
     /**
-     * @param boolean $enablePodcast
-     * @return \Panopto\SessionManagement\UpdateFolderEnablePodcast
+     * @param bool $enablePodcast
+     * @return UpdateFolderEnablePodcast
      */
-    public function setEnablePodcast($enablePodcast)
+    public function setEnablePodcast($enablePodcast): UpdateFolderEnablePodcast
     {
-      $this->enablePodcast = $enablePodcast;
-      return $this;
+        $this->enablePodcast = $enablePodcast;
+        return $this;
     }
 
 }

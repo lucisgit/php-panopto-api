@@ -6,29 +6,29 @@ class GrantGroupAccessToFolder
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $folderId
+     * @var string|null $folderId
      */
     protected $folderId = null;
 
     /**
-     * @var guid $groupId
+     * @var string|null $groupId
      */
     protected $groupId = null;
 
     /**
-     * @var AccessRole $role
+     * @var AccessRole|null $role
      */
     protected $role = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $folderId
-     * @param guid $groupId
+     * @param string $folderId
+     * @param string $groupId
      * @param AccessRole $role
      */
     public function __construct($auth, $folderId, $groupId, $role)
@@ -44,53 +44,53 @@ class GrantGroupAccessToFolder
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\AccessManagement\GrantGroupAccessToFolder
+     * @return GrantGroupAccessToFolder
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GrantGroupAccessToFolder
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->folderId;
+        return $this->folderId;
     }
 
     /**
-     * @param guid $folderId
-     * @return \Panopto\AccessManagement\GrantGroupAccessToFolder
+     * @param string $folderId
+     * @return GrantGroupAccessToFolder
      */
-    public function setFolderId($folderId)
+    public function setFolderId($folderId): GrantGroupAccessToFolder
     {
-      $this->folderId = $folderId;
-      return $this;
+        $this->folderId = $folderId;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getGroupId()
     {
-      return $this->groupId;
+        return $this->groupId;
     }
 
     /**
-     * @param guid $groupId
-     * @return \Panopto\AccessManagement\GrantGroupAccessToFolder
+     * @param string $groupId
+     * @return GrantGroupAccessToFolder
      */
-    public function setGroupId($groupId)
+    public function setGroupId($groupId): GrantGroupAccessToFolder
     {
-      $this->groupId = $groupId;
-      return $this;
+        $this->groupId = $groupId;
+        return $this;
     }
 
     /**
@@ -98,17 +98,17 @@ class GrantGroupAccessToFolder
      */
     public function getRole()
     {
-      return $this->role;
+        return $this->role;
     }
 
     /**
      * @param AccessRole $role
-     * @return \Panopto\AccessManagement\GrantGroupAccessToFolder
+     * @return GrantGroupAccessToFolder
      */
-    public function setRole($role)
+    public function setRole($role): GrantGroupAccessToFolder
     {
-      $this->role = $role;
-      return $this;
+        $this->role = $role;
+        return $this;
     }
 
 }

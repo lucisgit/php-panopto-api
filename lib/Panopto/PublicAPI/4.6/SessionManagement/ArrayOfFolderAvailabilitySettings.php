@@ -8,41 +8,41 @@ class ArrayOfFolderAvailabilitySettings implements \ArrayAccess, \Iterator, \Cou
     /**
      * @var FolderAvailabilitySettings[] $FolderAvailabilitySettings
      */
-    protected $FolderAvailabilitySettings = null;
+    protected array $FolderAvailabilitySettings = [];
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
-     * @return FolderAvailabilitySettings[]
+     * @return FolderAvailabilitySettings[]|null
      */
-    public function getFolderAvailabilitySettings()
+    public function getFolderAvailabilitySettings(): ?array
     {
-      return $this->FolderAvailabilitySettings;
+        return $this->FolderAvailabilitySettings;
     }
 
     /**
-     * @param FolderAvailabilitySettings[] $FolderAvailabilitySettings
-     * @return \Panopto\SessionManagement\ArrayOfFolderAvailabilitySettings
+     * @param FolderAvailabilitySettings[]|null $FolderAvailabilitySettings
+     * @return ArrayOfFolderAvailabilitySettings
      */
-    public function setFolderAvailabilitySettings(array $FolderAvailabilitySettings = null)
+    public function setFolderAvailabilitySettings(?array $FolderAvailabilitySettings = null): ArrayOfFolderAvailabilitySettings
     {
-      $this->FolderAvailabilitySettings = $FolderAvailabilitySettings;
-      return $this;
+        $this->FolderAvailabilitySettings = $FolderAvailabilitySettings;
+        return $this;
     }
 
     /**
      * ArrayAccess implementation
      *
      * @param mixed $offset An offset to check for
-     * @return boolean true on success or false on failure
+     * @return bool True on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
-      return isset($this->FolderAvailabilitySettings[$offset]);
+        return isset($this->FolderAvailabilitySettings[$offset]);
     }
 
     /**
@@ -51,9 +51,9 @@ class ArrayOfFolderAvailabilitySettings implements \ArrayAccess, \Iterator, \Cou
      * @param mixed $offset The offset to retrieve
      * @return FolderAvailabilitySettings
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): FolderAvailabilitySettings
     {
-      return $this->FolderAvailabilitySettings[$offset];
+        return $this->FolderAvailabilitySettings[$offset];
     }
 
     /**
@@ -63,13 +63,13 @@ class ArrayOfFolderAvailabilitySettings implements \ArrayAccess, \Iterator, \Cou
      * @param FolderAvailabilitySettings $value The value to set
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
-      if (!isset($offset)) {
-        $this->FolderAvailabilitySettings[] = $value;
-      } else {
-        $this->FolderAvailabilitySettings[$offset] = $value;
-      }
+        if (!isset($offset)) {
+            $this->FolderAvailabilitySettings[] = $value;
+        } else {
+            $this->FolderAvailabilitySettings[$offset] = $value;
+        }
     }
 
     /**
@@ -78,9 +78,9 @@ class ArrayOfFolderAvailabilitySettings implements \ArrayAccess, \Iterator, \Cou
      * @param mixed $offset The offset to unset
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
-      unset($this->FolderAvailabilitySettings[$offset]);
+        unset($this->FolderAvailabilitySettings[$offset]);
     }
 
     /**
@@ -88,9 +88,9 @@ class ArrayOfFolderAvailabilitySettings implements \ArrayAccess, \Iterator, \Cou
      *
      * @return FolderAvailabilitySettings Return the current element
      */
-    public function current()
+    public function current(): FolderAvailabilitySettings
     {
-      return current($this->FolderAvailabilitySettings);
+        return current($this->FolderAvailabilitySettings);
     }
 
     /**
@@ -99,9 +99,9 @@ class ArrayOfFolderAvailabilitySettings implements \ArrayAccess, \Iterator, \Cou
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
-      next($this->FolderAvailabilitySettings);
+        next($this->FolderAvailabilitySettings);
     }
 
     /**
@@ -109,19 +109,19 @@ class ArrayOfFolderAvailabilitySettings implements \ArrayAccess, \Iterator, \Cou
      *
      * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): ?string
     {
-      return key($this->FolderAvailabilitySettings);
+        return key($this->FolderAvailabilitySettings);
     }
 
     /**
      * Iterator implementation
      *
-     * @return boolean Return the validity of the current position
+     * @return bool Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
-      return $this->key() !== null;
+        return $this->key() !== null;
     }
 
     /**
@@ -130,19 +130,19 @@ class ArrayOfFolderAvailabilitySettings implements \ArrayAccess, \Iterator, \Cou
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
-      reset($this->FolderAvailabilitySettings);
+        reset($this->FolderAvailabilitySettings);
     }
 
     /**
      * Countable implementation
      *
-     * @return FolderAvailabilitySettings Return count of elements
+     * @return int Return count of elements
      */
-    public function count()
+    public function count(): int
     {
-      return count($this->FolderAvailabilitySettings);
+        return count($this->FolderAvailabilitySettings);
     }
 
 }

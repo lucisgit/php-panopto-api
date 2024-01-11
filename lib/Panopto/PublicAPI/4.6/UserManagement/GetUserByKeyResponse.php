@@ -6,7 +6,7 @@ class GetUserByKeyResponse
 {
 
     /**
-     * @var User $GetUserByKeyResult
+     * @var User|null $GetUserByKeyResult
      */
     protected $GetUserByKeyResult = null;
 
@@ -23,17 +23,17 @@ class GetUserByKeyResponse
      */
     public function getGetUserByKeyResult()
     {
-      return $this->GetUserByKeyResult;
+        return $this->GetUserByKeyResult;
     }
 
     /**
      * @param User $GetUserByKeyResult
-     * @return \Panopto\UserManagement\GetUserByKeyResponse
+     * @return GetUserByKeyResponse
      */
-    public function setGetUserByKeyResult($GetUserByKeyResult)
+    public function setGetUserByKeyResult($GetUserByKeyResult): GetUserByKeyResponse
     {
-      $this->GetUserByKeyResult = $GetUserByKeyResult;
-      return $this;
+        $this->GetUserByKeyResult = $GetUserByKeyResult;
+        return $this;
     }
 
 }

@@ -6,12 +6,12 @@ class CreateUserResponse
 {
 
     /**
-     * @var guid $CreateUserResult
+     * @var string|null $CreateUserResult
      */
     protected $CreateUserResult = null;
 
     /**
-     * @param guid $CreateUserResult
+     * @param string $CreateUserResult
      */
     public function __construct($CreateUserResult)
     {
@@ -19,21 +19,21 @@ class CreateUserResponse
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getCreateUserResult()
     {
-      return $this->CreateUserResult;
+        return $this->CreateUserResult;
     }
 
     /**
-     * @param guid $CreateUserResult
-     * @return \Panopto\UserManagement\CreateUserResponse
+     * @param string $CreateUserResult
+     * @return CreateUserResponse
      */
-    public function setCreateUserResult($CreateUserResult)
+    public function setCreateUserResult($CreateUserResult): CreateUserResponse
     {
-      $this->CreateUserResult = $CreateUserResult;
-      return $this;
+        $this->CreateUserResult = $CreateUserResult;
+        return $this;
     }
 
 }

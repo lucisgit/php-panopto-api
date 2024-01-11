@@ -6,17 +6,17 @@ class GetFoldersWithExternalContextList
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var ListFoldersRequest $request
+     * @var ListFoldersRequest|null $request
      */
     protected $request = null;
 
     /**
-     * @var string $searchQuery
+     * @var string|null $searchQuery
      */
     protected $searchQuery = null;
 
@@ -37,17 +37,17 @@ class GetFoldersWithExternalContextList
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\GetFoldersWithExternalContextList
+     * @return GetFoldersWithExternalContextList
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetFoldersWithExternalContextList
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -55,17 +55,17 @@ class GetFoldersWithExternalContextList
      */
     public function getRequest()
     {
-      return $this->request;
+        return $this->request;
     }
 
     /**
      * @param ListFoldersRequest $request
-     * @return \Panopto\SessionManagement\GetFoldersWithExternalContextList
+     * @return GetFoldersWithExternalContextList
      */
-    public function setRequest($request)
+    public function setRequest($request): GetFoldersWithExternalContextList
     {
-      $this->request = $request;
-      return $this;
+        $this->request = $request;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class GetFoldersWithExternalContextList
      */
     public function getSearchQuery()
     {
-      return $this->searchQuery;
+        return $this->searchQuery;
     }
 
     /**
      * @param string $searchQuery
-     * @return \Panopto\SessionManagement\GetFoldersWithExternalContextList
+     * @return GetFoldersWithExternalContextList
      */
-    public function setSearchQuery($searchQuery)
+    public function setSearchQuery($searchQuery): GetFoldersWithExternalContextList
     {
-      $this->searchQuery = $searchQuery;
-      return $this;
+        $this->searchQuery = $searchQuery;
+        return $this;
     }
 
 }

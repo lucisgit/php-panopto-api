@@ -6,12 +6,12 @@ class CreateNoteByAbsoluteTimeResponse
 {
 
     /**
-     * @var guid $CreateNoteByAbsoluteTimeResult
+     * @var string|null $CreateNoteByAbsoluteTimeResult
      */
     protected $CreateNoteByAbsoluteTimeResult = null;
 
     /**
-     * @param guid $CreateNoteByAbsoluteTimeResult
+     * @param string $CreateNoteByAbsoluteTimeResult
      */
     public function __construct($CreateNoteByAbsoluteTimeResult)
     {
@@ -19,21 +19,21 @@ class CreateNoteByAbsoluteTimeResponse
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getCreateNoteByAbsoluteTimeResult()
     {
-      return $this->CreateNoteByAbsoluteTimeResult;
+        return $this->CreateNoteByAbsoluteTimeResult;
     }
 
     /**
-     * @param guid $CreateNoteByAbsoluteTimeResult
-     * @return \Panopto\SessionManagement\CreateNoteByAbsoluteTimeResponse
+     * @param string $CreateNoteByAbsoluteTimeResult
+     * @return CreateNoteByAbsoluteTimeResponse
      */
-    public function setCreateNoteByAbsoluteTimeResult($CreateNoteByAbsoluteTimeResult)
+    public function setCreateNoteByAbsoluteTimeResult($CreateNoteByAbsoluteTimeResult): CreateNoteByAbsoluteTimeResponse
     {
-      $this->CreateNoteByAbsoluteTimeResult = $CreateNoteByAbsoluteTimeResult;
-      return $this;
+        $this->CreateNoteByAbsoluteTimeResult = $CreateNoteByAbsoluteTimeResult;
+        return $this;
     }
 
 }

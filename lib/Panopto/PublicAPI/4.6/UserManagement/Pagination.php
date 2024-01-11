@@ -6,19 +6,19 @@ class Pagination
 {
 
     /**
-     * @var int $MaxNumberResults
+     * @var int|null $MaxNumberResults
      */
     protected $MaxNumberResults = null;
 
     /**
-     * @var int $PageNumber
+     * @var int|null $PageNumber
      */
     protected $PageNumber = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -26,17 +26,17 @@ class Pagination
      */
     public function getMaxNumberResults()
     {
-      return $this->MaxNumberResults;
+        return $this->MaxNumberResults;
     }
 
     /**
      * @param int $MaxNumberResults
-     * @return \Panopto\UserManagement\Pagination
+     * @return Pagination
      */
-    public function setMaxNumberResults($MaxNumberResults)
+    public function setMaxNumberResults($MaxNumberResults): Pagination
     {
-      $this->MaxNumberResults = $MaxNumberResults;
-      return $this;
+        $this->MaxNumberResults = $MaxNumberResults;
+        return $this;
     }
 
     /**
@@ -44,17 +44,17 @@ class Pagination
      */
     public function getPageNumber()
     {
-      return $this->PageNumber;
+        return $this->PageNumber;
     }
 
     /**
      * @param int $PageNumber
-     * @return \Panopto\UserManagement\Pagination
+     * @return Pagination
      */
-    public function setPageNumber($PageNumber)
+    public function setPageNumber($PageNumber): Pagination
     {
-      $this->PageNumber = $PageNumber;
-      return $this;
+        $this->PageNumber = $PageNumber;
+        return $this;
     }
 
 }

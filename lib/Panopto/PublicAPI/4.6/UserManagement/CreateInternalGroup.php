@@ -6,17 +6,17 @@ class CreateInternalGroup
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var string $groupName
+     * @var string|null $groupName
      */
     protected $groupName = null;
 
     /**
-     * @var ArrayOfguid $memberIds
+     * @var ArrayOfguid|null $memberIds
      */
     protected $memberIds = null;
 
@@ -37,17 +37,17 @@ class CreateInternalGroup
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UserManagement\CreateInternalGroup
+     * @return CreateInternalGroup
      */
-    public function setAuth($auth)
+    public function setAuth($auth): CreateInternalGroup
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -55,17 +55,17 @@ class CreateInternalGroup
      */
     public function getGroupName()
     {
-      return $this->groupName;
+        return $this->groupName;
     }
 
     /**
      * @param string $groupName
-     * @return \Panopto\UserManagement\CreateInternalGroup
+     * @return CreateInternalGroup
      */
-    public function setGroupName($groupName)
+    public function setGroupName($groupName): CreateInternalGroup
     {
-      $this->groupName = $groupName;
-      return $this;
+        $this->groupName = $groupName;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class CreateInternalGroup
      */
     public function getMemberIds()
     {
-      return $this->memberIds;
+        return $this->memberIds;
     }
 
     /**
      * @param ArrayOfguid $memberIds
-     * @return \Panopto\UserManagement\CreateInternalGroup
+     * @return CreateInternalGroup
      */
-    public function setMemberIds($memberIds)
+    public function setMemberIds($memberIds): CreateInternalGroup
     {
-      $this->memberIds = $memberIds;
-      return $this;
+        $this->memberIds = $memberIds;
+        return $this;
     }
 
 }

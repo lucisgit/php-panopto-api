@@ -6,12 +6,12 @@ class CreateUsers
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var ArrayOfUser $users
+     * @var ArrayOfUser|null $users
      */
     protected $users = null;
 
@@ -30,17 +30,17 @@ class CreateUsers
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UserManagement\CreateUsers
+     * @return CreateUsers
      */
-    public function setAuth($auth)
+    public function setAuth($auth): CreateUsers
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -48,17 +48,17 @@ class CreateUsers
      */
     public function getUsers()
     {
-      return $this->users;
+        return $this->users;
     }
 
     /**
      * @param ArrayOfUser $users
-     * @return \Panopto\UserManagement\CreateUsers
+     * @return CreateUsers
      */
-    public function setUsers($users)
+    public function setUsers($users): CreateUsers
     {
-      $this->users = $users;
-      return $this;
+        $this->users = $users;
+        return $this;
     }
 
 }

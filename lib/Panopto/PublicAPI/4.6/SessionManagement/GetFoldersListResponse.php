@@ -6,7 +6,7 @@ class GetFoldersListResponse
 {
 
     /**
-     * @var ListFoldersResponse $GetFoldersListResult
+     * @var ListFoldersResponse|null $GetFoldersListResult
      */
     protected $GetFoldersListResult = null;
 
@@ -23,17 +23,17 @@ class GetFoldersListResponse
      */
     public function getGetFoldersListResult()
     {
-      return $this->GetFoldersListResult;
+        return $this->GetFoldersListResult;
     }
 
     /**
      * @param ListFoldersResponse $GetFoldersListResult
-     * @return \Panopto\SessionManagement\GetFoldersListResponse
+     * @return GetFoldersListResponse
      */
-    public function setGetFoldersListResult($GetFoldersListResult)
+    public function setGetFoldersListResult($GetFoldersListResult): GetFoldersListResponse
     {
-      $this->GetFoldersListResult = $GetFoldersListResult;
-      return $this;
+        $this->GetFoldersListResult = $GetFoldersListResult;
+        return $this;
     }
 
 }

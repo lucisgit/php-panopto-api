@@ -6,12 +6,12 @@ class DeleteUsers
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var ArrayOfguid $userIds
+     * @var ArrayOfguid|null $userIds
      */
     protected $userIds = null;
 
@@ -30,17 +30,17 @@ class DeleteUsers
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UserManagement\DeleteUsers
+     * @return DeleteUsers
      */
-    public function setAuth($auth)
+    public function setAuth($auth): DeleteUsers
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -48,17 +48,17 @@ class DeleteUsers
      */
     public function getUserIds()
     {
-      return $this->userIds;
+        return $this->userIds;
     }
 
     /**
      * @param ArrayOfguid $userIds
-     * @return \Panopto\UserManagement\DeleteUsers
+     * @return DeleteUsers
      */
-    public function setUserIds($userIds)
+    public function setUserIds($userIds): DeleteUsers
     {
-      $this->userIds = $userIds;
-      return $this;
+        $this->userIds = $userIds;
+        return $this;
     }
 
 }

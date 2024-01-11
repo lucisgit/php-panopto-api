@@ -6,32 +6,32 @@ class SyncExternalUser
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var string $firstName
+     * @var string|null $firstName
      */
     protected $firstName = null;
 
     /**
-     * @var string $lastName
+     * @var string|null $lastName
      */
     protected $lastName = null;
 
     /**
-     * @var string $email
+     * @var string|null $email
      */
     protected $email = null;
 
     /**
-     * @var boolean $EmailSessionNotifications
+     * @var bool|null $EmailSessionNotifications
      */
     protected $EmailSessionNotifications = null;
 
     /**
-     * @var ArrayOfstring $externalGroupIds
+     * @var ArrayOfstring|null $externalGroupIds
      */
     protected $externalGroupIds = null;
 
@@ -40,7 +40,7 @@ class SyncExternalUser
      * @param string $firstName
      * @param string $lastName
      * @param string $email
-     * @param boolean $EmailSessionNotifications
+     * @param bool $EmailSessionNotifications
      * @param ArrayOfstring $externalGroupIds
      */
     public function __construct($auth, $firstName, $lastName, $email, $EmailSessionNotifications, $externalGroupIds)
@@ -58,17 +58,17 @@ class SyncExternalUser
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UserManagement\SyncExternalUser
+     * @return SyncExternalUser
      */
-    public function setAuth($auth)
+    public function setAuth($auth): SyncExternalUser
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -76,17 +76,17 @@ class SyncExternalUser
      */
     public function getFirstName()
     {
-      return $this->firstName;
+        return $this->firstName;
     }
 
     /**
      * @param string $firstName
-     * @return \Panopto\UserManagement\SyncExternalUser
+     * @return SyncExternalUser
      */
-    public function setFirstName($firstName)
+    public function setFirstName($firstName): SyncExternalUser
     {
-      $this->firstName = $firstName;
-      return $this;
+        $this->firstName = $firstName;
+        return $this;
     }
 
     /**
@@ -94,17 +94,17 @@ class SyncExternalUser
      */
     public function getLastName()
     {
-      return $this->lastName;
+        return $this->lastName;
     }
 
     /**
      * @param string $lastName
-     * @return \Panopto\UserManagement\SyncExternalUser
+     * @return SyncExternalUser
      */
-    public function setLastName($lastName)
+    public function setLastName($lastName): SyncExternalUser
     {
-      $this->lastName = $lastName;
-      return $this;
+        $this->lastName = $lastName;
+        return $this;
     }
 
     /**
@@ -112,35 +112,35 @@ class SyncExternalUser
      */
     public function getEmail()
     {
-      return $this->email;
+        return $this->email;
     }
 
     /**
      * @param string $email
-     * @return \Panopto\UserManagement\SyncExternalUser
+     * @return SyncExternalUser
      */
-    public function setEmail($email)
+    public function setEmail($email): SyncExternalUser
     {
-      $this->email = $email;
-      return $this;
+        $this->email = $email;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getEmailSessionNotifications()
     {
-      return $this->EmailSessionNotifications;
+        return $this->EmailSessionNotifications;
     }
 
     /**
-     * @param boolean $EmailSessionNotifications
-     * @return \Panopto\UserManagement\SyncExternalUser
+     * @param bool $EmailSessionNotifications
+     * @return SyncExternalUser
      */
-    public function setEmailSessionNotifications($EmailSessionNotifications)
+    public function setEmailSessionNotifications($EmailSessionNotifications): SyncExternalUser
     {
-      $this->EmailSessionNotifications = $EmailSessionNotifications;
-      return $this;
+        $this->EmailSessionNotifications = $EmailSessionNotifications;
+        return $this;
     }
 
     /**
@@ -148,17 +148,17 @@ class SyncExternalUser
      */
     public function getExternalGroupIds()
     {
-      return $this->externalGroupIds;
+        return $this->externalGroupIds;
     }
 
     /**
      * @param ArrayOfstring $externalGroupIds
-     * @return \Panopto\UserManagement\SyncExternalUser
+     * @return SyncExternalUser
      */
-    public function setExternalGroupIds($externalGroupIds)
+    public function setExternalGroupIds($externalGroupIds): SyncExternalUser
     {
-      $this->externalGroupIds = $externalGroupIds;
-      return $this;
+        $this->externalGroupIds = $externalGroupIds;
+        return $this;
     }
 
 }

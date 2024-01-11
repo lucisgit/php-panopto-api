@@ -6,7 +6,7 @@ class GetSessionsAvailabilitySettingsResponse
 {
 
     /**
-     * @var SessionsWithAvailabilitySettings $GetSessionsAvailabilitySettingsResult
+     * @var SessionsWithAvailabilitySettings|null $GetSessionsAvailabilitySettingsResult
      */
     protected $GetSessionsAvailabilitySettingsResult = null;
 
@@ -23,17 +23,17 @@ class GetSessionsAvailabilitySettingsResponse
      */
     public function getGetSessionsAvailabilitySettingsResult()
     {
-      return $this->GetSessionsAvailabilitySettingsResult;
+        return $this->GetSessionsAvailabilitySettingsResult;
     }
 
     /**
      * @param SessionsWithAvailabilitySettings $GetSessionsAvailabilitySettingsResult
-     * @return \Panopto\SessionManagement\GetSessionsAvailabilitySettingsResponse
+     * @return GetSessionsAvailabilitySettingsResponse
      */
-    public function setGetSessionsAvailabilitySettingsResult($GetSessionsAvailabilitySettingsResult)
+    public function setGetSessionsAvailabilitySettingsResult($GetSessionsAvailabilitySettingsResult): GetSessionsAvailabilitySettingsResponse
     {
-      $this->GetSessionsAvailabilitySettingsResult = $GetSessionsAvailabilitySettingsResult;
-      return $this;
+        $this->GetSessionsAvailabilitySettingsResult = $GetSessionsAvailabilitySettingsResult;
+        return $this;
     }
 
 }

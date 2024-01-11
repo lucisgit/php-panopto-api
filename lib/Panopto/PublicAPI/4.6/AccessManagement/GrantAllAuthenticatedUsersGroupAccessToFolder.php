@@ -6,23 +6,23 @@ class GrantAllAuthenticatedUsersGroupAccessToFolder
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $folderId
+     * @var string|null $folderId
      */
     protected $folderId = null;
 
     /**
-     * @var AccessRole $role
+     * @var AccessRole|null $role
      */
     protected $role = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $folderId
+     * @param string $folderId
      * @param AccessRole $role
      */
     public function __construct($auth, $folderId, $role)
@@ -37,35 +37,35 @@ class GrantAllAuthenticatedUsersGroupAccessToFolder
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\AccessManagement\GrantAllAuthenticatedUsersGroupAccessToFolder
+     * @return GrantAllAuthenticatedUsersGroupAccessToFolder
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GrantAllAuthenticatedUsersGroupAccessToFolder
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->folderId;
+        return $this->folderId;
     }
 
     /**
-     * @param guid $folderId
-     * @return \Panopto\AccessManagement\GrantAllAuthenticatedUsersGroupAccessToFolder
+     * @param string $folderId
+     * @return GrantAllAuthenticatedUsersGroupAccessToFolder
      */
-    public function setFolderId($folderId)
+    public function setFolderId($folderId): GrantAllAuthenticatedUsersGroupAccessToFolder
     {
-      $this->folderId = $folderId;
-      return $this;
+        $this->folderId = $folderId;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class GrantAllAuthenticatedUsersGroupAccessToFolder
      */
     public function getRole()
     {
-      return $this->role;
+        return $this->role;
     }
 
     /**
      * @param AccessRole $role
-     * @return \Panopto\AccessManagement\GrantAllAuthenticatedUsersGroupAccessToFolder
+     * @return GrantAllAuthenticatedUsersGroupAccessToFolder
      */
-    public function setRole($role)
+    public function setRole($role): GrantAllAuthenticatedUsersGroupAccessToFolder
     {
-      $this->role = $role;
-      return $this;
+        $this->role = $role;
+        return $this;
     }
 
 }

@@ -6,24 +6,24 @@ class UpdateSessionIsPublic
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var boolean $isPublic
+     * @var bool|null $isPublic
      */
     protected $isPublic = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
-     * @param boolean $isPublic
+     * @param string $sessionId
+     * @param bool $isPublic
      */
     public function __construct($auth, $sessionId, $isPublic)
     {
@@ -37,53 +37,53 @@ class UpdateSessionIsPublic
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\AccessManagement\UpdateSessionIsPublic
+     * @return UpdateSessionIsPublic
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateSessionIsPublic
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\AccessManagement\UpdateSessionIsPublic
+     * @param string $sessionId
+     * @return UpdateSessionIsPublic
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): UpdateSessionIsPublic
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getIsPublic()
     {
-      return $this->isPublic;
+        return $this->isPublic;
     }
 
     /**
-     * @param boolean $isPublic
-     * @return \Panopto\AccessManagement\UpdateSessionIsPublic
+     * @param bool $isPublic
+     * @return UpdateSessionIsPublic
      */
-    public function setIsPublic($isPublic)
+    public function setIsPublic($isPublic): UpdateSessionIsPublic
     {
-      $this->isPublic = $isPublic;
-      return $this;
+        $this->isPublic = $isPublic;
+        return $this;
     }
 
 }

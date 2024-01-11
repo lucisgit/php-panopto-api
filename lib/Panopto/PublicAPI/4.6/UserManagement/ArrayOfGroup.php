@@ -8,41 +8,41 @@ class ArrayOfGroup implements \ArrayAccess, \Iterator, \Countable
     /**
      * @var Group[] $Group
      */
-    protected $Group = null;
+    protected array $Group = [];
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
-     * @return Group[]
+     * @return Group[]|null
      */
-    public function getGroup()
+    public function getGroup(): ?array
     {
-      return $this->Group;
+        return $this->Group;
     }
 
     /**
-     * @param Group[] $Group
-     * @return \Panopto\UserManagement\ArrayOfGroup
+     * @param Group[]|null $Group
+     * @return ArrayOfGroup
      */
-    public function setGroup(array $Group = null)
+    public function setGroup(?array $Group = null): ArrayOfGroup
     {
-      $this->Group = $Group;
-      return $this;
+        $this->Group = $Group;
+        return $this;
     }
 
     /**
      * ArrayAccess implementation
      *
      * @param mixed $offset An offset to check for
-     * @return boolean true on success or false on failure
+     * @return bool True on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
-      return isset($this->Group[$offset]);
+        return isset($this->Group[$offset]);
     }
 
     /**
@@ -51,9 +51,9 @@ class ArrayOfGroup implements \ArrayAccess, \Iterator, \Countable
      * @param mixed $offset The offset to retrieve
      * @return Group
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): Group
     {
-      return $this->Group[$offset];
+        return $this->Group[$offset];
     }
 
     /**
@@ -63,13 +63,13 @@ class ArrayOfGroup implements \ArrayAccess, \Iterator, \Countable
      * @param Group $value The value to set
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
-      if (!isset($offset)) {
-        $this->Group[] = $value;
-      } else {
-        $this->Group[$offset] = $value;
-      }
+        if (!isset($offset)) {
+            $this->Group[] = $value;
+        } else {
+            $this->Group[$offset] = $value;
+        }
     }
 
     /**
@@ -78,9 +78,9 @@ class ArrayOfGroup implements \ArrayAccess, \Iterator, \Countable
      * @param mixed $offset The offset to unset
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
-      unset($this->Group[$offset]);
+        unset($this->Group[$offset]);
     }
 
     /**
@@ -88,9 +88,9 @@ class ArrayOfGroup implements \ArrayAccess, \Iterator, \Countable
      *
      * @return Group Return the current element
      */
-    public function current()
+    public function current(): Group
     {
-      return current($this->Group);
+        return current($this->Group);
     }
 
     /**
@@ -99,9 +99,9 @@ class ArrayOfGroup implements \ArrayAccess, \Iterator, \Countable
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
-      next($this->Group);
+        next($this->Group);
     }
 
     /**
@@ -109,19 +109,19 @@ class ArrayOfGroup implements \ArrayAccess, \Iterator, \Countable
      *
      * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): ?string
     {
-      return key($this->Group);
+        return key($this->Group);
     }
 
     /**
      * Iterator implementation
      *
-     * @return boolean Return the validity of the current position
+     * @return bool Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
-      return $this->key() !== null;
+        return $this->key() !== null;
     }
 
     /**
@@ -130,19 +130,19 @@ class ArrayOfGroup implements \ArrayAccess, \Iterator, \Countable
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
-      reset($this->Group);
+        reset($this->Group);
     }
 
     /**
      * Countable implementation
      *
-     * @return Group Return count of elements
+     * @return int Return count of elements
      */
-    public function count()
+    public function count(): int
     {
-      return count($this->Group);
+        return count($this->Group);
     }
 
 }

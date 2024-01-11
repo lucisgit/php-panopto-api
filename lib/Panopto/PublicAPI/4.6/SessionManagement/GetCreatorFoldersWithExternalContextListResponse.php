@@ -6,7 +6,7 @@ class GetCreatorFoldersWithExternalContextListResponse
 {
 
     /**
-     * @var ListFoldersResponseWithExternalContext $GetCreatorFoldersWithExternalContextListResult
+     * @var ListFoldersResponseWithExternalContext|null $GetCreatorFoldersWithExternalContextListResult
      */
     protected $GetCreatorFoldersWithExternalContextListResult = null;
 
@@ -23,17 +23,17 @@ class GetCreatorFoldersWithExternalContextListResponse
      */
     public function getGetCreatorFoldersWithExternalContextListResult()
     {
-      return $this->GetCreatorFoldersWithExternalContextListResult;
+        return $this->GetCreatorFoldersWithExternalContextListResult;
     }
 
     /**
      * @param ListFoldersResponseWithExternalContext $GetCreatorFoldersWithExternalContextListResult
-     * @return \Panopto\SessionManagement\GetCreatorFoldersWithExternalContextListResponse
+     * @return GetCreatorFoldersWithExternalContextListResponse
      */
-    public function setGetCreatorFoldersWithExternalContextListResult($GetCreatorFoldersWithExternalContextListResult)
+    public function setGetCreatorFoldersWithExternalContextListResult($GetCreatorFoldersWithExternalContextListResult): GetCreatorFoldersWithExternalContextListResponse
     {
-      $this->GetCreatorFoldersWithExternalContextListResult = $GetCreatorFoldersWithExternalContextListResult;
-      return $this;
+        $this->GetCreatorFoldersWithExternalContextListResult = $GetCreatorFoldersWithExternalContextListResult;
+        return $this;
     }
 
 }

@@ -6,11 +6,11 @@ class FolderWithExternalContext extends FolderBase
 {
 
     /**
-     * @var ArrayOfstring $ExternalIds
+     * @var ArrayOfstring|null $ExternalIds
      */
     protected $ExternalIds = null;
 
-
+    
     public function __construct()
     {
       parent::__construct();
@@ -21,17 +21,17 @@ class FolderWithExternalContext extends FolderBase
      */
     public function getExternalIds()
     {
-      return $this->ExternalIds;
+        return $this->ExternalIds;
     }
 
     /**
      * @param ArrayOfstring $ExternalIds
-     * @return \Panopto\SessionManagement\FolderWithExternalContext
+     * @return FolderWithExternalContext
      */
-    public function setExternalIds($ExternalIds)
+    public function setExternalIds($ExternalIds): FolderWithExternalContext
     {
-      $this->ExternalIds = $ExternalIds;
-      return $this;
+        $this->ExternalIds = $ExternalIds;
+        return $this;
     }
 
 }

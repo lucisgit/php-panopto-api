@@ -6,23 +6,23 @@ class UpdateSessionExternalId
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var string $externalId
+     * @var string|null $externalId
      */
     protected $externalId = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
+     * @param string $sessionId
      * @param string $externalId
      */
     public function __construct($auth, $sessionId, $externalId)
@@ -37,35 +37,35 @@ class UpdateSessionExternalId
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\UpdateSessionExternalId
+     * @return UpdateSessionExternalId
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateSessionExternalId
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\SessionManagement\UpdateSessionExternalId
+     * @param string $sessionId
+     * @return UpdateSessionExternalId
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): UpdateSessionExternalId
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class UpdateSessionExternalId
      */
     public function getExternalId()
     {
-      return $this->externalId;
+        return $this->externalId;
     }
 
     /**
      * @param string $externalId
-     * @return \Panopto\SessionManagement\UpdateSessionExternalId
+     * @return UpdateSessionExternalId
      */
-    public function setExternalId($externalId)
+    public function setExternalId($externalId): UpdateSessionExternalId
     {
-      $this->externalId = $externalId;
-      return $this;
+        $this->externalId = $externalId;
+        return $this;
     }
 
 }

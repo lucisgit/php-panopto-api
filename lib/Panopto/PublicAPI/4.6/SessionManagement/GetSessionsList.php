@@ -6,17 +6,17 @@ class GetSessionsList
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var ListSessionsRequest $request
+     * @var ListSessionsRequest|null $request
      */
     protected $request = null;
 
     /**
-     * @var string $searchQuery
+     * @var string|null $searchQuery
      */
     protected $searchQuery = null;
 
@@ -37,17 +37,17 @@ class GetSessionsList
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\GetSessionsList
+     * @return GetSessionsList
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetSessionsList
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -55,17 +55,17 @@ class GetSessionsList
      */
     public function getRequest()
     {
-      return $this->request;
+        return $this->request;
     }
 
     /**
      * @param ListSessionsRequest $request
-     * @return \Panopto\SessionManagement\GetSessionsList
+     * @return GetSessionsList
      */
-    public function setRequest($request)
+    public function setRequest($request): GetSessionsList
     {
-      $this->request = $request;
-      return $this;
+        $this->request = $request;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class GetSessionsList
      */
     public function getSearchQuery()
     {
-      return $this->searchQuery;
+        return $this->searchQuery;
     }
 
     /**
      * @param string $searchQuery
-     * @return \Panopto\SessionManagement\GetSessionsList
+     * @return GetSessionsList
      */
-    public function setSearchQuery($searchQuery)
+    public function setSearchQuery($searchQuery): GetSessionsList
     {
-      $this->searchQuery = $searchQuery;
-      return $this;
+        $this->searchQuery = $searchQuery;
+        return $this;
     }
 
 }

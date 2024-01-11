@@ -6,12 +6,12 @@ class GetDefaultFolderForRecorderResponse
 {
 
     /**
-     * @var guid $GetDefaultFolderForRecorderResult
+     * @var string|null $GetDefaultFolderForRecorderResult
      */
     protected $GetDefaultFolderForRecorderResult = null;
 
     /**
-     * @param guid $GetDefaultFolderForRecorderResult
+     * @param string $GetDefaultFolderForRecorderResult
      */
     public function __construct($GetDefaultFolderForRecorderResult)
     {
@@ -19,21 +19,21 @@ class GetDefaultFolderForRecorderResponse
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getGetDefaultFolderForRecorderResult()
     {
-      return $this->GetDefaultFolderForRecorderResult;
+        return $this->GetDefaultFolderForRecorderResult;
     }
 
     /**
-     * @param guid $GetDefaultFolderForRecorderResult
-     * @return \Panopto\RemoteRecorderManagement\GetDefaultFolderForRecorderResponse
+     * @param string $GetDefaultFolderForRecorderResult
+     * @return GetDefaultFolderForRecorderResponse
      */
-    public function setGetDefaultFolderForRecorderResult($GetDefaultFolderForRecorderResult)
+    public function setGetDefaultFolderForRecorderResult($GetDefaultFolderForRecorderResult): GetDefaultFolderForRecorderResponse
     {
-      $this->GetDefaultFolderForRecorderResult = $GetDefaultFolderForRecorderResult;
-      return $this;
+        $this->GetDefaultFolderForRecorderResult = $GetDefaultFolderForRecorderResult;
+        return $this;
     }
 
 }

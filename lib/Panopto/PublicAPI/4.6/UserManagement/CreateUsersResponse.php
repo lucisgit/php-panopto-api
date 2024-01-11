@@ -6,7 +6,7 @@ class CreateUsersResponse
 {
 
     /**
-     * @var ArrayOfUser $CreateUsersResult
+     * @var ArrayOfUser|null $CreateUsersResult
      */
     protected $CreateUsersResult = null;
 
@@ -23,17 +23,17 @@ class CreateUsersResponse
      */
     public function getCreateUsersResult()
     {
-      return $this->CreateUsersResult;
+        return $this->CreateUsersResult;
     }
 
     /**
      * @param ArrayOfUser $CreateUsersResult
-     * @return \Panopto\UserManagement\CreateUsersResponse
+     * @return CreateUsersResponse
      */
-    public function setCreateUsersResult($CreateUsersResult)
+    public function setCreateUsersResult($CreateUsersResult): CreateUsersResponse
     {
-      $this->CreateUsersResult = $CreateUsersResult;
-      return $this;
+        $this->CreateUsersResult = $CreateUsersResult;
+        return $this;
     }
 
 }

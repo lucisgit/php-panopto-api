@@ -8,41 +8,41 @@ class ArrayOfguid implements \ArrayAccess, \Iterator, \Countable
     /**
      * @var guid[] $guid
      */
-    protected $guid = null;
+    protected array $guid = [];
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
-     * @return guid[]
+     * @return guid[]|null
      */
-    public function getGuid()
+    public function getGuid(): ?array
     {
-      return $this->guid;
+        return $this->guid;
     }
 
     /**
-     * @param guid[] $guid
-     * @return \Panopto\SessionManagement\ArrayOfguid
+     * @param guid[]|null $guid
+     * @return ArrayOfguid
      */
-    public function setGuid(array $guid = null)
+    public function setGuid(?array $guid = null): ArrayOfguid
     {
-      $this->guid = $guid;
-      return $this;
+        $this->guid = $guid;
+        return $this;
     }
 
     /**
      * ArrayAccess implementation
      *
      * @param mixed $offset An offset to check for
-     * @return boolean true on success or false on failure
+     * @return bool True on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
-      return isset($this->guid[$offset]);
+        return isset($this->guid[$offset]);
     }
 
     /**
@@ -51,9 +51,9 @@ class ArrayOfguid implements \ArrayAccess, \Iterator, \Countable
      * @param mixed $offset The offset to retrieve
      * @return guid
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): guid
     {
-      return $this->guid[$offset];
+        return $this->guid[$offset];
     }
 
     /**
@@ -63,13 +63,13 @@ class ArrayOfguid implements \ArrayAccess, \Iterator, \Countable
      * @param guid $value The value to set
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
-      if (!isset($offset)) {
-        $this->guid[] = $value;
-      } else {
-        $this->guid[$offset] = $value;
-      }
+        if (!isset($offset)) {
+            $this->guid[] = $value;
+        } else {
+            $this->guid[$offset] = $value;
+        }
     }
 
     /**
@@ -78,9 +78,9 @@ class ArrayOfguid implements \ArrayAccess, \Iterator, \Countable
      * @param mixed $offset The offset to unset
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
-      unset($this->guid[$offset]);
+        unset($this->guid[$offset]);
     }
 
     /**
@@ -88,9 +88,9 @@ class ArrayOfguid implements \ArrayAccess, \Iterator, \Countable
      *
      * @return guid Return the current element
      */
-    public function current()
+    public function current(): guid
     {
-      return current($this->guid);
+        return current($this->guid);
     }
 
     /**
@@ -99,9 +99,9 @@ class ArrayOfguid implements \ArrayAccess, \Iterator, \Countable
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
-      next($this->guid);
+        next($this->guid);
     }
 
     /**
@@ -109,19 +109,19 @@ class ArrayOfguid implements \ArrayAccess, \Iterator, \Countable
      *
      * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): ?string
     {
-      return key($this->guid);
+        return key($this->guid);
     }
 
     /**
      * Iterator implementation
      *
-     * @return boolean Return the validity of the current position
+     * @return bool Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
-      return $this->key() !== null;
+        return $this->key() !== null;
     }
 
     /**
@@ -130,19 +130,19 @@ class ArrayOfguid implements \ArrayAccess, \Iterator, \Countable
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
-      reset($this->guid);
+        reset($this->guid);
     }
 
     /**
      * Countable implementation
      *
-     * @return guid Return count of elements
+     * @return int Return count of elements
      */
-    public function count()
+    public function count(): int
     {
-      return count($this->guid);
+        return count($this->guid);
     }
 
 }

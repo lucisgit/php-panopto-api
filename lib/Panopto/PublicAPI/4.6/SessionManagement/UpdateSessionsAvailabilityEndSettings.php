@@ -6,24 +6,24 @@ class UpdateSessionsAvailabilityEndSettings
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var ArrayOfguid $sessionIds
+     * @var ArrayOfguid|null $sessionIds
      */
     protected $sessionIds = null;
 
     /**
-     * @var SessionEndSettingType $settingType
+     * @var SessionEndSettingType|null $settingType
      */
     protected $settingType = null;
 
     /**
-     * @var \DateTime $endDate
+     * @var \DateTime|string|null $endDate
      */
-    protected $endDate = null;
+    protected \DateTime|string|null $endDate = null;
 
     /**
      * @param AuthenticationInfo $auth
@@ -44,17 +44,17 @@ class UpdateSessionsAvailabilityEndSettings
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\UpdateSessionsAvailabilityEndSettings
+     * @return UpdateSessionsAvailabilityEndSettings
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateSessionsAvailabilityEndSettings
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -62,17 +62,17 @@ class UpdateSessionsAvailabilityEndSettings
      */
     public function getSessionIds()
     {
-      return $this->sessionIds;
+        return $this->sessionIds;
     }
 
     /**
      * @param ArrayOfguid $sessionIds
-     * @return \Panopto\SessionManagement\UpdateSessionsAvailabilityEndSettings
+     * @return UpdateSessionsAvailabilityEndSettings
      */
-    public function setSessionIds($sessionIds)
+    public function setSessionIds($sessionIds): UpdateSessionsAvailabilityEndSettings
     {
-      $this->sessionIds = $sessionIds;
-      return $this;
+        $this->sessionIds = $sessionIds;
+        return $this;
     }
 
     /**
@@ -80,43 +80,43 @@ class UpdateSessionsAvailabilityEndSettings
      */
     public function getSettingType()
     {
-      return $this->settingType;
+        return $this->settingType;
     }
 
     /**
      * @param SessionEndSettingType $settingType
-     * @return \Panopto\SessionManagement\UpdateSessionsAvailabilityEndSettings
+     * @return UpdateSessionsAvailabilityEndSettings
      */
-    public function setSettingType($settingType)
+    public function setSettingType($settingType): UpdateSessionsAvailabilityEndSettings
     {
-      $this->settingType = $settingType;
-      return $this;
+        $this->settingType = $settingType;
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getEndDate()
+    public function getEndDate(): \DateTime|bool|null
     {
-      if ($this->endDate == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->endDate);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->endDate == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->endDate);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
      * @param \DateTime $endDate
-     * @return \Panopto\SessionManagement\UpdateSessionsAvailabilityEndSettings
+     * @return UpdateSessionsAvailabilityEndSettings
      */
-    public function setEndDate(\DateTime $endDate)
+    public function setEndDate(\DateTime $endDate): UpdateSessionsAvailabilityEndSettings
     {
-      $this->endDate = $endDate->format(\DateTime::ATOM);
-      return $this;
+        $this->endDate = $endDate->format(\DateTime::ATOM);
+        return $this;
     }
 
 }

@@ -26,6 +26,9 @@
  */
 namespace Panopto;
 
+use BadMethodCallException;
+use UnexpectedValueException;
+
 /**
  * PHP Panopto API client class.
  *
@@ -37,52 +40,52 @@ class Client {
     /** Current client version in use. */
     const CLIENT_VERSION = '4.6';
 
-    /** @var stdClass Access Management client */
-    private $accessmanagementclient = null;
+    /** @var AccessManagement\AccessManagement|null Access Management client */
+    private ?AccessManagement\AccessManagement $accessmanagementclient = null;
 
-    /** @var stdClass Auth client */
-    private $authclient = null;
+    /** @var Auth\Auth|null Auth client */
+    private ?Auth\Auth $authclient = null;
 
-    /** @var stdClass Remote Recorder Management client */
-    private $remoterecordermanagementclient = null;
+    /** @var RemoteRecorderManagement\RemoteRecorderManagement|null Remote Recorder Management client */
+    private ?RemoteRecorderManagement\RemoteRecorderManagement $remoterecordermanagementclient = null;
 
-    /** @var stdClass Session Management client */
-    private $sessionmanagementclient = null;
+    /** @var SessionManagement\SessionManagement|null Session Management client */
+    private ?SessionManagement\SessionManagement $sessionmanagementclient = null;
 
-    /** @var stdClass Usage Reporting client */
-    private $usagereportingclient = null;
+    /** @var UsageReporting\UsageReporting|null Usage Reporting client */
+    private ?UsageReporting\UsageReporting $usagereportingclient = null;
 
-    /** @var stdClass User Management client */
-    private $usermanagementclient = null;
+    /** @var UserManagement\UserManagement|null User Management client */
+    private ?UserManagement\UserManagement $usermanagementclient = null;
 
-    /** @var stdClass AuthenticationInfo object */
-    private $authinfo = null;
+    /** @var Auth\AuthenticationInfo|null AuthenticationInfo object */
+    private ?Auth\AuthenticationInfo $authinfo = null;
 
     /** @var array SOAP options */
-    private $soapoptions = array();
+    private array $soapoptions;
 
     /** @var string SOAP options */
-    private $serverhostname = '';
+    private string $serverhostname;
 
     /** @var array The list of webservices classes */
-    private static $classmap = array (
-      'AccessManagement' => '\\Panopto\\AccessManagement\\AccessManagement',
-      'Auth' => '\\Panopto\\Auth\\Auth',
-      'RemoteRecorderManagement' => 'Panopto\\RemoteRecorderManagement\\RemoteRecorderManagement',
-      'SessionManagement' => '\\Panopto\\SessionManagement\\SessionManagement',
-      'UsageReporting' => '\\Panopto\\UsageReporting\\UsageReporting',
-      'UserManagement' => '\\Panopto\\UserManagement\\UserManagement',
+    private static array $classmap = array (
+        'AccessManagement' => '\\Panopto\\AccessManagement\\AccessManagement',
+        'Auth' => '\\Panopto\\Auth\\Auth',
+        'RemoteRecorderManagement' => 'Panopto\\RemoteRecorderManagement\\RemoteRecorderManagement',
+        'SessionManagement' => '\\Panopto\\SessionManagement\\SessionManagement',
+        'UsageReporting' => '\\Panopto\\UsageReporting\\UsageReporting',
+        'UserManagement' => '\\Panopto\\UserManagement\\UserManagement',
     );
 
     /**
      * Constructor for the Panopto client.
      *
-     * @throws \UnexpectedValueException When API classes can't be loaded.
-     *
-     * @param  string $serverhostname FQDN of your Panopto server, e.g. demo.hosted.panopto.com
+     * @param string $serverhostname FQDN of your Panopto server, e.g. demo.hosted.panopto.com
      * @param  array $soapoptions Custom SOAP client options to use.
+     *
+     * @throws UnexpectedValueException When API classes can't be loaded.
      */
-    public function __construct($serverhostname, array $soapoptions = array()) {
+    public function __construct(string $serverhostname, array $soapoptions = array()) {
         // Define serverhostname.
         $this->serverhostname = $serverhostname;
 
@@ -106,9 +109,10 @@ class Client {
      * has been pre-configured with provided credentials. You can use it in
      * $auth parameter in all API calls.
      *
-     * @return stdClass \Panopto\Auth\AuthenticationInfo instance.
+     * @return Auth\AuthenticationInfo|null \Panopto\Auth\AuthenticationInfo instance.
      */
-    public function getAuthenticationInfo() {
+    public function getAuthenticationInfo(): ?Auth\AuthenticationInfo
+    {
         return $this->authinfo;
     }
 
@@ -123,9 +127,10 @@ class Client {
      * @param string $applicationkey Application Key value from Identity Provider setting, e.g. '00000000-0000-0000-0000-000000000000'
      *
      */
-    public function setAuthenticationInfo($userkey = '', $password = '', $applicationkey = '') {
+    public function setAuthenticationInfo(string $userkey = '', string $password = '', string $applicationkey = ''): void
+    {
         // Create AuthenticationInfo instance.
-        $this->authinfo = new \Panopto\Auth\AuthenticationInfo();
+        $this->authinfo = new Auth\AuthenticationInfo();
 
         // Populate authentication settings.
         if (!empty($userkey)) {
@@ -149,7 +154,8 @@ class Client {
      * @param string $applicationkey
      * @return string Authentication code.
      */
-    protected function createAuthCode($userkey, $applicationkey) {
+    protected function createAuthCode(string $userkey, string $applicationkey): string
+    {
         $payload = $userkey . "@" . strtolower($this->serverhostname) . "|" . strtolower($applicationkey);
         return strtoupper(sha1($payload));
     }
@@ -157,13 +163,13 @@ class Client {
     /**
      * Getter function for API interface instances.
      *
-     * @throws BadMethodCallException
-     * @throws UnexpectedValueException
-     *
      * @param string $name webservice name to create interface instance for.
      * @return \Panopto\$name\$name API interface instance.
+     *
+     * @throws BadMethodCallException
+     * @throws UnexpectedValueException
      */
-    public function __call($name, $args)
+    public function __call(string $name, $args)
     {
         $privatevar = strtolower($name) . 'client';
 

@@ -6,7 +6,7 @@ class GetRemoteRecordersByIdResponse
 {
 
     /**
-     * @var ArrayOfRemoteRecorder $GetRemoteRecordersByIdResult
+     * @var ArrayOfRemoteRecorder|null $GetRemoteRecordersByIdResult
      */
     protected $GetRemoteRecordersByIdResult = null;
 
@@ -23,17 +23,17 @@ class GetRemoteRecordersByIdResponse
      */
     public function getGetRemoteRecordersByIdResult()
     {
-      return $this->GetRemoteRecordersByIdResult;
+        return $this->GetRemoteRecordersByIdResult;
     }
 
     /**
      * @param ArrayOfRemoteRecorder $GetRemoteRecordersByIdResult
-     * @return \Panopto\RemoteRecorderManagement\GetRemoteRecordersByIdResponse
+     * @return GetRemoteRecordersByIdResponse
      */
-    public function setGetRemoteRecordersByIdResult($GetRemoteRecordersByIdResult)
+    public function setGetRemoteRecordersByIdResult($GetRemoteRecordersByIdResult): GetRemoteRecordersByIdResponse
     {
-      $this->GetRemoteRecordersByIdResult = $GetRemoteRecordersByIdResult;
-      return $this;
+        $this->GetRemoteRecordersByIdResult = $GetRemoteRecordersByIdResult;
+        return $this;
     }
 
 }

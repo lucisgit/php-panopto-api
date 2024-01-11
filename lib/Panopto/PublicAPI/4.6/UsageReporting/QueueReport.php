@@ -6,24 +6,24 @@ class QueueReport
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var StatsReportType $reportType
+     * @var StatsReportType|null $reportType
      */
     protected $reportType = null;
 
     /**
-     * @var \DateTime $startTime
+     * @var \DateTime|string|null $startTime
      */
-    protected $startTime = null;
+    protected \DateTime|string|null $startTime = null;
 
     /**
-     * @var \DateTime $endTime
+     * @var \DateTime|string|null $endTime
      */
-    protected $endTime = null;
+    protected \DateTime|string|null $endTime = null;
 
     /**
      * @param AuthenticationInfo $auth
@@ -44,17 +44,17 @@ class QueueReport
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UsageReporting\QueueReport
+     * @return QueueReport
      */
-    public function setAuth($auth)
+    public function setAuth($auth): QueueReport
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -62,69 +62,69 @@ class QueueReport
      */
     public function getReportType()
     {
-      return $this->reportType;
+        return $this->reportType;
     }
 
     /**
      * @param StatsReportType $reportType
-     * @return \Panopto\UsageReporting\QueueReport
+     * @return QueueReport
      */
-    public function setReportType($reportType)
+    public function setReportType($reportType): QueueReport
     {
-      $this->reportType = $reportType;
-      return $this;
+        $this->reportType = $reportType;
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getStartTime()
+    public function getStartTime(): \DateTime|bool|null
     {
-      if ($this->startTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->startTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->startTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->startTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
      * @param \DateTime $startTime
-     * @return \Panopto\UsageReporting\QueueReport
+     * @return QueueReport
      */
-    public function setStartTime(\DateTime $startTime)
+    public function setStartTime(\DateTime $startTime): QueueReport
     {
-      $this->startTime = $startTime->format(\DateTime::ATOM);
-      return $this;
+        $this->startTime = $startTime->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getEndTime()
+    public function getEndTime(): \DateTime|bool|null
     {
-      if ($this->endTime == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->endTime);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->endTime == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->endTime);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
      * @param \DateTime $endTime
-     * @return \Panopto\UsageReporting\QueueReport
+     * @return QueueReport
      */
-    public function setEndTime(\DateTime $endTime)
+    public function setEndTime(\DateTime $endTime): QueueReport
     {
-      $this->endTime = $endTime->format(\DateTime::ATOM);
-      return $this;
+        $this->endTime = $endTime->format(\DateTime::ATOM);
+        return $this;
     }
 
 }

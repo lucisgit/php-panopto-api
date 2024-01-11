@@ -6,28 +6,28 @@ class CreateCaptionByAbsoluteTime
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var string $text
+     * @var string|null $text
      */
     protected $text = null;
 
     /**
-     * @var \DateTime $timestamp
+     * @var \DateTime|string|null $timestamp
      */
-    protected $timestamp = null;
+    protected \DateTime|string|null $timestamp = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
+     * @param string $sessionId
      * @param string $text
      * @param \DateTime $timestamp
      */
@@ -44,35 +44,35 @@ class CreateCaptionByAbsoluteTime
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\CreateCaptionByAbsoluteTime
+     * @return CreateCaptionByAbsoluteTime
      */
-    public function setAuth($auth)
+    public function setAuth($auth): CreateCaptionByAbsoluteTime
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\SessionManagement\CreateCaptionByAbsoluteTime
+     * @param string $sessionId
+     * @return CreateCaptionByAbsoluteTime
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): CreateCaptionByAbsoluteTime
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
@@ -80,43 +80,43 @@ class CreateCaptionByAbsoluteTime
      */
     public function getText()
     {
-      return $this->text;
+        return $this->text;
     }
 
     /**
      * @param string $text
-     * @return \Panopto\SessionManagement\CreateCaptionByAbsoluteTime
+     * @return CreateCaptionByAbsoluteTime
      */
-    public function setText($text)
+    public function setText($text): CreateCaptionByAbsoluteTime
     {
-      $this->text = $text;
-      return $this;
+        $this->text = $text;
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getTimestamp()
+    public function getTimestamp(): \DateTime|bool|null
     {
-      if ($this->timestamp == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->timestamp);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->timestamp == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->timestamp);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
      * @param \DateTime $timestamp
-     * @return \Panopto\SessionManagement\CreateCaptionByAbsoluteTime
+     * @return CreateCaptionByAbsoluteTime
      */
-    public function setTimestamp(\DateTime $timestamp)
+    public function setTimestamp(\DateTime $timestamp): CreateCaptionByAbsoluteTime
     {
-      $this->timestamp = $timestamp->format(\DateTime::ATOM);
-      return $this;
+        $this->timestamp = $timestamp->format(\DateTime::ATOM);
+        return $this;
     }
 
 }

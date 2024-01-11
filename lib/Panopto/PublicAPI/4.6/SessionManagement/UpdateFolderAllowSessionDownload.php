@@ -6,24 +6,24 @@ class UpdateFolderAllowSessionDownload
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $folderId
+     * @var string|null $folderId
      */
     protected $folderId = null;
 
     /**
-     * @var boolean $allowSessionDownload
+     * @var bool|null $allowSessionDownload
      */
     protected $allowSessionDownload = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $folderId
-     * @param boolean $allowSessionDownload
+     * @param string $folderId
+     * @param bool $allowSessionDownload
      */
     public function __construct($auth, $folderId, $allowSessionDownload)
     {
@@ -37,53 +37,53 @@ class UpdateFolderAllowSessionDownload
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\UpdateFolderAllowSessionDownload
+     * @return UpdateFolderAllowSessionDownload
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateFolderAllowSessionDownload
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->folderId;
+        return $this->folderId;
     }
 
     /**
-     * @param guid $folderId
-     * @return \Panopto\SessionManagement\UpdateFolderAllowSessionDownload
+     * @param string $folderId
+     * @return UpdateFolderAllowSessionDownload
      */
-    public function setFolderId($folderId)
+    public function setFolderId($folderId): UpdateFolderAllowSessionDownload
     {
-      $this->folderId = $folderId;
-      return $this;
+        $this->folderId = $folderId;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getAllowSessionDownload()
     {
-      return $this->allowSessionDownload;
+        return $this->allowSessionDownload;
     }
 
     /**
-     * @param boolean $allowSessionDownload
-     * @return \Panopto\SessionManagement\UpdateFolderAllowSessionDownload
+     * @param bool $allowSessionDownload
+     * @return UpdateFolderAllowSessionDownload
      */
-    public function setAllowSessionDownload($allowSessionDownload)
+    public function setAllowSessionDownload($allowSessionDownload): UpdateFolderAllowSessionDownload
     {
-      $this->allowSessionDownload = $allowSessionDownload;
-      return $this;
+        $this->allowSessionDownload = $allowSessionDownload;
+        return $this;
     }
 
 }

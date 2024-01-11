@@ -6,7 +6,7 @@ class GetGroupResponse
 {
 
     /**
-     * @var Group $GetGroupResult
+     * @var Group|null $GetGroupResult
      */
     protected $GetGroupResult = null;
 
@@ -23,17 +23,17 @@ class GetGroupResponse
      */
     public function getGetGroupResult()
     {
-      return $this->GetGroupResult;
+        return $this->GetGroupResult;
     }
 
     /**
      * @param Group $GetGroupResult
-     * @return \Panopto\UserManagement\GetGroupResponse
+     * @return GetGroupResponse
      */
-    public function setGetGroupResult($GetGroupResult)
+    public function setGetGroupResult($GetGroupResult): GetGroupResponse
     {
-      $this->GetGroupResult = $GetGroupResult;
-      return $this;
+        $this->GetGroupResult = $GetGroupResult;
+        return $this;
     }
 
 }

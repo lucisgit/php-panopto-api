@@ -6,24 +6,24 @@ class ScheduledRecordingResult
 {
 
     /**
-     * @var ArrayOfScheduledRecordingInfo $ConflictingSessions
+     * @var ArrayOfScheduledRecordingInfo|null $ConflictingSessions
      */
     protected $ConflictingSessions = null;
 
     /**
-     * @var boolean $ConflictsExist
+     * @var bool|null $ConflictsExist
      */
     protected $ConflictsExist = null;
 
     /**
-     * @var ArrayOfguid $SessionIDs
+     * @var ArrayOfguid|null $SessionIDs
      */
     protected $SessionIDs = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -31,35 +31,35 @@ class ScheduledRecordingResult
      */
     public function getConflictingSessions()
     {
-      return $this->ConflictingSessions;
+        return $this->ConflictingSessions;
     }
 
     /**
      * @param ArrayOfScheduledRecordingInfo $ConflictingSessions
-     * @return \Panopto\RemoteRecorderManagement\ScheduledRecordingResult
+     * @return ScheduledRecordingResult
      */
-    public function setConflictingSessions($ConflictingSessions)
+    public function setConflictingSessions($ConflictingSessions): ScheduledRecordingResult
     {
-      $this->ConflictingSessions = $ConflictingSessions;
-      return $this;
+        $this->ConflictingSessions = $ConflictingSessions;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getConflictsExist()
     {
-      return $this->ConflictsExist;
+        return $this->ConflictsExist;
     }
 
     /**
-     * @param boolean $ConflictsExist
-     * @return \Panopto\RemoteRecorderManagement\ScheduledRecordingResult
+     * @param bool $ConflictsExist
+     * @return ScheduledRecordingResult
      */
-    public function setConflictsExist($ConflictsExist)
+    public function setConflictsExist($ConflictsExist): ScheduledRecordingResult
     {
-      $this->ConflictsExist = $ConflictsExist;
-      return $this;
+        $this->ConflictsExist = $ConflictsExist;
+        return $this;
     }
 
     /**
@@ -67,17 +67,17 @@ class ScheduledRecordingResult
      */
     public function getSessionIDs()
     {
-      return $this->SessionIDs;
+        return $this->SessionIDs;
     }
 
     /**
      * @param ArrayOfguid $SessionIDs
-     * @return \Panopto\RemoteRecorderManagement\ScheduledRecordingResult
+     * @return ScheduledRecordingResult
      */
-    public function setSessionIDs($SessionIDs)
+    public function setSessionIDs($SessionIDs): ScheduledRecordingResult
     {
-      $this->SessionIDs = $SessionIDs;
-      return $this;
+        $this->SessionIDs = $SessionIDs;
+        return $this;
     }
 
 }

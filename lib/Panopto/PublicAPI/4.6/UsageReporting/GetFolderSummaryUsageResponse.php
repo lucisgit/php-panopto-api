@@ -6,7 +6,7 @@ class GetFolderSummaryUsageResponse
 {
 
     /**
-     * @var ArrayOfSummaryUsageResponseItem $GetFolderSummaryUsageResult
+     * @var ArrayOfSummaryUsageResponseItem|null $GetFolderSummaryUsageResult
      */
     protected $GetFolderSummaryUsageResult = null;
 
@@ -23,17 +23,17 @@ class GetFolderSummaryUsageResponse
      */
     public function getGetFolderSummaryUsageResult()
     {
-      return $this->GetFolderSummaryUsageResult;
+        return $this->GetFolderSummaryUsageResult;
     }
 
     /**
      * @param ArrayOfSummaryUsageResponseItem $GetFolderSummaryUsageResult
-     * @return \Panopto\UsageReporting\GetFolderSummaryUsageResponse
+     * @return GetFolderSummaryUsageResponse
      */
-    public function setGetFolderSummaryUsageResult($GetFolderSummaryUsageResult)
+    public function setGetFolderSummaryUsageResult($GetFolderSummaryUsageResult): GetFolderSummaryUsageResponse
     {
-      $this->GetFolderSummaryUsageResult = $GetFolderSummaryUsageResult;
-      return $this;
+        $this->GetFolderSummaryUsageResult = $GetFolderSummaryUsageResult;
+        return $this;
     }
 
 }

@@ -6,23 +6,23 @@ class SetSystemRole
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $userId
+     * @var string|null $userId
      */
     protected $userId = null;
 
     /**
-     * @var SystemRole $role
+     * @var SystemRole|null $role
      */
     protected $role = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $userId
+     * @param string $userId
      * @param SystemRole $role
      */
     public function __construct($auth, $userId, $role)
@@ -37,35 +37,35 @@ class SetSystemRole
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\UserManagement\SetSystemRole
+     * @return SetSystemRole
      */
-    public function setAuth($auth)
+    public function setAuth($auth): SetSystemRole
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getUserId()
     {
-      return $this->userId;
+        return $this->userId;
     }
 
     /**
-     * @param guid $userId
-     * @return \Panopto\UserManagement\SetSystemRole
+     * @param string $userId
+     * @return SetSystemRole
      */
-    public function setUserId($userId)
+    public function setUserId($userId): SetSystemRole
     {
-      $this->userId = $userId;
-      return $this;
+        $this->userId = $userId;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class SetSystemRole
      */
     public function getRole()
     {
-      return $this->role;
+        return $this->role;
     }
 
     /**
      * @param SystemRole $role
-     * @return \Panopto\UserManagement\SetSystemRole
+     * @return SetSystemRole
      */
-    public function setRole($role)
+    public function setRole($role): SetSystemRole
     {
-      $this->role = $role;
-      return $this;
+        $this->role = $role;
+        return $this;
     }
 
 }

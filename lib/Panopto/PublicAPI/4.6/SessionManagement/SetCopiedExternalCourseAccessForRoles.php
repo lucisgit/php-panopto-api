@@ -6,27 +6,27 @@ class SetCopiedExternalCourseAccessForRoles
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var string $name
+     * @var string|null $name
      */
     protected $name = null;
 
     /**
-     * @var string $externalId
+     * @var string|null $externalId
      */
     protected $externalId = null;
 
     /**
-     * @var ArrayOfguid $folderIds
+     * @var ArrayOfguid|null $folderIds
      */
     protected $folderIds = null;
 
     /**
-     * @var ArrayOfAccessRole $roles
+     * @var ArrayOfAccessRole|null $roles
      */
     protected $roles = null;
 
@@ -51,17 +51,17 @@ class SetCopiedExternalCourseAccessForRoles
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\SetCopiedExternalCourseAccessForRoles
+     * @return SetCopiedExternalCourseAccessForRoles
      */
-    public function setAuth($auth)
+    public function setAuth($auth): SetCopiedExternalCourseAccessForRoles
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -69,17 +69,17 @@ class SetCopiedExternalCourseAccessForRoles
      */
     public function getName()
     {
-      return $this->name;
+        return $this->name;
     }
 
     /**
      * @param string $name
-     * @return \Panopto\SessionManagement\SetCopiedExternalCourseAccessForRoles
+     * @return SetCopiedExternalCourseAccessForRoles
      */
-    public function setName($name)
+    public function setName($name): SetCopiedExternalCourseAccessForRoles
     {
-      $this->name = $name;
-      return $this;
+        $this->name = $name;
+        return $this;
     }
 
     /**
@@ -87,17 +87,17 @@ class SetCopiedExternalCourseAccessForRoles
      */
     public function getExternalId()
     {
-      return $this->externalId;
+        return $this->externalId;
     }
 
     /**
      * @param string $externalId
-     * @return \Panopto\SessionManagement\SetCopiedExternalCourseAccessForRoles
+     * @return SetCopiedExternalCourseAccessForRoles
      */
-    public function setExternalId($externalId)
+    public function setExternalId($externalId): SetCopiedExternalCourseAccessForRoles
     {
-      $this->externalId = $externalId;
-      return $this;
+        $this->externalId = $externalId;
+        return $this;
     }
 
     /**
@@ -105,17 +105,17 @@ class SetCopiedExternalCourseAccessForRoles
      */
     public function getFolderIds()
     {
-      return $this->folderIds;
+        return $this->folderIds;
     }
 
     /**
      * @param ArrayOfguid $folderIds
-     * @return \Panopto\SessionManagement\SetCopiedExternalCourseAccessForRoles
+     * @return SetCopiedExternalCourseAccessForRoles
      */
-    public function setFolderIds($folderIds)
+    public function setFolderIds($folderIds): SetCopiedExternalCourseAccessForRoles
     {
-      $this->folderIds = $folderIds;
-      return $this;
+        $this->folderIds = $folderIds;
+        return $this;
     }
 
     /**
@@ -123,17 +123,17 @@ class SetCopiedExternalCourseAccessForRoles
      */
     public function getRoles()
     {
-      return $this->roles;
+        return $this->roles;
     }
 
     /**
      * @param ArrayOfAccessRole $roles
-     * @return \Panopto\SessionManagement\SetCopiedExternalCourseAccessForRoles
+     * @return SetCopiedExternalCourseAccessForRoles
      */
-    public function setRoles($roles)
+    public function setRoles($roles): SetCopiedExternalCourseAccessForRoles
     {
-      $this->roles = $roles;
-      return $this;
+        $this->roles = $roles;
+        return $this;
     }
 
 }

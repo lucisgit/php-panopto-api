@@ -6,12 +6,12 @@ class GetSessionsAvailabilitySettings
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var ArrayOfguid $sessionIds
+     * @var ArrayOfguid|null $sessionIds
      */
     protected $sessionIds = null;
 
@@ -30,17 +30,17 @@ class GetSessionsAvailabilitySettings
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\GetSessionsAvailabilitySettings
+     * @return GetSessionsAvailabilitySettings
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetSessionsAvailabilitySettings
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -48,17 +48,17 @@ class GetSessionsAvailabilitySettings
      */
     public function getSessionIds()
     {
-      return $this->sessionIds;
+        return $this->sessionIds;
     }
 
     /**
      * @param ArrayOfguid $sessionIds
-     * @return \Panopto\SessionManagement\GetSessionsAvailabilitySettings
+     * @return GetSessionsAvailabilitySettings
      */
-    public function setSessionIds($sessionIds)
+    public function setSessionIds($sessionIds): GetSessionsAvailabilitySettings
     {
-      $this->sessionIds = $sessionIds;
-      return $this;
+        $this->sessionIds = $sessionIds;
+        return $this;
     }
 
 }

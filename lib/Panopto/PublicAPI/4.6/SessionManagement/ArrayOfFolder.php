@@ -8,41 +8,41 @@ class ArrayOfFolder implements \ArrayAccess, \Iterator, \Countable
     /**
      * @var Folder[] $Folder
      */
-    protected $Folder = null;
+    protected array $Folder = [];
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
-     * @return Folder[]
+     * @return Folder[]|null
      */
-    public function getFolder()
+    public function getFolder(): ?array
     {
-      return $this->Folder;
+        return $this->Folder;
     }
 
     /**
-     * @param Folder[] $Folder
-     * @return \Panopto\SessionManagement\ArrayOfFolder
+     * @param Folder[]|null $Folder
+     * @return ArrayOfFolder
      */
-    public function setFolder(array $Folder = null)
+    public function setFolder(?array $Folder = null): ArrayOfFolder
     {
-      $this->Folder = $Folder;
-      return $this;
+        $this->Folder = $Folder;
+        return $this;
     }
 
     /**
      * ArrayAccess implementation
      *
      * @param mixed $offset An offset to check for
-     * @return boolean true on success or false on failure
+     * @return bool True on success or false on failure
      */
-    public function offsetExists($offset)
+    public function offsetExists(mixed $offset): bool
     {
-      return isset($this->Folder[$offset]);
+        return isset($this->Folder[$offset]);
     }
 
     /**
@@ -51,9 +51,9 @@ class ArrayOfFolder implements \ArrayAccess, \Iterator, \Countable
      * @param mixed $offset The offset to retrieve
      * @return Folder
      */
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): Folder
     {
-      return $this->Folder[$offset];
+        return $this->Folder[$offset];
     }
 
     /**
@@ -63,13 +63,13 @@ class ArrayOfFolder implements \ArrayAccess, \Iterator, \Countable
      * @param Folder $value The value to set
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet(mixed $offset, mixed $value): void
     {
-      if (!isset($offset)) {
-        $this->Folder[] = $value;
-      } else {
-        $this->Folder[$offset] = $value;
-      }
+        if (!isset($offset)) {
+            $this->Folder[] = $value;
+        } else {
+            $this->Folder[$offset] = $value;
+        }
     }
 
     /**
@@ -78,9 +78,9 @@ class ArrayOfFolder implements \ArrayAccess, \Iterator, \Countable
      * @param mixed $offset The offset to unset
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset(mixed $offset): void
     {
-      unset($this->Folder[$offset]);
+        unset($this->Folder[$offset]);
     }
 
     /**
@@ -88,9 +88,9 @@ class ArrayOfFolder implements \ArrayAccess, \Iterator, \Countable
      *
      * @return Folder Return the current element
      */
-    public function current()
+    public function current(): Folder
     {
-      return current($this->Folder);
+        return current($this->Folder);
     }
 
     /**
@@ -99,9 +99,9 @@ class ArrayOfFolder implements \ArrayAccess, \Iterator, \Countable
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
-      next($this->Folder);
+        next($this->Folder);
     }
 
     /**
@@ -109,19 +109,19 @@ class ArrayOfFolder implements \ArrayAccess, \Iterator, \Countable
      *
      * @return string|null Return the key of the current element or null
      */
-    public function key()
+    public function key(): ?string
     {
-      return key($this->Folder);
+        return key($this->Folder);
     }
 
     /**
      * Iterator implementation
      *
-     * @return boolean Return the validity of the current position
+     * @return bool Return the validity of the current position
      */
-    public function valid()
+    public function valid(): bool
     {
-      return $this->key() !== null;
+        return $this->key() !== null;
     }
 
     /**
@@ -130,19 +130,19 @@ class ArrayOfFolder implements \ArrayAccess, \Iterator, \Countable
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
-      reset($this->Folder);
+        reset($this->Folder);
     }
 
     /**
      * Countable implementation
      *
-     * @return Folder Return count of elements
+     * @return int Return count of elements
      */
-    public function count()
+    public function count(): int
     {
-      return count($this->Folder);
+        return count($this->Folder);
     }
 
 }

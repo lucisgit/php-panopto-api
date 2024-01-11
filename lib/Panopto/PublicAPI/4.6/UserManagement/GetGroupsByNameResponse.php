@@ -6,7 +6,7 @@ class GetGroupsByNameResponse
 {
 
     /**
-     * @var ArrayOfGroup $GetGroupsByNameResult
+     * @var ArrayOfGroup|null $GetGroupsByNameResult
      */
     protected $GetGroupsByNameResult = null;
 
@@ -23,17 +23,17 @@ class GetGroupsByNameResponse
      */
     public function getGetGroupsByNameResult()
     {
-      return $this->GetGroupsByNameResult;
+        return $this->GetGroupsByNameResult;
     }
 
     /**
      * @param ArrayOfGroup $GetGroupsByNameResult
-     * @return \Panopto\UserManagement\GetGroupsByNameResponse
+     * @return GetGroupsByNameResponse
      */
-    public function setGetGroupsByNameResult($GetGroupsByNameResult)
+    public function setGetGroupsByNameResult($GetGroupsByNameResult): GetGroupsByNameResponse
     {
-      $this->GetGroupsByNameResult = $GetGroupsByNameResult;
-      return $this;
+        $this->GetGroupsByNameResult = $GetGroupsByNameResult;
+        return $this;
     }
 
 }

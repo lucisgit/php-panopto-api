@@ -6,54 +6,54 @@ class RemoteRecorder
 {
 
     /**
-     * @var ArrayOfRemoteRecorderDevice $Devices
+     * @var ArrayOfRemoteRecorderDevice|null $Devices
      */
     protected $Devices = null;
 
     /**
-     * @var string $ExternalId
+     * @var string|null $ExternalId
      */
     protected $ExternalId = null;
 
     /**
-     * @var guid $Id
+     * @var string|null $Id
      */
     protected $Id = null;
 
     /**
-     * @var string $MachineIP
+     * @var string|null $MachineIP
      */
     protected $MachineIP = null;
 
     /**
-     * @var string $Name
+     * @var string|null $Name
      */
     protected $Name = null;
 
     /**
-     * @var string $PreviewUrl
+     * @var string|null $PreviewUrl
      */
     protected $PreviewUrl = null;
 
     /**
-     * @var ArrayOfguid $ScheduledRecordings
+     * @var ArrayOfguid|null $ScheduledRecordings
      */
     protected $ScheduledRecordings = null;
 
     /**
-     * @var string $SettingsUrl
+     * @var string|null $SettingsUrl
      */
     protected $SettingsUrl = null;
 
     /**
-     * @var RemoteRecorderState $State
+     * @var RemoteRecorderState|null $State
      */
     protected $State = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -61,17 +61,17 @@ class RemoteRecorder
      */
     public function getDevices()
     {
-      return $this->Devices;
+        return $this->Devices;
     }
 
     /**
      * @param ArrayOfRemoteRecorderDevice $Devices
-     * @return \Panopto\RemoteRecorderManagement\RemoteRecorder
+     * @return RemoteRecorder
      */
-    public function setDevices($Devices)
+    public function setDevices($Devices): RemoteRecorder
     {
-      $this->Devices = $Devices;
-      return $this;
+        $this->Devices = $Devices;
+        return $this;
     }
 
     /**
@@ -79,35 +79,35 @@ class RemoteRecorder
      */
     public function getExternalId()
     {
-      return $this->ExternalId;
+        return $this->ExternalId;
     }
 
     /**
      * @param string $ExternalId
-     * @return \Panopto\RemoteRecorderManagement\RemoteRecorder
+     * @return RemoteRecorder
      */
-    public function setExternalId($ExternalId)
+    public function setExternalId($ExternalId): RemoteRecorder
     {
-      $this->ExternalId = $ExternalId;
-      return $this;
+        $this->ExternalId = $ExternalId;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getId()
     {
-      return $this->Id;
+        return $this->Id;
     }
 
     /**
-     * @param guid $Id
-     * @return \Panopto\RemoteRecorderManagement\RemoteRecorder
+     * @param string $Id
+     * @return RemoteRecorder
      */
-    public function setId($Id)
+    public function setId($Id): RemoteRecorder
     {
-      $this->Id = $Id;
-      return $this;
+        $this->Id = $Id;
+        return $this;
     }
 
     /**
@@ -115,17 +115,17 @@ class RemoteRecorder
      */
     public function getMachineIP()
     {
-      return $this->MachineIP;
+        return $this->MachineIP;
     }
 
     /**
      * @param string $MachineIP
-     * @return \Panopto\RemoteRecorderManagement\RemoteRecorder
+     * @return RemoteRecorder
      */
-    public function setMachineIP($MachineIP)
+    public function setMachineIP($MachineIP): RemoteRecorder
     {
-      $this->MachineIP = $MachineIP;
-      return $this;
+        $this->MachineIP = $MachineIP;
+        return $this;
     }
 
     /**
@@ -133,17 +133,17 @@ class RemoteRecorder
      */
     public function getName()
     {
-      return $this->Name;
+        return $this->Name;
     }
 
     /**
      * @param string $Name
-     * @return \Panopto\RemoteRecorderManagement\RemoteRecorder
+     * @return RemoteRecorder
      */
-    public function setName($Name)
+    public function setName($Name): RemoteRecorder
     {
-      $this->Name = $Name;
-      return $this;
+        $this->Name = $Name;
+        return $this;
     }
 
     /**
@@ -151,17 +151,17 @@ class RemoteRecorder
      */
     public function getPreviewUrl()
     {
-      return $this->PreviewUrl;
+        return $this->PreviewUrl;
     }
 
     /**
      * @param string $PreviewUrl
-     * @return \Panopto\RemoteRecorderManagement\RemoteRecorder
+     * @return RemoteRecorder
      */
-    public function setPreviewUrl($PreviewUrl)
+    public function setPreviewUrl($PreviewUrl): RemoteRecorder
     {
-      $this->PreviewUrl = $PreviewUrl;
-      return $this;
+        $this->PreviewUrl = $PreviewUrl;
+        return $this;
     }
 
     /**
@@ -169,17 +169,17 @@ class RemoteRecorder
      */
     public function getScheduledRecordings()
     {
-      return $this->ScheduledRecordings;
+        return $this->ScheduledRecordings;
     }
 
     /**
      * @param ArrayOfguid $ScheduledRecordings
-     * @return \Panopto\RemoteRecorderManagement\RemoteRecorder
+     * @return RemoteRecorder
      */
-    public function setScheduledRecordings($ScheduledRecordings)
+    public function setScheduledRecordings($ScheduledRecordings): RemoteRecorder
     {
-      $this->ScheduledRecordings = $ScheduledRecordings;
-      return $this;
+        $this->ScheduledRecordings = $ScheduledRecordings;
+        return $this;
     }
 
     /**
@@ -187,17 +187,17 @@ class RemoteRecorder
      */
     public function getSettingsUrl()
     {
-      return $this->SettingsUrl;
+        return $this->SettingsUrl;
     }
 
     /**
      * @param string $SettingsUrl
-     * @return \Panopto\RemoteRecorderManagement\RemoteRecorder
+     * @return RemoteRecorder
      */
-    public function setSettingsUrl($SettingsUrl)
+    public function setSettingsUrl($SettingsUrl): RemoteRecorder
     {
-      $this->SettingsUrl = $SettingsUrl;
-      return $this;
+        $this->SettingsUrl = $SettingsUrl;
+        return $this;
     }
 
     /**
@@ -205,17 +205,17 @@ class RemoteRecorder
      */
     public function getState()
     {
-      return $this->State;
+        return $this->State;
     }
 
     /**
      * @param RemoteRecorderState $State
-     * @return \Panopto\RemoteRecorderManagement\RemoteRecorder
+     * @return RemoteRecorder
      */
-    public function setState($State)
+    public function setState($State): RemoteRecorder
     {
-      $this->State = $State;
-      return $this;
+        $this->State = $State;
+        return $this;
     }
 
 }

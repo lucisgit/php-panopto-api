@@ -6,7 +6,7 @@ class GetFoldersByIdResponse
 {
 
     /**
-     * @var ArrayOfFolder $GetFoldersByIdResult
+     * @var ArrayOfFolder|null $GetFoldersByIdResult
      */
     protected $GetFoldersByIdResult = null;
 
@@ -23,17 +23,17 @@ class GetFoldersByIdResponse
      */
     public function getGetFoldersByIdResult()
     {
-      return $this->GetFoldersByIdResult;
+        return $this->GetFoldersByIdResult;
     }
 
     /**
      * @param ArrayOfFolder $GetFoldersByIdResult
-     * @return \Panopto\SessionManagement\GetFoldersByIdResponse
+     * @return GetFoldersByIdResponse
      */
-    public function setGetFoldersByIdResult($GetFoldersByIdResult)
+    public function setGetFoldersByIdResult($GetFoldersByIdResult): GetFoldersByIdResponse
     {
-      $this->GetFoldersByIdResult = $GetFoldersByIdResult;
-      return $this;
+        $this->GetFoldersByIdResult = $GetFoldersByIdResult;
+        return $this;
     }
 
 }

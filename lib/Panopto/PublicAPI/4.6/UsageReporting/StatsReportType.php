@@ -13,6 +13,12 @@ class StatsReportType
     const SessionsViewsByUsers = 'SessionsViewsByUsers';
     const SessionsViewsByViewingType = 'SessionsViewsByViewingType';
     const SessionsCreatedOrEdited = 'SessionsCreatedOrEdited';
+    const RemoteRecorderUsage = 'RemoteRecorderUsage';
+    const SystemViews = 'SystemViews';
+    const SystemFolderStorage = 'SystemFolderStorage';
+    const StreamCreation = 'StreamCreation';
+    const RetentionAudit = 'RetentionAudit';
+    const SystemSessionStorage = 'SystemSessionStorage';
 
 
 }

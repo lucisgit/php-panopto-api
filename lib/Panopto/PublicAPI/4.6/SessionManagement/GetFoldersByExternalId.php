@@ -6,12 +6,12 @@ class GetFoldersByExternalId
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var ArrayOfstring $folderExternalIds
+     * @var ArrayOfstring|null $folderExternalIds
      */
     protected $folderExternalIds = null;
 
@@ -30,17 +30,17 @@ class GetFoldersByExternalId
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\GetFoldersByExternalId
+     * @return GetFoldersByExternalId
      */
-    public function setAuth($auth)
+    public function setAuth($auth): GetFoldersByExternalId
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -48,17 +48,17 @@ class GetFoldersByExternalId
      */
     public function getFolderExternalIds()
     {
-      return $this->folderExternalIds;
+        return $this->folderExternalIds;
     }
 
     /**
      * @param ArrayOfstring $folderExternalIds
-     * @return \Panopto\SessionManagement\GetFoldersByExternalId
+     * @return GetFoldersByExternalId
      */
-    public function setFolderExternalIds($folderExternalIds)
+    public function setFolderExternalIds($folderExternalIds): GetFoldersByExternalId
     {
-      $this->folderExternalIds = $folderExternalIds;
-      return $this;
+        $this->folderExternalIds = $folderExternalIds;
+        return $this;
     }
 
 }

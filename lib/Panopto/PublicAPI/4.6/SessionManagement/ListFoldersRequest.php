@@ -6,39 +6,44 @@ class ListFoldersRequest
 {
 
     /**
-     * @var Pagination $Pagination
+     * @var Pagination|null $Pagination
      */
     protected $Pagination = null;
 
     /**
-     * @var guid $ParentFolderId
+     * @var string|null $ParentFolderId
      */
     protected $ParentFolderId = null;
 
     /**
-     * @var boolean $PublicOnly
+     * @var bool|null $PublicOnly
      */
     protected $PublicOnly = null;
 
     /**
-     * @var FolderSortField $SortBy
+     * @var FolderSortField|null $SortBy
      */
     protected $SortBy = null;
 
     /**
-     * @var boolean $SortIncreasing
+     * @var bool|null $SortIncreasing
      */
     protected $SortIncreasing = null;
 
     /**
-     * @var boolean $WildcardSearchNameOnly
+     * @var bool|null $UnmappedOnly
+     */
+    protected $UnmappedOnly = null;
+
+    /**
+     * @var bool|null $WildcardSearchNameOnly
      */
     protected $WildcardSearchNameOnly = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -46,53 +51,53 @@ class ListFoldersRequest
      */
     public function getPagination()
     {
-      return $this->Pagination;
+        return $this->Pagination;
     }
 
     /**
      * @param Pagination $Pagination
-     * @return \Panopto\SessionManagement\ListFoldersRequest
+     * @return ListFoldersRequest
      */
-    public function setPagination($Pagination)
+    public function setPagination($Pagination): ListFoldersRequest
     {
-      $this->Pagination = $Pagination;
-      return $this;
+        $this->Pagination = $Pagination;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getParentFolderId()
     {
-      return $this->ParentFolderId;
+        return $this->ParentFolderId;
     }
 
     /**
-     * @param guid $ParentFolderId
-     * @return \Panopto\SessionManagement\ListFoldersRequest
+     * @param string $ParentFolderId
+     * @return ListFoldersRequest
      */
-    public function setParentFolderId($ParentFolderId)
+    public function setParentFolderId($ParentFolderId): ListFoldersRequest
     {
-      $this->ParentFolderId = $ParentFolderId;
-      return $this;
+        $this->ParentFolderId = $ParentFolderId;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getPublicOnly()
     {
-      return $this->PublicOnly;
+        return $this->PublicOnly;
     }
 
     /**
-     * @param boolean $PublicOnly
-     * @return \Panopto\SessionManagement\ListFoldersRequest
+     * @param bool $PublicOnly
+     * @return ListFoldersRequest
      */
-    public function setPublicOnly($PublicOnly)
+    public function setPublicOnly($PublicOnly): ListFoldersRequest
     {
-      $this->PublicOnly = $PublicOnly;
-      return $this;
+        $this->PublicOnly = $PublicOnly;
+        return $this;
     }
 
     /**
@@ -100,53 +105,71 @@ class ListFoldersRequest
      */
     public function getSortBy()
     {
-      return $this->SortBy;
+        return $this->SortBy;
     }
 
     /**
      * @param FolderSortField $SortBy
-     * @return \Panopto\SessionManagement\ListFoldersRequest
+     * @return ListFoldersRequest
      */
-    public function setSortBy($SortBy)
+    public function setSortBy($SortBy): ListFoldersRequest
     {
-      $this->SortBy = $SortBy;
-      return $this;
+        $this->SortBy = $SortBy;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getSortIncreasing()
     {
-      return $this->SortIncreasing;
+        return $this->SortIncreasing;
     }
 
     /**
-     * @param boolean $SortIncreasing
-     * @return \Panopto\SessionManagement\ListFoldersRequest
+     * @param bool $SortIncreasing
+     * @return ListFoldersRequest
      */
-    public function setSortIncreasing($SortIncreasing)
+    public function setSortIncreasing($SortIncreasing): ListFoldersRequest
     {
-      $this->SortIncreasing = $SortIncreasing;
-      return $this;
+        $this->SortIncreasing = $SortIncreasing;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
+     */
+    public function getUnmappedOnly()
+    {
+        return $this->UnmappedOnly;
+    }
+
+    /**
+     * @param bool $UnmappedOnly
+     * @return ListFoldersRequest
+     */
+    public function setUnmappedOnly($UnmappedOnly): ListFoldersRequest
+    {
+        $this->UnmappedOnly = $UnmappedOnly;
+        return $this;
+    }
+
+    /**
+     * @return bool
      */
     public function getWildcardSearchNameOnly()
     {
-      return $this->WildcardSearchNameOnly;
+        return $this->WildcardSearchNameOnly;
     }
 
     /**
-     * @param boolean $WildcardSearchNameOnly
-     * @return \Panopto\SessionManagement\ListFoldersRequest
+     * @param bool $WildcardSearchNameOnly
+     * @return ListFoldersRequest
      */
-    public function setWildcardSearchNameOnly($WildcardSearchNameOnly)
+    public function setWildcardSearchNameOnly($WildcardSearchNameOnly): ListFoldersRequest
     {
-      $this->WildcardSearchNameOnly = $WildcardSearchNameOnly;
-      return $this;
+        $this->WildcardSearchNameOnly = $WildcardSearchNameOnly;
+        return $this;
     }
 
 }

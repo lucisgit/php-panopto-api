@@ -6,27 +6,27 @@ class UpdateFoldersAvailabilityEndSettings
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var ArrayOfguid $folderIds
+     * @var ArrayOfguid|null $folderIds
      */
     protected $folderIds = null;
 
     /**
-     * @var FolderEndSettingType $settingType
+     * @var FolderEndSettingType|null $settingType
      */
     protected $settingType = null;
 
     /**
-     * @var \DateTime $endDate
+     * @var \DateTime|string|null $endDate
      */
-    protected $endDate = null;
+    protected \DateTime|string|null $endDate = null;
 
     /**
-     * @var boolean $overrideSessionsSettings
+     * @var bool|null $overrideSessionsSettings
      */
     protected $overrideSessionsSettings = null;
 
@@ -35,7 +35,7 @@ class UpdateFoldersAvailabilityEndSettings
      * @param ArrayOfguid $folderIds
      * @param FolderEndSettingType $settingType
      * @param \DateTime $endDate
-     * @param boolean $overrideSessionsSettings
+     * @param bool $overrideSessionsSettings
      */
     public function __construct($auth, $folderIds, $settingType, \DateTime $endDate, $overrideSessionsSettings)
     {
@@ -51,17 +51,17 @@ class UpdateFoldersAvailabilityEndSettings
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\UpdateFoldersAvailabilityEndSettings
+     * @return UpdateFoldersAvailabilityEndSettings
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateFoldersAvailabilityEndSettings
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -69,17 +69,17 @@ class UpdateFoldersAvailabilityEndSettings
      */
     public function getFolderIds()
     {
-      return $this->folderIds;
+        return $this->folderIds;
     }
 
     /**
      * @param ArrayOfguid $folderIds
-     * @return \Panopto\SessionManagement\UpdateFoldersAvailabilityEndSettings
+     * @return UpdateFoldersAvailabilityEndSettings
      */
-    public function setFolderIds($folderIds)
+    public function setFolderIds($folderIds): UpdateFoldersAvailabilityEndSettings
     {
-      $this->folderIds = $folderIds;
-      return $this;
+        $this->folderIds = $folderIds;
+        return $this;
     }
 
     /**
@@ -87,61 +87,61 @@ class UpdateFoldersAvailabilityEndSettings
      */
     public function getSettingType()
     {
-      return $this->settingType;
+        return $this->settingType;
     }
 
     /**
      * @param FolderEndSettingType $settingType
-     * @return \Panopto\SessionManagement\UpdateFoldersAvailabilityEndSettings
+     * @return UpdateFoldersAvailabilityEndSettings
      */
-    public function setSettingType($settingType)
+    public function setSettingType($settingType): UpdateFoldersAvailabilityEndSettings
     {
-      $this->settingType = $settingType;
-      return $this;
+        $this->settingType = $settingType;
+        return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return \DateTime|bool|null
      */
-    public function getEndDate()
+    public function getEndDate(): \DateTime|bool|null
     {
-      if ($this->endDate == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->endDate);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->endDate == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->endDate);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
      * @param \DateTime $endDate
-     * @return \Panopto\SessionManagement\UpdateFoldersAvailabilityEndSettings
+     * @return UpdateFoldersAvailabilityEndSettings
      */
-    public function setEndDate(\DateTime $endDate)
+    public function setEndDate(\DateTime $endDate): UpdateFoldersAvailabilityEndSettings
     {
-      $this->endDate = $endDate->format(\DateTime::ATOM);
-      return $this;
+        $this->endDate = $endDate->format(\DateTime::ATOM);
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getOverrideSessionsSettings()
     {
-      return $this->overrideSessionsSettings;
+        return $this->overrideSessionsSettings;
     }
 
     /**
-     * @param boolean $overrideSessionsSettings
-     * @return \Panopto\SessionManagement\UpdateFoldersAvailabilityEndSettings
+     * @param bool $overrideSessionsSettings
+     * @return UpdateFoldersAvailabilityEndSettings
      */
-    public function setOverrideSessionsSettings($overrideSessionsSettings)
+    public function setOverrideSessionsSettings($overrideSessionsSettings): UpdateFoldersAvailabilityEndSettings
     {
-      $this->overrideSessionsSettings = $overrideSessionsSettings;
-      return $this;
+        $this->overrideSessionsSettings = $overrideSessionsSettings;
+        return $this;
     }
 
 }

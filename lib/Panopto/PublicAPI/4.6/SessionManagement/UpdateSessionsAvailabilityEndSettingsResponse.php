@@ -6,12 +6,12 @@ class UpdateSessionsAvailabilityEndSettingsResponse
 {
 
     /**
-     * @var boolean $UpdateSessionsAvailabilityEndSettingsResult
+     * @var bool|null $UpdateSessionsAvailabilityEndSettingsResult
      */
     protected $UpdateSessionsAvailabilityEndSettingsResult = null;
 
     /**
-     * @param boolean $UpdateSessionsAvailabilityEndSettingsResult
+     * @param bool $UpdateSessionsAvailabilityEndSettingsResult
      */
     public function __construct($UpdateSessionsAvailabilityEndSettingsResult)
     {
@@ -19,21 +19,21 @@ class UpdateSessionsAvailabilityEndSettingsResponse
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getUpdateSessionsAvailabilityEndSettingsResult()
     {
-      return $this->UpdateSessionsAvailabilityEndSettingsResult;
+        return $this->UpdateSessionsAvailabilityEndSettingsResult;
     }
 
     /**
-     * @param boolean $UpdateSessionsAvailabilityEndSettingsResult
-     * @return \Panopto\SessionManagement\UpdateSessionsAvailabilityEndSettingsResponse
+     * @param bool $UpdateSessionsAvailabilityEndSettingsResult
+     * @return UpdateSessionsAvailabilityEndSettingsResponse
      */
-    public function setUpdateSessionsAvailabilityEndSettingsResult($UpdateSessionsAvailabilityEndSettingsResult)
+    public function setUpdateSessionsAvailabilityEndSettingsResult($UpdateSessionsAvailabilityEndSettingsResult): UpdateSessionsAvailabilityEndSettingsResponse
     {
-      $this->UpdateSessionsAvailabilityEndSettingsResult = $UpdateSessionsAvailabilityEndSettingsResult;
-      return $this;
+        $this->UpdateSessionsAvailabilityEndSettingsResult = $UpdateSessionsAvailabilityEndSettingsResult;
+        return $this;
     }
 
 }

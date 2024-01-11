@@ -1,7 +1,7 @@
 <?php
 
 
- function autoload_ac52f20a509717e8e89d2b97705c1b9c($class)
+ function autoload_ac52f20a509717e8e89d2b97705c1b9c($class): void
 {
     $classes = array(
         'Panopto\SessionManagement\SessionManagement' => __DIR__ .'/SessionManagement.php',
@@ -32,6 +32,14 @@
         'Panopto\SessionManagement\ListSessionsResponse' => __DIR__ .'/ListSessionsResponse.php',
         'Panopto\SessionManagement\ListFoldersResponse' => __DIR__ .'/ListFoldersResponse.php',
         'Panopto\SessionManagement\ListFoldersResponseWithExternalContext' => __DIR__ .'/ListFoldersResponseWithExternalContext.php',
+        'Panopto\SessionManagement\ListExtendedFoldersResponse' => __DIR__ .'/ListExtendedFoldersResponse.php',
+        'Panopto\SessionManagement\ArrayOfExtendedFolder' => __DIR__ .'/ArrayOfExtendedFolder.php',
+        'Panopto\SessionManagement\ExtendedFolder' => __DIR__ .'/ExtendedFolder.php',
+        'Panopto\SessionManagement\ArrayOfListSessionRTMPStreamKeysResponse' => __DIR__ .'/ArrayOfListSessionRTMPStreamKeysResponse.php',
+        'Panopto\SessionManagement\ListSessionRTMPStreamKeysResponse' => __DIR__ .'/ListSessionRTMPStreamKeysResponse.php',
+        'Panopto\SessionManagement\RTMPStreamKeyState' => __DIR__ .'/RTMPStreamKeyState.php',
+        'Panopto\SessionManagement\ArrayOfExternalHierarchyInfo' => __DIR__ .'/ArrayOfExternalHierarchyInfo.php',
+        'Panopto\SessionManagement\ExternalHierarchyInfo' => __DIR__ .'/ExternalHierarchyInfo.php',
         'Panopto\SessionManagement\FoldersWithAvailabilitySettings' => __DIR__ .'/FoldersWithAvailabilitySettings.php',
         'Panopto\SessionManagement\ArrayOfFolderAvailabilitySettings' => __DIR__ .'/ArrayOfFolderAvailabilitySettings.php',
         'Panopto\SessionManagement\FolderAvailabilitySettings' => __DIR__ .'/FolderAvailabilitySettings.php',
@@ -70,6 +78,8 @@
         'Panopto\SessionManagement\GetFoldersWithExternalContextListResponse' => __DIR__ .'/GetFoldersWithExternalContextListResponse.php',
         'Panopto\SessionManagement\GetCreatorFoldersList' => __DIR__ .'/GetCreatorFoldersList.php',
         'Panopto\SessionManagement\GetCreatorFoldersListResponse' => __DIR__ .'/GetCreatorFoldersListResponse.php',
+        'Panopto\SessionManagement\GetExtendedCreatorFoldersList' => __DIR__ .'/GetExtendedCreatorFoldersList.php',
+        'Panopto\SessionManagement\GetExtendedCreatorFoldersListResponse' => __DIR__ .'/GetExtendedCreatorFoldersListResponse.php',
         'Panopto\SessionManagement\GetCreatorFoldersWithExternalContextList' => __DIR__ .'/GetCreatorFoldersWithExternalContextList.php',
         'Panopto\SessionManagement\GetCreatorFoldersWithExternalContextListResponse' => __DIR__ .'/GetCreatorFoldersWithExternalContextListResponse.php',
         'Panopto\SessionManagement\UpdateSessionName' => __DIR__ .'/UpdateSessionName.php',
@@ -86,6 +96,9 @@
         'Panopto\SessionManagement\UpdateSessionCreateRTMPStreamsResponse' => __DIR__ .'/UpdateSessionCreateRTMPStreamsResponse.php',
         'Panopto\SessionManagement\UpdateSessionUpdateRTMPStreamTypes' => __DIR__ .'/UpdateSessionUpdateRTMPStreamTypes.php',
         'Panopto\SessionManagement\UpdateSessionUpdateRTMPStreamTypesResponse' => __DIR__ .'/UpdateSessionUpdateRTMPStreamTypesResponse.php',
+        'Panopto\SessionManagement\UpdateSessionUpdateRTMPStreamSetShouldConvertToOnDemand' => __DIR__ .'/UpdateSessionUpdateRTMPStreamSetShouldConvertToOnDemand.php',
+        'Panopto\SessionManagement\UpdateSessionUpdateRTMPStreamSetShouldConvertToOnDemandResponse' => __DIR__ .'/UpdateSessionUpdateRTMPStreamSetShouldConvertToOnDemandResponse.php',
+        'Panopto\SessionManagement\ListSessionRTMPStreamKeys' => __DIR__ .'/ListSessionRTMPStreamKeys.php',
         'Panopto\SessionManagement\UpdateSessionOwner' => __DIR__ .'/UpdateSessionOwner.php',
         'Panopto\SessionManagement\UpdateSessionOwnerResponse' => __DIR__ .'/UpdateSessionOwnerResponse.php',
         'Panopto\SessionManagement\MoveSessions' => __DIR__ .'/MoveSessions.php',
@@ -114,6 +127,8 @@
         'Panopto\SessionManagement\DeleteFoldersResponse' => __DIR__ .'/DeleteFoldersResponse.php',
         'Panopto\SessionManagement\ProvisionExternalCourse' => __DIR__ .'/ProvisionExternalCourse.php',
         'Panopto\SessionManagement\ProvisionExternalCourseResponse' => __DIR__ .'/ProvisionExternalCourseResponse.php',
+        'Panopto\SessionManagement\EnsureExternalHierarchyBranch' => __DIR__ .'/EnsureExternalHierarchyBranch.php',
+        'Panopto\SessionManagement\EnsureExternalHierarchyBranchResponse' => __DIR__ .'/EnsureExternalHierarchyBranchResponse.php',
         'Panopto\SessionManagement\ProvisionExternalCourseWithRoles' => __DIR__ .'/ProvisionExternalCourseWithRoles.php',
         'Panopto\SessionManagement\ProvisionExternalCourseWithRolesResponse' => __DIR__ .'/ProvisionExternalCourseWithRolesResponse.php',
         'Panopto\SessionManagement\SetExternalCourseAccess' => __DIR__ .'/SetExternalCourseAccess.php',
@@ -149,6 +164,8 @@
         'Panopto\SessionManagement\CreateCaptionByAbsoluteTimeResponse' => __DIR__ .'/CreateCaptionByAbsoluteTimeResponse.php',
         'Panopto\SessionManagement\UploadTranscript' => __DIR__ .'/UploadTranscript.php',
         'Panopto\SessionManagement\UploadTranscriptResponse' => __DIR__ .'/UploadTranscriptResponse.php',
+        'Panopto\SessionManagement\ReplaceMachineCaptionsAndUploadTranscript' => __DIR__ .'/ReplaceMachineCaptionsAndUploadTranscript.php',
+        'Panopto\SessionManagement\ReplaceMachineCaptionsAndUploadTranscriptResponse' => __DIR__ .'/ReplaceMachineCaptionsAndUploadTranscriptResponse.php',
         'Panopto\SessionManagement\GetFoldersAvailabilitySettings' => __DIR__ .'/GetFoldersAvailabilitySettings.php',
         'Panopto\SessionManagement\GetFoldersAvailabilitySettingsResponse' => __DIR__ .'/GetFoldersAvailabilitySettingsResponse.php',
         'Panopto\SessionManagement\GetSessionsAvailabilitySettings' => __DIR__ .'/GetSessionsAvailabilitySettings.php',
@@ -162,11 +179,17 @@
         'Panopto\SessionManagement\UpdateSessionsAvailabilityEndSettings' => __DIR__ .'/UpdateSessionsAvailabilityEndSettings.php',
         'Panopto\SessionManagement\UpdateSessionsAvailabilityEndSettingsResponse' => __DIR__ .'/UpdateSessionsAvailabilityEndSettingsResponse.php',
         'Panopto\SessionManagement\GetPersonalFolderForUser' => __DIR__ .'/GetPersonalFolderForUser.php',
-        'Panopto\SessionManagement\GetPersonalFolderForUserResponse' => __DIR__ .'/GetPersonalFolderForUserResponse.php'
+        'Panopto\SessionManagement\GetPersonalFolderForUserResponse' => __DIR__ .'/GetPersonalFolderForUserResponse.php',
+        'Panopto\SessionManagement\GetVideoDownloadURL' => __DIR__ .'/GetVideoDownloadURL.php',
+        'Panopto\SessionManagement\GetVideoDownloadURLResponse' => __DIR__ .'/GetVideoDownloadURLResponse.php',
+        'Panopto\SessionManagement\GetAudioDownloadURL' => __DIR__ .'/GetAudioDownloadURL.php',
+        'Panopto\SessionManagement\GetAudioDownloadURLResponse' => __DIR__ .'/GetAudioDownloadURLResponse.php',
+        'Panopto\SessionManagement\UnprovisionExternalCourse' => __DIR__ .'/UnprovisionExternalCourse.php',
+        'Panopto\SessionManagement\UnprovisionExternalCourseResponse' => __DIR__ .'/UnprovisionExternalCourseResponse.php'
     );
     if (!empty($classes[$class])) {
         include $classes[$class];
-    };
+    }
 }
 
 spl_autoload_register('autoload_ac52f20a509717e8e89d2b97705c1b9c');

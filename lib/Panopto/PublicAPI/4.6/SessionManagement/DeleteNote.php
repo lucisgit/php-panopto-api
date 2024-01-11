@@ -6,24 +6,24 @@ class DeleteNote
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $noteId
+     * @var string|null $noteId
      */
     protected $noteId = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $noteId
-     * @param guid $sessionId
+     * @param string $noteId
+     * @param string $sessionId
      */
     public function __construct($auth, $noteId, $sessionId)
     {
@@ -37,53 +37,53 @@ class DeleteNote
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\DeleteNote
+     * @return DeleteNote
      */
-    public function setAuth($auth)
+    public function setAuth($auth): DeleteNote
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getNoteId()
     {
-      return $this->noteId;
+        return $this->noteId;
     }
 
     /**
-     * @param guid $noteId
-     * @return \Panopto\SessionManagement\DeleteNote
+     * @param string $noteId
+     * @return DeleteNote
      */
-    public function setNoteId($noteId)
+    public function setNoteId($noteId): DeleteNote
     {
-      $this->noteId = $noteId;
-      return $this;
+        $this->noteId = $noteId;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\SessionManagement\DeleteNote
+     * @param string $sessionId
+     * @return DeleteNote
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): DeleteNote
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
 }

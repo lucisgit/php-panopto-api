@@ -6,12 +6,12 @@ class LogOnWithExternalProviderResponse
 {
 
     /**
-     * @var boolean $LogOnWithExternalProviderResult
+     * @var bool|null $LogOnWithExternalProviderResult
      */
     protected $LogOnWithExternalProviderResult = null;
 
     /**
-     * @param boolean $LogOnWithExternalProviderResult
+     * @param bool $LogOnWithExternalProviderResult
      */
     public function __construct($LogOnWithExternalProviderResult)
     {
@@ -19,21 +19,21 @@ class LogOnWithExternalProviderResponse
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getLogOnWithExternalProviderResult()
     {
-      return $this->LogOnWithExternalProviderResult;
+        return $this->LogOnWithExternalProviderResult;
     }
 
     /**
-     * @param boolean $LogOnWithExternalProviderResult
-     * @return \Panopto\Auth\LogOnWithExternalProviderResponse
+     * @param bool $LogOnWithExternalProviderResult
+     * @return LogOnWithExternalProviderResponse
      */
-    public function setLogOnWithExternalProviderResult($LogOnWithExternalProviderResult)
+    public function setLogOnWithExternalProviderResult($LogOnWithExternalProviderResult): LogOnWithExternalProviderResponse
     {
-      $this->LogOnWithExternalProviderResult = $LogOnWithExternalProviderResult;
-      return $this;
+        $this->LogOnWithExternalProviderResult = $LogOnWithExternalProviderResult;
+        return $this;
     }
 
 }

@@ -6,7 +6,7 @@ class ScheduleRecurringRecordingResponse
 {
 
     /**
-     * @var ScheduledRecordingResult $ScheduleRecurringRecordingResult
+     * @var ScheduledRecordingResult|null $ScheduleRecurringRecordingResult
      */
     protected $ScheduleRecurringRecordingResult = null;
 
@@ -23,17 +23,17 @@ class ScheduleRecurringRecordingResponse
      */
     public function getScheduleRecurringRecordingResult()
     {
-      return $this->ScheduleRecurringRecordingResult;
+        return $this->ScheduleRecurringRecordingResult;
     }
 
     /**
      * @param ScheduledRecordingResult $ScheduleRecurringRecordingResult
-     * @return \Panopto\RemoteRecorderManagement\ScheduleRecurringRecordingResponse
+     * @return ScheduleRecurringRecordingResponse
      */
-    public function setScheduleRecurringRecordingResult($ScheduleRecurringRecordingResult)
+    public function setScheduleRecurringRecordingResult($ScheduleRecurringRecordingResult): ScheduleRecurringRecordingResponse
     {
-      $this->ScheduleRecurringRecordingResult = $ScheduleRecurringRecordingResult;
-      return $this;
+        $this->ScheduleRecurringRecordingResult = $ScheduleRecurringRecordingResult;
+        return $this;
     }
 
 }

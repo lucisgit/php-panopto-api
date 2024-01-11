@@ -6,24 +6,24 @@ class UpdateFolderIsPublic
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $folderId
+     * @var string|null $folderId
      */
     protected $folderId = null;
 
     /**
-     * @var boolean $isPublic
+     * @var bool|null $isPublic
      */
     protected $isPublic = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $folderId
-     * @param boolean $isPublic
+     * @param string $folderId
+     * @param bool $isPublic
      */
     public function __construct($auth, $folderId, $isPublic)
     {
@@ -37,53 +37,53 @@ class UpdateFolderIsPublic
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\AccessManagement\UpdateFolderIsPublic
+     * @return UpdateFolderIsPublic
      */
-    public function setAuth($auth)
+    public function setAuth($auth): UpdateFolderIsPublic
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getFolderId()
     {
-      return $this->folderId;
+        return $this->folderId;
     }
 
     /**
-     * @param guid $folderId
-     * @return \Panopto\AccessManagement\UpdateFolderIsPublic
+     * @param string $folderId
+     * @return UpdateFolderIsPublic
      */
-    public function setFolderId($folderId)
+    public function setFolderId($folderId): UpdateFolderIsPublic
     {
-      $this->folderId = $folderId;
-      return $this;
+        $this->folderId = $folderId;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getIsPublic()
     {
-      return $this->isPublic;
+        return $this->isPublic;
     }
 
     /**
-     * @param boolean $isPublic
-     * @return \Panopto\AccessManagement\UpdateFolderIsPublic
+     * @param bool $isPublic
+     * @return UpdateFolderIsPublic
      */
-    public function setIsPublic($isPublic)
+    public function setIsPublic($isPublic): UpdateFolderIsPublic
     {
-      $this->isPublic = $isPublic;
-      return $this;
+        $this->isPublic = $isPublic;
+        return $this;
     }
 
 }

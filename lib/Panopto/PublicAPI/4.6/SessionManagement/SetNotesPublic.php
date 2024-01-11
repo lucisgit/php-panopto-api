@@ -6,24 +6,24 @@ class SetNotesPublic
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
-     * @var boolean $areNotesPublic
+     * @var bool|null $areNotesPublic
      */
     protected $areNotesPublic = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
-     * @param boolean $areNotesPublic
+     * @param string $sessionId
+     * @param bool $areNotesPublic
      */
     public function __construct($auth, $sessionId, $areNotesPublic)
     {
@@ -37,53 +37,53 @@ class SetNotesPublic
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\SessionManagement\SetNotesPublic
+     * @return SetNotesPublic
      */
-    public function setAuth($auth)
+    public function setAuth($auth): SetNotesPublic
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\SessionManagement\SetNotesPublic
+     * @param string $sessionId
+     * @return SetNotesPublic
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): SetNotesPublic
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getAreNotesPublic()
     {
-      return $this->areNotesPublic;
+        return $this->areNotesPublic;
     }
 
     /**
-     * @param boolean $areNotesPublic
-     * @return \Panopto\SessionManagement\SetNotesPublic
+     * @param bool $areNotesPublic
+     * @return SetNotesPublic
      */
-    public function setAreNotesPublic($areNotesPublic)
+    public function setAreNotesPublic($areNotesPublic): SetNotesPublic
     {
-      $this->areNotesPublic = $areNotesPublic;
-      return $this;
+        $this->areNotesPublic = $areNotesPublic;
+        return $this;
     }
 
 }

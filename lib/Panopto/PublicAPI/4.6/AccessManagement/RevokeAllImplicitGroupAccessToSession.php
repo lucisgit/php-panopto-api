@@ -6,18 +6,18 @@ class RevokeAllImplicitGroupAccessToSession
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var guid $sessionId
+     * @var string|null $sessionId
      */
     protected $sessionId = null;
 
     /**
      * @param AuthenticationInfo $auth
-     * @param guid $sessionId
+     * @param string $sessionId
      */
     public function __construct($auth, $sessionId)
     {
@@ -30,35 +30,35 @@ class RevokeAllImplicitGroupAccessToSession
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\AccessManagement\RevokeAllImplicitGroupAccessToSession
+     * @return RevokeAllImplicitGroupAccessToSession
      */
-    public function setAuth($auth)
+    public function setAuth($auth): RevokeAllImplicitGroupAccessToSession
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
-     * @return guid
+     * @return string
      */
     public function getSessionId()
     {
-      return $this->sessionId;
+        return $this->sessionId;
     }
 
     /**
-     * @param guid $sessionId
-     * @return \Panopto\AccessManagement\RevokeAllImplicitGroupAccessToSession
+     * @param string $sessionId
+     * @return RevokeAllImplicitGroupAccessToSession
      */
-    public function setSessionId($sessionId)
+    public function setSessionId($sessionId): RevokeAllImplicitGroupAccessToSession
     {
-      $this->sessionId = $sessionId;
-      return $this;
+        $this->sessionId = $sessionId;
+        return $this;
     }
 
 }

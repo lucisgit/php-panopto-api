@@ -6,24 +6,24 @@ class AuthenticationInfo
 {
 
     /**
-     * @var string $AuthCode
+     * @var string|null $AuthCode
      */
     protected $AuthCode = null;
 
     /**
-     * @var string $Password
+     * @var string|null $Password
      */
     protected $Password = null;
 
     /**
-     * @var string $UserKey
+     * @var string|null $UserKey
      */
     protected $UserKey = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -31,17 +31,17 @@ class AuthenticationInfo
      */
     public function getAuthCode()
     {
-      return $this->AuthCode;
+        return $this->AuthCode;
     }
 
     /**
      * @param string $AuthCode
-     * @return \Panopto\UsageReporting\AuthenticationInfo
+     * @return AuthenticationInfo
      */
-    public function setAuthCode($AuthCode)
+    public function setAuthCode($AuthCode): AuthenticationInfo
     {
-      $this->AuthCode = $AuthCode;
-      return $this;
+        $this->AuthCode = $AuthCode;
+        return $this;
     }
 
     /**
@@ -49,17 +49,17 @@ class AuthenticationInfo
      */
     public function getPassword()
     {
-      return $this->Password;
+        return $this->Password;
     }
 
     /**
      * @param string $Password
-     * @return \Panopto\UsageReporting\AuthenticationInfo
+     * @return AuthenticationInfo
      */
-    public function setPassword($Password)
+    public function setPassword($Password): AuthenticationInfo
     {
-      $this->Password = $Password;
-      return $this;
+        $this->Password = $Password;
+        return $this;
     }
 
     /**
@@ -67,17 +67,17 @@ class AuthenticationInfo
      */
     public function getUserKey()
     {
-      return $this->UserKey;
+        return $this->UserKey;
     }
 
     /**
      * @param string $UserKey
-     * @return \Panopto\UsageReporting\AuthenticationInfo
+     * @return AuthenticationInfo
      */
-    public function setUserKey($UserKey)
+    public function setUserKey($UserKey): AuthenticationInfo
     {
-      $this->UserKey = $UserKey;
-      return $this;
+        $this->UserKey = $UserKey;
+        return $this;
     }
 
 }

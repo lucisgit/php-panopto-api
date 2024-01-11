@@ -6,7 +6,7 @@ class GetSessionsListResponse
 {
 
     /**
-     * @var ListSessionsResponse $GetSessionsListResult
+     * @var ListSessionsResponse|null $GetSessionsListResult
      */
     protected $GetSessionsListResult = null;
 
@@ -23,17 +23,17 @@ class GetSessionsListResponse
      */
     public function getGetSessionsListResult()
     {
-      return $this->GetSessionsListResult;
+        return $this->GetSessionsListResult;
     }
 
     /**
      * @param ListSessionsResponse $GetSessionsListResult
-     * @return \Panopto\SessionManagement\GetSessionsListResponse
+     * @return GetSessionsListResponse
      */
-    public function setGetSessionsListResult($GetSessionsListResult)
+    public function setGetSessionsListResult($GetSessionsListResult): GetSessionsListResponse
     {
-      $this->GetSessionsListResult = $GetSessionsListResult;
-      return $this;
+        $this->GetSessionsListResult = $GetSessionsListResult;
+        return $this;
     }
 
 }

@@ -6,19 +6,19 @@ class SessionsWithAvailabilitySettings
 {
 
     /**
-     * @var ArrayOfSessionAvailabilitySettings $Results
+     * @var ArrayOfSessionAvailabilitySettings|null $Results
      */
     protected $Results = null;
 
     /**
-     * @var int $TotalNumberResults
+     * @var int|null $TotalNumberResults
      */
     protected $TotalNumberResults = null;
 
-
+    
     public function __construct()
     {
-
+    
     }
 
     /**
@@ -26,17 +26,17 @@ class SessionsWithAvailabilitySettings
      */
     public function getResults()
     {
-      return $this->Results;
+        return $this->Results;
     }
 
     /**
      * @param ArrayOfSessionAvailabilitySettings $Results
-     * @return \Panopto\SessionManagement\SessionsWithAvailabilitySettings
+     * @return SessionsWithAvailabilitySettings
      */
-    public function setResults($Results)
+    public function setResults($Results): SessionsWithAvailabilitySettings
     {
-      $this->Results = $Results;
-      return $this;
+        $this->Results = $Results;
+        return $this;
     }
 
     /**
@@ -44,17 +44,17 @@ class SessionsWithAvailabilitySettings
      */
     public function getTotalNumberResults()
     {
-      return $this->TotalNumberResults;
+        return $this->TotalNumberResults;
     }
 
     /**
      * @param int $TotalNumberResults
-     * @return \Panopto\SessionManagement\SessionsWithAvailabilitySettings
+     * @return SessionsWithAvailabilitySettings
      */
-    public function setTotalNumberResults($TotalNumberResults)
+    public function setTotalNumberResults($TotalNumberResults): SessionsWithAvailabilitySettings
     {
-      $this->TotalNumberResults = $TotalNumberResults;
-      return $this;
+        $this->TotalNumberResults = $TotalNumberResults;
+        return $this;
     }
 
 }

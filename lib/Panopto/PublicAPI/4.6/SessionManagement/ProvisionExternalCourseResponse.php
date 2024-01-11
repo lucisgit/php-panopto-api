@@ -6,7 +6,7 @@ class ProvisionExternalCourseResponse
 {
 
     /**
-     * @var Folder $ProvisionExternalCourseResult
+     * @var Folder|null $ProvisionExternalCourseResult
      */
     protected $ProvisionExternalCourseResult = null;
 
@@ -23,17 +23,17 @@ class ProvisionExternalCourseResponse
      */
     public function getProvisionExternalCourseResult()
     {
-      return $this->ProvisionExternalCourseResult;
+        return $this->ProvisionExternalCourseResult;
     }
 
     /**
      * @param Folder $ProvisionExternalCourseResult
-     * @return \Panopto\SessionManagement\ProvisionExternalCourseResponse
+     * @return ProvisionExternalCourseResponse
      */
-    public function setProvisionExternalCourseResult($ProvisionExternalCourseResult)
+    public function setProvisionExternalCourseResult($ProvisionExternalCourseResult): ProvisionExternalCourseResponse
     {
-      $this->ProvisionExternalCourseResult = $ProvisionExternalCourseResult;
-      return $this;
+        $this->ProvisionExternalCourseResult = $ProvisionExternalCourseResult;
+        return $this;
     }
 
 }

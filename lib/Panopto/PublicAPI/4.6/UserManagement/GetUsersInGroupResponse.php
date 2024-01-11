@@ -6,7 +6,7 @@ class GetUsersInGroupResponse
 {
 
     /**
-     * @var ArrayOfguid $GetUsersInGroupResult
+     * @var ArrayOfguid|null $GetUsersInGroupResult
      */
     protected $GetUsersInGroupResult = null;
 
@@ -23,17 +23,17 @@ class GetUsersInGroupResponse
      */
     public function getGetUsersInGroupResult()
     {
-      return $this->GetUsersInGroupResult;
+        return $this->GetUsersInGroupResult;
     }
 
     /**
      * @param ArrayOfguid $GetUsersInGroupResult
-     * @return \Panopto\UserManagement\GetUsersInGroupResponse
+     * @return GetUsersInGroupResponse
      */
-    public function setGetUsersInGroupResult($GetUsersInGroupResult)
+    public function setGetUsersInGroupResult($GetUsersInGroupResult): GetUsersInGroupResponse
     {
-      $this->GetUsersInGroupResult = $GetUsersInGroupResult;
-      return $this;
+        $this->GetUsersInGroupResult = $GetUsersInGroupResult;
+        return $this;
     }
 
 }

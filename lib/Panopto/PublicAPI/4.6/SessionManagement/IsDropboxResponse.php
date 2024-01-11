@@ -6,12 +6,12 @@ class IsDropboxResponse
 {
 
     /**
-     * @var boolean $IsDropboxResult
+     * @var bool|null $IsDropboxResult
      */
     protected $IsDropboxResult = null;
 
     /**
-     * @param boolean $IsDropboxResult
+     * @param bool $IsDropboxResult
      */
     public function __construct($IsDropboxResult)
     {
@@ -19,21 +19,21 @@ class IsDropboxResponse
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getIsDropboxResult()
     {
-      return $this->IsDropboxResult;
+        return $this->IsDropboxResult;
     }
 
     /**
-     * @param boolean $IsDropboxResult
-     * @return \Panopto\SessionManagement\IsDropboxResponse
+     * @param bool $IsDropboxResult
+     * @return IsDropboxResponse
      */
-    public function setIsDropboxResult($IsDropboxResult)
+    public function setIsDropboxResult($IsDropboxResult): IsDropboxResponse
     {
-      $this->IsDropboxResult = $IsDropboxResult;
-      return $this;
+        $this->IsDropboxResult = $IsDropboxResult;
+        return $this;
     }
 
 }

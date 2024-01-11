@@ -6,12 +6,12 @@ class GetGroupIsPublicResponse
 {
 
     /**
-     * @var boolean $GetGroupIsPublicResult
+     * @var bool|null $GetGroupIsPublicResult
      */
     protected $GetGroupIsPublicResult = null;
 
     /**
-     * @param boolean $GetGroupIsPublicResult
+     * @param bool $GetGroupIsPublicResult
      */
     public function __construct($GetGroupIsPublicResult)
     {
@@ -19,21 +19,21 @@ class GetGroupIsPublicResponse
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function getGetGroupIsPublicResult()
     {
-      return $this->GetGroupIsPublicResult;
+        return $this->GetGroupIsPublicResult;
     }
 
     /**
-     * @param boolean $GetGroupIsPublicResult
-     * @return \Panopto\UserManagement\GetGroupIsPublicResponse
+     * @param bool $GetGroupIsPublicResult
+     * @return GetGroupIsPublicResponse
      */
-    public function setGetGroupIsPublicResult($GetGroupIsPublicResult)
+    public function setGetGroupIsPublicResult($GetGroupIsPublicResult): GetGroupIsPublicResponse
     {
-      $this->GetGroupIsPublicResult = $GetGroupIsPublicResult;
-      return $this;
+        $this->GetGroupIsPublicResult = $GetGroupIsPublicResult;
+        return $this;
     }
 
 }

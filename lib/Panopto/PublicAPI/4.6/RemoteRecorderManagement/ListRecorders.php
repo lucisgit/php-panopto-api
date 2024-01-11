@@ -6,17 +6,17 @@ class ListRecorders
 {
 
     /**
-     * @var AuthenticationInfo $auth
+     * @var AuthenticationInfo|null $auth
      */
     protected $auth = null;
 
     /**
-     * @var Pagination $pagination
+     * @var Pagination|null $pagination
      */
     protected $pagination = null;
 
     /**
-     * @var RecorderSortField $sortBy
+     * @var RecorderSortField|null $sortBy
      */
     protected $sortBy = null;
 
@@ -37,17 +37,17 @@ class ListRecorders
      */
     public function getAuth()
     {
-      return $this->auth;
+        return $this->auth;
     }
 
     /**
      * @param AuthenticationInfo $auth
-     * @return \Panopto\RemoteRecorderManagement\ListRecorders
+     * @return ListRecorders
      */
-    public function setAuth($auth)
+    public function setAuth($auth): ListRecorders
     {
-      $this->auth = $auth;
-      return $this;
+        $this->auth = $auth;
+        return $this;
     }
 
     /**
@@ -55,17 +55,17 @@ class ListRecorders
      */
     public function getPagination()
     {
-      return $this->pagination;
+        return $this->pagination;
     }
 
     /**
      * @param Pagination $pagination
-     * @return \Panopto\RemoteRecorderManagement\ListRecorders
+     * @return ListRecorders
      */
-    public function setPagination($pagination)
+    public function setPagination($pagination): ListRecorders
     {
-      $this->pagination = $pagination;
-      return $this;
+        $this->pagination = $pagination;
+        return $this;
     }
 
     /**
@@ -73,17 +73,17 @@ class ListRecorders
      */
     public function getSortBy()
     {
-      return $this->sortBy;
+        return $this->sortBy;
     }
 
     /**
      * @param RecorderSortField $sortBy
-     * @return \Panopto\RemoteRecorderManagement\ListRecorders
+     * @return ListRecorders
      */
-    public function setSortBy($sortBy)
+    public function setSortBy($sortBy): ListRecorders
     {
-      $this->sortBy = $sortBy;
-      return $this;
+        $this->sortBy = $sortBy;
+        return $this;
     }
 
 }
